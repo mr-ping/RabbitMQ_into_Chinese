@@ -4,7 +4,9 @@ About This Guide
 关于本指南
 
 This guide explains the AMQP 0-9-1 model used by RabbitMQ. The original version was written and kindly contributed by Michael Klishin and edited by Chris Duncan.  
-本指南介绍了RabbitMQ使用的 AMQP 0-9-1版本。原始版本由Michael Klishin贡献，由Chris Duncan编辑。
+本指南介绍了RabbitMQ使用的 AMQP 0-9-1版本。[原始版本](http://bit.ly/amqp-model-explained)由[Michael Klishin](http://twitter.com/michaelklishin)贡献，[Chris Duncan](https://twitter.com/celldee)编辑。
+
+中文版本由[Ping](http://mr-ping.com)编译
 
 ##High-level Overview of AMQP 0-9-1 and the AMQP Model
 ## AMQP 0-9-1 和 AMQP 模型高阶概述
@@ -62,15 +64,13 @@ Applications declare the AMQP entities that they need, define necessary routing 
 Exchanges are AMQP entities where messages are sent. Exchanges take a message and route it into zero or more queues. The routing algorithm used depends on the exchange type and rules called bindings. AMQP 0-9-1 brokers provide four exchange types:  
 交换机是用来发送消息的AMQP实体。交换机拿到一个消息之后将它路由给一个或零个队列。它使用哪种路由算法是由交换机类型和被称作绑定（bindings）的规则所决定的。
 
-Name	Default pre-declared names  
-名称 默认的预声明名称  
-Direct exchange	(Empty string) and amq.direct  
-直连交换机 （空字符串）和amq.direct  
-Fanout exchange	amq.fanout  
-扇型交换机 amq.fanout  
-Topic exchange	amq.topic  
-主题交换机 amq.topic  
-Headers exchange	amq.match (and amq.headers in RabbitMQ)  
+| Name（交换机类型）   | Default pre-declared names（预声明的默认名称） |
+|--------|--------|
+| Direct exchange（直连交换机） |    (Empty string) and amq.direct  |
+| Fanout exchange（扇型交换机） |    amq.fanout    |
+| Topic exchange（主题交换机） |    amq.topic    |
+| Headers exchange |    amq.match (and amq.headers in RabbitMQ)  |
+
 
 Besides the exchange type, exchanges are declared with a number of attributes, the most important of which are:  
 除交换机类型外，在声明交换机时还有许多其他的属性，其中最重要的几个分别是：
