@@ -59,5 +59,3 @@
 ##活跃的贡献者（排名不分先后）：
 
 [Ping](http://mr-ping.com)
-
->asdfasdf  asdf
