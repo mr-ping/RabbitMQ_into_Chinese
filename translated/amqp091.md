@@ -1,5 +1,5 @@
 >原文：[AMQP 0-9-1 Model Explained](https://www.rabbitmq.com/tutorials/amqp-concepts.html)  
->状态：待翻译  
+>状态：待校对 
 >翻译：[Ping](http://mr-ping.com)  
 >校对：
 
@@ -204,13 +204,20 @@ AMQP 0-9-1是一个可编程协议，AMQP的实体和路由规则是由应用本
 
 >###Headers Exchange
 
+###头交换机
+
 >A headers exchange is designed to for routing on multiple attributes that are more easily expressed as message headers than a routing key. Headers exchanges ignore the routing key attribute. Instead, the attributes used for routing are taken from the headers attribute. A message is considered matching if the value of the header equals the value specified upon binding.
+
+对于消息的路由来说，有时使用多个属性来表示消息头比用路由键更方便，头交换机（headers exchange）就是为此而生的。头交换机使用多个消息属性来代替路由键建立路由规则。这个规则的建立是通过判断消息头的值是否与指定绑定相匹配而来的。
 
 >It is possible to bind a queue to a headers exchange using more than one header for matching. In this case, the broker needs one more piece of information from the application developer, namely, should it consider messages with any of the headers matching, or all of them? This is what the "x-match" binding argument is for. When the "x-match" argument is set to "any", just one matching header value is sufficient. Alternatively, setting "x-match" to "all" mandates that all the values must match.
 
+我们可以绑定一个队列到头交换机上，并给绑定使用多个用于匹配的头。这个案例中，消息代理得从应用开发者那儿取到更多一段信息，换句话说，它需要考虑某条消息（message）是需要部分匹配还是全部匹配。上边说的“更多一段消息”就是"x-match"参数。当"x-match"设置为“any”时，消息头的任意一个值被匹配就可以满足条件，而当"x-match"设置为“all”的时候，就需要消息头的所有值都匹配成功。
+
 >Headers exchanges can be looked upon as "direct exchanges on steroids". Because they route based on header values, they can be used as direct exchanges where the routing key does not have to be a string; it could be an integer or a hash (dictionary) for example.
 
-（待翻译） 
+头交换机可以视为之恋交换机的另一种表现形式。头交换机能够像直连交换机一样工作，不同之处在于头交换机的路由规则是建立在头属性值之上，而不是路由键。路由键必须是一个字符串，而头属性值则没有这个约束，它们甚至可以是整数或者哈希值（字典）等。
+
 
 >##Queues
 
@@ -221,15 +228,15 @@ AMQP 0-9-1是一个可编程协议，AMQP的实体和路由规则是由应用本
 AMQP中的队列（queue）跟其他消息队列或任务队列中的队列是很相似的：它们存储着即将被应用消费掉的消息。队列跟交换机共享某些属性，但是队列也有一些另外的属性。
 
  - Name  
-名字
+    名字
  - Durable (the queue will survive a broker restart)  
-持久性（消息代理重启后，队列依旧存在）
+    持久性（消息代理重启后，队列依旧存在）
  - Exclusive (used by only one connection and the queue will be deleted when that connection closes)  
-独享（只被一个连接（connection）使用，而且当连接关闭后队列即被删除）
+    独享（只被一个连接（connection）使用，而且当连接关闭后队列即被删除）
  - Auto-delete (queue is deleted when last consumer unsubscribes)  
-自动删除（当最后一个消费者退订后即被删除）
+    自动删除（当最后一个消费者退订后即被删除）
  - Arguments (some brokers use it to implement additional features like message TTL)  
-其他参数：（消息代理用他来完成类似与TTL的某些额外功能）
+    其他参数：（消息代理用他来完成类似与TTL的某些额外功能）
 
 >Before a queue can be used it has to be declared. Declaring a queue will cause it to be created if it does not already exist. The declaration will have no effect if the queue does already exist and its attributes are the same as those in the declaration. When the existing queue attributes are not the same as those in the declaration a channel-level exception with code 406 (PRECONDITION_FAILED) will be raised.  
 
@@ -338,9 +345,12 @@ AMQP中的队列（queue）跟其他消息队列或任务队列中的队列是�
 
 >###Negative Acknowledgements
 
+###Negative Acknowledgements
+
 >Messages are rejected with the basic.reject AMQP method. There is one limitation that basic.reject has: there is no way to reject multiple messages as you can do with acknowledgements. However, if you are using RabbitMQ, then there is a solution. RabbitMQ provides an AMQP 0-9-1 extension known as negative acknowledgements or nacks. For more information, please refer to the the help page.
 
-（待翻译）
+在AMQP中，basic.reject方法用来执行拒绝消息的操作。但basic.reject有个限制：你不能使用它决绝多个带有确认回执（acknowledgements）的消息。但是如果你使用的是RabbitMQ，那么你可以使用被称作negative acknowledgements（也叫nacks）的AMQP 0-9-1扩展来解决这个问题。更多的信息请参考[帮助页面](https://www.rabbitmq.com/nack.html)
+
 
 >###Prefetching Messages
 
