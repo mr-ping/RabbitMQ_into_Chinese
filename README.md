@@ -55,7 +55,7 @@
 ##文章列表：
 
  - [RabbitMQ on Wikipedia](http://zh.wikipedia.org/wiki/RabbitMQ) 
- - [AMQP 0-9-1 简介](./amqp091.md)
+ - [AMQP 0-9-1 简介](./published/AMQP_0-9-1_Model_Explained.md)
 
 ##活跃的贡献者（排名不分先后）：
 
