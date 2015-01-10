@@ -49,8 +49,13 @@
     `git fetch upstream master`
  8. 将远端更新合并到本地  
     `git merge upstream/master`
+ 9. 修改后，推送到自己的远端库
+    `git push origin HEAD:master`
+ 10. 使用自己GitHub中的Pull Request功能将自己的库合并至本项目原始库
 
-其中1-6步只需执行一次，7&8步可多次执行
+其中1-6步为初始化操作只需执行一次  
+7&8 为更新本地库的操作，可多次执行  
+更新到GitHub时执行 9&10 步  
 
 ##文章列表：
 
@@ -58,6 +63,8 @@
  - [AMQP 0-9-1 简介](./published/AMQP_0-9-1_Model_Explained.md)
  - [RabbitMQ教程](./published/tutorials_with_python)
    - [RabbitMQ教程 - 使用主题交换机](./published/tutorials_with_python/Topics.md)
+ - [安装](./published/installation)
+   - [平台支持](./published/installation/Platforms_supported_by_RabbitMQ.md)
 
 ##活跃的贡献者（排名不分先后）：
 
