@@ -64,7 +64,8 @@
  - [RabbitMQ教程](./published/tutorials_with_python)
    - [RabbitMQ教程 - 使用主题交换机](./published/tutorials_with_python/Topics.md)
  - [安装](./published/installation)
-   - [平台支持](./published/installation/Platforms_supported_by_RabbitMQ.md)
+   - [支持RabbiMQ的平台](./published/installation/Platforms_supported_by_RabbitMQ.md)
+   - [在Debian/Ubuntu中安装RabbitMQ](./published/installation/Installing_on_Debian_Ubuntu.md)
 
 ##活跃的贡献者（排名不分先后）：
 
