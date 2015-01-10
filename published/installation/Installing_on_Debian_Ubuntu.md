@@ -1,3 +1,8 @@
+>原文：[Installing on Debian / Ubuntu](http://www.rabbitmq.com/install-debian.html)  
+>状态：校对完成  
+>翻译：[Ping](http://weibo.com/370321376)  
+>校对：[Ping](http://weibo.com/370321376)  
+
 ##安装到 Debian / Ubuntu 系统中
 
 ###下载服服务器

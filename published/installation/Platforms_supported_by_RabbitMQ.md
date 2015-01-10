@@ -1,3 +1,8 @@
+>原文：[Supported Platforms](http://www.rabbitmq.com/platforms.html)  
+>状态：校对完成  
+>翻译：[Ping](http://weibo.com/370321376)  
+>校对：[Ping](http://weibo.com/370321376)  
+
 ##支持的平台
 
 我们的目标是让RabbitMQ运行在尽可能广泛的平台之上。RabbitMQ有着运行在所有Erlang所支持的平台之上的潜力，从嵌入式系统到多核心集群还有基于云端的服务器。
