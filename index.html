@@ -38,6 +38,11 @@
 如转载文章至此，请事先征得原作者授权。</p>
 
 <h2>
+<a id="查看文档" class="anchor" href="#%E6%9F%A5%E7%9C%8B%E6%96%87%E6%A1%A3" aria-hidden="true"><span class="octicon octicon-link"></span></a>查看文档：</h2>
+
+<p><a href="http://rabbitmq-into-chinese.readthedocs.org/">RabbitMQ中文 文档站</a></p>
+
+<h2>
 <a id="使用说明" class="anchor" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a>使用说明：</h2>
 
 <h3>
@@ -66,7 +71,7 @@
 <li>对<code>translated</code>目录内所有已完成翻译的文档进行校对（提出关于内容质量，技术术语等的修缮建议）
 
 <ul>
-<li>完成校对后：请在文章头部添加<code>&gt;校对：您的名字</code>，并将状态改为<code>&gt;状态：校对完成</code>;之后将其移动到<code>published</code>目录。</li>
+<li>完成校对后：请在文章头部添加<code>&gt;校对：您的名字</code>，并将状态改为<code>&gt;状态：校对完成</code>;之后将其移动到<code>docs</code>目录。</li>
 </ul>
 </li>
 </ul>
@@ -76,7 +81,7 @@
 
 <p><code>source</code>暂时存储尚未翻译或者完成部分翻译的文章<br>
 <code>translated</code>暂存翻译完成但尚未校对的文档<br>
-<code>published</code>目录存储已经完成校对的文章</p>
+<code>docs</code>目录存储已经完成校对的文章</p>
 
 <h3>
 <a id="文档格式" class="anchor" href="#%E6%96%87%E6%A1%A3%E6%A0%BC%E5%BC%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>文档格式：</h3>
@@ -97,7 +102,7 @@
 </ul>
 
 <h3>
-<a id="github流程" class="anchor" href="#github%E6%B5%81%E7%A8%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Github流程：</h3>
+<a id="github工作流程" class="anchor" href="#github%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Github工作流程：</h3>
 
 <ol>
 <li>创建并登录您的Github帐号</li>
@@ -120,25 +125,15 @@
 <li>将远端更新合并到本地<br>
 <code>git merge upstream/master</code>
 </li>
+<li>修改后，推送到自己的远端库
+<code>git push origin HEAD:master</code>
+</li>
+<li>使用自己GitHub中的Pull Request功能将自己的库合并至本项目原始库</li>
 </ol>
 
-<p>其中1-6步只需执行一次，7&amp;8步可多次执行</p>
-
-<h2>
-<a id="文章列表" class="anchor" href="#%E6%96%87%E7%AB%A0%E5%88%97%E8%A1%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a>文章列表：</h2>
-
-<ul>
-<li>
-<a href="http://zh.wikipedia.org/wiki/RabbitMQ">RabbitMQ on Wikipedia</a> </li>
-<li><a href="./published/AMQP_0-9-1_Model_Explained.md">AMQP 0-9-1 简介</a></li>
-<li>
-<a href="./published/tutorials_with_python">RabbitMQ教程</a>
-
-<ul>
-<li><a href="./published/tutorials_with_python/Topics.md">RabbitMQ教程 - 使用主题交换机</a></li>
-</ul>
-</li>
-</ul>
+<p>其中1-6步为初始化操作只需执行一次<br>
+7&amp;8 为更新本地库的操作，可多次执行<br>
+更新到GitHub时执行 9&amp;10 步  </p>
 
 <h2>
 <a id="活跃的贡献者排名不分先后" class="anchor" href="#%E6%B4%BB%E8%B7%83%E7%9A%84%E8%B4%A1%E7%8C%AE%E8%80%85%E6%8E%92%E5%90%8D%E4%B8%8D%E5%88%86%E5%85%88%E5%90%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a>活跃的贡献者（排名不分先后）：</h2>
