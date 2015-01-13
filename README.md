@@ -1,10 +1,15 @@
-#RabbitMQ中文
+# RabbitMQ中文
 
 欢迎各位RabbitMQ使用者们在此贡献RabbitMQ中文译文或有关RabbitMQ的有价值的原创文章。  
 如转载文章至此，请事先征得原作者授权。
 
-##使用说明：
-###贡献方式：
+## 查看文档：
+
+[RabbitMQ中文 文档站](http://rabbitmq-into-chinese.readthedocs.org/)
+
+## 使用说明：
+### 贡献方式：
+
 您可以：
 
 - 将希望别人翻译的或者自己打算翻译的文章提交到这里
@@ -16,15 +21,15 @@
     - 开始翻译：您认领操作的`pull request`被合并进本项目后表示认领成功，可对其进行翻译
     - 完成翻译后：请在文章头部添加`>翻译：您的名字`，并将状态改为`>状态：待校对`;然后将其移动到`translated`目录
 - 对`translated`目录内所有已完成翻译的文档进行校对（提出关于内容质量，技术术语等的修缮建议）
-    - 完成校对后：请在文章头部添加`>校对：您的名字`，并将状态改为`>状态：校对完成`;之后将其移动到`published`目录。
+    - 完成校对后：请在文章头部添加`>校对：您的名字`，并将状态改为`>状态：校对完成`;之后将其移动到`docs`目录。
 
-###项目结构
+### 项目结构
 
 `source`暂时存储尚未翻译或者完成部分翻译的文章  
 `translated`暂存翻译完成但尚未校对的文档  
-`published`目录存储已经完成校对的文章
+`docs`目录存储已经完成校对的文章
 
-###文档格式：
+### 文档格式：
 
 - 文档的文件名请使用英文
 - 发布到此处的文档请统一使用[Markdown](http://zh.wikipedia.org/wiki/Markdown)格式。
@@ -33,7 +38,7 @@
     - 在线编辑器：[Markable](http://markable.in/)
     - 本地编辑器：[haroopress](http://pad.haroopress.com/user.html)
 
-###Github流程：
+### Github工作流程：
 
  1. 创建并登录您的Github帐号
  2. 点击本项目右上角fork按钮，将本项目派生到您的帐号下
@@ -56,16 +61,6 @@
 其中1-6步为初始化操作只需执行一次  
 7&8 为更新本地库的操作，可多次执行  
 更新到GitHub时执行 9&10 步  
-
-##文章列表：
-
- - [RabbitMQ on Wikipedia](http://zh.wikipedia.org/wiki/RabbitMQ) 
- - [AMQP 0-9-1 简介](./published/AMQP_0-9-1_Model_Explained.md)
- - [RabbitMQ教程](./published/tutorials_with_python)
-   - [RabbitMQ教程 - 使用主题交换机](./published/tutorials_with_python/Topics.md)
- - [安装](./published/installation)
-   - [支持RabbiMQ的平台](./published/installation/Platforms_supported_by_RabbitMQ.md)
-   - [在Debian/Ubuntu中安装RabbitMQ](./published/installation/Installing_on_Debian_Ubuntu.md)
 
 ##活跃的贡献者（排名不分先后）：
 
