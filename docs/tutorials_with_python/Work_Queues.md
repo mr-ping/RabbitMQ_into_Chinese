@@ -115,6 +115,7 @@ channel.basic_consume(callback,
 > 一个很容易犯的错误就是忘了basic_ack，后果很严重。消息在你的程序退出之后就会重新发送，如果它不能够释放没响应的消息，RabbitMQ就会占用越来越多的内存。
 
 > 为了排除这种错误，你可以使用rabbitmqctl命令，输出messages_unacknowledged字段：
+
 >```
 $ sudo rabbitmqctl list_queues name messages_ready messages_unacknowledged
 Listing queues ...
