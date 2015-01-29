@@ -1,7 +1,7 @@
 >原文：[Routing](https://www.rabbitmq.com/tutorials/tutorial-four-python.html)  
->状态：待校对  
+>状态：翻译完成  
 >翻译：[Adam](http://adamlu.net/dev/author/adam/)  
->校对：
+>校对：[Ping](http://weibo.com/370321376)
 
 ## 路由(Routing)
 
@@ -9,7 +9,7 @@
 
 在前面的教程中，我们实现了一个简单的日志系统。可以把日志消息广播给多个接收者。
 
-本篇教程中我们打算新增一个功能——使得它能够只订阅消息的一个字集。例如，我们只需要把严重的错误日志信息写入日志文件（存储到磁盘），但同时仍然把所有的日志信息输出到控制台中
+本篇教程中我们打算新增一个功能 —— 使得它能够只订阅消息的一个字集。例如，我们只需要把严重的错误日志信息写入日志文件（存储到磁盘），但同时仍然把所有的日志信息输出到控制台中
 
 ## 绑定（Bindings）
 
@@ -20,9 +20,9 @@ channel.queue_bind(exchange=exchange_name,
                    queue=queue_name)
 ```
 
-绑定（binding）是指交换器（exchange）和队列（queue）的关系。可以简单理解为：这个队列（queue）对这个交换器（exchange）的消息感兴趣。
+绑定（binding）是指交换机（exchange）和队列（queue）的关系。可以简单理解为：这个队列（queue）对这个交换机（exchange）的消息感兴趣。
 
-绑定的时候可以带上一个额外的routing_key参数。为了避免与basic_publish的参数混淆，我们把它叫做binding key。以下是如何创建一个带binding key的绑定。
+绑定的时候可以带上一个额外的routing_key参数。为了避免与basic_publish的参数混淆，我们把它叫做绑定键（binding key）。以下是如何创建一个带绑定键的绑定。
 
 ```python
 channel.queue_bind(exchange=exchange_name,
@@ -30,35 +30,35 @@ channel.queue_bind(exchange=exchange_name,
                    routing_key='black')
 ```
 
-binding key的含义取决于交换器（exchange）的类型。我们之前使用过的fanout类型会忽略这个值。
+绑定键的意义取决于交换机（exchange）的类型。我们之前使用过的扇型交换机（fanout exchanges）会忽略这个值。
 
-## Direct类型的交换器（exchange）
+## 直连交换机（Direct exchange）
 
-我们的日志系统广播所有的消息给所有的消费者（consumers）。我们打算扩展它，使其可以能够精确的过滤消息。例如我们也许值是希望当接收到一个严重的错误的时候才把消息写入磁盘，以免浪费磁盘空间。
+我们的日志系统广播所有的消息给所有的消费者（consumers）。我们打算扩展它，使其基于日志的严重程度进行消息过滤。例如我们也许只是希望将比较严重的错误（error）日志写入磁盘，以免在警告（warning）或者信息（info）日志上浪费磁盘空间。
 
-我们使用的fanout类型的交换器（exchange）扩展性不够——它能做的仅仅是广播。
+我们使用的扇型交换机（fanout exchange）没有足够的灵活性 —— 它能做的仅仅是广播。
 
-我们将会使用direct类型的交换器（exchange）来代替。路由的算法很简单——交换器将会对binding key和routing key进行精确匹配，从而确定消息该分发到哪个队列。
+我们将会使用直连交换机（direct exchange）来代替。路由的算法很简单 —— 交换机将会对绑定键（binding key）和路由键（routing key）进行精确匹配，从而确定消息该分发到哪个队列。
 
 下图能够很好的描述这个场景：
 
 ![](http://www.rabbitmq.com/img/tutorials/direct-exchange.png)
 
-在这个场景中，我们可以看到direct exchange X和两个队列绑定了。第一个队列使用orange作为binding key，第二个队列有两个绑定，一个使用black作为binding key，另外一个是green。
+在这个场景中，我们可以看到直连交换机 X和两个队列进行了绑定。第一个队列使用orange作为绑定键，第二个队列有两个绑定，一个使用black作为绑定键，另外一个使用green。
 
-这样以来，当routing key为orange的消息发布到交换器（exchange），就会被路由到队列Q1。routing key为black或者green的消息就会路由到Q2。其他的所有消息都将会被丢弃。
+这样以来，当路由键为orange的消息发布到交换机，就会被路由到队列Q1。路由键为black或者green的消息就会路由到Q2。其他的所有消息都将会被丢弃。
 
 ## 多个绑定（Multiple bindings）
 
 ![](http://www.rabbitmq.com/img/tutorials/direct-exchange-multiple.png)
 
-多个队列使用相同的binding key是合法的。我们的这个例子，我们可以添加一个X和Q1之间的绑定，使用blackbinding key。这样一来，direct交换器就和fanout交换器的行为一样，将会广播消息到所有匹配的队列。带有routing key为black的消息都会发送到Q1和Q2。
+多个队列使用相同的绑定键是合法的。这个例子中，我们可以添加一个X和Q1之间的绑定，使用black绑定键。这样一来，直连交换机就和扇型交换机的行为一样，会将消息广播到所有匹配的队列。带有black路由键的消息会同时发送到Q1和Q2。
 
 ## 发送日志
 
-我们将会发送消息到一个direct exchange，把日志级别作为routing key。这样子负责处理接收的脚本就可以选择它要处理的日志级别。我们先看看触发日志。
+我们将会发送消息到一个直连交换机，把日志级别作为路由键。这样接收日志的脚本就可以根据严重级别来选择它想要处理的日志。我们先看看发送日志。
 
-我们需要创建一个交换器（exchange）：
+我们需要创建一个交换机（exchange）：
 
 ```python
 channel.exchange_declare(exchange='direct_logs',
@@ -75,9 +75,9 @@ channel.basic_publish(exchange='direct_logs',
 
 我们先假设“severity”的值是info、warning、error中的一个。
 
-## 订阅（Subscribing）
+## 订阅
 
-处理接收消息的方式和之前差不多，但是我们为每一个日志级别创建了一个新的绑定。
+处理接收消息的方式和之前差不多，只有一个例外，我们将会为我们感兴趣的每个严重级别分别创建一个新的绑定。
 
 ```python
 result = channel.queue_declare(exclusive=True)
@@ -89,7 +89,7 @@ for severity in severities:
                        routing_key=severity)
 ```
 
-整合
+## 代码整合
 
 ![](http://www.rabbitmq.com/img/tutorials/python-four.png)
 
@@ -170,6 +170,8 @@ channel.start_consuming()
     $ python emit_log_direct.py error "Run. Run. Or it will explode."
      [x] Sent 'error':'Run. Run. Or it will explode.'
 
-这里是完整的代码：(emit_log_direct.py和receive_logs_direct.py)
+这里是完整的代码：([emit_log_direct.py][1]和[receive_logs_direct.py][2])
 
-教程5展示了如果通过一个模式来监听消息。
+
+[1]:https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/python/emit_log_direct.py
+[2]:https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/python/receive_logs_direct.py
