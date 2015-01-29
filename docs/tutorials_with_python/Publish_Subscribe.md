@@ -44,16 +44,14 @@ channel.exchange_declare(exchange='logs',
 
 > rabbitmqctl能够列出服务器上所有的交换器：
 
-> ```
-$ sudo rabbitmqctl list_exchanges
-Listing exchanges ...
-logs      fanout
-amq.direct      direct
-amq.topic       topic
-amq.fanout      fanout
-amq.headers     headers
-...done.
-```
+>     $ sudo rabbitmqctl list_exchanges
+>     Listing exchanges ...
+>     logs      fanout
+>     amq.direct      direct
+>     amq.topic       topic
+>     amq.fanout      fanout
+>     amq.headers     headers
+>     ...done.
 
 > 这个列表中有一些叫做amq.*的交换器。这些都是默认创建的，不过这时候你还不需要使用他们。
 
@@ -63,11 +61,9 @@ amq.headers     headers
 
 > 回想我们之前是如何发布一则消息：
 
-> ```python
-channel.basic_publish(exchange='',
-                      routing_key='hello',
-                      body=message)
-```
+>     channel.basic_publish(exchange='',
+>                           routing_key='hello',
+>                           body=message)
 
 > exchange参数就是交换机的名称。空字符串代表默认或者匿名交换机：消息将会根据指定的routing_key分发到指定的队列。
 

@@ -116,12 +116,12 @@ channel.basic_consume(callback,
 
 > 为了排除这种错误，你可以使用rabbitmqctl命令，输出messages_unacknowledged字段：
 
->```
-$ sudo rabbitmqctl list_queues name messages_ready messages_unacknowledged
-Listing queues ...
-hello    0       0
-...done.
-```
+> ```
+> $ sudo rabbitmqctl list_queues name messages_ready messages_unacknowledged
+> Listing queues ...
+> hello    0       0
+> ...done.
+> ```
 
 ##消息持久化
 
