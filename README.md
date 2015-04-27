@@ -5,7 +5,7 @@
 
 ## 查看文档：
 
-[RabbitMQ中文 文档站](http://rabbitmq-into-chinese.readthedocs.org/)
+[RabbitMQ中文 文档站](http://rabbitmq.mr-ping.com)
 
 ## 使用说明：
 ### 贡献方式：
