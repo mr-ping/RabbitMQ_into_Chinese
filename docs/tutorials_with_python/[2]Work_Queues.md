@@ -100,6 +100,7 @@ shell2$ python worker.py
 
 消息响应默认是开启的。之前的例子中我们可以使用no_ack=True标识把它关闭。是时候移除这个标识了，当工作者（worker）完成了任务，就发送一个响应。
 
+```python
 def callback(ch, method, properties, body):
     print " [x] Received %r" % (body,)
     time.sleep( body.count('.') )
@@ -108,6 +109,7 @@ def callback(ch, method, properties, body):
 
 channel.basic_consume(callback,
                       queue='hello')
+```
 运行上面的代码，我们发现即使使用CTRL+C杀掉了一个工作者（worker）进程，消息也不会丢失。当工作者（worker）挂掉这后，所有没有响应的消息都会重新发送。
 
 > #### 忘记确认
@@ -125,9 +127,9 @@ channel.basic_consume(callback,
 
 ##消息持久化
 
-如果你没有特意告诉RabbitMQ，那么在它退出或者崩溃的时候，它将会流失所有的队列和消息。为了确保信息不会丢失，有两个事情是需要注意的：我们必须把“队列”和“消息”设为持久化。
+如果你没有特意告诉RabbitMQ，那么在它退出或者崩溃的时候，将会丢失所有队列和消息。为了确保信息不会丢失，有两个事情是需要注意的：我们必须把“队列”和“消息”设为持久化。
 
-首先，为了不让队列丢失，需要把它声明为持久化（durable）：
+首先，为了不让队列消失，需要把队列声明为持久化（durable）：
 
     channel.queue_declare(queue='hello', durable=True)
 
