@@ -4,8 +4,8 @@
     * [RabbitMQ能为你做些什么？](docs/index.md)
 
 * [安装]
-    * [在Debian及Ubuntu系统上进行安装](doc/installation/Installing_on_Debian_Ubuntu.md)
-    * [RabbitMQ所支持的平台](doc/installation/Platforms_supported_by_RabbitMQ.md)
+    * [在Debian及Ubuntu系统上进行安装](docs/installation/Installing_on_Debian_Ubuntu.md)
+    * [RabbitMQ所支持的平台](docs/installation/Platforms_supported_by_RabbitMQ.md)
 
 * [AMQP协议]
     * [AMQP 0.9.1 模型解析](docs/AMQP/AMQP_0-9-1_Model_Explained.md)
