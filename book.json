@@ -2,7 +2,7 @@
     "gitbook": "=3.0.0-pre.14",
     "author": "Ping <yuanta11@gmil.com>",
     "description": "RabbitMQ in Chinese",
-    "root": "./docs",
+    "root": "./published",
     "generator": "site",
     "links": {
         "sharing": {
