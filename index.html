@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="RabbitMQ into Chinese : RabbitMQ相关文档中文译文">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>RabbitMQ into Chinese</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/mr-ping/RabbitMQ_into_Chinese">View on GitHub</a>
+
+          <h1 id="project_title">RabbitMQ into Chinese</h1>
+          <h2 id="project_tagline">RabbitMQ相关文档中文译文</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/mr-ping/RabbitMQ_into_Chinese/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/mr-ping/RabbitMQ_into_Chinese/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="rabbitmq中文" class="anchor" href="#rabbitmq%E4%B8%AD%E6%96%87" aria-hidden="true"><span class="octicon octicon-link"></span></a>RabbitMQ中文</h1>
+
+<p>欢迎各位RabbitMQ使用者们在此贡献RabbitMQ中文译文或有关RabbitMQ的有价值的原创文章。<br>
+如转载文章至此，请事先征得原作者授权。</p>
+
+<h2>
+<a id="查看文档" class="anchor" href="#%E6%9F%A5%E7%9C%8B%E6%96%87%E6%A1%A3" aria-hidden="true"><span class="octicon octicon-link"></span></a>查看文档：</h2>
+
+<p><a href="http://rabbitmq-into-chinese.readthedocs.org/">RabbitMQ中文 文档站</a></p>
+
+<h2>
+<a id="使用说明" class="anchor" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a>使用说明：</h2>
+
+<h3>
+<a id="贡献方式" class="anchor" href="#%E8%B4%A1%E7%8C%AE%E6%96%B9%E5%BC%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>贡献方式：</h3>
+
+<p>您可以：</p>
+
+<ul>
+<li>
+<strong>选题</strong>：将希望别人翻译的或者自己打算翻译的文章提交到这里
+
+<ul>
+<li>在<code>source</code>目录中创建Markdown格式的新文档，并在头部添加<code>&gt;原文：原文档地址</code>以及<code>&gt;状态：待翻译</code>
+</li>
+<li>添加新文档后，<code>pull request</code>到本项目，等待贡献者翻译、校对</li>
+</ul>
+</li>
+<li>
+<strong>翻译</strong>：翻译<code>source</code>目录内尚未翻译完成的文章（翻译前请先认领文章）
+
+<ul>
+<li>认领目的：保证同一时间只有一人负责翻译，避免因个人习惯产生的风格冲突，避免重复劳动</li>
+<li>认领方式：凡状态为待翻译的文章都可认领。将文章状态改为<code>&gt;状态：翻译中</code>后<code>pull request</code>到本项目</li>
+<li>开始翻译：您认领操作的<code>pull request</code>被合并进本项目后表示认领成功，可对其进行翻译</li>
+<li>完成翻译后：请在文章头部添加<code>&gt;翻译：您的名字</code>，并将状态改为<code>&gt;状态：待校对</code>;然后将其移动到<code>translated</code>目录</li>
+</ul>
+</li>
+<li>
+<strong>校对</strong>：对<code>translated</code>目录内所有已完成翻译的文档进行校对（提出关于内容质量，技术术语等的修缮建议）
+
+<ul>
+<li>完成校对后：请在文章头部添加<code>&gt;校对：您的名字</code>，并将状态改为<code>&gt;状态：校对完成</code>;之后将其移动到<code>docs</code>目录。</li>
+</ul>
+</li>
+</ul>
+
+<h3>
+<a id="项目结构" class="anchor" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84" aria-hidden="true"><span class="octicon octicon-link"></span></a>项目结构</h3>
+
+<p>"<em>source</em>" 暂时存储尚未翻译或者完成部分翻译的文章<br>
+"<em>translated</em>" 暂存翻译完成但尚未校对的文档<br>
+"<em>docs</em>" 目录存储已经完成校对的文章</p>
+
+<h3>
+<a id="文档格式" class="anchor" href="#%E6%96%87%E6%A1%A3%E6%A0%BC%E5%BC%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>文档格式：</h3>
+
+<ul>
+<li>文档的文件名请使用英文</li>
+<li>发布到此处的文档请统一使用 <a href="http://zh.wikipedia.org/wiki/Markdown">Markdown</a> 格式。</li>
+<li>Markdown语法介绍可以 <a href="http://wowubuntu.com/markdown/">点击此处</a> 查看。</li>
+<li>Markdown编辑器推荐：
+
+<ul>
+<li>在线编辑器：<a href="http://markable.in/">Markable</a>
+</li>
+<li>本地编辑器：<a href="http://pad.haroopress.com/user.html">haroopress</a>
+</li>
+</ul>
+</li>
+</ul>
+
+<h3>
+<a id="github工作流程" class="anchor" href="#github%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Github工作流程：</h3>
+
+<ol>
+<li>创建并登录您的Github帐号</li>
+<li>点击本项目右上角fork按钮，将本项目派生到您的帐号下</li>
+<li>
+<p>将您帐号下的派生clone到本地</p>
+
+<pre><code>git clone your_repo_address
+</code></pre>
+</li>
+<li>
+<p>在本地的项目中新建一个branch，在此分支中进行您的工作</p>
+
+<pre><code>git branch new_branch_name
+</code></pre>
+</li>
+<li>
+<p>将git切换到新建的branch</p>
+
+<pre><code>git chechout new_branch_name
+</code></pre>
+</li>
+<li>
+<p>将本项目地址添加为远端对象</p>
+
+<pre><code>git remote add upstream https://github.com/mr-ping/RabbitMQ_into_Chinese.git
+</code></pre>
+</li>
+<li>
+<p>获取远端更新</p>
+
+<pre><code>git fetch upstream master
+</code></pre>
+</li>
+<li>
+<p>将远端更新合并到本地</p>
+
+<pre><code>git merge upstream/master
+</code></pre>
+</li>
+<li>
+<p>修改后，推送到自己的远端库</p>
+
+<pre><code>git push origin HEAD:master
+</code></pre>
+</li>
+<li><p>使用自己GitHub中的Pull Request功能将自己的库合并至本项目原始库</p></li>
+</ol>
+
+<p><strong>1-6步</strong> 为初始化操作只需执行一次<br>
+<strong>7&amp;8步</strong> 为更新本地库的操作，可多次执行<br>
+<strong>9&amp;10步</strong> 为将你的提交合并到GitHub原项目时执行  </p>
+
+<h2>
+<a id="活跃的贡献者排名不分先后" class="anchor" href="#%E6%B4%BB%E8%B7%83%E7%9A%84%E8%B4%A1%E7%8C%AE%E8%80%85%E6%8E%92%E5%90%8D%E4%B8%8D%E5%88%86%E5%85%88%E5%90%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a>活跃的贡献者（排名不分先后）：</h2>
+
+<p><a href="http://mr-ping.com">Ping</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">RabbitMQ into Chinese maintained by <a href="https://github.com/mr-ping">mr-ping</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
