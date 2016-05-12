@@ -18,7 +18,7 @@
 
 "*source*" 暂存格式化(markdown)后的文档  
 "*translated*" 暂存翻译完成但尚未校对的文档  
-"*docs*" 存储发布的文档
+"*published*" 存储已发布的文档
 
 ## 文档格式：
 
