@@ -1,5 +1,7 @@
 # Summary
 
+* [RabbitMQ中文文档](README.md)
+
 * RabbitMQ简介
     * [RabbitMQ能为你做些什么？](description.md)
 
