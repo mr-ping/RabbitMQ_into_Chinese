@@ -36,7 +36,7 @@ End a queue consumer.
 结束队列消费者  
 
 This method cancels a consumer. This does not affect already delivered messages, but it does mean the server will not send any more messages for that consumer. The client may receive an arbitrary number of messages in between sending the cancel method and receiving the cancel-ok reply. It may also be sent from the server to the client in the event of the consumer being unexpectedly cancelled (i.e. cancelled for any reason other than the server receiving the corresponding basic.cancel from the client). This allows clients to be notified of the loss of consumers due to events such as queue deletion. Note that as it is not a MUST for clients to accept this method from the server, it is advisable for the broker to be able to identify those clients that are capable of accepting the method, through some means of capability negotiation.  
-此方法用来清除消费者。它不会影响到已经投递成功的消息，但是会使得服务器不再将新的消息投送给此消费者。客户端会在发送`cancel`方法和收到`cancel-ok`回复的过程中收到任意数量的消息。当消费者端发生不可预估的错误时，此方法也有可能由服务器发送给客户端（也就是说结束行为不是由服务器收到客户端的basic.cancel方法所触发）。次情形下客户端可以接收到由于队列被清除等原因引起的消费者丢失通知。需要注意的是，客户端从服务器接收此方法并不是必须的，它被推荐的原因在于消息代理可以通过它辨识能够通过协商方式访问方法的客户端。
+此方法用来清除消费者。它不会影响到已经投递成功的消息，但是会使得服务器不再将新的消息投送给此消费者。客户端会在发送`cancel`方法和收到`cancel-ok`回复的过程中收到任意数量的消息。当消费者端发生不可预估的错误时，此方法也有可能由服务器发送给客户端（也就是说结束行为不是由客户端发送给服务器的basic.cancel方法所触发）。次情形下客户端可以接收到由于队列被删除等原因引起的消费者丢失通知。需要注意的是，客户端从服务器接收`basic.cancel`方法并不是必须实现的，它通过消息代理可以辨识以协商方式接受`basic.cancel`的客户端的特性来正常工作。
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
@@ -188,10 +188,13 @@ This method returns an undeliverable message that was published with the "immedi
 
 `channel.close(reply-code reply-code, reply-text reply-text, class-id class-id, method-id method-id) ➔ close-ok`
 
-Support: full
-Request a channel close.
+Support: full  
+支持：完整  
+Request a channel close.  
+请求将信道关闭。
 
-This method indicates that the sender wants to close the channel. This may be due to internal conditions (e.g. a forced shut-down) or due to an error handling a specific method, i.e. an exception. When a close is due to an exception, the sender provides the class and method id of the method which caused the exception.
+This method indicates that the sender wants to close the channel. This may be due to internal conditions (e.g. a forced shut-down) or due to an error handling a specific method, i.e. an exception. When a close is due to an exception, the sender provides the class and method id of the method which caused the exception.  
+此方法表明发送者希望关闭信道。这通常是由于内部条件（如强制关闭）或者由于处理特定方法引起的错误（也就是Exception）时触发。当关闭行为是由 exception 触发时，发送者需提供引起 exception 的方法所在的class id 和 method id。
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
@@ -199,10 +202,13 @@ This method indicates that the sender wants to close the channel. This may be du
 
 `channel.flow(bit active) ➔ flow-ok`
 
-Support: partial
-Enable/disable flow from peer.
+Support: partial  
+支持：部分  
+Enable/disable flow from peer.  
+启用/禁用对端流
 
-This method asks the peer to pause or restart the flow of content data sent by a consumer. This is a simple flow-control mechanism that a peer can use to avoid overflowing its queues or otherwise finding itself receiving more messages than it can process. Note that this method is not intended for window control. It does not affect contents returned by Basic.Get-Ok methods.
+This method asks the peer to pause or restart the flow of content data sent by a consumer. This is a simple flow-control mechanism that a peer can use to avoid overflowing its queues or otherwise finding itself receiving more messages than it can process. Note that this method is not intended for window control. It does not affect contents returned by Basic.Get-Ok methods.  
+此方法要求对端暂停或者重启消费者发送的内容数据流。这是一个简单的流控制机制，用来避免信道的队列溢出或者发现信道接收的消息是否超出了其处理能力。需要注意的是，此方法目的不在于控制窗口。它不会影响到`Basic.Get-Ok`方法返回的内容。
 
 [amqpdoc]
 
@@ -210,10 +216,13 @@ This method asks the peer to pause or restart the flow of content data sent by a
 
 `channel.open(shortstr reserved-1) ➔ open-ok`
 
-Support: full
-Open a channel for use.
+Support: full  
+支持：完整  
+Open a channel for use.  
+打开一个信道使用。
 
-This method opens a channel to the server.
+This method opens a channel to the server.  
+此方法会打开一个信道用于与服务器通讯。
 
 [amqpdoc]
 
@@ -221,13 +230,15 @@ This method opens a channel to the server.
 
 ## Confirm
 
-*THIS CLASS IS A RABBITMQ-SPECIFIC EXTENSION OF AMQP*
+*THIS CLASS IS A RABBITMQ-SPECIFIC EXTENSION OF AMQP*  
+*此类为RabbitMQ特有的AMQP扩展*
 
 `confirm.select(bit nowait) ➔ select-ok`
 
 .
 
-This method sets the channel to use publisher acknowledgements. The client can only use this method on a non-transactional channel.
+This method sets the channel to use publisher acknowledgements. The client can only use this method on a non-transactional channel.  
+此方法用来设置信道以使用发布者确认通知。客户端仅可将此方法用于非事务性信道。
 
 RabbitMQ Documentation
 [javadoc] [dotnetdoc] [amqpdoc]
@@ -238,11 +249,14 @@ RabbitMQ Documentation
 
 `exchange.bind(short reserved-1, exchange-name destination, exchange-name source, shortstr routing-key, no-wait no-wait, table arguments) ➔ bind-ok`
 
-*THIS METHOD IS A RABBITMQ-SPECIFIC EXTENSION OF AMQP*
+*THIS METHOD IS A RABBITMQ-SPECIFIC EXTENSION OF AMQP*  
+*此方法为RabbitMQ特有的AMQP扩展*
 
-Bind exchange to an exchange.
+Bind exchange to an exchange.  
+将两个交换机进行绑定。
 
-This method binds an exchange to an exchange.
+This method binds an exchange to an exchange.  
+此方法将一个交换机绑定到另一个交换机上。
 
 RabbitMQ Documentation
 RabbitMQ blog post
@@ -253,13 +267,18 @@ RabbitMQ blog post
 `exchange.declare(short reserved-1, exchange-name exchange, shortstr type, bit passive, bit durable, bit auto-delete*, bit internal*, no-wait no-wait, table arguments) ➔ declare-ok`
 
 *RABBITMQ-SPECIFIC EXTENSION OF AMQP*
+*RabbitMQ针对AMQP协议的扩展*
 
-Support: full
-Verify exchange exists, create if needed.
+Support: full  
+支持：完整  
+Verify exchange exists, create if needed.  
+验证交换机是否存在，如果不存在新建之。
 
-This method creates an exchange if it does not already exist, and if the exchange exists, verifies that it is of the correct and expected class.
+This method creates an exchange if it does not already exist, and if the exchange exists, verifies that it is of the correct and expected class.  
+如果指定交换机不存在，此方法会新建之。如果交换机已经存在，会验证其类型是否正确。
 
-RabbitMQ implements an extension to the AMQP specification that allows for unroutable messages to be delivered to an Alternate Exchange (AE). The AE feature helps to detect when clients are publishing messages that cannot be routed and can provide "or else" routing semantics where some messages are handled specifically and the remainder are processed by a generic handler.
+RabbitMQ implements an extension to the AMQP specification that allows for unroutable messages to be delivered to an Alternate Exchange (AE). The AE feature helps to detect when clients are publishing messages that cannot be routed and can provide "or else" routing semantics where some messages are handled specifically and the remainder are processed by a generic handler.  
+RabbitMQ针对AMQP规范实现了一个扩展，允许将无法正确路由的消息投递到一个替代交换机中（AE）。替代交换机的特性帮助判断客户端何时发布了无法路由的消息，并且能够提供 `"or else"` 路由语义去对某些消息做特殊处理，其他的消息则由通用方法进行处理。
 
 AE documention
 [javadoc] [dotnetdoc] [amqpdoc]
