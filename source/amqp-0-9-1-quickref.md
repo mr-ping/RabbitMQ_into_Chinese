@@ -5,7 +5,7 @@
 This page provides a guide to RabbitMQ's implementation of AMQP 0-9-1. In addition to the classes and methods defined in the AMQP specification, RabbitMQ supports several protocol extensions, 
 which are also listed here. The original and extended specification downloads can be found on the protocol page.
 
-本文提供了RabbitMQ对AMQP 0-9-1实现的指南。作为对AMQP规范所定义的类和方法的有力补充，RabbitMQ还提供了一系列扩展协议，同样在此列出。原始以及扩展规范可以在[协议页面][3]中下载。
+本文提供了AMQP 0-9-1的RabbitMQ实现指南。作为对AMQP规范所定义的类和方法的有力补充，RabbitMQ还提供了一系列扩展协议，同样在此列出。原始以及扩展规范可以在[协议页面][3]中进行下载。
 
 For your convenience, links are provided from this guide to the relevant sections of the API guides for the RabbitMQ Java and .NET clients. Full details of each method and its parameters are available in our complete AMQP 0-9-1 reference.
 
@@ -33,7 +33,7 @@ When sent by the client, this method acknowledges one or more messages delivered
 Support: full  
 支持： 完整  
 End a queue consumer.  
-结束一个队列消费者  
+结束队列消费者  
 
 This method cancels a consumer. This does not affect already delivered messages, but it does mean the server will not send any more messages for that consumer. The client may receive an arbitrary number of messages in between sending the cancel method and receiving the cancel-ok reply. It may also be sent from the server to the client in the event of the consumer being unexpectedly cancelled (i.e. cancelled for any reason other than the server receiving the corresponding basic.cancel from the client). This allows clients to be notified of the loss of consumers due to events such as queue deletion. Note that as it is not a MUST for clients to accept this method from the server, it is advisable for the broker to be able to identify those clients that are capable of accepting the method, through some means of capability negotiation.  
 此方法用来清除消费者。它不会影响到已经投递成功的消息，但是会使得服务器不再将新的消息投送给此消费者。客户端会在发送`cancel`方法和收到`cancel-ok`回复的过程中收到任意数量的消息。当消费者端发生不可预估的错误时，此方法也有可能由服务器发送给客户端（也就是说结束行为不是由服务器收到客户端的basic.cancel方法所触发）。次情形下客户端可以接收到由于队列被清除等原因引起的消费者丢失通知。需要注意的是，客户端从服务器接收此方法并不是必须的，它被推荐的原因在于消息代理可以通过它辨识能够通过协商方式访问方法的客户端。
@@ -45,10 +45,13 @@ This method cancels a consumer. This does not affect already delivered messages,
 
 `basic.consume(short reserved-1, queue-name queue, consumer-tag consumer-tag, no-local no-local, no-ack no-ack, bit exclusive, no-wait no-wait, table arguments) ➔ consume-ok`
 
-Support: partial
-Start a queue consumer.
+Support: partial  
+支持：部分  
+Start a queue consumer.  
+启动队列消费者  
 
-This method asks the server to start a "consumer", which is a transient request for messages from a specific queue. Consumers last as long as the channel they were declared on, or until the client cancels them.
+This method asks the server to start a "consumer", which is a transient request for messages from a specific queue. Consumers last as long as the channel they were declared on, or until the client cancels them.  
+此方法告知服务器开启一个“消费者”，此消费者实质是一个针对特定队列消息的持久化请求。消费者在声明过的信道（channel）中会一直存在，直到客户端清除他们为止。
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
@@ -56,10 +59,13 @@ This method asks the server to start a "consumer", which is a transient request 
 
 `basic.deliver(consumer-tag consumer-tag, delivery-tag delivery-tag, redelivered redelivered, exchange-name exchange, shortstr routing-key)`
 
-Support: full
-Notify the client of a consumer message.
+Support: full  
+支持：完整  
+Notify the client of a consumer message.  
+将消息通知给消费者客户端
 
 This method delivers a message to the client, via a consumer. In the asynchronous message delivery model, the client starts a consumer using the Consume method, then the server responds with Deliver methods as and when messages arrive for that consumer.
+此方法将一条消息通过消费者投递给客户端。在异步消息投递模式中，客户端通过Consume方法启动消费者，然后服务器使用Deliver方法将消息送达。
 
 [amqpdoc]
 
@@ -67,10 +73,13 @@ This method delivers a message to the client, via a consumer. In the asynchronou
 
 `basic.get(short reserved-1, queue-name queue, no-ack no-ack) ➔ get-ok | get-empty`
 
-Support: full
-Direct access to a queue.
+Support: full   
+支持：完整  
+Direct access to a queue.  
+直接访问队列  
 
-This method provides a direct access to the messages in a queue using a synchronous dialogue that is designed for specific types of application where synchronous functionality is more important than performance.
+This method provides a direct access to the messages in a queue using a synchronous dialogue that is designed for specific types of application where synchronous functionality is more important than performance.  
+此方法提供了通过同步通讯的方式直接访问队列内消息的途径。它针对的是一些有特殊需求的应用，例如对应用来说同步的功能性远大于应用性能。
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
@@ -78,11 +87,14 @@ This method provides a direct access to the messages in a queue using a synchron
 
 `basic.nack(delivery-tag delivery-tag, bit multiple, bit requeue)`
 
-*THIS METHOD IS A RABBITMQ-SPECIFIC EXTENSION OF AMQP*
+*THIS METHOD IS A RABBITMQ-SPECIFIC EXTENSION OF AMQP*  
+*此方法为RabbitMQ特有的AMQP扩展*
 
-Reject one or more incoming messages.
+Reject one or more incoming messages.  
+拒绝单条或多条输入消息。
 
-This method allows a client to reject one or more incoming messages. It can be used to interrupt and cancel large incoming messages, or return untreatable messages to their original queue. This method is also used by the server to inform publishers on channels in confirm mode of unhandled messages. If a publisher receives this method, it probably needs to republish the offending messages.
+This method allows a client to reject one or more incoming messages. It can be used to interrupt and cancel large incoming messages, or return untreatable messages to their original queue. This method is also used by the server to inform publishers on channels in confirm mode of unhandled messages. If a publisher receives this method, it probably needs to republish the offending messages.  
+此方法允许客户端拒绝单条或多条输入消息。它可以用来打断或清除大体积消息的输入，或者将无法处理的消息返回给消息的原始队列。这个方法也可以在确认模式（confirm mode）下被服务器用来通知信道（channel）上的消息发布者有未被处理的消息存在。
 
 RabbitMQ Documentation
 [javadoc] [dotnetdoc] [amqpdoc]
@@ -91,10 +103,13 @@ RabbitMQ Documentation
 
 `basic.publish(short reserved-1, exchange-name exchange, shortstr routing-key, bit mandatory, bit immediate)`
 
-Support: full
-Publish a message.
+Support: full  
+支持：完整  
+Publish a message.  
+发布单挑消息  
 
-This method publishes a message to a specific exchange. The message will be routed to queues as defined by the exchange configuration and distributed to any active consumers when the transaction, if any, is committed.
+This method publishes a message to a specific exchange. The message will be routed to queues as defined by the exchange configuration and distributed to any active consumers when the transaction, if any, is committed.  
+此方法用来发布单条消息到指定的交换机（exchange）。消息将会通过配置好的交换机根据既定规则路由给队列（queues），之后，如果存在事务处理（transaction），并且事务已经被提交，就会分发给活跃的消费者。
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
@@ -102,10 +117,13 @@ This method publishes a message to a specific exchange. The message will be rout
 
 `basic.qos(long prefetch-size, short prefetch-count, bit global) ➔ qos-ok`
 
-Support: partial
-Specify quality of service.
+Support: partial  
+支持：部分 
+Specify quality of service.  
+指定服务质量
 
-This method requests a specific quality of service. The QoS can be specified for the current channel or for all channels on the connection. The particular properties and semantics of a qos method always depend on the content class semantics. Though the qos method could in principle apply to both peers, it is currently meaningful only for the server.
+This method requests a specific quality of service. The QoS can be specified for the current channel or for all channels on the connection. The particular properties and semantics of a qos method always depend on the content class semantics. Though the qos method could in principle apply to both peers, it is currently meaningful only for the server.  
+此方法指定服务的服务质量。QoS可以分配给当前的信道（channel）或者链接内的所有信道。qos方法的特定属性和语义依赖于内容类的语义。虽然qos方法原则上可以适用于服务端及客户端，但在这里此方法仅适用于服务器端。
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
@@ -113,10 +131,13 @@ This method requests a specific quality of service. The QoS can be specified for
 
 `basic.recover(bit requeue)`
 
-Support: partial
-Redeliver unacknowledged messages.
+Support: partial  
+支持：部分
+Redeliver unacknowledged messages.  
+重新投递未确认的消息。  
 
 This method asks the server to redeliver all unacknowledged messages on a specified channel. Zero or more messages may be redelivered. This method replaces the asynchronous Recover.
+此方法会要求服务器重新投递特定信道内所有未确认的消息。零条或多条消息会被重新投递。此方法用于替代异步恢复（asynchronous Recover）。
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
@@ -124,9 +145,11 @@ This method asks the server to redeliver all unacknowledged messages on a specif
 
 `basic.recover-async(bit requeue)`
 
-Redeliver unacknowledged messages.
+Redeliver unacknowledged messages.  
+重新投递未确认的消息。  
 
-This method asks the server to redeliver all unacknowledged messages on a specified channel. Zero or more messages may be redelivered. This method is deprecated in favour of the synchronous Recover/Recover-Ok.
+This method asks the server to redeliver all unacknowledged messages on a specified channel. Zero or more messages may be redelivered. This method is deprecated in favour of the synchronous Recover/Recover-Ok.  
+此方法会要求服务器重新投递特定信道内所有未确认的消息。零条或多条消息会被重新投递。此方法已经弃用，取而代之的是同步 Recover/Recover-Ok 方法。
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
@@ -134,10 +157,13 @@ This method asks the server to redeliver all unacknowledged messages on a specif
 
 `basic.reject(delivery-tag delivery-tag, bit requeue)`
 
-Support: partial
-Reject an incoming message.
+Support: partial  
+支持：部分  
+Reject an incoming message.  
+拒绝单条输入消息。
 
-This method allows a client to reject a message. It can be used to interrupt and cancel large incoming messages, or return untreatable messages to their original queue.
+This method allows a client to reject a message. It can be used to interrupt and cancel large incoming messages, or return untreatable messages to their original queue.  
+此方法允许客户端拒绝单条或多条输入消息。它可以用来打断或清除大体积消息的输入，或者将无法处理的消息返回给消息的原始队列。
 
 RabbitMQ blog post
 [javadoc] [dotnetdoc] [amqpdoc]
@@ -146,10 +172,13 @@ RabbitMQ blog post
 
 `basic.return(reply-code reply-code, reply-text reply-text, exchange-name exchange, shortstr routing-key)`
 
-Support: full
-Return a failed message.
+Support: full  
+支持： 部分  
+Return a failed message.  
+返回单条处理失败的消息
 
-This method returns an undeliverable message that was published with the "immediate" flag set, or an unroutable message published with the "mandatory" flag set. The reply code and text provide information about the reason that the message was undeliverable.
+This method returns an undeliverable message that was published with the "immediate" flag set, or an unroutable message published with the "mandatory" flag set. The reply code and text provide information about the reason that the message was undeliverable.  
+此方法将发布时打有"immediate"标签的无法投递的，或者发布时打有"mandatory"标签的无法正确路由的单条消息返回。应答代码或文字中会说明失败原因。
 
 [amqpdoc]
 
