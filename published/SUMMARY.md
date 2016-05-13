@@ -11,6 +11,7 @@
 
 * AMQP协议
     * [AMQP 0.9.1 模型解析](AMQP/AMQP_0-9-1_Model_Explained.md)
+    * [AMQP 0.9.1 快速参考指南](AMQP/amqp-0-9-1-quickref.md)
 
 * 应用教程
     * Python版
