@@ -14,32 +14,36 @@ For your convenience, links are provided from this guide to the relevant section
 
 ## Basic
 
-### basic.ack(delivery-tag delivery-tag, bit multiple)
+`basic.ack(delivery-tag delivery-tag, bit multiple)`
 
-Support: full
-支持： 完整
-Acknowledge one or more messages.
-确认一条或多条消息。
+Support: full  
+支持： 完整  
+Acknowledge one or more messages.  
+确认一条或多条消息。  
 
-When sent by the client, this method acknowledges one or more messages delivered via the Deliver or Get-Ok methods. When sent by server, this method acknowledges one or more messages published with the Publish method on a channel in confirm mode. The acknowledgement can be for a single message or a set of messages up to and including a specific message.
+When sent by the client, this method acknowledges one or more messages delivered via the Deliver or Get-Ok methods. When sent by server, this method acknowledges one or more messages published with the Publish method on a channel in confirm mode. The acknowledgement can be for a single message or a set of messages up to and including a specific message.  
 当确认通知由客户端发出时，此方法通过`Deliver`或`Get-Ok`方法确认单条或多条消息已经送达。当确认通知由服务器发出时，此方法在`confirm`模式下通过`channel`由`Publish`方法确认单条或多条消息已成功发布。确认通知可用于单条消息或者用于包含特殊消息的一个消息集合。
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
-### basic.cancel(consumer-tag consumer-tag, no-wait no-wait) ➔ cancel-ok
+---
 
-Support: full
-支持： 完整
-End a queue consumer.
-结束一个队列消费者
+`basic.cancel(consumer-tag consumer-tag, no-wait no-wait) ➔ cancel-ok`
 
-This method cancels a consumer. This does not affect already delivered messages, but it does mean the server will not send any more messages for that consumer. The client may receive an arbitrary number of messages in between sending the cancel method and receiving the cancel-ok reply. It may also be sent from the server to the client in the event of the consumer being unexpectedly cancelled (i.e. cancelled for any reason other than the server receiving the corresponding basic.cancel from the client). This allows clients to be notified of the loss of consumers due to events such as queue deletion. Note that as it is not a MUST for clients to accept this method from the server, it is advisable for the broker to be able to identify those clients that are capable of accepting the method, through some means of capability negotiation.
-此方法用来清除消费者。它不会影响到已经投递成功的消息，但是会使得服务器不再将新的消息投送给此消费者。客户端会在发送`cancel`方法和收到`cancel-ok`回复的过程中收到任意数量的消息。当消费者端发生不可预估的错误时，此方法也有可能由服务器发送给客户端（也就是说结束行为不是由服务器收到客户端的basic.cancel方法所触发）。次情形下客户端可以接收到由于队列被清除等原因引起的消费者丢失通知。需要注意的是，客户端从服务器接受此方法并不是必须的，消息代理可以鉴别
+Support: full  
+支持： 完整  
+End a queue consumer.  
+结束一个队列消费者  
+
+This method cancels a consumer. This does not affect already delivered messages, but it does mean the server will not send any more messages for that consumer. The client may receive an arbitrary number of messages in between sending the cancel method and receiving the cancel-ok reply. It may also be sent from the server to the client in the event of the consumer being unexpectedly cancelled (i.e. cancelled for any reason other than the server receiving the corresponding basic.cancel from the client). This allows clients to be notified of the loss of consumers due to events such as queue deletion. Note that as it is not a MUST for clients to accept this method from the server, it is advisable for the broker to be able to identify those clients that are capable of accepting the method, through some means of capability negotiation.  
+此方法用来清除消费者。它不会影响到已经投递成功的消息，但是会使得服务器不再将新的消息投送给此消费者。客户端会在发送`cancel`方法和收到`cancel-ok`回复的过程中收到任意数量的消息。当消费者端发生不可预估的错误时，此方法也有可能由服务器发送给客户端（也就是说结束行为不是由服务器收到客户端的basic.cancel方法所触发）。次情形下客户端可以接收到由于队列被清除等原因引起的消费者丢失通知。需要注意的是，客户端从服务器接收此方法并不是必须的，它被推荐的原因在于消息代理可以通过它辨识能够通过协商方式访问方法的客户端。
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
+---
 
-### basic.consume(short reserved-1, queue-name queue, consumer-tag consumer-tag, no-local no-local, no-ack no-ack, bit exclusive, no-wait no-wait, table arguments) ➔ consume-ok
+
+`basic.consume(short reserved-1, queue-name queue, consumer-tag consumer-tag, no-local no-local, no-ack no-ack, bit exclusive, no-wait no-wait, table arguments) ➔ consume-ok`
 
 Support: partial
 Start a queue consumer.
@@ -48,8 +52,9 @@ This method asks the server to start a "consumer", which is a transient request 
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
+---
 
-### basic.deliver(consumer-tag consumer-tag, delivery-tag delivery-tag, redelivered redelivered, exchange-name exchange, shortstr routing-key)
+`basic.deliver(consumer-tag consumer-tag, delivery-tag delivery-tag, redelivered redelivered, exchange-name exchange, shortstr routing-key)`
 
 Support: full
 Notify the client of a consumer message.
@@ -58,8 +63,9 @@ This method delivers a message to the client, via a consumer. In the asynchronou
 
 [amqpdoc]
 
+---
 
-### basic.get(short reserved-1, queue-name queue, no-ack no-ack) ➔ get-ok | get-empty
+`basic.get(short reserved-1, queue-name queue, no-ack no-ack) ➔ get-ok | get-empty`
 
 Support: full
 Direct access to a queue.
@@ -68,8 +74,9 @@ This method provides a direct access to the messages in a queue using a synchron
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
+---
 
-### basic.nack(delivery-tag delivery-tag, bit multiple, bit requeue)
+`basic.nack(delivery-tag delivery-tag, bit multiple, bit requeue)`
 
 *THIS METHOD IS A RABBITMQ-SPECIFIC EXTENSION OF AMQP*
 
@@ -80,8 +87,9 @@ This method allows a client to reject one or more incoming messages. It can be u
 RabbitMQ Documentation
 [javadoc] [dotnetdoc] [amqpdoc]
 
+---
 
-### basic.publish(short reserved-1, exchange-name exchange, shortstr routing-key, bit mandatory, bit immediate)
+`basic.publish(short reserved-1, exchange-name exchange, shortstr routing-key, bit mandatory, bit immediate)`
 
 Support: full
 Publish a message.
@@ -90,8 +98,9 @@ This method publishes a message to a specific exchange. The message will be rout
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
+---
 
-### basic.qos(long prefetch-size, short prefetch-count, bit global) ➔ qos-ok
+`basic.qos(long prefetch-size, short prefetch-count, bit global) ➔ qos-ok`
 
 Support: partial
 Specify quality of service.
@@ -100,8 +109,9 @@ This method requests a specific quality of service. The QoS can be specified for
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
+---
 
-### basic.recover(bit requeue)
+`basic.recover(bit requeue)`
 
 Support: partial
 Redeliver unacknowledged messages.
@@ -110,8 +120,9 @@ This method asks the server to redeliver all unacknowledged messages on a specif
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
+---
 
-### basic.recover-async(bit requeue)
+`basic.recover-async(bit requeue)`
 
 Redeliver unacknowledged messages.
 
@@ -119,8 +130,9 @@ This method asks the server to redeliver all unacknowledged messages on a specif
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
+---
 
-### basic.reject(delivery-tag delivery-tag, bit requeue)
+`basic.reject(delivery-tag delivery-tag, bit requeue)`
 
 Support: partial
 Reject an incoming message.
@@ -130,8 +142,9 @@ This method allows a client to reject a message. It can be used to interrupt and
 RabbitMQ blog post
 [javadoc] [dotnetdoc] [amqpdoc]
 
+---
 
-### basic.return(reply-code reply-code, reply-text reply-text, exchange-name exchange, shortstr routing-key)
+`basic.return(reply-code reply-code, reply-text reply-text, exchange-name exchange, shortstr routing-key)`
 
 Support: full
 Return a failed message.
@@ -140,10 +153,11 @@ This method returns an undeliverable message that was published with the "immedi
 
 [amqpdoc]
 
+---
 
 ## Channel
 
-### channel.close(reply-code reply-code, reply-text reply-text, class-id class-id, method-id method-id) ➔ close-ok
+`channel.close(reply-code reply-code, reply-text reply-text, class-id class-id, method-id method-id) ➔ close-ok`
 
 Support: full
 Request a channel close.
@@ -152,7 +166,9 @@ This method indicates that the sender wants to close the channel. This may be du
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
-### channel.flow(bit active) ➔ flow-ok
+---
+
+`channel.flow(bit active) ➔ flow-ok`
 
 Support: partial
 Enable/disable flow from peer.
@@ -161,7 +177,9 @@ This method asks the peer to pause or restart the flow of content data sent by a
 
 [amqpdoc]
 
-### channel.open(shortstr reserved-1) ➔ open-ok
+---
+
+`channel.open(shortstr reserved-1) ➔ open-ok`
 
 Support: full
 Open a channel for use.
@@ -170,11 +188,13 @@ This method opens a channel to the server.
 
 [amqpdoc]
 
+---
+
 ## Confirm
 
 *THIS CLASS IS A RABBITMQ-SPECIFIC EXTENSION OF AMQP*
 
-### confirm.select(bit nowait) ➔ select-ok
+`confirm.select(bit nowait) ➔ select-ok`
 
 .
 
@@ -183,9 +203,11 @@ This method sets the channel to use publisher acknowledgements. The client can o
 RabbitMQ Documentation
 [javadoc] [dotnetdoc] [amqpdoc]
 
+---
+
 ## Exchange
 
-### exchange.bind(short reserved-1, exchange-name destination, exchange-name source, shortstr routing-key, no-wait no-wait, table arguments) ➔ bind-ok
+`exchange.bind(short reserved-1, exchange-name destination, exchange-name source, shortstr routing-key, no-wait no-wait, table arguments) ➔ bind-ok`
 
 *THIS METHOD IS A RABBITMQ-SPECIFIC EXTENSION OF AMQP*
 
@@ -197,7 +219,9 @@ RabbitMQ Documentation
 RabbitMQ blog post
 [javadoc] [dotnetdoc] [amqpdoc]
 
-### exchange.declare(short reserved-1, exchange-name exchange, shortstr type, bit passive, bit durable, bit auto-delete*, bit internal*, no-wait no-wait, table arguments) ➔ declare-ok
+---
+
+`exchange.declare(short reserved-1, exchange-name exchange, shortstr type, bit passive, bit durable, bit auto-delete*, bit internal*, no-wait no-wait, table arguments) ➔ declare-ok`
 
 *RABBITMQ-SPECIFIC EXTENSION OF AMQP*
 
@@ -211,7 +235,9 @@ RabbitMQ implements an extension to the AMQP specification that allows for unrou
 AE documention
 [javadoc] [dotnetdoc] [amqpdoc]
 
-### exchange.delete(short reserved-1, exchange-name exchange, bit if-unused, no-wait no-wait) ➔ delete-ok
+---
+
+`exchange.delete(short reserved-1, exchange-name exchange, bit if-unused, no-wait no-wait) ➔ delete-ok`
 
 Support: partial
 Delete an exchange.
@@ -220,7 +246,9 @@ This method deletes an exchange. When an exchange is deleted all queue bindings 
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
-### exchange.unbind(short reserved-1, exchange-name destination, exchange-name source, shortstr routing-key, no-wait no-wait, table arguments) ➔ unbind-ok
+---
+
+`exchange.unbind(short reserved-1, exchange-name destination, exchange-name source, shortstr routing-key, no-wait no-wait, table arguments) ➔ unbind-ok`
 
 *THIS METHOD IS A RABBITMQ-SPECIFIC EXTENSION OF AMQP*
 
@@ -230,9 +258,11 @@ This method unbinds an exchange from an exchange.
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
+---
+
 ## Queue
 
-### queue.bind(short reserved-1, queue-name queue, exchange-name exchange, shortstr routing-key, no-wait no-wait, table arguments) ➔ bind-ok
+`queue.bind(short reserved-1, queue-name queue, exchange-name exchange, shortstr routing-key, no-wait no-wait, table arguments) ➔ bind-ok`
 
 Support: full
 Bind queue to an exchange.
@@ -241,7 +271,9 @@ This method binds a queue to an exchange. Until a queue is bound it will not rec
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
-### queue.declare(short reserved-1, queue-name queue, bit passive, bit durable, bit exclusive, bit auto-delete, no-wait no-wait, table arguments) ➔ declare-ok
+---
+
+`queue.declare(short reserved-1, queue-name queue, bit passive, bit durable, bit exclusive, bit auto-delete, no-wait no-wait, table arguments) ➔ declare-ok`
 
 Support: full
 Declare queue, create if needed.
@@ -260,7 +292,9 @@ x-message-ttl documentation
 x-expires documentation
 [javadoc] [dotnetdoc] [amqpdoc]
 
-### queue.delete(short reserved-1, queue-name queue, bit if-unused, bit if-empty, no-wait no-wait) ➔ delete-ok
+---
+
+`queue.delete(short reserved-1, queue-name queue, bit if-unused, bit if-empty, no-wait no-wait) ➔ delete-ok`
 
 Support: partial
 Delete a queue.
@@ -269,7 +303,9 @@ This method deletes a queue. When a queue is deleted any pending messages are se
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
-### queue.purge(short reserved-1, queue-name queue, no-wait no-wait) ➔ purge-ok
+---
+
+`queue.purge(short reserved-1, queue-name queue, no-wait no-wait) ➔ purge-ok`
 
 Support: full
 Purge a queue.
@@ -278,7 +314,9 @@ This method removes all messages from a queue which are not awaiting acknowledgm
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
-### queue.unbind(short reserved-1, queue-name queue, exchange-name exchange, shortstr routing-key, table arguments) ➔ unbind-ok
+---
+
+`queue.unbind(short reserved-1, queue-name queue, exchange-name exchange, shortstr routing-key, table arguments) ➔ unbind-ok`
 
 Support: partial
 Unbind a queue from an exchange.
@@ -287,9 +325,11 @@ This method unbinds a queue from an exchange.
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
+---
+
 ## Tx
 
-### tx.commit() ➔ commit-ok
+`tx.commit() ➔ commit-ok`
 
 Support: full
 Commit the current transaction.
@@ -298,7 +338,9 @@ This method commits all message publications and acknowledgments performed in th
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
-### tx.rollback() ➔ rollback-ok
+---
+
+`tx.rollback() ➔ rollback-ok`
 
 Support: full
 Abandon the current transaction.
@@ -307,7 +349,9 @@ This method abandons all message publications and acknowledgments performed in t
 
 [javadoc] [dotnetdoc] [amqpdoc]
 
-### tx.select() ➔ select-ok
+---
+
+`tx.select() ➔ select-ok`
 
 Support: full
 Select standard transaction mode.
@@ -321,3 +365,4 @@ This method sets the channel to use standard transactions. The client must use t
 
 [3]: http://www.rabbitmq.com/protocol.html
 [6]: http://www.rabbitmq.com/amqp-0-9-1-reference.html
+
