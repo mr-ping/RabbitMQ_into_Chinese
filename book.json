@@ -16,7 +16,12 @@
             "Mr Ping": "http://www.mr-ping.com"
         }
     },
-    "plugins": [],
+    "plugins": ["ga"],
+    "pluginsConfig": {
+        "ga": {
+            "token": "UA-47037953-1"
+        }
+    },
     "title": "RabbitMQ in Chinese",
     "variables": {}
 }
