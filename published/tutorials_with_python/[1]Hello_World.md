@@ -103,7 +103,7 @@ connection.close()
 
 ###获取数据
 
-![](http://www.rabbitmq.com/img/tutorials/sending.png)
+![](https://www.rabbitmq.com/img/tutorials/receiving.png)
 
 我们的第二个程序receive.py，将会从队列中获取消息并打印消息。
 
