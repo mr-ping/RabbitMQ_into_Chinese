@@ -1,0 +1,4 @@
+[submodule "published/_book"]
+	path = published/_book
+	url = git@github.com:mr-ping/RabbitMQ_into_Chinese.git
+	branch = gh-pages
