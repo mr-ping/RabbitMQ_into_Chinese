@@ -2,13 +2,13 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>发布/订阅 · RabbitMQ in Chinese</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>发布/订阅 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.0.0-pre.14">
-        <meta name="author" content="Ping <yuanta11@gmil.com>">
+        <meta name="generator" content="GitBook 3.2.2">
+        
         
         
     
@@ -82,16 +82,7 @@
 <ul class="summary">
     
     
-    
-        
-        <li>
-            <a href="http://www.mr-ping.com" target="_blank" class="custom-link">Mr Ping</a>
-        </li>
-    
-    
 
-    
-    <li class="divider"></li>
     
 
     
@@ -395,7 +386,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <blockquote>
-<p>&#x539F;&#x6587;&#xFF1A;<a href="https://www.rabbitmq.com/tutorials/tutorial-three-python.html" _target="blank">Publish/Subscribe</a><br>&#x72B6;&#x6001;&#xFF1A;&#x6821;&#x5BF9;&#x5B8C;&#x6BD5;<br>&#x7FFB;&#x8BD1;&#xFF1A;<a href="http://adamlu.net/dev/author/adam/" _target="blank">Adam</a><br>&#x6821;&#x5BF9;&#xFF1A;<a href="http://weibo.com/370321376" _target="blank">Ping</a></p>
+<p>&#x539F;&#x6587;&#xFF1A;<a href="https://www.rabbitmq.com/tutorials/tutorial-three-python.html" target="_blank">Publish/Subscribe</a><br>&#x72B6;&#x6001;&#xFF1A;&#x6821;&#x5BF9;&#x5B8C;&#x6BD5;<br>&#x7FFB;&#x8BD1;&#xFF1A;<a href="http://adamlu.net/dev/author/adam/" target="_blank">Adam</a><br>&#x6821;&#x5BF9;&#xFF1A;<a href="http://weibo.com/370321376" target="_blank">Ping</a></p>
 </blockquote>
 <h2 id="&#x53D1;&#x5E03;&#xFF0F;&#x8BA2;&#x9605;">&#x53D1;&#x5E03;&#xFF0F;&#x8BA2;&#x9605;</h2>
 <p><strong>&#xFF08;&#x4F7F;&#x7528;pika 0.9.5 Python&#x5BA2;&#x6237;&#x7AEF;&#xFF09;</strong></p>
@@ -484,7 +475,7 @@ channel.basic_publish(exchange=<span class="hljs-string">&apos;logs&apos;</span>
 <span class="hljs-keyword">print</span> <span class="hljs-string">&quot; [x] Sent %r&quot;</span> % (message,)
 connection.close()
 </code></pre>
-<p>(<a href="http://github.com/rabbitmq/rabbitmq-tutorials/blob/master/python/emit_log.py" _target="blank">emit_log.py</a> &#x6E90;&#x6587;&#x4EF6;)</p>
+<p>(<a href="http://github.com/rabbitmq/rabbitmq-tutorials/blob/master/python/emit_log.py" target="_blank">emit_log.py</a> &#x6E90;&#x6587;&#x4EF6;)</p>
 <p>&#x6B63;&#x5982;&#x4F60;&#x770B;&#x5230;&#x7684;&#x90A3;&#x6837;&#xFF0C;&#x5728;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A;&#x4EA4;&#x6362;&#x5668;&#xFF0C;&#x8FD9;&#x4E00;&#x4E2A;&#x662F;&#x5F88;&#x91CD;&#x8981;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x4E0D;&#x5141;&#x8BB8;&#x53D1;&#x5E03;&#x6D88;&#x606F;&#x5230;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x4EA4;&#x6362;&#x5668;&#x3002;</p>
 <p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7ED1;&#x5B9A;&#x961F;&#x5217;&#x5230;&#x4EA4;&#x6362;&#x5668;&#xFF0C;&#x6D88;&#x606F;&#x5C06;&#x4F1A;&#x4E22;&#x5931;&#x3002;&#x4F46;&#x8FD9;&#x4E2A;&#x6CA1;&#x6709;&#x6240;&#x8C13;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6D88;&#x8D39;&#x8005;&#x76D1;&#x542C;&#xFF0C;&#x90A3;&#x4E48;&#x6D88;&#x606F;&#x5C31;&#x4F1A;&#x88AB;&#x5FFD;&#x7565;&#x3002;</p>
 <p>receive_logs.py&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
@@ -515,7 +506,7 @@ channel.basic_consume(callback,
 
 channel.start_consuming()
 </code></pre>
-<p>(<a href="http://github.com/rabbitmq/rabbitmq-tutorials/blob/master/python/receive_logs.py" _target="blank">receive_logs.py</a> source)</p>
+<p>(<a href="http://github.com/rabbitmq/rabbitmq-tutorials/blob/master/python/receive_logs.py" target="_blank">receive_logs.py</a> source)</p>
 <p>&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5C31;&#x5B8C;&#x6210;&#x4E86;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x628A;&#x65E5;&#x5FD7;&#x4FDD;&#x5B58;&#x5230;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x6253;&#x5F00;&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x5165;&#xFF1A;</p>
 <pre><code>$ python receive_logs.py &gt; logs_from_rabbit.log
 </code></pre><p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5728;&#x5C4F;&#x5E55;&#x4E2D;&#x67E5;&#x770B;&#x65E5;&#x5FD7;&#xFF0C;&#x90A3;&#x4E48;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7EC8;&#x7AEF;&#x7136;&#x540E;&#x8FD0;&#x884C;&#xFF1A;</p>
@@ -574,7 +565,7 @@ logs    amq.gen-x0kymA4yPzAT6BoC/YP+zw==                []
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"发布/订阅","level":"1.5.1.3","depth":3,"next":{"title":"路由","level":"1.5.1.4","depth":3,"path":"tutorials_with_python/[4]Routing.md","ref":"tutorials_with_python/[4]Routing.md","articles":[]},"previous":{"title":"工作队列","level":"1.5.1.2","depth":3,"path":"tutorials_with_python/[2]Work_Queues.md","ref":"tutorials_with_python/[2]Work_Queues.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ga"],"root":"./published","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"token":"UA-47037953-1","configuration":"auto"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Ping <yuanta11@gmil.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"RabbitMQ in Chinese","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Mr Ping":"http://www.mr-ping.com"}},"gitbook":"=3.0.0-pre.14","description":"RabbitMQ in Chinese"},"file":{"path":"tutorials_with_python/[3]Publish_Subscribe.md","mtime":"2016-06-01T09:25:20.000Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.14","time":"2016-07-06T01:05:21.927Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"发布/订阅","level":"1.5.1.3","depth":3,"next":{"title":"路由","level":"1.5.1.4","depth":3,"path":"tutorials_with_python/[4]Routing.md","ref":"tutorials_with_python/[4]Routing.md","articles":[]},"previous":{"title":"工作队列","level":"1.5.1.2","depth":3,"path":"tutorials_with_python/[2]Work_Queues.md","ref":"tutorials_with_python/[2]Work_Queues.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tutorials_with_python/[3]Publish_Subscribe.md","mtime":"2017-06-16T08:52:52.826Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-16T08:53:39.772Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -582,10 +573,6 @@ logs    amq.gen-x0kymA4yPzAT6BoC/YP+zw==                []
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
@@ -608,7 +595,7 @@ logs    amq.gen-x0kymA4yPzAT6BoC/YP+zw==                []
         
     
         
-        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
 

@@ -2,13 +2,13 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>主题交换机 · RabbitMQ in Chinese</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>主题交换机 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.0.0-pre.14">
-        <meta name="author" content="Ping <yuanta11@gmil.com>">
+        <meta name="generator" content="GitBook 3.2.2">
+        
         
         
     
@@ -82,16 +82,7 @@
 <ul class="summary">
     
     
-    
-        
-        <li>
-            <a href="http://www.mr-ping.com" target="_blank" class="custom-link">Mr Ping</a>
-        </li>
-    
-    
 
-    
-    <li class="divider"></li>
     
 
     
@@ -395,13 +386,13 @@
                                 <section class="normal markdown-section">
                                 
                                 <blockquote>
-<p>&#x539F;&#x6587;&#xFF1A;<a href="https://www.rabbitmq.com/tutorials/tutorial-five-python.html" _target="blank">Topics</a><br>&#x72B6;&#x6001;&#xFF1A;&#x7FFB;&#x8BD1;&#x5B8C;&#x6210;<br>&#x7FFB;&#x8BD1;&#xFF1A;<a href="http://weibo.com/370321376" _target="blank">Ping</a><br>&#x6821;&#x5BF9;&#xFF1A;<a href="http://weibo.com/370321376" _target="blank">Ping</a></p>
+<p>&#x539F;&#x6587;&#xFF1A;<a href="https://www.rabbitmq.com/tutorials/tutorial-five-python.html" target="_blank">Topics</a><br>&#x72B6;&#x6001;&#xFF1A;&#x7FFB;&#x8BD1;&#x5B8C;&#x6210;<br>&#x7FFB;&#x8BD1;&#xFF1A;<a href="http://weibo.com/370321376" target="_blank">Ping</a><br>&#x6821;&#x5BF9;&#xFF1A;<a href="http://weibo.com/370321376" target="_blank">Ping</a></p>
 </blockquote>
 <h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x4E3B;&#x9898;&#x4EA4;&#x6362;&#x673A;&#xFF1F;">&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x4E3B;&#x9898;&#x4EA4;&#x6362;&#x673A;&#xFF1F;</h2>
 <p>&#xFF08;&#x4F7F;&#x7528;Python &#x5BA2;&#x6237;&#x7AEF; &#x2014;&#x2014; pika 0.9.8&#xFF09;</p>
 <p><a href="">&#x4E0A;&#x4E00;&#x7BC7;&#x6559;&#x7A0B;</a>&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x6539;&#x8FDB;&#x4E86;&#x6211;&#x4EEC;&#x7684;&#x65E5;&#x5FD7;&#x7CFB;&#x7EDF;&#x3002;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x76F4;&#x8FDE;&#x4EA4;&#x6362;&#x673A;&#x66FF;&#x4EE3;&#x4E86;&#x6247;&#x578B;&#x4EA4;&#x6362;&#x673A;&#xFF0C;&#x4ECE;&#x53EA;&#x80FD;&#x76F2;&#x76EE;&#x7684;&#x5E7F;&#x64AD;&#x6D88;&#x606F;&#x6539;&#x8FDB;&#x4E3A;&#x6709;&#x53EF;&#x80FD;&#x9009;&#x62E9;&#x6027;&#x7684;&#x63A5;&#x6536;&#x65E5;&#x5FD7;&#x3002;</p>
 <p>&#x5C3D;&#x7BA1;&#x76F4;&#x8FDE;&#x4EA4;&#x6362;&#x673A;&#x80FD;&#x591F;&#x6539;&#x5584;&#x6211;&#x4EEC;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x4E5F;&#x6709;&#x5B83;&#x7684;&#x9650;&#x5236; &#x2014;&#x2014; &#x6CA1;&#x529E;&#x6CD5;&#x57FA;&#x4E8E;&#x591A;&#x4E2A;&#x6807;&#x51C6;&#x6267;&#x884C;&#x8DEF;&#x7531;&#x64CD;&#x4F5C;&#x3002;</p>
-<p>&#x5728;&#x6211;&#x4EEC;&#x7684;&#x65E5;&#x5FD7;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x53EA;&#x5E0C;&#x671B;&#x8BA2;&#x9605;&#x57FA;&#x4E8E;&#x4E25;&#x91CD;&#x7A0B;&#x5EA6;&#x7684;&#x65E5;&#x5FD7;&#xFF0C;&#x540C;&#x65F6;&#x8FD8;&#x5E0C;&#x671B;&#x8BA2;&#x9605;&#x57FA;&#x4E8E;&#x53D1;&#x9001;&#x6765;&#x6E90;&#x7684;&#x65E5;&#x5FD7;&#x3002;Unix&#x5DE5;&#x5177;<a href="http://en.wikipedia.org/wiki/Syslog" _target="blank">syslog</a>&#x5C31;&#x662F;&#x540C;&#x65F6;&#x57FA;&#x4E8E;&#x4E25;&#x91CD;&#x7A0B;&#x5EA6;-severity (info/warn/crit...) &#x548C; &#x8BBE;&#x5907;-facility (auth/cron/kern...)&#x6765;&#x8DEF;&#x7531;&#x65E5;&#x5FD7;&#x7684;&#x3002;</p>
+<p>&#x5728;&#x6211;&#x4EEC;&#x7684;&#x65E5;&#x5FD7;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x53EA;&#x5E0C;&#x671B;&#x8BA2;&#x9605;&#x57FA;&#x4E8E;&#x4E25;&#x91CD;&#x7A0B;&#x5EA6;&#x7684;&#x65E5;&#x5FD7;&#xFF0C;&#x540C;&#x65F6;&#x8FD8;&#x5E0C;&#x671B;&#x8BA2;&#x9605;&#x57FA;&#x4E8E;&#x53D1;&#x9001;&#x6765;&#x6E90;&#x7684;&#x65E5;&#x5FD7;&#x3002;Unix&#x5DE5;&#x5177;<a href="http://en.wikipedia.org/wiki/Syslog" target="_blank">syslog</a>&#x5C31;&#x662F;&#x540C;&#x65F6;&#x57FA;&#x4E8E;&#x4E25;&#x91CD;&#x7A0B;&#x5EA6;-severity (info/warn/crit...) &#x548C; &#x8BBE;&#x5907;-facility (auth/cron/kern...)&#x6765;&#x8DEF;&#x7531;&#x65E5;&#x5FD7;&#x7684;&#x3002;</p>
 <p>&#x5982;&#x679C;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;&#x5C06;&#x4F1A;&#x7ED9;&#x4E88;&#x6211;&#x4EEC;&#x975E;&#x5E38;&#x5927;&#x7684;&#x7075;&#x6D3B;&#x6027;&#xFF0C;&#x6211;&#x4EEC;&#x65E2;&#x53EF;&#x4EE5;&#x76D1;&#x542C;&#x6765;&#x6E90;&#x4E8E;&#x201C;cron&#x201D;&#x7684;&#x4E25;&#x91CD;&#x7A0B;&#x5EA6;&#x4E3A;&#x201C;critical errors&#x201D;&#x7684;&#x65E5;&#x5FD7;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x76D1;&#x542C;&#x6765;&#x6E90;&#x4E8E;&#x201C;kern&#x201D;&#x7684;&#x6240;&#x6709;&#x65E5;&#x5FD7;&#x3002;</p>
 <p>&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x76EE;&#x7684;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x53E6;&#x4E00;&#x79CD;&#x66F4;&#x590D;&#x6742;&#x7684;&#x4EA4;&#x6362;&#x673A; &#x2014;&#x2014; &#x4E3B;&#x9898;&#x4EA4;&#x6362;&#x673A;&#x3002;</p>
 <h2 id="&#x4E3B;&#x9898;&#x4EA4;&#x6362;&#x673A;">&#x4E3B;&#x9898;&#x4EA4;&#x6362;&#x673A;</h2>
@@ -499,7 +490,7 @@ channel.start_consuming()
 <li>&#x7ED1;&#x5B9A;&#x952E;&#x4E3A; <code>#.*</code> &#x7684;&#x961F;&#x5217;&#x4F1A;&#x83B7;&#x53D6;&#x5230;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;<code>..</code>&#x7684;&#x8DEF;&#x7531;&#x952E;&#x7684;&#x6D88;&#x606F;&#x5417;&#xFF1F;&#x5B83;&#x4F1A;&#x53D6;&#x5230;&#x4E00;&#x4E2A;&#x8DEF;&#x7531;&#x952E;&#x4E3A;&#x5355;&#x4E2A;&#x5355;&#x8BCD;&#x7684;&#x6D88;&#x606F;&#x5417;&#xFF1F;  </li>
 <li><code>a.*.#</code> &#x548C; <code>a.#</code>&#x7684;&#x533A;&#x522B;&#x5728;&#x54EA;&#x513F;&#xFF1F;</li>
 </ul>
-<p>&#xFF08;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x53C2;&#x89C1;<a href="https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/python/emit_log_topic.py" _target="blank">emit_logs_topic.py</a> and <a href="https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/python/receive_logs_topic.py" _target="blank">receive_logs_topic.py</a>)</p>
+<p>&#xFF08;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x53C2;&#x89C1;<a href="https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/python/emit_log_topic.py" target="_blank">emit_logs_topic.py</a> and <a href="https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/python/receive_logs_topic.py" target="_blank">receive_logs_topic.py</a>)</p>
 <p>&#x79FB;&#x6B65;&#x81F3;<a href="">&#x6559;&#x7A0B; 6</a> &#x5B66;&#x4E60;RPC&#x3002;</p>
 
                                 
@@ -544,7 +535,7 @@ channel.start_consuming()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"主题交换机","level":"1.5.1.5","depth":3,"next":{"title":"远程过程调用","level":"1.5.1.6","depth":3,"path":"tutorials_with_python/[6]RPC.md","ref":"tutorials_with_python/[6]RPC.md","articles":[]},"previous":{"title":"路由","level":"1.5.1.4","depth":3,"path":"tutorials_with_python/[4]Routing.md","ref":"tutorials_with_python/[4]Routing.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ga"],"root":"./published","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"token":"UA-47037953-1","configuration":"auto"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Ping <yuanta11@gmil.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"RabbitMQ in Chinese","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Mr Ping":"http://www.mr-ping.com"}},"gitbook":"=3.0.0-pre.14","description":"RabbitMQ in Chinese"},"file":{"path":"tutorials_with_python/[5]Topics.md","mtime":"2016-06-01T09:25:20.000Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.14","time":"2016-07-06T01:05:21.927Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"主题交换机","level":"1.5.1.5","depth":3,"next":{"title":"远程过程调用","level":"1.5.1.6","depth":3,"path":"tutorials_with_python/[6]RPC.md","ref":"tutorials_with_python/[6]RPC.md","articles":[]},"previous":{"title":"路由","level":"1.5.1.4","depth":3,"path":"tutorials_with_python/[4]Routing.md","ref":"tutorials_with_python/[4]Routing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tutorials_with_python/[5]Topics.md","mtime":"2017-06-16T08:52:52.830Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-16T08:53:39.772Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -552,10 +543,6 @@ channel.start_consuming()
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
@@ -578,7 +565,7 @@ channel.start_consuming()
         
     
         
-        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
 
