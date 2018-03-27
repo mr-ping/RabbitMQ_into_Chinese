@@ -124,7 +124,7 @@ connection = pika.BlockingConnection(pika.ConnectionParameters(
 channel = connection.channel()
 
 channel.exchange_declare(exchange='logs',
-                         type='fanout')
+                         exchange_type='fanout')
 
 message = ' '.join(sys.argv[1:]) or "info: Hello World!"
 channel.basic_publish(exchange='logs',
@@ -151,7 +151,7 @@ connection = pika.BlockingConnection(pika.ConnectionParameters(
 channel = connection.channel()
 
 channel.exchange_declare(exchange='logs',
-                         type='fanout')
+                         exchange_type='fanout')
 
 result = channel.queue_declare(exclusive=True)
 queue_name = result.method.queue
