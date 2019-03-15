@@ -19,7 +19,7 @@
     "plugins": ["ga"],
     "pluginsConfig": {
         "ga": {
-            "token": "UA-47037953-1"
+            "token": "UA-120619814-1"
         }
     },
     "title": "RabbitMQ in Chinese",
