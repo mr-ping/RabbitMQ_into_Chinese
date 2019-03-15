@@ -10,9 +10,14 @@
 
 欢迎大家共同参与RabbitMQ官方文档的翻译。（[rabbitmq.com](http://rabbitmq.com)）
 
-- 请将翻译后的文档放置在 `translated`
-目录内，并在文章末尾附上原文连接，我校对后会及时发布。
-- 如果您有希望翻译成中文的文档或文章，可以在Issues中留言并附上连接。
+### 翻译工作
+请将翻译后的markdown文档放置在 `translated`
+目录内，并在文章末尾附上原文连接，校对后会及时发布。
+### 校对工作
+请在`translated`目录中领取需要校对的文章，校对完成（删除原文）后，将其移至`published`目录中即可。
+
+
+如果您有希望翻译成中文的文档或文章，可以在Issues中留言并附上连接。
 
 ## 项目结构
 
@@ -27,4 +32,4 @@
 - Markdown语法介绍可以 [点击此处](http://wowubuntu.com/markdown/) 查看。
 - Markdown编辑器推荐：
     - 在线编辑器：[Markable](http://markable.in/)
-    - 本地编辑器：[haroopress](http://pad.haroopress.com/user.html)
+    - 本地编辑器：[typora](https://typora.io)
