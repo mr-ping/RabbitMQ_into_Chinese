@@ -193,11 +193,13 @@ From now on the logs exchange will append messages to our queue.
 
 ## Putting it all together
 
-## 将它们组合到一起
+## 组合到一起
 
 ![img](https://www.rabbitmq.com/img/tutorials/python-three-overall.png)
 
 The producer program, which emits log messages, doesn't look much different from the previous tutorial. The most important change is that we now want to publish messages to our logs exchange instead of the nameless one. We need to supply a routingKey when sending, but its value is ignored for fanout exchanges. Here goes the code for EmitLog.cs file:
+
+用来发送日志消息的生产者程序看起来跟上个教程中的没多大区别。最重大的改变是，现在我们希望将消息发布到`logs`交换机而不是未命名的那个。发送的时候我们需要提供一个`routingKey，`但是它的值会被扇形交换机忽略掉。下边是`EmitLog.cs`文件：
 
 ```csharp
 using System;
@@ -238,11 +240,19 @@ class EmitLog
 
 [(EmitLog.cs source)](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/EmitLog/EmitLog.cs)
 
+[(EmitLog.cs 源文件)](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/EmitLog/EmitLog.cs)
+
 As you see, after establishing the connection we declared the exchange. This step is necessary as publishing to a non-existing exchange is forbidden.
+
+如你所见，建立连接之后，我们声明了我们的交换机。这一步是必需的，因为不允许发布消息到一个不存在的交换机。
 
 The messages will be lost if no queue is bound to the exchange yet, but that's okay for us; if no consumer is listening yet we can safely discard the message.
 
+如果尚未有队列绑定到交换机，消息会丢失掉，但是对我们来说无所谓；如果还没有消费者进行监听，我们可以安全的将消息丢弃掉。
+
 The code for ReceiveLogs.cs:
+
+`ReceiveLogs.cs`的代码：
 
 ```csharp
 using System;
@@ -287,9 +297,15 @@ class ReceiveLogs
 
 [(ReceiveLogs.cs source)](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/ReceiveLogs/ReceiveLogs.cs)
 
+[(ReceiveLogs.cs 源代码)](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/ReceiveLogs/ReceiveLogs.cs)
+
 Follow the setup instructions from [tutorial one](https://www.rabbitmq.com/tutorials/tutorial-one-dotnet.html) to generate the EmitLogs and ReceiveLogsprojects.
 
+根据 [教程一](https://www.rabbitmq.com/tutorials/tutorial-one-dotnet.html) 所介绍的步骤生成 `EmitLogs` and `ReceiveLogs`项目。
+
 If you want to save logs to a file, just open a console and type:
+
+如果你想要将日志保存到一个文件中，只需要在控制台中输入：
 
 ```bash
 cd ReceiveLogs
@@ -298,6 +314,8 @@ dotnet run > logs_from_rabbit.log
 
 If you wish to see the logs on your screen, spawn a new terminal and run:
 
+如果你希望在屏幕上看到日志记录，打开一个新的终端并运行：
+
 ```bash
 cd ReceiveLogs
 dotnet run
@@ -305,12 +323,18 @@ dotnet run
 
 And of course, to emit logs type:
 
+当然，还需要通过以下方式发送日志：
+
 ```bash
 cd EmitLog
 dotnet run
 ```
 
 Using rabbitmqctl list_bindings you can verify that the code actually creates bindings and queues as we want. With two ReceiveLogs.cs programs running you should see something like:
+
+使用`rabbitmqctl list_bindings`命令可以验证绑定和队列依照我们想要的方式正确运行与否。当有两个`ReceiveLogs.cs`程序运行的时候，你应该可以看到类似于这样的信息：
+
+
 
 ```bash
 sudo rabbitmqctl list_bindings
@@ -322,4 +346,8 @@ sudo rabbitmqctl list_bindings
 
 The interpretation of the result is straightforward: data from exchange logs goes to two queues with server-assigned names. And that's exactly what we intended.
 
+简单地对结果进行下解释：跟我们期待的一样，数据从`logs`交换机传输到两个由服务器命名的队列当中。
+
 To find out how to listen for a subset of messages, let's move on to [tutorial 4](https://www.rabbitmq.com/tutorials/tutorial-four-dotnet.html)
+
+让我们移步[教程4](https://www.rabbitmq.com/tutorials/tutorial-four-dotnet.html)来了解如何监听消息的子集。
