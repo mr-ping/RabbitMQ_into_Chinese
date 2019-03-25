@@ -28,7 +28,7 @@ To illustrate the pattern, we're going to build a simple logging system. It will
 
 In our logging system every running copy of the receiver program will get the messages. That way we'll be able to run one receiver and direct the logs to disk; and at the same time we'll be able to run another receiver and see the logs on the screen.
 
-在我们的日志系统中，每一个接收程序的拷贝都会获取到消息。通过这种方式，我们可以做到其中一个接收者用于将日志直接存储到硬盘上，同时运行的另一个接收者将日志输出到屏幕上用于查看。
+在我们的日志系统中，每一个接收程序的拷贝都会获取到消息。通过这种方式，我们可以做到让其中一个接收者将日志直接存储到硬盘上，同时运行的另一个接收者将日志输出到屏幕上用于查看。
 
 Essentially, published log messages are going to be broadcast to all the receivers.
 
@@ -40,7 +40,7 @@ Essentially, published log messages are going to be broadcast to all the receive
 
 In previous parts of the tutorial we sent and received messages to and from a queue. Now it's time to introduce the full messaging model in Rabbit.
 
-教程的上个部分中，我们通过一个队列来发送和接收消息。现在，是时候把完整的Rabbit消息模型模型介绍一下了。
+教程的上个部分里，我们通过一个队列来发送和接收消息。现在，是时候把完整的Rabbit消息模型模型介绍一下了。
 
 Let's quickly go over what we covered in the previous tutorials:
 
@@ -54,11 +54,12 @@ Let's quickly go over what we covered in the previous tutorials:
 - 一个“消费者”就是一个接收消息的用户应用程序。
 
 The core idea in the messaging model in RabbitMQ is that the producer never sends any messages directly to a queue. Actually, quite often the producer doesn't even know if a message will be delivered to any queue at all.
+
 RabbitMQ的消息模型中的核心思想就是生产者永远不会将任何消息直接发送给队列。实际上，通常情况下，生产者根本不知道它是否会将消息投送给任何一个队列。
 
 Instead, the producer can only send messages to an *exchange*. An exchange is a very simple thing. On one side it receives messages from producers and the other side it pushes them to queues. The exchange must know exactly what to do with a message it receives. Should it be appended to a particular queue? Should it be appended to many queues? Or should it get discarded. The rules for that are defined by the *exchange type*.
 
-取而代之，生产者只能将消息发送给一个*交换机*。交换机是个很简单概念。它做搜接收生产者发送的消息，右手将消息推送给队列。交换机必须明确的知道需要对接收到的消息做些什么。消息是需要追加到一个特定的队列中？是需要追加到多个队列中？还是需要被丢弃掉。*交换机类型(exchange type)*就是用来定义这种规则的。
+真正的情况是，生产者只能将消息发送给一个*交换机*。交换机是个很简单概念。它做左手收生产者发送的消息，右手就将消息推送给队列。交换机必须明确的知道需要对接收到的消息做些什么。消息是需要追加到一个特定的队列中？是需要追加到多个队列中？还是需要被丢弃掉。*交换机类型(exchange type)*就是用来定义这种规则的。
 
 ![img](https://www.rabbitmq.com/img/tutorials/exchanges.png)
 
@@ -71,12 +72,17 @@ channel.ExchangeDeclare("logs", "fanout");
 ```
 
 The fanout exchange is very simple. As you can probably guess from the name, it just broadcasts all the messages it receives to all the queues it knows. And that's exactly what we need for our logger.
+
 扇形交换机非常简单。从名字就可猜出来，它只是负责将消息广播给所有它所知道的队列。这正是我们的日志系统所需要的。
 
+> 
+>
 > #### Listing exchanges
+>
 > #### 交换机的监听
 >
 > To list the exchanges on the server you can run the ever useful rabbitmqctl:
+>
 > 想要列出服务器上的交换机，可以运行`rabbitmqctl`这个非常有用的程序：
 >
 > 
@@ -88,35 +94,40 @@ The fanout exchange is very simple. As you can probably guess from the name, it 
 > 
 >
 > In this list there will be some `amq.*` exchanges and the default (unnamed) exchange. These are created by default, but it is unlikely you'll need to use them at the moment.
-> 在此列表中，会出现一些类似于`amq.*`的交换机以及默认（未命名）交换机。这是是默认创建的，但是此刻并不需要用到它们。
+>
+> 在此列表中，会出现一些类似于`amq.*`的交换机以及默认（未命名）交换机。这些交换机是以默认方式创建的，但此刻并不需要用到它们。
 >
 > #### The default exchange
 > #### 默认交换机
 >
 > In previous parts of the tutorial we knew nothing about exchanges, but still were able to send messages to queues. That was possible because we were using a default exchange, which we identify by the empty string ("").
-> 教程的上一部分中，我们对交换机还一无所知，但是依然能将消息发送给队列。原因是我们使用了用空字符(`""`)来标示的默认交换机。
+>
+> 教程的上一部分中，我们对交换机还一无所知，但是依然能将消息发送给队列。原因是我们使用了用空字符串(`""`)来标示的默认交换机。
 >
 > Recall how we published a message before:
+>
 > 回想一下之前我们是如何来发布消息的：
-> 
+>
 > 
 >
 > ```csharp
->     var message = GetMessage(args);
->     var body = Encoding.UTF8.GetBytes(message);
->     channel.BasicPublish(exchange: "",
->                          routingKey: "hello",
->                          basicProperties: null,
->                          body: body);
+>  var message = GetMessage(args);
+>  var body = Encoding.UTF8.GetBytes(message);
+>  channel.BasicPublish(exchange: "",
+>                       routingKey: "hello",
+>                       basicProperties: null,
+>                       body: body);
 > ```
 >
 > 
 >
 > The first parameter is the name of the exchange. The empty string denotes the default or *nameless* exchange: messages are routed to the queue with the name specified by routingKey, if it exists.
-> 第一个参数就是交换机的名字。空字符串用来表示默认或者*无名*交换机：消息依据路由键（`routingKey`）所指定的名称路由到队列中，如果队列存在的话。
+>
+> 第一个参数就是交换机的名字。空字符串用来表示默认或者*无名*交换机：如果队列存在的话，消息会依据路由键（`routingKey`）所指定的名称路由到队列中。
 
 Now, we can publish to our named exchange instead:
-现在我们可以发布到命名过的交换机中了：
+
+现在我们可以对命名过的交换机执行发布操作了：
 
 ```csharp
 var message = GetMessage(args);
@@ -131,6 +142,7 @@ channel.BasicPublish(exchange: "logs",
 ## 临时队列
 
 As you may remember previously we were using queues that had specific names (remember hello and task_queue?). Being able to name a queue was crucial for us -- we needed to point the workers to the same queue. Giving a queue a name is important when you want to share the queue between producers and consumers.
+
 你可能还记得我们上次使用的是命名过的队列（还记得`hello`和`task_queue`吗？）。可以对队列进行命名对我们来说是至关重要的——我们需要将工作者指向同一个队列。当你想在多个生产者和消费者之间共享一个队列时，给队列起个名字是很重要的。
 
 But that's not the case for our logger. We want to hear about all log messages, not just a subset of them. We're also interested only in currently flowing messages not in the old ones. To solve that we need two things.
@@ -147,7 +159,7 @@ Secondly, once we disconnect the consumer the queue should be automatically dele
 
 In the .NET client, when we supply no parameters to QueueDeclare() we create a non-durable, exclusive, autodelete queue with a generated name:
 
-在.NET客户端中，当我们不给`QueueDeclare()`提供参数的时候，就创建了一个非持久化、独享的、可自动删除的拥有生成名称的队列。
+在.NET客户端中，当我们不给`QueueDeclare()`提供参数的情况下，就可以创建一个非持久化、独享的、可自动删除的拥有生成名称的队列。
 
 ```csharp
 var queueName = channel.QueueDeclare().QueueName;
@@ -169,7 +181,7 @@ At that point queueName contains a random queue name. For example it may look li
 
 We've already created a fanout exchange and a queue. Now we need to tell the exchange to send messages to our queue. That relationship between exchange and a queue is called a *binding*.
 
-我们已经创建了一个扇形交换机和一个队列。现在我么你需要告诉交换机将消息发送给我们的队列。交换机和队列之间的这种关系称为*绑定(`binding`)*。
+我们已经创建了一个扇形交换机和一个队列。现在我们需要通知交换机将消息发送给我们的队列。交换机和队列之间的这种关系称为*绑定(`binding`)*。
 
 ```csharp
 channel.QueueBind(queue: queueName,
@@ -185,7 +197,8 @@ From now on the logs exchange will append messages to our queue.
 > #### 绑定的监听
 >
 > You can list existing bindings using, you guessed it,
-> 你可以列出所有正在使用的绑定，你猜对了，
+>
+> 你可以通过以下命令列出所有正在使用的绑定，
 >
 > ```bash
 > rabbitmqctl list_bindings
@@ -244,7 +257,7 @@ class EmitLog
 
 As you see, after establishing the connection we declared the exchange. This step is necessary as publishing to a non-existing exchange is forbidden.
 
-如你所见，建立连接之后，我们声明了我们的交换机。这一步是必需的，因为不允许发布消息到一个不存在的交换机。
+如你所见，建立连接之后，我们对交换机进行了声明。这一步是必需的，因为不允许发布消息到一个不存在的交换机。
 
 The messages will be lost if no queue is bound to the exchange yet, but that's okay for us; if no consumer is listening yet we can safely discard the message.
 
@@ -332,7 +345,7 @@ dotnet run
 
 Using rabbitmqctl list_bindings you can verify that the code actually creates bindings and queues as we want. With two ReceiveLogs.cs programs running you should see something like:
 
-使用`rabbitmqctl list_bindings`命令可以验证绑定和队列依照我们想要的方式正确运行与否。当有两个`ReceiveLogs.cs`程序运行的时候，你应该可以看到类似于这样的信息：
+使用`rabbitmqctl list_bindings`命令可以验证绑定和队列是否按照我们期望的方式正确运行。当有两个`ReceiveLogs.cs`程序运行的时候，你应该可以看到类似于这样的信息：
 
 
 
@@ -350,4 +363,4 @@ The interpretation of the result is straightforward: data from exchange logs goe
 
 To find out how to listen for a subset of messages, let's move on to [tutorial 4](https://www.rabbitmq.com/tutorials/tutorial-four-dotnet.html)
 
-让我们移步[教程4](https://www.rabbitmq.com/tutorials/tutorial-four-dotnet.html)来了解如何监听消息的子集。
+接下来，我们可以移步[教程4](https://www.rabbitmq.com/tutorials/tutorial-four-dotnet.html)来了解如何监听消息的子集。
