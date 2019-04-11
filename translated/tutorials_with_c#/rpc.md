@@ -18,7 +18,7 @@ If you're having trouble going through this tutorial you can [contact us](https:
 
 
 
-  In the [second tutorial](https://www.rabbitmq.com/tutorials/tutorial-two-dotnet.html) we learned how to use *Work Queues* to distribute time-consuming tasks among multiple workers.
+In the [second tutorial](https://www.rabbitmq.com/tutorials/tutorial-two-dotnet.html) we learned how to use *Work Queues* to distribute time-consuming tasks among multiple workers.
 
 在[第二个教程](https://www.rabbitmq.com/tutorials/tutorial-two-dotnet.html)中，我们学习了如何使用*工作队列* 在多个工作者之间分配耗时任务。
 
@@ -36,7 +36,7 @@ In this tutorial we're going to use RabbitMQ to build an RPC system: a client an
 
 To illustrate how an RPC service could be used we're going to create a simple client class. It's going to expose a method named Call which sends an RPC request and blocks until the answer is received:
 
-为了说明如何使用一个RPC服务，我们创建一个简单的客户端类。它会暴露一个名为Call的方法，此方法发送一个RPC请求，然后阻塞到收到回答为止。
+为了说明如何使用一个RPC服务，我们创建一个简单的客户端类。它会暴露一个名为`Call`的方法，此方法发送一个RPC请求，然后阻塞到收到回答为止。
 
 ```csharp
 var rpcClient = new RPCClient();
@@ -95,16 +95,16 @@ channel.BasicPublish(exchange: "",
 > The AMQP 0-9-1 protocol predefines a set of 14 properties that go with a message. Most of the properties are rarely used, with the exception of the following:
 > AMQP 0-9-1 协议与定义了14个消息的属性。大部分属性很少会用到，不过以下几个例外：
 >
-> - Persistent: : Marks a message as persistent (with a value of 2) or transient (any other value). Take a look at [the second tutorial](https://www.rabbitmq.com/tutorials/tutorial-two-dotnet.html).
-> - Persistent: 标示此信息为持久的（用值为2来表示）还是暂时的（2之外的其他任何值）。具体可以去 [第二个教程](https://www.rabbitmq.com/tutorials/tutorial-two-dotnet.html) 一探究竟。
-> - DeliveryMode: those familiar with the protocol may choose to use this property instead of Persistent. They control the same thing.
-> - DeliveryMode：那些熟悉协议的人可能会选择使用这个属性，而不是Persistent。他们办的是一个事情。
-> - ContentType: Used to describe the mime-type of the encoding. For example for the often used JSON encoding it is a good practice to set this property to: application/json.
-> - ContentType：用来描述编码的mime-type。例如对于经常用到的JSON编码来说，将此属性设置为application/json是一个很好的做法。
-> - ReplyTo: Commonly used to name a callback queue.
-> - ReplyTo: 通常用来对一个回调队列进行命名。
-> - CorrelationId: Useful to correlate RPC responses with requests.
-> - CorrelationId: 用于将RPC响应和请求进行关联。
+> - `Persistent`: : Marks a message as persistent (with a value of 2) or transient (any other value). Take a look at [the second tutorial](https://www.rabbitmq.com/tutorials/tutorial-two-dotnet.html).
+> - `Persistent`: 标示此信息为持久的（用值为2来表示）还是暂时的（2之外的其他任何值）。具体可以去 [第二个教程](https://www.rabbitmq.com/tutorials/tutorial-two-dotnet.html) 一探究竟。
+> - `DeliveryMode`: those familiar with the protocol may choose to use this property instead of Persistent. They control the same thing.
+> - `DeliveryMode`：那些熟悉协议的人可能会选择使用这个属性，而不是`Persistent`。他们办的是一个事情。
+> - `ContentType`: Used to describe the mime-type of the encoding. For example for the often used JSON encoding it is a good practice to set this property to: application/json.
+> - `ContentType`：用来描述编码的mime-type。例如对于经常用到的JSON编码来说，将此属性设置为application/json是一个很好的做法。
+> - `ReplyTo`: Commonly used to name a callback queue.
+> - `ReplyTo`: 通常用来对一个回调队列进行命名。
+> - `CorrelationId`: Useful to correlate RPC responses with requests.
+> - `CorrelationId`: 用于将RPC响应和请求进行关联。
 
 ### Correlation Id
 
@@ -116,7 +116,7 @@ In the method presented above we suggest creating a callback queue for every RPC
 
 That raises a new issue, having received a response in that queue it's not clear to which request the response belongs. That's when the CorrelationId property is used. We're going to set it to a unique value for every request. Later, when we receive a message in the callback queue we'll look at this property, and based on that we'll be able to match a response with a request. If we see an unknown CorrelationId value, we may safely discard the message - it doesn't belong to our requests.
 
-这样又有一个新问题，当我们从此队列里收到一个响应的时候并不清楚它是属于哪个请求的。这就是CorrelationId属性的用途所在了。我们为每一个请求将其设置为一个唯一值。稍后，当我们从回调队列里收到一条消息的时候，就可以通过这个属性来对响应和请求进行匹配。如果我们收到的消息的CorrelationId值是未知的，那就可以安心的把它丢弃掉，因为它并不属于我们的请求。
+这样又有一个新问题，当我们从此队列里收到一个响应的时候并不清楚它是属于哪个请求的。这就是`CorrelationId`属性的用途所在了。我们为每一个请求将其设置为一个唯一值。稍后，当我们从回调队列里收到一条消息的时候，就可以通过这个属性来对响应和请求进行匹配。如果我们收到的消息的`CorrelationId`值是未知的，那就可以安心的把它丢弃掉，因为它并不属于我们的请求。
 
 You may ask, why should we ignore unknown messages in the callback queue, rather than failing with an error? It's due to a possibility of a race condition on the server side. Although unlikely, it is possible that the RPC server will die just after sending us the answer, but before sending an acknowledgment message for the request. If that happens, the restarted RPC server will process the request again. That's why on the client we must handle the duplicate responses gracefully, and the RPC should ideally be idempotent.
 
@@ -135,17 +135,21 @@ Our RPC will work like this:
 - When the Client starts up, it creates an anonymous exclusive callback queue.
 - 当客户端启动时，会创建一个匿名的独占回调队列。
 - For an RPC request, the Client sends a message with two properties: ReplyTo, which is set to the callback queue and CorrelationId, which is set to a unique value for every request.
-- 客户端发送一条带有ReplyTo和CorrelationId两个属性的消息作为一个RPC请求，ReplyTo用于设置回调队列，CorrelationId用于为每一个请求设置一个独一无二的值。
+- 客户端发送一条带有`ReplyTo`和`CorrelationId`两个属性的消息作为一个RPC请求，`ReplyTo`用于设置回调队列，`CorrelationId`用于为每一个请求设置一个独一无二的值。
 - The request is sent to an rpc_queue queue.
-- 请求被发送到一个rpc_queue队列。
+- 请求被发送到一个`rpc_queue`队列。
 - The RPC worker (aka: server) is waiting for requests on that queue. When a request appears, it does the job and sends a message with the result back to the Client, using the queue from the ReplyTo property.
-- RPC工作者（也称为服务器）等待从那个队列中接受请求。当一个请求出现的时候，他会执行任务并且通过ReplyTo 属性所提及的队列来将带有执行结果的消息发回给客户端。
+- RPC工作者（也称为服务器）等待从那个队列中接受请求。当一个请求出现的时候，他会执行任务并且通过`ReplyTo` 属性所提及的队列来将带有执行结果的消息发回给客户端。
 - The client waits for data on the callback queue. When a message appears, it checks the CorrelationId property. If it matches the value from the request it returns the response to the application.
-- 客户端从回调队列那儿等待数据。当消息出现的时候，它会检查CorrelationId属性。如果属性值跟请求相匹配，就将响应返回给应用。
+- 客户端从回调队列那儿等待数据。当消息出现的时候，它会检查`CorrelationId`属性。如果属性值跟请求相匹配，就将响应返回给应用。
 
 ## Putting it all together
 
+## 将代码整合到一起
+
 The Fibonacci task:
+
+斐波那契任务：
 
 ```csharp
 private static int fib(int n)
@@ -157,7 +161,11 @@ private static int fib(int n)
 
 We declare our fibonacci function. It assumes only valid positive integer input. (Don't expect this one to work for big numbers, and it's probably the slowest recursive implementation possible).
 
+我们定义了斐波那契函数。函数假设输入值是合法的正整数。（不要期望这个函数能作用于很大的数字，它可能是最慢的递归实现了）。
+
 The code for our RPC server [RPCServer.cs](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/RPCServer/RPCServer.cs) looks like this:
+
+RPC服务器代码：[RPCServer.cs](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/RPCServer/RPCServer.cs) 看起来像这样：
 
 ```csharp
 using System;
@@ -222,6 +230,9 @@ class RPCServer
     /// Don't expect this one to work for big numbers, and it's
     /// probably the slowest recursive implementation possible.
     /// 
+    /// 假设输入值只能是合法的正整数。
+    /// 不要期望它能服务于很大的数字，它可能是最慢的递归实现了。
+    ///
     private static int fib(int n)
     {
         if (n == 0 || n == 1)
@@ -236,11 +247,18 @@ class RPCServer
 
 The server code is rather straightforward:
 
+服务器代码很简单：
+
 - As usual we start by establishing the connection, channel and declaring the queue.
+- 跟之前一样，一开始我们建立连接、信道，并且声明队列。
 - We might want to run more than one server process. In order to spread the load equally over multiple servers we need to set the prefetchCount setting in channel.BasicQos.
+- 可能我们会希望运行多个服务器进程。为了在多个服务器间均分负载，我们需要在`channel.BasicQos`中设置`prefetchCount`。
 - We use BasicConsume to access the queue. Then we register a delivery handler in which we do the work and send the response back.
+- 我们使用`BasicConsume`去访问队列。然后我们注册一个投递处理程序，我们在这个处理程序中完成工作并发回响应。
 
 The code for our RPC client [RPCClient.cs](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/RPCClient/RPCClient.cs):
+
+RPC客户端代码 [RPCClient.cs](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/RPCClient/RPCClient.cs)：
 
 ```csharp
 using System;
@@ -323,16 +341,28 @@ public class Rpc
 
 The client code is slightly more involved:
 
+客户端代码稍显复杂：
+
 - We establish a connection and channel and declare an exclusive 'callback' queue for replies.
+- 我们创建一个连接和信道，并且声明一个独享的`callback`队列用于回复。
 - We subscribe to the 'callback' queue, so that we can receive RPC responses.
+- 我们订阅`callback`队列，这样就可以接收到RPC的响应。
 - Our Call method makes the actual RPC request.
+- 我们的`Call`方法生成实际的RPC请求。
 - Here, we first generate a unique CorrelationId number and save it - the while loop will use this value to catch the appropriate response.
+- 这里，我们首先生成一个唯一的`CorrelationId`数字并且保存起来——整个循环都会使用这个值来获取相对应的响应。
 - Next, we publish the request message, with two properties: ReplyTo and CorrelationId.
+- 接下来，我们发送带有`ReplyTo` 和 `CorrelationId`属性的请求信息。
 - At this point we can sit back and wait until the proper response arrives.
+- 此刻，我们可以坐等匹配的回应到来。
 - The while loop is doing a very simple job, for every response message it checks if the CorrelationId is the one we're looking for. If so, it saves the response.
+- 整个循环所做的工作很简单，就是检查每个响应消息，看它们是不是我们需要的那个。如果是的话就将响应保存起来。
 - Finally we return the response back to the user.
+- 最后我们将响应返回给用户。
 
 Making the Client request:
+
+生成客户端请求：
 
 ```csharp
 var rpcClient = new RPCClient();
@@ -346,9 +376,15 @@ rpcClient.Close();
 
 Now is a good time to take a look at our full example source code (which includes basic exception handling) for [RPCClient.cs](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/RPCClient/RPCClient.cs) and [RPCServer.cs](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/RPCServer/RPCServer.cs).
 
+现在我们可以看看  [RPCClient.cs](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/RPCClient/RPCClient.cs) 和 [RPCServer.cs](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/RPCServer/RPCServer.cs) 的完整的样例代码了（代码里包含了简单的异常处理）。
+
 Set up as usual (see [tutorial one](https://www.rabbitmq.com/tutorials/tutorial-one-dotnet.html)):
 
+像往常一样进行设置（见 [tutorial one](https://www.rabbitmq.com/tutorials/tutorial-one-dotnet.html)）：
+
 Our RPC service is now ready. We can start the server:
+
+RPC服务已经就绪，让我们启动它：
 
 ```bash
 cd RPCServer
@@ -358,6 +394,8 @@ dotnet run
 
 To request a fibonacci number run the client:
 
+运行客户端来请求一个斐波那契数：
+
 ```bash
 cd RPCClient
 dotnet run
@@ -366,14 +404,25 @@ dotnet run
 
 The design presented here is not the only possible implementation of a RPC service, but it has some important advantages:
 
+这里所呈现的设计方式并不是实现RPC服务的唯一方法，但是它具备一些重要的优势：
+
 - If the RPC server is too slow, you can scale up by just running another one. Try running a second RPCServer in a new console.
+- 如果RPC服务器过慢，你可以通过再运行一个服务器来进行扩展。试试在一个新的控制台中运行第二个`RPCServer`吧。
 - On the client side, the RPC requires sending and receiving only one message. No synchronous calls like QueueDeclare are required. As a result the RPC client needs only one network round trip for a single RPC request.
+- 在客户端这边，RPC只需要发送和接收一条消息。不需要类似`QueueDeclare`这样的同步调用。因此RPC客户端在一次RPC请求中，只需要进行一次网络的往返。
 
 Our code is still pretty simplistic and doesn't try to solve more complex (but important) problems, like:
 
+我们的代码依旧很简洁，并且只去尝试解决重要的而不是更加复杂的问题，比如：
+
 - How should the client react if there are no servers running?
+- 如果没有服务器运行，客户端是不是要做出反应？
 - Should a client have some kind of timeout for the RPC?
+- 客户端是不是需要有针对RPC的某种超时设置？
 - If the server malfunctions and raises an exception, should it be forwarded to the client?
+- 如果服务器发生故障，抛出异常，是不是需要转发给客户端？
 - Protecting against invalid incoming messages (eg checking bounds, type) before processing.
+- 在进行处理之前防止无效的消息传入（比如检查边界、类型）。
 
 > If you want to experiment, you may find the [management UI](https://www.rabbitmq.com/management.html) useful for viewing the queues.
+> 如果你想进行一下实验。会发现[管理界面](https://www.rabbitmq.com/management.html) 对于浏览队列来说用处很大。
