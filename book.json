@@ -16,7 +16,9 @@
             "瓶先生": "http://mr-ping.com"
         }
     },
-    "plugins": ["ga"],
+    "plugins": [
+        "ga",
+        "expandable-chapters-interactive"],
     "pluginsConfig": {
         "ga": {
             "token": "UA-120619814-1"
