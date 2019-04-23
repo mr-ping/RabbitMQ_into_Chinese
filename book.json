@@ -18,7 +18,8 @@
     },
     "plugins": [
         "ga",
-        "expandable-chapters-interactive"],
+        "expandable-chapters-interactive",
+        "-lunr", "-search", "search-plus"],
     "pluginsConfig": {
         "ga": {
             "token": "UA-120619814-1"
