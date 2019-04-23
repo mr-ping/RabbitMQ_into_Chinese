@@ -13,7 +13,7 @@
             "weibo": null
         },
         "sidebar": {
-            "Mr Ping": "http://www.mr-ping.com"
+            "瓶先生": "http://mr-ping.com"
         }
     },
     "plugins": ["ga"],
