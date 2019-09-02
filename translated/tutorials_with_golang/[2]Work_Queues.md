@@ -1,4 +1,4 @@
->原文：[Work Queues](https://www.rabbitmq.com/tutorials/tutorial-two-python.html)  
+>原文：[Work Queues](https://www.rabbitmq.com/tutorials/tutorial-two-go.html)  
 >状态：待校对  
 >翻译：[Bingjian-Zhu](https://bingjian-zhu.github.io/) 
 >校对：
