@@ -7,7 +7,9 @@
 
 **（使用Go客户端）**
 
-在上篇教程中，我们搭建了一个工作队列，每个任务只分发给一个工作者（worker）。在本篇教程中，我们要做的跟之前完全不一样 —— 分发一个消息给多个消费者（consumers）。这种模式被称为“发布／订阅”。
+<!--more-->
+
+在[上篇教程](https://bingjian-zhu.github.io/2019/09/01/RabbitMQ%E6%95%99%E7%A8%8B%EF%BC%88%E8%AF%91%EF%BC%89-Work-queues/)中，我们搭建了一个工作队列，每个任务只分发给一个工作者（worker）。在本篇教程中，我们要做的跟之前完全不一样 —— 分发一个消息给多个消费者（consumers）。这种模式被称为“发布／订阅”。
 
 为了描述这种模式，我们将会构建一个简单的日志系统。它包括两个程序——第一个程序负责发送日志消息，第二个程序负责获取消息并输出内容。
 
@@ -45,21 +47,14 @@ err = ch.ExchangeDeclare(
 )
 ```
 
-扇型交换机（fanout）很简单，你可能从名字上就能猜测出来，它把消息发送给它所知道的所有队列。这正是我们的日志系统所需要的。
+`fanout`交换机很简单，你可能从名字上就能猜测出来，它把消息发送给它所知道的所有队列。这正是我们的日志系统所需要的。
 
 > #### 交换器列表
-
-> `rabbitmqctl`能够列出服务器上所有的交换器：
-
->     sudo rabbitmqctl list_exchanges
-
-
+> `rabbitmqctl`能够列出服务器上所有的交换器：`sudo rabbitmqctl list_exchanges`
 > 这个列表中有一些叫做`amq.*`的匿名交换器。这些都是默认创建的，不过这时候你还不需要使用他们。
 
 > #### 匿名的交换器
-
-> 前面的教程中我们对交换机一无所知，但仍然能够发送消息到队列中。因为我们使用了命名为空字符串("")默认的交换机。
-
+> 前面的教程中我们对交换机一无所知，但仍然能够发送消息到队列中。因为我们使用了命名为空字符串("")的匿名交换机。
 > 回想我们之前是如何发布一则消息：
 >  
 	 err = ch.Publish(
@@ -71,7 +66,7 @@ err = ch.ExchangeDeclare(
 	    ContentType: "text/plain",
 	    Body:        []byte(body),
 	})
-> exchange参数就是交换机的名称。空字符串代表默认或者匿名交换机：消息将会根据指定的routing_key分发到指定的队列。
+> exchange参数就是交换机的名称。空字符串代表默认或者匿名交换机，消息将会根据指定的`routing_key`分发到指定的队列。
 
 现在，我们就可以发送消息到一个具名交换机了：
 
@@ -128,7 +123,7 @@ q, err := ch.QueueDeclare(
 
 ![](http://www.rabbitmq.com/img/tutorials/bindings.png)
 
-我们已经创建了一个扇型交换机（fanout）和一个队列。现在我们需要告诉交换机如何发送消息给我们的队列。交换器和队列之间的联系我们称之为绑定（binding）。
+我们已经创建了一个`fanout`交换机和一个队列。现在我们需要告诉交换机如何发送消息给我们的队列。交换器和队列之间的联系我们称之为绑定（binding）。
 
 ```go
 err = ch.QueueBind(
@@ -143,14 +138,13 @@ err = ch.QueueBind(
 现在，logs交换机将会把消息添加到我们的队列中。
 
 > #### 绑定（binding）列表
-
 > 你可以使用`rabbitmqctl list_bindings` 列出所有现存的绑定。
 
 ## 代码整合
 
 ![](http://www.rabbitmq.com/img/tutorials/python-three-overall.png)
 
-发布日志消息的程序看起来和之前的没有太大区别。最重要的改变就是我们把消息发送给logs交换机而不是匿名交换机。在发送的时候我们需要提供`routing_key`参数，但是它的值`fanout` exchange忽略。以下是`emit_log.go`：
+发布日志消息的程序看起来和之前的没有太大区别。最重要的改变就是我们把消息发送给logs交换机而不是匿名交换机。在发送的时候我们需要提供`routing_key`参数，但可以忽略它的值。以下是`emit_log.go`：
 
 ```go
 package main
@@ -328,4 +322,5 @@ func main() {
 如何监听消息的子集呢？让我们移步教程4
 
 > 原文：[Publish/Subscribe](https://www.rabbitmq.com/tutorials/tutorial-three-go.html)
+
 

@@ -3,11 +3,13 @@
 >翻译：[Bingjian-Zhu](https://bingjian-zhu.github.io/) 
 >校对：
 
-##为什么需要topic交换机？
+## 为什么需要topic交换机？
 
 **（使用Go客户端）**
 
-上一篇教程，我们改进了我们的日志系统。我们使用`direct`交换机替代了`fanout`交换机，从只能盲目的广播消息改进为有可能选择性的接收日志。
+<!--more-->
+
+[上一篇教程](https://bingjian-zhu.github.io/2019/09/01/RabbitMQ%E6%95%99%E7%A8%8B%EF%BC%88%E8%AF%91%EF%BC%89-Routing/)，我们改进了我们的日志系统。我们使用`direct`交换机替代了`fanout`交换机，从只能盲目的广播消息改进为有可能选择性的接收日志。
 
 尽管`direct`交换机能够改善我们的系统，但是它也有它的限制 —— 没办法基于多个标准执行路由操作。
 
@@ -17,11 +19,11 @@
 
 为了实现这个目的，接下来我们学习如何使用另一种更复杂的交换机 —— topic交换机。
 
-##topic交换机
+## topic交换机
 
-发送到`topic`交换机的消息不可以携带随意`routing_key`，它的路由键必须是一个由`.`分隔开的词语列表。这些单词随便是什么都可以，但是最好是跟携带它们的消息有关系的词汇。以下是几个推荐的例子："stock.usd.nyse", "nyse.vmw", "quick.orange.rabbit"。词语的个数可以随意，但是不要超过255字节。
+发送到`topic`交换机的消息不可以携带随意`routing_key`，它的routing_key必须是一个由`.`分隔开的词语列表。这些单词随便是什么都可以，但是最好是跟携带它们的消息有关系的词汇。以下是几个推荐的例子："stock.usd.nyse", "nyse.vmw", "quick.orange.rabbit"。词语的个数可以随意，但是不要超过255字节。
 
-绑定键也必须拥有同样的格式。主题交换机背后的逻辑跟直连交换机很相似 —— 一个携带着特定路由键的消息会被主题交换机投递给绑定键与之想匹配的队列。但是它的绑定键和路由键有两个特殊应用方式：
+binding key也必须拥有同样的格式。`topic`交换机背后的逻辑跟`direct`交换机很相似 —— 一个携带着特定routing_key的消息会被topic交换机投递给绑定键与之想匹配的队列。但是它的binding key和routing_key有两个特殊应用方式：
 
  - `*` (星号) 用来表示一个单词.
  - `#` (井号) 用来表示任意数量（零个或多个）单词。
@@ -44,19 +46,16 @@
 
 但是另一方面，即使 `"lazy.orange.male.rabbit"` 有四个单词，他还是会匹配最后一个绑定，并且被投递到第二个队列中。
 
->####Topic交换机
-
+>#### Topic交换机
 >Topic交换机是很强大的，它可以表现出跟其他交换机类似的行为
+>当一个队列的binding key为 "#"（井号） 的时候，这个队列将会无视消息的routing key，接收所有的消息。
+>当 `*` (星号) 和 `#` (井号) 这两个特殊字符都未在binding key中出现的时候，此时Topic交换机就拥有的direct交换机的行为。
 
->当一个队列的绑定键为 "#"（井号） 的时候，这个队列将会无视消息的路由键，接收所有的消息。
+## 代码整合
 
->当 `*` (星号) 和 `#` (井号) 这两个特殊字符都未在绑定键中出现的时候，此时主题交换机就拥有的直连交换机的行为。
+接下来我们会将Topic交换机应用到我们的日志系统中。在开始工作前，我们假设日志的routing key由两个单词组成，routing key看起来是这样的：`<facility>.<severity>`
 
-##组合在一起
-
-接下来我们会将主题交换机应用到我们的日志系统中。在开始工作前，我们假设日志的路由键由两个单词组成，路由键看起来是这样的：`<facility>.<severity>`
-
-代码跟[上一篇教程]()差不多。
+代码跟[上一篇教程](https://bingjian-zhu.github.io/2019/09/01/RabbitMQ%E6%95%99%E7%A8%8B%EF%BC%88%E8%AF%91%EF%BC%89-Routing/)差不多。
 
 emit_log_topic.go的代码：
 
@@ -243,13 +242,12 @@ func main() {
 
 执行上边命令试试看效果吧。另外，上边代码不会对路由键和绑定键做任何假设，所以你可以在命令中使用超过两个路由键参数。
 
-###如果你现在还没被搞晕，想想下边问题:
- - 绑定键为 `*` 的队列会取到一个路由键为空的消息吗？  
- - 绑定键为 `#.*` 的队列会获取到一个名为`..`的路由键的消息吗？它会取到一个路由键为单个单词的消息吗？  
+### 如果你现在还没被搞晕，想想下边问题:
+ - 绑定键为 `*` 的队列会取到一个routing key为空的消息吗？  
+ - 绑定键为 `#.*` 的队列会获取到一个名为`..`的路由键的消息吗？它会取到一个routing key为单个单词的消息吗？  
  - `a.*.#` 和 `a.#`的区别在哪儿？
 
 （完整代码参见[emit_logs_topic.go](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/go/emit_log_topic.go) and [receive_logs_topic.go](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/go/receive_logs_topic.go))
 
-移步至[教程 6]() 学习RPC。
 
 > 原文：[Topics](https://www.rabbitmq.com/tutorials/tutorial-five-go.html)

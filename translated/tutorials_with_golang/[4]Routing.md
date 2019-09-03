@@ -7,6 +7,8 @@
 
 **（使用Go客户端）**
 
+<!--more-->
+
 在前面的教程中，我们实现了一个简单的日志系统。可以把日志消息广播给多个接收者。
 
 本篇教程中我们打算新增一个功能 —— 使得它能够只订阅消息的一个字集。例如，我们只需要把严重的错误日志信息写入日志文件（存储到磁盘），但同时仍然把所有的日志信息输出到控制台中
@@ -26,7 +28,7 @@ err = ch.QueueBind(
 
 绑定（binding）是指交换机（exchange）和队列（queue）的关系。可以简单理解为：这个队列（queue）对这个交换机（exchange）的消息感兴趣。
 
-绑定的时候可以带上一个额外的routing_key参数。为了避免与`Channel.Publish`的参数混淆，我们把它叫做绑定键`binding key`。以下是如何创建一个带绑定键的绑定。
+绑定的时候可以带上一个额外的`routing_key`参数。为了避免与`Channel.Publish`的参数混淆，我们把它叫做绑定键`binding key`。以下是如何创建一个带绑定键的绑定。
 
 ```go
 err = ch.QueueBind(
@@ -51,15 +53,15 @@ err = ch.QueueBind(
 
 ![](http://www.rabbitmq.com/img/tutorials/direct-exchange.png)
 
-在这个场景中，我们可以看到直连交换机 X和两个队列进行了绑定。第一个队列使用orange作为绑定键，第二个队列有两个绑定，一个使用black作为绑定键，另外一个使用green。
+在这个场景中，我们可以看到`direct`交换机 X和两个队列进行了绑定。第一个队列使用`orange`作为binding key，第二个队列有两个绑定，一个使用`black`作为binding key，另外一个使用`green`。
 
-这样以来，当路由键为orange的消息发布到交换机，就会被路由到队列Q1。路由键为black或者green的消息就会路由到Q2。其他的所有消息都将会被丢弃。
+这样以来，当消息发布到routing key为`orange`的交换机时，就会被路由到队列Q1。routing key为`black`或者`green`的消息就会路由到Q2。其他的所有消息都将会被丢弃。
 
 ## 多个绑定（Multiple bindings）
 
 ![](http://www.rabbitmq.com/img/tutorials/direct-exchange-multiple.png)
 
-多个队列使用相同的绑定键是合法的。这个例子中，我们可以添加一个X和Q1之间的绑定，使用black绑定键。这样一来，直连交换机就和扇型交换机的行为一样，会将消息广播到所有匹配的队列。带有black路由键的消息会同时发送到Q1和Q2。
+多个队列使用相同的binding key是合法的。这个例子中，我们可以添加一个X和Q1之间的绑定，使用`black`为binding key。这样一来，`direct`交换机就和`fanout`交换机的行为一样，会将消息广播到所有匹配的队列。带有routing key为`black`的消息会同时发送到Q1和Q2。
 
 ## 发送日志
 
@@ -105,7 +107,7 @@ err = ch.Publish(
 })
 ```
 
-我们先假设“severity”的值是info、warning、error中的一个。
+我们假设日志等级的值是info、warning、error中的一个。
 
 ## 订阅
 
