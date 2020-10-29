@@ -23,3 +23,4 @@
         - [远程过程调用](tutorials_with_python/[6]RPC.md)
     - C#
         - [Hello World](tutorials_with_csharp/HelloWorld.md)
+        - [工作队列](tutorials_with_csharp/WorkQueue.md)
