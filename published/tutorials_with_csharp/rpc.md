@@ -1,3 +1,6 @@
+>原文：[Remote procedure call RPC](https://www.rabbitmq.com/tutorials/tutorial-six-dotnet.html)
+>翻译：[mr-ping](http://rabbitmq.mr-ping.com)  
+
 ## 远程过程调用(RPC)
 
 ### (使用 .NET 客户端)

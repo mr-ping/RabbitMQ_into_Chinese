@@ -1,3 +1,6 @@
+>原文：[Topics](https://www.rabbitmq.com/tutorials/tutorial-five-dotnet.html)  
+>翻译：[mr-ping](http://rabbitmq.mr-ping.com)  
+
 > ### 前置条件
 
 > 本教程假设RabbitMQ已经[安装](http://www.rabbitmq.com/download.html)在你本机的 (5672)端口。如果你使用了不同的主机、端口或者凭证，连接设置就需要作出一些对应的调整。

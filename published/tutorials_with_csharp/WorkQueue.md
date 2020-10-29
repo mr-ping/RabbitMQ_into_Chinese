@@ -1,4 +1,5 @@
-
+>原文：[Work Queues](https://www.rabbitmq.com/tutorials/tutorial-two-dotnet.html)  
+>翻译：[mr-ping](http://rabbitmq.mr-ping.com)  
 
 > ### 前置条件
 
