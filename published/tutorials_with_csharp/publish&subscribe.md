@@ -1,5 +1,6 @@
 >原文：[Publish/Subscribe](https://www.rabbitmq.com/tutorials/tutorial-three-dotnet.html)  
 >翻译：[mr-ping](http://rabbitmq.mr-ping.com)  
+![CC-BY-SA](https://upload.wikimedia.org/wikipedia/commons/d/d0/CC-BY-SA_icon.svg)
 
 > ### 前置条件
 > 
