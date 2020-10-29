@@ -1,9 +1,5 @@
->原文：[Remote procedure call RPC](https://www.rabbitmq.com/tutorials/tutorial-six-dotnet.html)
+>原文：[Remote procedure call RPC](https://www.rabbitmq.com/tutorials/tutorial-six-dotnet.html)  
 >翻译：[mr-ping](http://rabbitmq.mr-ping.com)  
-
-## 远程过程调用(RPC)
-
-### (使用 .NET 客户端)
 
 > ### 前置条件
 
@@ -12,6 +8,11 @@
 > ### 如何获得帮助
 
 > 如果你在使用本教程的过程中遇到了麻烦，你可以通过邮件列表来[联系我们](https://groups.google.com/forum/#!forum/rabbitmq-users)。
+
+## 远程过程调用(RPC)
+
+### (使用 .NET 客户端)
+
 
 在[第二个教程](https://www.rabbitmq.com/tutorials/tutorial-two-dotnet.html)中，我们学习了如何使用*工作队列* 在多个工作者之间分配耗时任务。
 
