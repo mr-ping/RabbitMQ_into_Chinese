@@ -1,0 +1,842 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>工作队列 · RabbitMQ in Chinese</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.0-pre.14">
+        <meta name="author" content="Ping <yuanta11@gmil.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="publish&subscribe.html" />
+    
+    
+    <link rel="prev" href="HelloWorld.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://mr-ping.com" target="_blank" class="custom-link">瓶先生</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    RabbitMQ中文文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    RabbitMQ简介
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../description.html">
+            
+                <a href="../description.html">
+            
+                    
+                    RabbitMQ能为你做些什么？
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    安装
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../installation/Installing_on_Debian_Ubuntu.html">
+            
+                <a href="../installation/Installing_on_Debian_Ubuntu.html">
+            
+                    
+                    在Debian及Ubuntu系统上进行安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../installation/Platforms_supported_by_RabbitMQ.html">
+            
+                <a href="../installation/Platforms_supported_by_RabbitMQ.html">
+            
+                    
+                    RabbitMQ所支持的平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    AMQP协议
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../AMQP/AMQP_0-9-1_Model_Explained.html">
+            
+                <a href="../AMQP/AMQP_0-9-1_Model_Explained.html">
+            
+                    
+                    AMQP 0.9.1 模型解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../AMQP/amqp-0-9-1-quickref.html">
+            
+                <a href="../AMQP/amqp-0-9-1-quickref.html">
+            
+                    
+                    AMQP 0.9.1 快速参考指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    应用教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    Python版
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../tutorials_with_python/[1]Hello_World.html">
+            
+                <a href="../tutorials_with_python/[1]Hello_World.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../tutorials_with_python/[2]Work_Queues.html">
+            
+                <a href="../tutorials_with_python/[2]Work_Queues.html">
+            
+                    
+                    工作队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../tutorials_with_python/[3]Publish_Subscribe.html">
+            
+                <a href="../tutorials_with_python/[3]Publish_Subscribe.html">
+            
+                    
+                    发布/订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../tutorials_with_python/[4]Routing.html">
+            
+                <a href="../tutorials_with_python/[4]Routing.html">
+            
+                    
+                    路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../tutorials_with_python/[5]Topics.html">
+            
+                <a href="../tutorials_with_python/[5]Topics.html">
+            
+                    
+                    主题交换机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.6" data-path="../tutorials_with_python/[6]RPC.html">
+            
+                <a href="../tutorials_with_python/[6]RPC.html">
+            
+                    
+                    远程过程调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    C#
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="HelloWorld.html">
+            
+                <a href="HelloWorld.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2.2" data-path="WorkQueue.html">
+            
+                <a href="WorkQueue.html">
+            
+                    
+                    工作队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="publish&subscribe.html">
+            
+                <a href="publish&subscribe.html">
+            
+                    
+                    发布/订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="routing.html">
+            
+                <a href="routing.html">
+            
+                    
+                    路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.5" data-path="Topics.html">
+            
+                <a href="Topics.html">
+            
+                    
+                    主题交换机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.6" data-path="rpc.html">
+            
+                <a href="rpc.html">
+            
+                    
+                    远程过程调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >工作队列</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<h3 id="&#x524D;&#x7F6E;&#x6761;&#x4EF6;">&#x524D;&#x7F6E;&#x6761;&#x4EF6;</h3>
+<p>&#x672C;&#x6559;&#x7A0B;&#x5047;&#x8BBE;RabbitMQ&#x5DF2;&#x7ECF;<a href="http://www.rabbitmq.com/download.html" _target="blank">&#x5B89;&#x88C5;</a>&#x5728;&#x4F60;&#x672C;&#x673A;&#x7684; (5672)&#x7AEF;&#x53E3;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x4E3B;&#x673A;&#x3001;&#x7AEF;&#x53E3;&#x6216;&#x8005;&#x51ED;&#x8BC1;&#xFF0C;&#x8FDE;&#x63A5;&#x8BBE;&#x7F6E;&#x5C31;&#x9700;&#x8981;&#x4F5C;&#x51FA;&#x4E00;&#x4E9B;&#x5BF9;&#x5E94;&#x7684;&#x8C03;&#x6574;&#x3002;</p>
+<h3 id="&#x5982;&#x4F55;&#x83B7;&#x5F97;&#x5E2E;&#x52A9;">&#x5982;&#x4F55;&#x83B7;&#x5F97;&#x5E2E;&#x52A9;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x5728;&#x4F7F;&#x7528;&#x672C;&#x6559;&#x7A0B;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x9047;&#x5230;&#x4E86;&#x9EBB;&#x70E6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x90AE;&#x4EF6;&#x5217;&#x8868;&#x6765;<a href="https://groups.google.com/forum/#!forum/rabbitmq-users" _target="blank">&#x8054;&#x7CFB;&#x6211;&#x4EEC;</a>&#x3002;</p>
+</blockquote>
+<h2 id="&#x5DE5;&#x4F5C;&#x961F;&#x5217;">&#x5DE5;&#x4F5C;&#x961F;&#x5217;</h2>
+<h3 id="&#x4F7F;&#x7528;-net-&#x5BA2;&#x6237;&#x7AEF;">(&#x4F7F;&#x7528; .NET &#x5BA2;&#x6237;&#x7AEF;)</h3>
+<p><img src="http://www.rabbitmq.com/img/tutorials/python-two.png" alt="img"></p>
+<p>&#x5728;<a href="http://www.rabbitmq.com/tutorials/tutorial-one-dotnet.html" _target="blank">&#x7B2C;&#x4E00;&#x4E2A;&#x6559;&#x7A0B;</a>&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5199;&#x4E86;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5411;&#x547D;&#x540D;&#x8FC7;&#x7684;&#x961F;&#x5217;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x5E76;&#x4E14;&#x4ECE;&#x5176;&#x4E2D;&#x8FDB;&#x884C;&#x63A5;&#x6536;&#x7684;&#x7A0B;&#x5E8F;&#x3002;&#x672C;&#x6559;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5728;&#x591A;&#x4E2A;&#x5DE5;&#x4F5C;&#x8005;&#xFF08;worker&#xFF09;&#x5F53;&#x4E2D;&#x5206;&#x53D1;&#x8017;&#x65F6;&#x4EFB;&#x52A1;&#x7684;<em>&#x5DE5;&#x4F5C;&#x961F;&#x5217;&#xFF08;work queue&#xFF09;</em>&#x3002;</p>
+<p>&#x5DE5;&#x4F5C;&#x961F;&#x5217; (&#x4EA6;&#x79F0; <em>&#x4EFB;&#x52A1;&#x961F;&#x5217;</em>) &#x7684;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x5728;&#x4E8E;&#x907F;&#x514D;&#x8D44;&#x6E90;&#x5BC6;&#x96C6;&#x578B;&#x4EFB;&#x52A1;&#x88AB;&#x7ACB;&#x5373;&#x6267;&#x884C;&#xFF0C;&#x6267;&#x884C;&#x8005;&#x9700;&#x8981;&#x4E00;&#x76F4;&#x7B49;&#x5230;&#x5B83;&#x5B8C;&#x6210;&#x4E3A;&#x6B62;&#x3002;&#x76F8;&#x53CD;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5B89;&#x6392;&#x4EFB;&#x52A1;&#x7A0D;&#x540E;&#x5B8C;&#x6210;&#x3002;&#x6211;&#x4EEC;&#x5C06;<em>&#x4EFB;&#x52A1;</em>&#x5C01;&#x88C5;&#x6210;&#x4E00;&#x6761;&#x6D88;&#x606F;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x53D1;&#x9001;&#x7ED9;&#x961F;&#x5217;&#x3002;&#x8FD0;&#x884C;&#x4E8E;&#x540E;&#x53F0;&#x7684;&#x5DE5;&#x4F5C;&#x8005;&#x7A0B;&#x5E8F;&#x4F1A;&#x4E22;&#x5F03;&#x6389;&#x8FD9;&#x6761;&#x6D88;&#x606F;&#xFF08;&#x8BD1;&#x8005;&#x6CE8;&#xFF1A;&#x9996;&#x5148;&#x4ECE;&#x5DE5;&#x4F5C;&#x961F;&#x5217;&#x4E2D;&#x63A5;&#x6536;&#x5230;&#x6D88;&#x606F;&#xFF09;&#xFF0C;&#x5E76;&#x6700;&#x7EC8;&#x5C06;&#x6D88;&#x606F;&#x6240;&#x63CF;&#x8FF0;&#x7684;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x5B8C;&#x3002;&#x5F53;&#x4F60;&#x6709;&#x591A;&#x4E2A;&#x5DE5;&#x4F5C;&#x8005;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4EFB;&#x52A1;&#x4F1A;&#x5728;&#x591A;&#x4E2A;&#x5DE5;&#x4F5C;&#x8005;&#x4E2D;&#x5171;&#x4EAB;&#x3002;</p>
+<p>&#x7531;&#x4E8E;web&#x5E94;&#x7528;&#x65E0;&#x6CD5;&#x5728;&#x4E00;&#x4E2A;&#x77ED;&#x6682;&#x7684;HTTP&#x8BF7;&#x6C42;&#x8FC7;&#x7A0B;&#x4E2D;&#x6267;&#x884C;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x79CD;&#x6982;&#x5FF5;&#x5728;web&#x5E94;&#x7528;&#x5F53;&#x4E2D;&#x7279;&#x522B;&#x6709;&#x7528;&#x3002;</p>
+<h2 id="&#x51C6;&#x5907;">&#x51C6;&#x5907;</h2>
+<p>&#x4E0A;&#x4E2A;&#x6559;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53D1;&#x9001;&#x4E86;&#x4E00;&#x6761;&quot;Hellow World!&quot;&#x6D88;&#x606F;&#x3002;&#x8FD9;&#x6B21;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x8868;&#x793A;&#x590D;&#x6742;&#x4EFB;&#x52A1;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x7531;&#x4E8E;&#x6211;&#x4EEC;&#x5F53;&#x4E0B;&#x6CA1;&#x6709;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x4E8E;&#x56FE;&#x7247;&#x7F29;&#x653E;&#xFF0C;&#x6E32;&#x67D3;pdf&#x6587;&#x4EF6;&#x8FD9;&#x79CD;&#x771F;&#x5B9E;&#x7684;&#x4EFB;&#x52A1;&#x9700;&#x8981;&#x6267;&#x884C;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x4F1A;&#x4F7F;&#x7528;<code>Thread.Sleep()</code>&#x51FD;&#x6570;&#x6765;&#x4F2A;&#x9020;&#x7E41;&#x5FD9;&#x7684;&#x72B6;&#x6001;&#xFF08;&#x8981;&#x4F7F;&#x7528;&#x6709;&#x5173;&#x7EBF;&#x7A0B;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x6587;&#x4EF6;&#x9876;&#x90E8;&#x6DFB;&#x52A0;<code>using System.Threading;</code>&#x7684;&#x5F15;&#x7528;&#xFF09;&#x3002;&#x6211;&#x4EEC;&#x4F1A;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x4F7F;&#x7528;&#x82F1;&#x6587;&#x53E5;&#x53F7;&#x6765;&#x8868;&#x793A;&#x4EFB;&#x52A1;&#x7684;&#x590D;&#x6742;&#x7A0B;&#x5EA6;&#x3002;&#x6BCF;&#x4E00;&#x4E2A;&#x70B9;&#x4EE3;&#x8868;&#x4E00;&#x79D2;&#x949F;&#x7684;&#x5DE5;&#x4F5C;&#x8005;&#x6267;&#x884C;&#x7684;&#x8017;&#x65F6;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x4F2A;&#x9020;&#x7684;&#x4EFB;&#x52A1;&#x7528;<code>Hello...</code>&#x6765;&#x8868;&#x793A;&#xFF0C;&#x90A3;&#x5C31;&#x610F;&#x5473;&#x7740;&#x5B83;&#x4F1A;&#x8017;&#x65F6;&#x4E09;&#x79D2;&#x949F;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4F1A;&#x7A0D;&#x5FAE;&#x6539;&#x9020;&#x4E0B;&#x4E0A;&#x4E2A;&#x6559;&#x7A0B;&#x4E2D;&#x7684;<em>Send</em>&#x7A0B;&#x5E8F;&#xFF0C;&#x4EE5;&#x4FBF;&#x4E8E;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x53D1;&#x9001;&#x4EFB;&#x610F;&#x4E00;&#x6761;&#x6D88;&#x606F;&#x3002;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x4F1A;&#x7528;&#x6765;&#x4E3A;&#x6211;&#x4EEC;&#x7684;&#x5DE5;&#x4F5C;&#x961F;&#x5217;&#x89C4;&#x5212;&#x4EFB;&#x52A1;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x79F0;&#x5B83;&#x4E3A;<code>NewTask</code>&#xFF1A;</p>
+<p>&#x8DDF; <a href="http://www.rabbitmq.com/tutorials/tutorial-one-dotnet.html" _target="blank">&#x6559;&#x7A0B;&#x4E00;</a> &#x4E00;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x751F;&#x6210;&#x4E24;&#x4E2A;&#x9879;&#x76EE;&#xFF1A;</p>
+<pre><code class="lang-powershell">dotnet new console --name NewTask
+mv NewTask/Program.cs NewTask/NewTask.cs
+dotnet new console --name Worker
+mv Worker/Program.cs Worker/Worker.cs
+cd NewTask
+dotnet add package RabbitMQ.Client
+dotnet restore
+cd ../Worker
+dotnet add package RabbitMQ.Client
+dotnet restore
+var message = GetMessage(args);
+var body = Encoding.UTF8.GetBytes(message);
+
+var properties = channel.CreateBasicProperties();
+properties.Persistent = true;
+
+channel.BasicPublish(exchange: <span class="hljs-string">&quot;&quot;</span>,
+                     routingKey: <span class="hljs-string">&quot;task_queue&quot;</span>,
+                     basicProperties: properties,
+                     body: body);
+</code></pre>
+<p>&#x4E3A;&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#x83B7;&#x53D6;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x63D0;&#x4F9B;&#x4E00;&#x4E9B;&#x5E2E;&#x52A9;&#xFF1A;</p>
+<pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">string</span> <span class="hljs-title">GetMessage</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+</span>{
+    <span class="hljs-keyword">return</span> ((args.Length &gt; <span class="hljs-number">0</span>) ? <span class="hljs-keyword">string</span>.Join(<span class="hljs-string">&quot; &quot;</span>, args) : <span class="hljs-string">&quot;Hello World!&quot;</span>);
+}
+</code></pre>
+<p>&#x4E0A;&#x4E00;&#x7248; <em>Receive.cs</em> &#x811A;&#x672C;&#x4E5F;&#x9700;&#x8981;&#x505A;&#x4E00;&#x4E9B;&#x4FEE;&#x6539;&#xFF1A;&#x5B83;&#x9700;&#x8981;&#x4E3A;&#x6D88;&#x606F;&#x4F53;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x82F1;&#x6587;&#x53E5;&#x53F7;&#x4F2A;&#x9020;&#x4E00;&#x79D2;&#x949F;&#x7684;&#x5DE5;&#x4F5C;&#x8017;&#x65F6;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5C06;&#x5B83;&#x62F7;&#x8D1D;&#x5230;<code>worker</code>&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x5E76;&#x505A;&#x5982;&#x4E0B;&#x4FEE;&#x6539;&#xFF1A;</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">var</span> consumer = <span class="hljs-keyword">new</span> EventingBasicConsumer(channel);
+consumer.Received += (model, ea) =&gt;
+{
+    <span class="hljs-keyword">var</span> body = ea.Body;
+    <span class="hljs-keyword">var</span> message = Encoding.UTF8.GetString(body);
+    Console.WriteLine(<span class="hljs-string">&quot; [x] Received {0}&quot;</span>, message);
+
+    <span class="hljs-keyword">int</span> dots = message.Split(<span class="hljs-string">&apos;.&apos;</span>).Length - <span class="hljs-number">1</span>;
+    Thread.Sleep(dots * <span class="hljs-number">1000</span>);
+
+    Console.WriteLine(<span class="hljs-string">&quot; [x] Done&quot;</span>);
+};
+channel.BasicConsume(queue: <span class="hljs-string">&quot;task_queue&quot;</span>, autoAck: <span class="hljs-keyword">true</span>, consumer: consumer);
+</code></pre>
+<p>&#x4F2A;&#x9020;&#x4EFB;&#x52A1;&#x6765;&#x6A21;&#x62DF;&#x6267;&#x884C;&#x65F6;&#x95F4;&#xFF1A;</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">int</span> dots = message.Split(<span class="hljs-string">&apos;.&apos;</span>).Length - <span class="hljs-number">1</span>;
+Thread.Sleep(dots * <span class="hljs-number">1000</span>);
+</code></pre>
+<h2 id="&#x5FAA;&#x73AF;&#x8C03;&#x5EA6;">&#x5FAA;&#x73AF;&#x8C03;&#x5EA6;</h2>
+<p>&#x4F7F;&#x7528;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x6240;&#x5E26;&#x6765;&#x7684;&#x4E00;&#x4E2A;&#x9AD8;&#x7EA7;&#x7279;&#x6027;&#x662F;&#x53EF;&#x4EE5;&#x7528;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5F0F;&#x8BA9;&#x5DE5;&#x4F5C;&#x5177;&#x6709;&#x5E76;&#x884C;&#x6267;&#x884C;&#x7684;&#x80FD;&#x529B;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5EFA;&#x7ACB;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x963B;&#x585E;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x90A3;&#x53EA;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x6DFB;&#x52A0;&#x66F4;&#x591A;&#x7684;&#x5DE5;&#x4F5C;&#x8005;&#x5C31;&#x53EF;&#x4EE5;&#x7B80;&#x4FBF;&#x7684;&#x8FDB;&#x884C;&#x6269;&#x5C55;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x540C;&#x4E8B;&#x8FD0;&#x884C;&#x4E24;&#x4E2A;<code>Worker</code>&#x5B9E;&#x4F8B;&#x3002;&#x5B83;&#x4EEC;&#x90FD;&#x53EF;&#x4EE5;&#x4ECE;&#x961F;&#x5217;&#x4E2D;&#x83B7;&#x53D6;&#x6D88;&#x606F;&#x3002;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x770B;&#x770B;&#x5B83;&#x4EEC;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;&#x3002;</p>
+<p>&#x4F60;&#x9700;&#x8981;&#x6253;&#x5F00;&#x4E09;&#x4E2A;&#x63A7;&#x5236;&#x53F0;&#x3002;&#x4E24;&#x4E2A;&#x7528;&#x4E8E;&#x8FD0;&#x884C;<code>Worker</code>&#x7A0B;&#x5E8F;&#x3002;&#x5B83;&#x4EEC;&#x5206;&#x522B;&#x4EE3;&#x8868;&#x4E24;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#xFF0C;&#x547D;&#x540D;&#x4E3A;C1&#x548C;C2&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># shell 1</span>
+<span class="hljs-built_in">cd</span> Worker
+dotnet run
+<span class="hljs-comment"># =&gt; [*] Waiting for messages. To exit press CTRL+C</span>
+<span class="hljs-comment"># shell 2</span>
+<span class="hljs-built_in">cd</span> Worker
+dotnet run
+<span class="hljs-comment"># =&gt; [*] Waiting for messages. To exit press CTRL+C</span>
+</code></pre>
+<p>&#x7B2C;&#x4E09;&#x4E2A;&#x63A7;&#x5236;&#x53F0;&#x7528;&#x6765;&#x53D1;&#x5E03;&#x65B0;&#x4EFB;&#x52A1;&#x3002;&#x5F00;&#x542F;&#x4E86;&#x6D88;&#x8D39;&#x8005;&#x4E4B;&#x540E;&#xFF0C;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x53D1;&#x5E03;&#x65B0;&#x6D88;&#x606F;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># shell 3</span>
+<span class="hljs-built_in">cd</span> NewTask
+dotnet run <span class="hljs-string">&quot;First message.&quot;</span>
+dotnet run <span class="hljs-string">&quot;Second message..&quot;</span>
+dotnet run <span class="hljs-string">&quot;Third message...&quot;</span>
+dotnet run <span class="hljs-string">&quot;Fourth message....&quot;</span>
+dotnet run <span class="hljs-string">&quot;Fifth message.....&quot;</span>
+</code></pre>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x770B;&#x6295;&#x9001;&#x7ED9;&#x5DE5;&#x4F5C;&#x8005;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># shell 1</span>
+<span class="hljs-comment"># =&gt; [*] Waiting for messages. To exit press CTRL+C</span>
+<span class="hljs-comment"># =&gt; [x] Received &apos;First message.&apos;</span>
+<span class="hljs-comment"># =&gt; [x] Received &apos;Third message...&apos;</span>
+<span class="hljs-comment"># =&gt; [x] Received &apos;Fifth message.....&apos;</span>
+<span class="hljs-comment"># shell 2</span>
+<span class="hljs-comment"># =&gt; [*] Waiting for messages. To exit press CTRL+C</span>
+<span class="hljs-comment"># =&gt; [x] Received &apos;Second message..&apos;</span>
+<span class="hljs-comment"># =&gt; [x] Received &apos;Fourth message....&apos;</span>
+</code></pre>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;RabbitMQ&#x4F1A;&#x5C06;&#x6D88;&#x606F;&#x4F9D;&#x6B21;&#x53D1;&#x9001;&#x7ED9;&#x4E0B;&#x4E00;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#x3002;&#x5E73;&#x5747;&#x6BCF;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#x4F1A;&#x83B7;&#x5F97;&#x540C;&#x6837;&#x6570;&#x91CF;&#x7684;&#x6D88;&#x606F;&#x3002;&#x8FD9;&#x79CD;&#x6D88;&#x606F;&#x5206;&#x53D1;&#x65B9;&#x6CD5;&#x88AB;&#x79F0;&#x4E3A;&#x5FAA;&#x73AF;&#x6CD5;&#xFF08;round-robin&#xFF09;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x53D1;&#x5E03;&#x4E09;&#x6761;&#x4EE5;&#x4E0A;&#x7684;&#x6D88;&#x606F;&#x6765;&#x5C1D;&#x8BD5;&#x4E00;&#x4E0B;&#x3002;</p>
+<h2 id="&#x6D88;&#x606F;&#x786E;&#x8BA4;">&#x6D88;&#x606F;&#x786E;&#x8BA4;</h2>
+<p>&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x53EF;&#x80FD;&#x4F1A;&#x8017;&#x65F6;&#x597D;&#x51E0;&#x79D2;&#x949F;&#x3002;&#x4F60;&#x4E5F;&#x8BB8;&#x4F1A;&#x597D;&#x5947;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#x5728;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x8017;&#x65F6;&#x4EFB;&#x52A1;&#x65F6;&#x53EA;&#x5B8C;&#x6210;&#x4E86;&#x90E8;&#x5206;&#x5DE5;&#x4F5C;&#x5C31;&#x6302;&#x6389;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x3002;&#x5728;&#x6211;&#x4EEC;&#x5F53;&#x524D;&#x4EE3;&#x7801;&#x4E0B;&#xFF0C;&#x4E00;&#x65E6;RabbitMQ&#x5C06;&#x6D88;&#x606F;&#x6295;&#x9001;&#x7ED9;&#x6D88;&#x8D39;&#x8005;&#x540E;&#xFF0C;&#x5B83;&#x4F1A;&#x7ACB;&#x5373;&#x5C06;&#x6D88;&#x606F;&#x6807;&#x793A;&#x4E3A;&#x5220;&#x9664;&#x72B6;&#x6001;&#x3002;&#x8FD9;&#x4E2A;&#x6848;&#x4F8B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5C06;&#x5DE5;&#x4F5C;&#x8005;&#x6740;&#x6389;&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x4E22;&#x5931;&#x5B83;&#x6B63;&#x5728;&#x5904;&#x7406;&#x7684;&#x6D88;&#x606F;&#x3002;&#x5982;&#x679C;&#x6709;&#x5176;&#x4ED6;&#x5DF2;&#x7ECF;&#x8C03;&#x5EA6;&#x7ED9;&#x8FD9;&#x4E2A;&#x5DE5;&#x4F5C;&#x8005;&#x7684;&#x6D88;&#x606F;&#x6CA1;&#x6709;&#x5B8C;&#x6210;&#xFF0C;&#x4E5F;&#x4F1A;&#x4E00;&#x8D77;&#x4E22;&#x5931;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x4E0D;&#x60F3;&#x4E22;&#x5931;&#x4EFB;&#x4F55;&#x4EFB;&#x52A1;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x8005;&#x6302;&#x6389;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x4EFB;&#x52A1;&#x4F1A;&#x6295;&#x9001;&#x7ED9;&#x5176;&#x4ED6;&#x7684;&#x5DE5;&#x4F5C;&#x8005;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x786E;&#x4FDD;&#x6D88;&#x606F;&#x6C38;&#x4E0D;&#x4E22;&#x5931;&#xFF0C;RabbitMQ&#x652F;&#x6301; <a href="http://www.rabbitmq.com/confirms.html" _target="blank">&#x6D88;&#x606F; <em>&#x786E;&#x8BA4;</em></a>&#x3002;&#x6D88;&#x8D39;&#x8005;&#x56DE;&#x9001;&#x4E00;&#x4E2A;&#x786E;&#x8BA4;&#x4FE1;&#x53F7;&#x2014;&#x2014;ack(nowledgement)&#x7ED9;RabbitMQ&#xFF0C;&#x544A;&#x8BC9;&#x5B83;&#x4E00;&#x6761;&#x6307;&#x5B9A;&#x7684;&#x6D88;&#x606F;&#x5DF2;&#x7ECF;&#x63A5;&#x6536;&#x5230;&#x5E76;&#x4E14;&#x5904;&#x7406;&#x5B8C;&#x6BD5;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x5C06;&#x6D88;&#x606F;&#x5220;&#x9664;&#x6389;&#x4E86;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#x5728;&#x6CA1;&#x6709;&#x56DE;&#x9001;&#x786E;&#x8BA4;&#x4FE1;&#x53F7;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6302;&#x6389;&#x4E86;&#xFF08;&#x6D88;&#x8D39;&#x8005;&#x7684;&#x4FE1;&#x9053;&#x5173;&#x95ED;&#xFF0C;&#x8FDE;&#x63A5;&#x5173;&#x95ED;&#x6216;&#x8005;TCP&#x8FDE;&#x63A5;&#x5DF2;&#x7ECF;&#x4E22;&#x5931;&#xFF09;&#xFF0C;RabbitMQ&#x4F1A;&#x7406;&#x89E3;&#x4E3A;&#x6B64;&#x6761;&#x6D88;&#x606F;&#x6CA1;&#x6709;&#x88AB;&#x5904;&#x7406;&#x5B8C;&#x6210;&#xFF0C;&#x5E76;&#x4E14;&#x91CD;&#x65B0;&#x5C06;&#x5176;&#x653E;&#x5165;&#x961F;&#x5217;&#x3002;&#x5982;&#x679C;&#x6070;&#x65F6;&#x6709;&#x5176;&#x4ED6;&#x6D88;&#x8D39;&#x8005;&#x5728;&#x7EBF;&#xFF0C;&#x8FD9;&#x6761;&#x6D88;&#x606F;&#x4F1A;&#x7ACB;&#x5373;&#x88AB;&#x6295;&#x9001;&#x7ED9;&#x5176;&#x4ED6;&#x7684;&#x6D88;&#x8D39;&#x8005;&#x3002;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x786E;&#x5B9A;&#x5373;&#x4F7F;&#x6709;&#x5DE5;&#x4F5C;&#x8005;&#x7531;&#x4E8E;&#x4E8B;&#x6545;&#x6302;&#x6389;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x6D88;&#x606F;&#x4E22;&#x5931;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<p>RabbitMQ&#x4E0D;&#x4F1A;&#x6709;&#x4EFB;&#x4F55;&#x6D88;&#x606F;&#x8D85;&#x65F6;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x6D88;&#x8D39;&#x8005;&#x6302;&#x6389;&#x4E4B;&#x540E;RabbitMQ&#x624D;&#x4F1A;&#x5C06;&#x6B64;&#x6D88;&#x606F;&#x6295;&#x9001;&#x7ED9;&#x5176;&#x4ED6;&#x6D88;&#x8D39;&#x8005;&#x3002;&#x6240;&#x4EE5;&#x5373;&#x4F7F;&#x6D88;&#x606F;&#x5904;&#x7406;&#x9700;&#x8981;&#x8BDD;&#x8D39;&#x8D85;&#x957F;&#x7684;&#x662F;&#x65F6;&#x95F4;&#x4E5F;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x3002;</p>
+<p><a href="http://www.rabbitmq.com/confirms.html" _target="blank">&#x624B;&#x52A8;&#x8FDB;&#x884C;&#x6D88;&#x606F;&#x786E;&#x8BA4;</a> &#x9ED8;&#x8BA4;&#x4E3A;&#x5F00;&#x542F;&#x72B6;&#x6001;&#x3002;&#x4E0A;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x660E;&#x786E;&#x5730;&#x901A;&#x8FC7;&#x5C06;autoAck (&quot;&#x81EA;&#x52A8;&#x786E;&#x8BA4;&#x6A21;&#x5F0F;&quot;)&#x8BBE;&#x7F6E;&#x4E3A;true&#x5C06;&#x5176;&#x5173;&#x95ED;&#x6389;&#x4E86;&#x3002;&#x8FD9;&#x6B21;&#x6211;&#x4EEC;&#x79FB;&#x9664;&#x6389;&#x8FD9;&#x4E2A;&#x6807;&#x5FD7;&#xFF0C;&#x4E00;&#x65E6;&#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#xFF0C;&#x624B;&#x52A8;&#x4ECE;&#x5DE5;&#x4F5C;&#x8005;&#x5F53;&#x4E2D;&#x53D1;&#x9001;&#x5408;&#x9002;&#x7684;&#x786E;&#x8BA4;&#x6807;&#x5FD7;&#x3002;</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">var</span> consumer = <span class="hljs-keyword">new</span> EventingBasicConsumer(channel);
+consumer.Received += (model, ea) =&gt;
+{
+    <span class="hljs-keyword">var</span> body = ea.Body;
+    <span class="hljs-keyword">var</span> message = Encoding.UTF8.GetString(body);
+    Console.WriteLine(<span class="hljs-string">&quot; [x] Received {0}&quot;</span>, message);
+
+    <span class="hljs-keyword">int</span> dots = message.Split(<span class="hljs-string">&apos;.&apos;</span>).Length - <span class="hljs-number">1</span>;
+    Thread.Sleep(dots * <span class="hljs-number">1000</span>);
+
+    Console.WriteLine(<span class="hljs-string">&quot; [x] Done&quot;</span>);
+
+    channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: <span class="hljs-keyword">false</span>);
+};
+channel.BasicConsume(queue: <span class="hljs-string">&quot;task_queue&quot;</span>, autoAck: <span class="hljs-keyword">false</span>, consumer: consumer);
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x672C;&#x4EE3;&#x7801;&#xFF0C;&#x5373;&#x4F7F;&#x4F60;&#x5728;&#x5B83;&#x8FD0;&#x884C;&#x65F6;&#x4F7F;&#x7528; CTRL+C&#x6740;&#x6389;&#x5DE5;&#x4F5C;&#x8005;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x6709;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;&#x4E22;&#x5931;&#x3002;&#x7A0D;&#x540E;&#xFF0C;&#x6302;&#x6389;&#x7684;&#x5DE5;&#x4F5C;&#x8005;&#x5F53;&#x4E2D;&#x672A;&#x8FDB;&#x884C;&#x786E;&#x8BA4;&#x7684;&#x6D88;&#x606F;&#x4F1A;&#x88AB;&#x91CD;&#x65B0;&#x6295;&#x9001;&#x3002;</p>
+<p>&#x786E;&#x8BA4;&#x4FE1;&#x53F7;&#x5FC5;&#x987B;&#x5728;&#x6536;&#x5230;&#x6295;&#x9001;&#x7684;&#x540C;&#x4E00;&#x4E2A;&#x4FE1;&#x9053;&#x4E0A;&#x53D1;&#x9001;&#x3002;&#x5C1D;&#x8BD5;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x4FE1;&#x9053;&#x4E0A;&#x53D1;&#x9001;&#x786E;&#x8BA4;&#x4FE1;&#x53F7;&#x4F1A;&#x5F15;&#x53D1;&#x4FE1;&#x9053;&#x7EA7;&#x522B;&#x7684;&#x534F;&#x8BAE;&#x5F02;&#x5E38;&#x3002; <a href="http://www.rabbitmq.com/confirms.html" _target="blank">&#x786E;&#x8BA4;&#x884C;&#x4E3A;&#x7684;&#x6587;&#x6863;&#x6307;&#x5357;</a> &#x91CC;&#x6709;&#x66F4;&#x591A;&#x4ECB;&#x7ECD;&#x3002;</p>
+<blockquote>
+<h4 id="&#x5FD8;&#x8BB0;&#x8FDB;&#x884C;&#x786E;&#x8BA4;">&#x5FD8;&#x8BB0;&#x8FDB;&#x884C;&#x786E;&#x8BA4;</h4>
+<p>&#x5FD8;&#x8BB0;&#x4F7F;&#x7528;<code>BasicAck</code>&#x662F;&#x4E00;&#x4E2A;&#x5E38;&#x89C1;&#x7684;&#x9519;&#x8BEF;&#x3002;&#x867D;&#x7136;&#x662F;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x4F46;&#x662F;&#x540E;&#x679C;&#x4E25;&#x91CD;&#x3002;&#x6D88;&#x606F;&#x4F1A;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x9000;&#x51FA;&#x540E;&#x91CD;&#x65B0;&#x6295;&#x9001;&#xFF08;&#x5C31;&#x50CF;&#x662F;&#x968F;&#x673A;&#x8FDB;&#x884C;&#x7684;&#x91CD;&#x65B0;&#x6295;&#x9001;&#xFF09;&#xFF0C;&#x4F46;&#x662F;&#x7531;&#x4E8E;RabbitMQ&#x65E0;&#x6CD5;&#x91CA;&#x653E;&#x4EFB;&#x4F55;&#x672A;&#x7ECF;&#x786E;&#x8BA4;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x5185;&#x5B58;&#x5360;&#x7528;&#x4F1A;&#x8D8A;&#x6765;&#x8D8A;&#x4E25;&#x91CD;&#x3002;</p>
+<p>&#x60F3;&#x8981;&#x5BF9;&#x8FD9;&#x79CD;&#x9519;&#x8BEF;&#x8FDB;&#x884C;&#x8C03;&#x8BD5;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>rabbitmqctl</code>&#x5C06;&#x201C;&#x672A;&#x7ECF;&#x786E;&#x8BA4;&#x7684;&#x6D88;&#x606F;&#x201D;&#xFF08;<code>messages_unacknowledged</code>&#xFF09;&#x5B57;&#x6BB5;&#x6253;&#x5370;&#x51FA;&#x6765;</p>
+<pre><code class="lang-bash">sudo rabbitmqctl list_queues name messages_ready messages_unacknowledged
+</code></pre>
+<p>On Windows, drop the sudo:</p>
+<p>&#x5728;Windows&#x4E2D;&#xFF0C;&#x4E0D;&#x9700;&#x8981;sudo:</p>
+<pre><code class="lang-bash">rabbitmqctl.bat list_queues name messages_ready messages_unacknowledged
+</code></pre>
+</blockquote>
+<h2 id="&#x6D88;&#x606F;&#x6301;&#x4E45;&#x5316;">&#x6D88;&#x606F;&#x6301;&#x4E45;&#x5316;</h2>
+<p>&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B66;&#x8FC7;&#x4E86;&#x5982;&#x4F55;&#x8BA9;&#x4EFB;&#x52A1;&#x5728;&#x6D88;&#x8D39;&#x8005;&#x5373;&#x4F7F;&#x6302;&#x6389;&#x7684;&#x60C5;&#x51B5;&#x4E5F;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#x3002;&#x4F46;&#x6211;&#x4EEC;&#x7684;&#x4EFB;&#x52A1;&#x4ECD;&#x6709;&#x53EF;&#x80FD;&#x5728;RabbitMQ&#x670D;&#x52A1;&#x5668;&#x505C;&#x673A;&#x7684;&#x65F6;&#x5019;&#x4E22;&#x5931;&#x6389;&#x3002;</p>
+<p>&#x5F53;RabbitMQ&#x9000;&#x51FA;&#x6216;&#x5D29;&#x6E83;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5FD8;&#x8BB0;&#x6389;&#x6240;&#x6709;&#x7684;&#x961F;&#x5217;&#xFF0C;&#x9664;&#x975E;&#x4F60;&#x544A;&#x8BC9;&#x4ED6;&#x4E0D;&#x8981;&#x8FD9;&#x4E48;&#x505A;&#x3002;&#x5982;&#x679C;&#x60F3;&#x8981;&#x786E;&#x4FDD;&#x6D88;&#x606F;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x505A;&#x4E24;&#x4EF6;&#x4E8B;&#xFF0C;&#x5C06;&#x961F;&#x5217;&#x548C;&#x6D88;&#x606F;&#x90FD;&#x6807;&#x793A;&#x6210;&#x6301;&#x4E45;&#x5316;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x786E;&#x4FDD;RabbitMQ&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x5C06;&#x961F;&#x5217;&#x4E22;&#x5931;&#x3002;&#x4E3A;&#x4E86;&#x8FBE;&#x5230;&#x6B64;&#x76EE;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528;<em>durable</em>&#x6765;&#x5C06;&#x5176;&#x6301;&#x4E45;&#x5316;&#x3002;</p>
+<pre><code class="lang-csharp">channel.QueueDeclare(queue: <span class="hljs-string">&quot;hello&quot;</span>,
+                     durable: <span class="hljs-keyword">true</span>,
+                     exclusive: <span class="hljs-keyword">false</span>,
+                     autoDelete: <span class="hljs-keyword">false</span>,
+                     arguments: <span class="hljs-keyword">null</span>);
+</code></pre>
+<p>&#x867D;&#x7136;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x672C;&#x8EAB;&#x662F;&#x6B63;&#x786E;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x5728;&#x6211;&#x4EEC;&#x5F53;&#x524D;&#x7684;&#x914D;&#x7F6E;&#x4E2D;&#x5E76;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#x3002;&#x539F;&#x56E0;&#x662F;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;<code>hello</code>&#x7684;&#x975E;&#x6301;&#x4E45;&#x5316;&#x961F;&#x5217;&#x3002;RabbitMQ&#x4E0D;&#x5141;&#x8BB8;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x53C2;&#x6570;&#x53BB;&#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x961F;&#x5217;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x7A0B;&#x5E8F;&#x5C1D;&#x8BD5;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x8BDD;&#xFF0C;&#x4F1A;&#x6536;&#x5230;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x3002; &#x4F46;&#x662F;&#x6709;&#x4E00;&#x4E2A;&#x5FEB;&#x6377;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x2014;&#x2014;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x4E0D;&#x91CD;&#x540D;&#x7684;&#x961F;&#x5217;&#xFF0C;&#x4F8B;&#x5982;<code>task_queue</code>:</p>
+<pre><code class="lang-csharp">channel.QueueDeclare(queue: <span class="hljs-string">&quot;task_queue&quot;</span>,
+                     durable: <span class="hljs-keyword">true</span>,
+                     exclusive: <span class="hljs-keyword">false</span>,
+                     autoDelete: <span class="hljs-keyword">false</span>,
+                     arguments: <span class="hljs-keyword">null</span>);
+</code></pre>
+<p>&#x6B64;<code>QueueDeclare</code>&#x7684;&#x6539;&#x53D8;&#x9700;&#x8981;&#x5E94;&#x7528;&#x5230;&#x751F;&#x4EA7;&#x8005;&#x548C;&#x6D88;&#x8D39;&#x8005;&#x4E24;&#x4EFD;&#x4EE3;&#x7801;&#x5F53;&#x4E2D;&#x3002;</p>
+<p>&#x5F53;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x786E;&#x8BA4;&#x5373;&#x4F7F;RabbitMQ&#x91CD;&#x542F;&#xFF0C;&#x6211;&#x4EEC;&#x7684;<code>task_queue</code>&#x961F;&#x5217;&#x4E5F;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;<code>IBasicProperties.SetPersistent</code>&#x8BBE;&#x7F6E;&#x4E3A;<code>true</code>&#xFF0C;&#x7528;&#x6765;&#x5C06;&#x6211;&#x4EEC;&#x7684;&#x6D88;&#x606F;&#x6807;&#x793A;&#x6210;&#x6301;&#x4E45;&#x5316;&#x7684;&#x3002;</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">var</span> properties = channel.CreateBasicProperties();
+properties.Persistent = <span class="hljs-keyword">true</span>;
+</code></pre>
+<blockquote>
+<h4 id="&#x6D88;&#x606F;&#x6301;&#x4E45;&#x5316;&#x7684;&#x6CE8;&#x91CA;">&#x6D88;&#x606F;&#x6301;&#x4E45;&#x5316;&#x7684;&#x6CE8;&#x91CA;</h4>
+<p>&#x5C06;&#x6D88;&#x606F;&#x6807;&#x793A;&#x4E3A;&#x6301;&#x4E45;&#x5316;&#x5E76;&#x4E0D;&#x80FD;&#x5B8C;&#x5168;&#x4FDD;&#x8BC1;&#x6D88;&#x606F;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#x3002;&#x5C3D;&#x7BA1;&#x5B83;&#x4F1A;&#x544A;&#x8BC9;RabbitMQ&#x5C06;&#x6D88;&#x606F;&#x5B58;&#x50A8;&#x5230;&#x786C;&#x76D8;&#x4E0A;&#xFF0C;&#x4F46;&#x662F;&#x5728;RabbitMQ&#x63A5;&#x6536;&#x5230;&#x6D88;&#x606F;&#x5E76;&#x5C06;&#x5176;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#x4E24;&#x4E2A;&#x884C;&#x4E3A;&#x4E4B;&#x95F4;&#x4ECD;&#x65E7;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x671F;&#x3002;&#x540C;&#x6837;&#x7684;&#xFF0C;RabbitMQ&#x4E5F;&#x4E0D;&#x4F1A;&#x5BF9;&#x6BCF;&#x4E00;&#x6761;&#x6D88;&#x606F;&#x6267;&#x884C;<code>fsync(2)</code>&#xFF0C;&#x6240;&#x4EE5;&#x6D88;&#x606F;&#x83B7;&#x53D6;&#x53EA;&#x662F;&#x5B58;&#x5230;&#x4E86;&#x7F13;&#x5B58;&#x4E4B;&#x4E2D;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x786C;&#x76D8;&#x4E0A;&#x3002;&#x867D;&#x7136;&#x6301;&#x4E45;&#x5316;&#x7684;&#x4FDD;&#x8BC1;&#x4E0D;&#x5F3A;&#xFF0C;&#x4F46;&#x662F;&#x5E94;&#x5BF9;&#x6211;&#x4EEC;&#x7B80;&#x5355;&#x7684;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x5DF2;&#x7ECF;&#x8DB3;&#x591F;&#x4E86;&#x3002;&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x66F4;&#x5F3A;&#x7684;&#x4FDD;&#x8BC1;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<a href="https://www.rabbitmq.com/confirms.html" _target="blank">publisher confirms</a>.</p>
+</blockquote>
+<h2 id="&#x516C;&#x5E73;&#x8C03;&#x5EA6;">&#x516C;&#x5E73;&#x8C03;&#x5EA6;</h2>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x6CE8;&#x610F;&#x5230;&#x4E86;&#xFF0C;&#x8C03;&#x5EA6;&#x4F9D;&#x7167;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x7684;&#x65B9;&#x5F0F;&#x8FD0;&#x884C;&#x3002;&#x4F8B;&#x5982;&#x5728;&#x6709;&#x4E24;&#x4E2A;&#x5DE5;&#x4F5C;&#x8005;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5F53;&#x6240;&#x6709;&#x7684;&#x5947;&#x6570;&#x4EFB;&#x52A1;&#x90FD;&#x5F88;&#x7E41;&#x91CD;&#x800C;&#x6240;&#x6709;&#x7684;&#x5076;&#x6570;&#x4EFB;&#x52A1;&#x90FD;&#x5F88;&#x8F7B;&#x677E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x8005;&#x4F1A;&#x4E00;&#x76F4;&#x5904;&#x4E8E;&#x5FD9;&#x788C;&#x4E4B;&#x4E2D;&#x800C;&#x53E6;&#x4E00;&#x4E2A;&#x51E0;&#x4E4E;&#x65E0;&#x4E8B;&#x53EF;&#x505A;&#x3002;RabbitMQ&#x5E76;&#x4E0D;&#x4F1A;&#x5BF9;&#x6B64;&#x6709;&#x4EFB;&#x4F55;&#x5BDF;&#x89C9;&#xFF0C;&#x4ECD;&#x65E7;&#x4F1A;&#x5E73;&#x5747;&#x5206;&#x914D;&#x6D88;&#x606F;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x53D1;&#x751F;&#x7684;&#x539F;&#x56E0;&#x662F;&#x7531;&#x4E8E;&#x5F53;&#x6709;&#x6D88;&#x606F;&#x8FDB;&#x5165;&#x961F;&#x5217;&#x65F6;&#xFF0C;RabbitMQ&#x53EA;&#x8D1F;&#x8D23;&#x5C06;&#x6D88;&#x606F;&#x8C03;&#x5EA6;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x68C0;&#x67E5;&#x67D0;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#x6709;&#x591A;&#x5C11;&#x672A;&#x7ECF;&#x786E;&#x8BA4;&#x7684;&#x6D88;&#x606F;&#x3002;&#x5B83;&#x53EA;&#x662F;&#x76F2;&#x76EE;&#x7684;&#x5C06;&#x7B2C;n&#x4E2A;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x7ED9;&#x7B2C;n&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#x800C;&#x5DF2;&#x3002;</p>
+<p><img src="http://www.rabbitmq.com/img/tutorials/prefetch-count.png" alt="img"></p>
+<p>&#x8981;&#x6539;&#x53D8;&#x8FD9;&#x79CD;&#x884C;&#x4E3A;&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;<code>BasicQos</code>&#x65B9;&#x6CD5;&#x4E2D;&#x8BBE;&#x7F6E;<code>prefetchCount = 1</code>&#x3002;&#x8FD9;&#x6837;&#x4F1A;&#x544A;&#x8BC9;RabbitMQ&#x4E00;&#x6B21;&#x4E0D;&#x8981;&#x7ED9;&#x540C;&#x4E00;&#x4E2A;worker&#x63D0;&#x4F9B;&#x591A;&#x4E8E;&#x4E00;&#x6761;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x8BDD;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x5728;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x8005;&#x8FD8;&#x6CA1;&#x6709;&#x5904;&#x7406;&#x5B8C;&#x6D88;&#x606F;&#xFF0C;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x786E;&#x8BA4;&#x6807;&#x5FD7;&#x4E4B;&#x524D;&#xFF0C;&#x4E0D;&#x8981;&#x518D;&#x7ED9;&#x5B83;&#x8C03;&#x5EA6;&#x65B0;&#x7684;&#x6D88;&#x606F;&#x3002;&#x53D6;&#x800C;&#x4EE3;&#x4E4B;&#xFF0C;&#x5B83;&#x4F1A;&#x5C06;&#x6D88;&#x606F;&#x8C03;&#x5EA6;&#x7ED9;&#x4E0B;&#x4E00;&#x4E2A;&#x4E0D;&#x518D;&#x7E41;&#x5FD9;&#x7684;&#x5DE5;&#x4F5C;&#x8005;&#x3002;</p>
+<pre><code class="lang-csharp">channel.BasicQos(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-keyword">false</span>);
+</code></pre>
+<blockquote>
+<p>If all the workers are busy, your queue can fill up. You will want to keep an eye on that, and maybe add more workers, or have some other strategy.</p>
+</blockquote>
+<h2 id="&#x6574;&#x5408;&#x5230;&#x4E00;&#x8D77;">&#x6574;&#x5408;&#x5230;&#x4E00;&#x8D77;</h2>
+<p>&#x6700;&#x7EC8;&#x7684;<code>NewTask.cs</code> &#x7C7B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> RabbitMQ.Client;
+<span class="hljs-keyword">using</span> System.Text;
+
+<span class="hljs-keyword">class</span> <span class="hljs-title">NewTask</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+    </span>{
+        <span class="hljs-keyword">var</span> factory = <span class="hljs-keyword">new</span> ConnectionFactory() { HostName = <span class="hljs-string">&quot;localhost&quot;</span> };
+        <span class="hljs-keyword">using</span>(<span class="hljs-keyword">var</span> connection = factory.CreateConnection())
+        <span class="hljs-keyword">using</span>(<span class="hljs-keyword">var</span> channel = connection.CreateModel())
+        {
+            channel.QueueDeclare(queue: <span class="hljs-string">&quot;task_queue&quot;</span>,
+                                 durable: <span class="hljs-keyword">true</span>,
+                                 exclusive: <span class="hljs-keyword">false</span>,
+                                 autoDelete: <span class="hljs-keyword">false</span>,
+                                 arguments: <span class="hljs-keyword">null</span>);
+
+            <span class="hljs-keyword">var</span> message = GetMessage(args);
+            <span class="hljs-keyword">var</span> body = Encoding.UTF8.GetBytes(message);
+
+            <span class="hljs-keyword">var</span> properties = channel.CreateBasicProperties();
+            properties.Persistent = <span class="hljs-keyword">true</span>;
+
+            channel.BasicPublish(exchange: <span class="hljs-string">&quot;&quot;</span>,
+                                 routingKey: <span class="hljs-string">&quot;task_queue&quot;</span>,
+                                 basicProperties: properties,
+                                 body: body);
+            Console.WriteLine(<span class="hljs-string">&quot; [x] Sent {0}&quot;</span>, message);
+        }
+
+        Console.WriteLine(<span class="hljs-string">&quot; Press [enter] to exit.&quot;</span>);
+        Console.ReadLine();
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">string</span> <span class="hljs-title">GetMessage</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+    </span>{
+        <span class="hljs-keyword">return</span> ((args.Length &gt; <span class="hljs-number">0</span>) ? <span class="hljs-keyword">string</span>.Join(<span class="hljs-string">&quot; &quot;</span>, args) : <span class="hljs-string">&quot;Hello World!&quot;</span>);
+    }
+}
+</code></pre>
+<p><a href="https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/NewTask/NewTask.cs" _target="blank">(NewTask.cs &#x6E90;&#x4EE3;&#x7801;)</a></p>
+<p>&#x6211;&#x4EEC;&#x7684; <code>Worker.cs</code>&#xFF1A;</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> RabbitMQ.Client;
+<span class="hljs-keyword">using</span> RabbitMQ.Client.Events;
+<span class="hljs-keyword">using</span> System.Text;
+<span class="hljs-keyword">using</span> System.Threading;
+
+<span class="hljs-keyword">class</span> <span class="hljs-title">Worker</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">var</span> factory = <span class="hljs-keyword">new</span> ConnectionFactory() { HostName = <span class="hljs-string">&quot;localhost&quot;</span> };
+        <span class="hljs-keyword">using</span>(<span class="hljs-keyword">var</span> connection = factory.CreateConnection())
+        <span class="hljs-keyword">using</span>(<span class="hljs-keyword">var</span> channel = connection.CreateModel())
+        {
+            channel.QueueDeclare(queue: <span class="hljs-string">&quot;task_queue&quot;</span>,
+                                 durable: <span class="hljs-keyword">true</span>,
+                                 exclusive: <span class="hljs-keyword">false</span>,
+                                 autoDelete: <span class="hljs-keyword">false</span>,
+                                 arguments: <span class="hljs-keyword">null</span>);
+
+            channel.BasicQos(prefetchSize: <span class="hljs-number">0</span>, prefetchCount: <span class="hljs-number">1</span>, global: <span class="hljs-keyword">false</span>);
+
+            Console.WriteLine(<span class="hljs-string">&quot; [*] Waiting for messages.&quot;</span>);
+
+            <span class="hljs-keyword">var</span> consumer = <span class="hljs-keyword">new</span> EventingBasicConsumer(channel);
+            consumer.Received += (model, ea) =&gt;
+            {
+                <span class="hljs-keyword">var</span> body = ea.Body;
+                <span class="hljs-keyword">var</span> message = Encoding.UTF8.GetString(body);
+                Console.WriteLine(<span class="hljs-string">&quot; [x] Received {0}&quot;</span>, message);
+
+                <span class="hljs-keyword">int</span> dots = message.Split(<span class="hljs-string">&apos;.&apos;</span>).Length - <span class="hljs-number">1</span>;
+                Thread.Sleep(dots * <span class="hljs-number">1000</span>);
+
+                Console.WriteLine(<span class="hljs-string">&quot; [x] Done&quot;</span>);
+
+                channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: <span class="hljs-keyword">false</span>);
+            };
+            channel.BasicConsume(queue: <span class="hljs-string">&quot;task_queue&quot;</span>,
+                                 autoAck: <span class="hljs-keyword">false</span>,
+                                 consumer: consumer);
+
+            Console.WriteLine(<span class="hljs-string">&quot; Press [enter] to exit.&quot;</span>);
+            Console.ReadLine();
+        }
+    }
+}
+</code></pre>
+<p><a href="https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/Worker/Worker.cs" _target="blank">(Worker.cs &#x6E90;&#x4EE3;&#x7801;)</a></p>
+<p>&#x4F7F;&#x7528;&#x6D88;&#x606F;&#x786E;&#x8BA4;&#x548C;<code>BasicQos</code>&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x961F;&#x5217;&#x3002;&#x6301;&#x4E45;&#x5316;&#x9009;&#x9879;&#x53EF;&#x4EE5;&#x4F7F;&#x5F97;&#x4EFB;&#x52A1;&#x5373;&#x4F7F;&#x5728;RabbitMQ&#x91CD;&#x542F;&#x540E;&#x4E5F;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#x3002;</p>
+<p>&#x6709;&#x5173;<code>IModel</code>&#x65B9;&#x6CD5;&#x548C;<code>IBasicProperties</code>&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x6D4F;&#x89C8;<a href="http://www.rabbitmq.com/releases/rabbitmq-dotnet-client/v3.6.10/rabbitmq-dotnet-client-3.6.10-client-htmldoc/html/index.html" _target="blank">RabbitMQ .NET client API reference online</a>.</p>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F02;&#x6B65;<a href="http://www.rabbitmq.com/tutorials/tutorial-three-dotnet.html" _target="blank">&#x6559;&#x7A0B; 3</a>&#xFF0C;&#x5B66;&#x4E60;&#x5C06;&#x6D88;&#x606F;&#x6295;&#x9001;&#x7ED9;&#x591A;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="HelloWorld.html" class="navigation navigation-prev " aria-label="Previous page: Hello World">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="publish&subscribe.html" class="navigation navigation-next " aria-label="Next page: 发布/订阅">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"工作队列","level":"1.5.2.2","depth":3,"next":{"title":"发布/订阅","level":"1.5.2.3","depth":3,"path":"tutorials_with_csharp/publish&subscribe.md","ref":"tutorials_with_csharp/publish&subscribe.md","articles":[]},"previous":{"title":"Hello World","level":"1.5.2.1","depth":3,"path":"tutorials_with_csharp/HelloWorld.md","ref":"tutorials_with_csharp/HelloWorld.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ga","expandable-chapters-interactive","-lunr","-search","search-plus"],"root":"./published","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"token":"UA-120619814-1","configuration":"auto"},"expandable-chapters-interactive":{},"search-plus":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Ping <yuanta11@gmil.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"RabbitMQ in Chinese","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"瓶先生":"http://mr-ping.com"}},"gitbook":"=3.0.0-pre.14","description":"RabbitMQ in Chinese"},"file":{"path":"tutorials_with_csharp/WorkQueue.md","mtime":"2020-10-29T06:13:44.342Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.14","time":"2020-10-29T06:35:55.343Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
