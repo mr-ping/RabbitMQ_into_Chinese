@@ -1,4 +1,7 @@
-﻿
+﻿>原文：[AMQP 0-9-1 Quick Reference](https://www.rabbitmq.com/amqp-0-9-1-quickref.html)  
+>翻译：[Ping](http://mr-ping.com)  
+![CC-BY-SA](https://upload.wikimedia.org/wikipedia/commons/d/d0/CC-BY-SA_icon.svg)
+
 #AMQP 0-9-1 快速参考指南
 
 本文提供了 AMQP 0-9-1 的 RabbitMQ 实现指南。作为对 [AMQP 规范][1]所定义的类和方法的有力补充，RabbitMQ 还提供了一系列[协议扩展][2]，同样在此列出。原始以及扩展规范可以在[协议页面][3]中进行下载。

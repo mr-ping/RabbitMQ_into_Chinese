@@ -1,7 +1,6 @@
 >原文：[AMQP 0-9-1 Model Explained](https://www.rabbitmq.com/tutorials/amqp-concepts.html)  
->状态：校对完成  
 >翻译：[Ping](http://mr-ping.com)  
->校对：[Ping](http://mr-ping.com)
+![CC-BY-SA](https://upload.wikimedia.org/wikipedia/commons/d/d0/CC-BY-SA_icon.svg)
 
 #AMQP 0-9-1 简介
 
