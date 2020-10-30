@@ -1,0 +1,821 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Hello World · RabbitMQ in Chinese</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.0-pre.14">
+        <meta name="author" content="Ping <yuanta11@gmil.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="[2]Work_Queues.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://mr-ping.com" target="_blank" class="custom-link">瓶先生</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    RabbitMQ中文文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    RabbitMQ简介
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../description.html">
+            
+                <a href="../description.html">
+            
+                    
+                    RabbitMQ能为你做些什么？
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    安装
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../installation/Installing_on_Debian_Ubuntu.html">
+            
+                <a href="../installation/Installing_on_Debian_Ubuntu.html">
+            
+                    
+                    在Debian及Ubuntu系统上进行安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../installation/Platforms_supported_by_RabbitMQ.html">
+            
+                <a href="../installation/Platforms_supported_by_RabbitMQ.html">
+            
+                    
+                    RabbitMQ所支持的平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    AMQP协议
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../AMQP/AMQP_0-9-1_Model_Explained.html">
+            
+                <a href="../AMQP/AMQP_0-9-1_Model_Explained.html">
+            
+                    
+                    AMQP 0.9.1 模型解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../AMQP/amqp-0-9-1-quickref.html">
+            
+                <a href="../AMQP/amqp-0-9-1-quickref.html">
+            
+                    
+                    AMQP 0.9.1 快速参考指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    应用教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    Python版
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../tutorials_with_python/[1]Hello_World.html">
+            
+                <a href="../tutorials_with_python/[1]Hello_World.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../tutorials_with_python/[2]Work_Queues.html">
+            
+                <a href="../tutorials_with_python/[2]Work_Queues.html">
+            
+                    
+                    工作队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../tutorials_with_python/[3]Publish_Subscribe.html">
+            
+                <a href="../tutorials_with_python/[3]Publish_Subscribe.html">
+            
+                    
+                    发布/订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../tutorials_with_python/[4]Routing.html">
+            
+                <a href="../tutorials_with_python/[4]Routing.html">
+            
+                    
+                    路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../tutorials_with_python/[5]Topics.html">
+            
+                <a href="../tutorials_with_python/[5]Topics.html">
+            
+                    
+                    主题交换机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.6" data-path="../tutorials_with_python/[6]RPC.html">
+            
+                <a href="../tutorials_with_python/[6]RPC.html">
+            
+                    
+                    远程过程调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    C#版
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../tutorials_with_csharp/HelloWorld.html">
+            
+                <a href="../tutorials_with_csharp/HelloWorld.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../tutorials_with_csharp/WorkQueue.html">
+            
+                <a href="../tutorials_with_csharp/WorkQueue.html">
+            
+                    
+                    工作队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../tutorials_with_csharp/publish&subscribe.html">
+            
+                <a href="../tutorials_with_csharp/publish&subscribe.html">
+            
+                    
+                    发布/订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="../tutorials_with_csharp/routing.html">
+            
+                <a href="../tutorials_with_csharp/routing.html">
+            
+                    
+                    路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.5" data-path="../tutorials_with_csharp/Topics.html">
+            
+                <a href="../tutorials_with_csharp/Topics.html">
+            
+                    
+                    主题交换机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.6" data-path="../tutorials_with_csharp/rpc.html">
+            
+                <a href="../tutorials_with_csharp/rpc.html">
+            
+                    
+                    远程过程调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    golang版
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.3.1" data-path="[1]Hello_World.html">
+            
+                <a href="[1]Hello_World.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="[2]Work_Queues.html">
+            
+                <a href="[2]Work_Queues.html">
+            
+                    
+                    工作队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="[3]Publish_Subscribe.html">
+            
+                <a href="[3]Publish_Subscribe.html">
+            
+                    
+                    发布/订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="[4]Routing.html">
+            
+                <a href="[4]Routing.html">
+            
+                    
+                    路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="[5]Topics.html">
+            
+                <a href="[5]Topics.html">
+            
+                    
+                    主题交换机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.6" data-path="[6]RPC.html">
+            
+                <a href="[6]RPC.html">
+            
+                    
+                    远程过程调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Hello World</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<p>&#x539F;&#x6587;&#xFF1A;<a href="https://www.rabbitmq.com/tutorials/tutorial-one-go.html" _target="blank">Hello_World</a><br>&#x72B6;&#x6001;&#xFF1A;&#x5F85;&#x6821;&#x5BF9;<br>&#x7FFB;&#x8BD1;&#xFF1A;<a href="https://bingjian-zhu.github.io/" _target="blank">Bingjian-Zhu</a><br>&#x6821;&#x5BF9;&#xFF1A;</p>
+</blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/CC-BY-SA_icon.svg" alt="CC-BY-SA"></p>
+<h2 id="&#x524D;&#x63D0;&#x6761;&#x4EF6;">&#x524D;&#x63D0;&#x6761;&#x4EF6;</h2>
+<blockquote>
+<p>&#x672C;&#x6559;&#x7A0B;&#x5047;&#x8BBE;RabbitMQ&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x5728;&#x4F60;&#x672C;&#x673A;&#x7684; (5672)&#x7AEF;&#x53E3;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x4E3B;&#x673A;&#x3001;&#x7AEF;&#x53E3;&#x6216;&#x8005;&#x51ED;&#x8BC1;&#xFF0C;&#x8FDE;&#x63A5;&#x8BBE;&#x7F6E;&#x5C31;&#x9700;&#x8981;&#x4F5C;&#x51FA;&#x4E00;&#x4E9B;&#x5BF9;&#x5E94;&#x7684;&#x8C03;&#x6574;&#x3002;</p>
+</blockquote>
+<!--more-->
+<h2 id="&#x4ECB;&#x7ECD;">&#x4ECB;&#x7ECD;</h2>
+<p>RabbitMQ&#x662F;&#x4E00;&#x4E2A;&#x6D88;&#x606F;&#x4EE3;&#x7406;&#x3002;&#x5B83;&#x7684;&#x5DE5;&#x4F5C;&#x5C31;&#x662F;&#x63A5;&#x6536;&#x548C;&#x8F6C;&#x53D1;&#x6D88;&#x606F;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x60F3;&#x50CF;&#x6210;&#x4E00;&#x4E2A;&#x90AE;&#x5C40;&#xFF1A;&#x4F60;&#x628A;&#x4FE1;&#x4EF6;&#x653E;&#x5165;&#x90AE;&#x7BB1;&#xFF0C;&#x90AE;&#x9012;&#x5458;&#x5C31;&#x4F1A;&#x628A;&#x4FE1;&#x4EF6;&#x6295;&#x9012;&#x5230;&#x4F60;&#x7684;&#x6536;&#x4EF6;&#x4EBA;&#x5904;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x6BD4;&#x55BB;&#x4E2D;&#xFF0C;RabbitMQ&#x5C31;&#x626E;&#x6F14;&#x7740;&#x90AE;&#x7BB1;&#x3001;&#x90AE;&#x5C40;&#x4EE5;&#x53CA;&#x90AE;&#x9012;&#x5458;&#x7684;&#x89D2;&#x8272;&#x3002;</p>
+<p>RabbitMQ&#x548C;&#x90AE;&#x5C40;&#x7684;&#x4E3B;&#x8981;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF0C;&#x5B83;&#x5904;&#x7406;&#x7EB8;&#x5F20;&#xFF0C;&#x800C;&#x662F;&#x63A5;&#x6536;&#x3001;&#x5B58;&#x50A8;&#x548C;&#x53D1;&#x9001;&#x6D88;&#x606F;&#xFF08;message&#xFF09;&#x8FD9;&#x79CD;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;RabbitMQ&#x548C;&#x6D88;&#x606F;&#x6240;&#x6D89;&#x53CA;&#x5230;&#x7684;&#x4E00;&#x4E9B;&#x672F;&#x8BED;&#x3002;</p>
+<ul>
+<li>&#x751F;&#x4EA7;(Producing)&#x7684;&#x610F;&#x601D;&#x5C31;&#x662F;&#x53D1;&#x9001;&#x3002;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7684;&#x7A0B;&#x5E8F;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x751F;&#x4EA7;&#x8005;(producer)&#x3002;&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x7528;&quot;P&quot;&#x6765;&#x8868;&#x793A;:
+<img src="http://www.rabbitmq.com/img/tutorials/producer.png" alt="img"></li>
+<li>&#x961F;&#x5217;(queue)&#x5C31;&#x662F;&#x5B58;&#x5728;&#x4E8E;RabbitMQ&#x4E2D;&#x90AE;&#x7BB1;&#x7684;&#x540D;&#x79F0;&#x3002;&#x867D;&#x7136;&#x6D88;&#x606F;&#x7684;&#x4F20;&#x8F93;&#x7ECF;&#x8FC7;&#x4E86;RabbitMQ&#x548C;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x53EA;&#x80FD;&#x88AB;&#x5B58;&#x50A8;&#x4E8E;&#x961F;&#x5217;&#x5F53;&#x4E2D;&#x3002;&#x5B9E;&#x8D28;&#x4E0A;&#x961F;&#x5217;&#x5C31;&#x662F;&#x4E2A;&#x5DE8;&#x5927;&#x7684;&#x6D88;&#x606F;&#x7F13;&#x51B2;&#x533A;&#xFF0C;&#x5B83;&#x7684;&#x5927;&#x5C0F;&#x53EA;&#x53D7;&#x4E3B;&#x673A;&#x5185;&#x5B58;&#x548C;&#x786C;&#x76D8;&#x9650;&#x5236;&#x3002;&#x591A;&#x4E2A;&#x751F;&#x4EA7;&#x8005;&#xFF08;producers&#xFF09;&#x53EF;&#x4EE5;&#x628A;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x7ED9;&#x540C;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#xFF0C;&#x540C;&#x6837;&#xFF0C;&#x591A;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#xFF08;consumers&#xFF09;&#x4E5F;&#x80FD;&#x591F;&#x4ECE;&#x540C;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#xFF08;queue&#xFF09;&#x4E2D;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x3002;&#x961F;&#x5217;&#x53EF;&#x4EE5;&#x7ED8;&#x5236;&#x6210;&#x8FD9;&#x6837;&#xFF08;&#x56FE;&#x4E0A;&#x662F;&#x961F;&#x5217;&#x7684;&#x540D;&#x79F0;&#xFF09;&#xFF1A;
+<img src="http://www.rabbitmq.com/img/tutorials/queue.png" alt="img"></li>
+<li>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6D88;&#x8D39;&#xFF08;Consuming&#xFF09;&#x548C;&#x63A5;&#x6536;(receiving)&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x610F;&#x601D;&#x3002;&#x4E00;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#xFF08;consumer&#xFF09;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x7B49;&#x5F85;&#x83B7;&#x53D6;&#x6D88;&#x606F;&#x7684;&#x7A0B;&#x5E8F;&#x3002;&#x6211;&#x4EEC;&#x628A;&#x5B83;&#x7ED8;&#x5236;&#x4E3A;&quot;C&quot;&#xFF1A;
+<img src="http://www.rabbitmq.com/img/tutorials/consumer.png" alt="img"></li>
+</ul>
+<h2 id="hello-world">Hello World!</h2>
+<p> <strong>&#xFF08;&#x4F7F;&#x7528;Go&#x5BA2;&#x6237;&#x7AEF;&#xFF09;</strong></p>
+<p>&#x5728;&#x672C;&#x6559;&#x7A0B;&#x7684;&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5728;Go&#x4E2D;&#x7F16;&#x5199;&#x4E24;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF1A;&#x53D1;&#x9001;&#x5355;&#x4E2A;&#x6D88;&#x606F;&#x7684;&#x751F;&#x4EA7;&#x8005;&#xFF0C;&#x4EE5;&#x53CA;&#x63A5;&#x6536;&#x6D88;&#x606F;&#x5E76;&#x5C06;&#x5176;&#x6253;&#x5370;&#x51FA;&#x6765;&#x7684;&#x6D88;&#x8D39;&#x8005;&#x3002;&#x6211;&#x4EEC;&#x5C06;&#x5FFD;&#x7565;Go RabbitMQ API&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x7EC6;&#x8282;&#xFF0C;&#x8FD9;&#x91CC;&#x4F20;&#x9012;&#x201C;Hello World&#x201D;&#x6D88;&#x606F;&#x3002;
+&#x5728;&#x4E0B;&#x56FE;&#x4E2D;&#xFF0C;&#x201C;P&#x201D;&#x662F;&#x751F;&#x4EA7;&#x8005;&#xFF0C;&#x201C;C&#x201D;&#x662F;&#x6D88;&#x8D39;&#x8005;&#x3002;&#x4E2D;&#x95F4;&#x7684;&#x6846;&#x662F;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#xFF08;&#x4FDD;&#x5B58;&#x6D88;&#x606F;&#x7684;&#x5730;&#x65B9;&#xFF09;&#x3002;
+<img src="http://www.rabbitmq.com/img/tutorials/python-one.png" alt="(P) -&gt; [|||] -&gt; (C)"></p>
+<blockquote>
+<p><strong>Go RabbitMQ&#x5BA2;&#x6237;&#x7AEF;&#x5E93;</strong>
+RabbitMQ&#x4F7F;&#x7528;&#x7684;&#x662F;AMQP 0.9.1&#x534F;&#x8BAE;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x6D88;&#x606F;&#x4F20;&#x9012;&#x7684;&#x5F00;&#x653E;&#x3001;&#x901A;&#x7528;&#x7684;&#x534F;&#x8BAE;&#x3002;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x6709;&#x5927;&#x91CF;&#x7684;RabbitMQ&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x7528;&#x3002;&#x5728;&#x672C;&#x6559;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4F7F;&#x7528;Go amqp&#x5BA2;&#x6237;&#x7AEF;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x4F7F;&#x7528;<code>go get</code>&#x5B89;&#x88C5;amqp&#xFF1A;<code>go get github.com/streadway/amqp</code></p>
+</blockquote>
+<h3 id="&#x53D1;&#x9001;">&#x53D1;&#x9001;</h3>
+<p><img src="http://www.rabbitmq.com/img/tutorials/sending.png" alt="(P) -&gt; [|||]"></p>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x7F16;&#x5199;&#x6D88;&#x606F;&#x751F;&#x4EA7;&#x8005;&#xFF08;&#x53D1;&#x9001;&#x8005;&#xFF09;<code>send.go</code>&#x548C;&#x6211;&#x4EEC;&#x7684;&#x6D88;&#x606F;&#x6D88;&#x8D39;&#x8005;&#xFF08;&#x63A5;&#x6536;&#x8005;&#xFF09;<code>receive.go</code>&#x3002;
+&#x53D1;&#x5E03;&#x8005;&#x5C06;&#x8FDE;&#x63A5;&#x5230;RabbitMQ&#xFF0C;&#x53D1;&#x9001;&#x5355;&#x4E2A;&#x6D88;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x9000;&#x51FA;&#x3002;
+&#x5728;<code>send.go</code>&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5148;&#x5BFC;&#x5165;&#x5305;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+  <span class="hljs-string">&quot;log&quot;</span>
+
+  <span class="hljs-string">&quot;github.com/streadway/amqp&quot;</span>
+)
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x8F85;&#x52A9;&#x51FD;&#x6570;&#x6765;&#x68C0;&#x67E5;&#x6BCF;&#x4E2A;amqp&#x8C03;&#x7528;&#x7684;&#x8FD4;&#x56DE;&#x503C;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> failOnError(err error, msg <span class="hljs-keyword">string</span>) {
+  <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+    log.Fatalf(<span class="hljs-string">&quot;%s: %s&quot;</span>, msg, err)
+  }
+}
+</code></pre>
+<p>&#x7136;&#x540E;&#x8FDE;&#x63A5;&#x5230;RabbitMQ&#x670D;&#x52A1;&#x5668;</p>
+<pre><code class="lang-go">conn, err := amqp.Dial(<span class="hljs-string">&quot;amqp://guest:guest@localhost:5672/&quot;</span>)
+failOnError(err, <span class="hljs-string">&quot;Failed to connect to RabbitMQ&quot;</span>)
+<span class="hljs-keyword">defer</span> conn.Close()
+</code></pre>
+<p>&#x914D;&#x7F6E;&#x8FDE;&#x63A5;&#x5957;&#x63A5;&#x5B57;&#xFF0C;&#x5B83;&#x4E3B;&#x8981;&#x5B9A;&#x4E49;&#x8FDE;&#x63A5;&#x7684;&#x534F;&#x8BAE;&#x548C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7B49;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;channel&#x6765;&#x4F20;&#x9012;&#x6D88;&#x606F;&#xFF1A;</p>
+<pre><code class="lang-go">ch, err := conn.Channel()
+failOnError(err, <span class="hljs-string">&quot;Failed to open a channel&quot;</span>)
+<span class="hljs-keyword">defer</span> ch.Close()
+</code></pre>
+<p>&#x53D1;&#x9001;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x4F9B;&#x6211;&#x4EEC;&#x53D1;&#x9001;&#xFF0C;&#x7136;&#x540E;&#x624D;&#x80FD;&#x5411;&#x961F;&#x5217;&#x53D1;&#x9001;&#x6D88;&#x606F;&#xFF1A;</p>
+<pre><code class="lang-go">q, err := ch.QueueDeclare(
+  <span class="hljs-string">&quot;hello&quot;</span>, <span class="hljs-comment">// name</span>
+  <span class="hljs-literal">false</span>,   <span class="hljs-comment">// durable</span>
+  <span class="hljs-literal">false</span>,   <span class="hljs-comment">// delete when unused</span>
+  <span class="hljs-literal">false</span>,   <span class="hljs-comment">// exclusive</span>
+  <span class="hljs-literal">false</span>,   <span class="hljs-comment">// no-wait</span>
+  <span class="hljs-literal">nil</span>,     <span class="hljs-comment">// arguments</span>
+)
+failOnError(err, <span class="hljs-string">&quot;Failed to declare a queue&quot;</span>)
+
+body := <span class="hljs-string">&quot;Hello World!&quot;</span>
+err = ch.Publish(
+  <span class="hljs-string">&quot;&quot;</span>,     <span class="hljs-comment">// exchange</span>
+  q.Name, <span class="hljs-comment">// routing key</span>
+  <span class="hljs-literal">false</span>,  <span class="hljs-comment">// mandatory</span>
+  <span class="hljs-literal">false</span>,  <span class="hljs-comment">// immediate</span>
+  amqp.Publishing {
+    ContentType: <span class="hljs-string">&quot;text/plain&quot;</span>,
+    Body:        []<span class="hljs-keyword">byte</span>(body),
+  })
+failOnError(err, <span class="hljs-string">&quot;Failed to publish a message&quot;</span>)
+</code></pre>
+<p>&#x58F0;&#x660E;&#x961F;&#x5217;&#x662F;&#x5E42;&#x7B49;&#x7684;&#x2014;&#x2014;&#x53EA;&#x6709;&#x5728;&#x5B83;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x624D;&#x4F1A;&#x521B;&#x5EFA;&#x5B83;&#x3002;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#xFF0C;&#x56E0;&#x6B64;&#x4F60;&#x53EF;&#x4EE5;&#x7F16;&#x5199;&#x4EFB;&#x4F55;&#x5185;&#x5BB9;&#x3002;
+<img src="http://www.rabbitmq.com/img/tutorials/receiving.png" alt="[|||] -&gt; (C)"></p>
+<h3 id="&#x63A5;&#x6536;">&#x63A5;&#x6536;</h3>
+<p>&#x4EE5;&#x4E0A;&#x662F;&#x6D88;&#x606F;&#x751F;&#x4EA7;&#x8005;&#x3002;&#x6211;&#x4EEC;&#x7684;&#x6D88;&#x8D39;&#x8005;&#x9700;&#x8981;&#x76D1;&#x542C;&#x6765;&#x81EA;RabbitMQ&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x56E0;&#x6B64;&#x4E0E;&#x751F;&#x4EA7;&#x8005;&#x4E0D;&#x540C;&#xFF0C;&#x5B83;&#x9700;&#x8981;&#x6301;&#x7EED;&#x8FD0;&#x884C;&#x4EE5;&#x76D1;&#x542C;&#x6D88;&#x606F;&#x5E76;&#x5C06;&#x5176;&#x6253;&#x5370;&#x51FA;&#x6765;
+<img src="http://pwzr2sh3s.bkt.clouddn.com/RabbitMQ/Hello%20World/6.png" alt="">
+&#x4EE3;&#x7801;<code>receive.go</code>&#x5177;&#x6709;&#x4E0E;send&#x76F8;&#x540C;&#x7684;&#x5BFC;&#x5165;&#x5305;&#x548C;&#x8F85;&#x52A9;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+  <span class="hljs-string">&quot;log&quot;</span>
+
+  <span class="hljs-string">&quot;github.com/streadway/amqp&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> failOnError(err error, msg <span class="hljs-keyword">string</span>) {
+  <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+    log.Fatalf(<span class="hljs-string">&quot;%s: %s&quot;</span>, msg, err)
+  }
+}
+</code></pre>
+<p>&#x8BBE;&#x7F6E;&#x4E0E;&#x751F;&#x4EA7;&#x8005;&#x76F8;&#x540C;&#xFF0C;&#x9996;&#x5148;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x548C;&#x4E00;&#x4E2A;Channel&#xFF0C;&#x5E76;&#x58F0;&#x660E;&#x6211;&#x4EEC;&#x8981;&#x6D88;&#x8D39;&#x7684;&#x961F;&#x5217;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x4E0E;&#x53D1;&#x9001;&#x7684;&#x961F;&#x5217;&#x76F8;&#x5339;&#x914D;</p>
+<pre><code class="lang-go">conn, err := amqp.Dial(<span class="hljs-string">&quot;amqp://guest:guest@localhost:5672/&quot;</span>)
+failOnError(err, <span class="hljs-string">&quot;Failed to connect to RabbitMQ&quot;</span>)
+<span class="hljs-keyword">defer</span> conn.Close()
+
+ch, err := conn.Channel()
+failOnError(err, <span class="hljs-string">&quot;Failed to open a channel&quot;</span>)
+<span class="hljs-keyword">defer</span> ch.Close()
+
+q, err := ch.QueueDeclare(
+  <span class="hljs-string">&quot;hello&quot;</span>, <span class="hljs-comment">// name</span>
+  <span class="hljs-literal">false</span>,   <span class="hljs-comment">// durable</span>
+  <span class="hljs-literal">false</span>,   <span class="hljs-comment">// delete when usused</span>
+  <span class="hljs-literal">false</span>,   <span class="hljs-comment">// exclusive</span>
+  <span class="hljs-literal">false</span>,   <span class="hljs-comment">// no-wait</span>
+  <span class="hljs-literal">nil</span>,     <span class="hljs-comment">// arguments</span>
+)
+failOnError(err, <span class="hljs-string">&quot;Failed to declare a queue&quot;</span>)
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x4E5F;&#x505A;&#x4E86;&#x961F;&#x5217;&#x58F0;&#x660E;&#x3002;&#x56E0;&#x4E3A;&#x6D88;&#x8D39;&#x8005;&#x53EF;&#x80FD;&#x5728;&#x751F;&#x4EA7;&#x8005;&#x542F;&#x52A8;&#x524D;&#x5C31;&#x8FD0;&#x884C;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x786E;&#x4FDD;&#x4F7F;&#x7528;&#x6D88;&#x606F;&#x4E4B;&#x524D;&#x961F;&#x5217;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x3002;
+&#x6211;&#x4EEC;&#x5373;&#x5C06;&#x544A;&#x8BC9;&#x670D;&#x52A1;&#x5668;&#x4ECE;&#x961F;&#x5217;&#x4E2D;&#x4F20;&#x9012;&#x6D88;&#x606F;&#x3002;&#x56E0;&#x4E3A;&#x5B83;&#x4F1A;&#x5F02;&#x6B65;&#x5730;&#x5411;&#x6211;&#x4EEC;&#x53D1;&#x9001;&#x6D88;&#x606F;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5C06;&#x5728;goroutine&#x4E2D;&#x8BFB;&#x53D6;&#x6765;&#x81EA;channel &#xFF08;&#x7531;<code>amqp :: Consume</code>&#x8FD4;&#x56DE;&#xFF09;&#x7684;&#x6D88;&#x606F;&#x3002;</p>
+<pre><code class="lang-go">msgs, err := ch.Consume(
+  q.Name, <span class="hljs-comment">// queue</span>
+  <span class="hljs-string">&quot;&quot;</span>,     <span class="hljs-comment">// consumer</span>
+  <span class="hljs-literal">true</span>,   <span class="hljs-comment">// auto-ack</span>
+  <span class="hljs-literal">false</span>,  <span class="hljs-comment">// exclusive</span>
+  <span class="hljs-literal">false</span>,  <span class="hljs-comment">// no-local</span>
+  <span class="hljs-literal">false</span>,  <span class="hljs-comment">// no-wait</span>
+  <span class="hljs-literal">nil</span>,    <span class="hljs-comment">// args</span>
+)
+failOnError(err, <span class="hljs-string">&quot;Failed to register a consumer&quot;</span>)
+
+forever := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">bool</span>)
+
+<span class="hljs-keyword">go</span> <span class="hljs-keyword">func</span>() {
+  <span class="hljs-keyword">for</span> d := <span class="hljs-keyword">range</span> msgs {
+    log.Printf(<span class="hljs-string">&quot;Received a message: %s&quot;</span>, d.Body)
+  }
+}()
+
+log.Printf(<span class="hljs-string">&quot; [*] Waiting for messages. To exit press CTRL+C&quot;</span>)
+&lt;-forever
+</code></pre>
+<p><a href="https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/go/receive.go" _target="blank">receive.go</a></p>
+<h3 id="&#x4EE3;&#x7801;&#x6574;&#x5408;">&#x4EE3;&#x7801;&#x6574;&#x5408;</h3>
+<p>&#x8FD0;&#x884C;&#x751F;&#x4EA7;&#x8005;&#xFF1A;<code>go run send.go</code>
+&#x8FD0;&#x884C;&#x6D88;&#x8D39;&#x8005;&#xFF1A;<code>go run receive.go</code>
+&#x6D88;&#x8D39;&#x8005;&#x5C06;&#x901A;&#x8FC7;RabbitMQ&#x6253;&#x5370;&#x4ECE;&#x751F;&#x4EA7;&#x8005;&#x5904;&#x83B7;&#x5F97;&#x7684;&#x6D88;&#x606F;&#x3002;&#x6D88;&#x8D39;&#x8005;&#x5C06;&#x7EE7;&#x7EED;&#x8FD0;&#x884C;&#xFF0C;&#x7B49;&#x5F85;&#x6D88;&#x606F;&#xFF08;&#x4F7F;&#x7528;Ctrl-C&#x505C;&#x6B62;&#x6D88;&#x606F;&#xFF09;&#x3002;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x4ECE;&#x53E6;&#x4E00;&#x4E2A;&#x7EC8;&#x7AEF;&#x518D;&#x6B21;&#x8FD0;&#x884C;&#x751F;&#x4EA7;&#x8005;&#x6765;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B66;&#x4F1A;&#x5982;&#x4F55;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x5230;&#x4E00;&#x4E2A;&#x5DF2;&#x77E5;&#x961F;&#x5217;&#x4E2D;&#x5E76;&#x63A5;&#x6536;&#x6D88;&#x606F;&#x3002;&#x662F;&#x65F6;&#x5019;&#x79FB;&#x6B65;&#x5230;&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4F1A;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x5DE5;&#x4F5C;&#x961F;&#x5217;&#xFF08;work queue&#xFF09;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="[2]Work_Queues.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 工作队列">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Hello World","level":"1.5.3.1","depth":3,"next":{"title":"工作队列","level":"1.5.3.2","depth":3,"path":"tutorials_with_golang/[2]Work_Queues.md","ref":"tutorials_with_golang/[2]Work_Queues.md","articles":[]},"previous":{"title":"golang版","level":"1.5.3","depth":2,"ref":"","articles":[{"title":"Hello World","level":"1.5.3.1","depth":3,"path":"tutorials_with_golang/[1]Hello_World.md","ref":"tutorials_with_golang/[1]Hello_World.md","articles":[]},{"title":"工作队列","level":"1.5.3.2","depth":3,"path":"tutorials_with_golang/[2]Work_Queues.md","ref":"tutorials_with_golang/[2]Work_Queues.md","articles":[]},{"title":"发布/订阅","level":"1.5.3.3","depth":3,"path":"tutorials_with_golang/[3]Publish_Subscribe.md","ref":"tutorials_with_golang/[3]Publish_Subscribe.md","articles":[]},{"title":"路由","level":"1.5.3.4","depth":3,"path":"tutorials_with_golang/[4]Routing.md","ref":"tutorials_with_golang/[4]Routing.md","articles":[]},{"title":"主题交换机","level":"1.5.3.5","depth":3,"path":"tutorials_with_golang/[5]Topics.md","ref":"tutorials_with_golang/[5]Topics.md","articles":[]},{"title":"远程过程调用","level":"1.5.3.6","depth":3,"path":"tutorials_with_golang/[6]RPC.md","ref":"tutorials_with_golang/[6]RPC.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["ga","expandable-chapters-interactive","-lunr","-search","search-plus"],"root":"./published","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"token":"UA-120619814-1","configuration":"auto"},"expandable-chapters-interactive":{},"search-plus":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Ping <yuanta11@gmil.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"RabbitMQ in Chinese","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"瓶先生":"http://mr-ping.com"}},"gitbook":"=3.0.0-pre.14","description":"RabbitMQ in Chinese"},"file":{"path":"tutorials_with_golang/[1]Hello_World.md","mtime":"2020-10-30T03:40:00.900Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.14","time":"2020-10-30T03:40:06.094Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+

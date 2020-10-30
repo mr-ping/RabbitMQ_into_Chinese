@@ -1,7 +1,9 @@
 >原文：[Publish/Subscribe](https://www.rabbitmq.com/tutorials/tutorial-three-go.html)  
 >状态：待校对  
->翻译：[Bingjian-Zhu](https://bingjian-zhu.github.io/) 
+>翻译：[Bingjian-Zhu](https://bingjian-zhu.github.io/)  
 >校对：
+
+![CC-BY-SA](https://upload.wikimedia.org/wikipedia/commons/d/d0/CC-BY-SA_icon.svg)
 
 ## 发布／订阅
 
@@ -320,7 +322,3 @@ func main() {
 显示结果很直观：logs交换器把数据发送给两个系统命名的队列。这就是我们所期望的。
 
 如何监听消息的子集呢？让我们移步教程4
-
-> 原文：[Publish/Subscribe](https://www.rabbitmq.com/tutorials/tutorial-three-go.html)
-
-

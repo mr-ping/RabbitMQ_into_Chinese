@@ -3,6 +3,8 @@
 >翻译：[Bingjian-Zhu](https://bingjian-zhu.github.io/)  
 >校对：
 
+![CC-BY-SA](https://upload.wikimedia.org/wikipedia/commons/d/d0/CC-BY-SA_icon.svg)
+
 ## 前提条件
 > 本教程假设RabbitMQ已经安装在你本机的 (5672)端口。如果你使用了不同的主机、端口或者凭证，连接设置就需要作出一些对应的调整。
 
@@ -171,5 +173,3 @@ log.Printf(" [*] Waiting for messages. To exit press CTRL+C")
 消费者将通过RabbitMQ打印从生产者处获得的消息。消费者将继续运行，等待消息（使用Ctrl-C停止消息）。可以尝试从另一个终端再次运行生产者来发送消息。
 
 我们已经学会如何发送消息到一个已知队列中并接收消息。是时候移步到第二部分了，我们将会建立一个简单的工作队列（work queue）。
-
-> 原文：[Hello World](https://www.rabbitmq.com/tutorials/tutorial-one-go.html)

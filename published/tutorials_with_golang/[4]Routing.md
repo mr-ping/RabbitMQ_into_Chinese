@@ -1,7 +1,9 @@
 >原文：[Routing](https://www.rabbitmq.com/tutorials/tutorial-four-go.html)  
 >状态：待校对  
->翻译：[Bingjian-Zhu](https://bingjian-zhu.github.io/) 
+>翻译：[Bingjian-Zhu](https://bingjian-zhu.github.io/)  
 >校对：
+
+![CC-BY-SA](https://upload.wikimedia.org/wikipedia/commons/d/d0/CC-BY-SA_icon.svg)
 
 ## 路由(Routing)
 
@@ -327,5 +329,3 @@ func main() {
 
 [1]:https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/go/emit_log_direct.go
 [2]:https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/go/receive_logs_direct.go
-
-> 原文：[Routing](https://www.rabbitmq.com/tutorials/tutorial-four-go.html)

@@ -1,7 +1,9 @@
 >原文：[Topics](https://www.rabbitmq.com/tutorials/tutorial-five-go.html)  
->状态：待校对 
->翻译：[Bingjian-Zhu](https://bingjian-zhu.github.io/) 
+>状态：待校对  
+>翻译：[Bingjian-Zhu](https://bingjian-zhu.github.io/)  
 >校对：
+
+![CC-BY-SA](https://upload.wikimedia.org/wikipedia/commons/d/d0/CC-BY-SA_icon.svg)
 
 ## 为什么需要topic交换机？
 
@@ -248,6 +250,3 @@ func main() {
  - `a.*.#` 和 `a.#`的区别在哪儿？
 
 （完整代码参见[emit_logs_topic.go](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/go/emit_log_topic.go) and [receive_logs_topic.go](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/go/receive_logs_topic.go))
-
-
-> 原文：[Topics](https://www.rabbitmq.com/tutorials/tutorial-five-go.html)

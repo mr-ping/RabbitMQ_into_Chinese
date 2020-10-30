@@ -1,7 +1,9 @@
 >原文：[RPC](https://www.rabbitmq.com/tutorials/tutorial-six-go.html)  
->状态：待校对 
->翻译：[Bingjian-Zhu](https://bingjian-zhu.github.io/) 
+>状态：待校对   
+>翻译：[Bingjian-Zhu](https://bingjian-zhu.github.io/)   
 >校对：
+
+![CC-BY-SA](https://upload.wikimedia.org/wikipedia/commons/d/d0/CC-BY-SA_icon.svg)
 
 ## 远程过程调用（RPC）
 
@@ -342,5 +344,3 @@ go run rpc_client.go 30
 
 如果你想做一些实验，你会发现[management UI ](https://www.rabbitmq.com/management.html)在观测队列方面是很有用处的
 
-
-> 原文：[RPC](https://www.rabbitmq.com/tutorials/tutorial-six-go.html)

@@ -1,7 +1,9 @@
 >原文：[Work Queues](https://www.rabbitmq.com/tutorials/tutorial-two-go.html)  
 >状态：待校对  
->翻译：[Bingjian-Zhu](https://bingjian-zhu.github.io/) 
+>翻译：[Bingjian-Zhu](https://bingjian-zhu.github.io/)  
 >校对：
+
+![CC-BY-SA](https://upload.wikimedia.org/wikipedia/commons/d/d0/CC-BY-SA_icon.svg)
 
 ## 工作队列
 
@@ -401,5 +403,3 @@ func main() {
 使用消息响应和prefetch_count你就可以搭建起一个工作队列了。这些持久化的选项使得在RabbitMQ重启之后仍然能够恢复。
 
 现在我们可以移步教程3学习如何发送相同的消息给多个消费者（consumers）。
-
-> 原文：[Work Queues](https://www.rabbitmq.com/tutorials/tutorial-two-go.html)
