@@ -1,3 +1,10 @@
+>原文：[Java Client API Guide](https://www.rabbitmq.com/api-guide.html)  
+>翻译：[mr-ping](http://rabbitmq.mr-ping.com)  
+>状态：[待校对](http://rabbitmq.mr-ping.com)  
+
+![CC-BY-SA](https://upload.wikimedia.org/wikipedia/commons/d/d0/CC-BY-SA_icon.svg)
+
+
 # Java客户端接口（API）指南
 
 ## [概览](https://www.rabbitmq.com/api-guide.html#overview)
@@ -1395,9 +1402,15 @@ Please consult the [Javadoc](https://rabbitmq.github.io/rabbitmq-java-client/api
 
 ### [Refreshing the Token](https://www.rabbitmq.com/api-guide.html#oauth2-refreshing-token)
 
+### [刷新令牌](https://www.rabbitmq.com/api-guide.html#oauth2-refreshing-token)
+
 Tokens expire and the broker will refuse operations on connections with expired tokens. To avoid this, it is possible to call CredentialsProvider#refresh() before expiration and send the new token to the server. This is cumbersome from an application point of view, so the Java client provides help with the DefaultCredentialsRefreshService. This utility tracks used tokens, refreshes them before they expire, and send the new tokens for the connections it is responsible for.
 
+令牌是会或过期的，代理会拒绝带有过期令牌的连接所请求的操作。可以使用`CredentialsProvider#refresh()`在令牌过期前使用新令牌发送请求，以防止此情况的发生。应用自己来实现是比较麻烦的，所以Java客户端提供了`DefaultCredentialsRefreshService`来给予一定帮助。这个工具用来追踪使用的令牌，在过期前进行刷新，并将新令牌发送给所负责的连接。
+
 The following snippet shows how to create a DefaultCredentialsRefreshService instance and set it up on the ConnectionFactory:
+
+以下代码片段展示了如何创建`DefaultCredentialsRefreshService`实例，并且将其配置到`ConnectionFactory`上。
 
 ```java
 import com.rabbitmq.client.impl.DefaultCredentialsRefreshService.
@@ -1410,10 +1423,12 @@ cf.setCredentialsRefreshService(refreshService);
 
 The DefaultCredentialsRefreshService schedules a refresh after 80% of the token validity time, e.g. if the token expires in 60 minutes, it will be refreshed after 48 minutes. This is the default behaviour, please consult the [Javadoc](https://rabbitmq.github.io/rabbitmq-java-client/api/current/com/rabbitmq/client/impl/DefaultCredentialsRefreshService.html) for more information.
 
+`DefaultCredentialsRefreshService`会在令牌有效期超过80%后进行刷新，例如，如果令牌在60分钟后过期，`DefaultCredentialsRefreshService`会在48分钟的时候进行刷新。这是默认的行为，更多的细节可以通过 [Javadoc](https://rabbitmq.github.io/rabbitmq-java-client/api/current/com/rabbitmq/client/impl/DefaultCredentialsRefreshService.html) 了解。
+
 ## Getting Help and Providing Feedback
+
+## 获取帮助和提供建议
 
 If you have questions about the contents of this guide or any other topic related to RabbitMQ, don't hesitate to ask them on the [RabbitMQ mailing list](https://groups.google.com/forum/#!forum/rabbitmq-users).
 
-## Help Us Improve the Docs <3
-
-If you'd like to contribute an improvement to the site, its source is [available on GitHub](https://github.com/rabbitmq/rabbitmq-website). Simply fork the repository and submit a pull request. Thank you!
+如果你对本指南的内容或RabbitMQ的其他主题有任何疑问。可以通多 [RabbitMQ 邮件列表](https://groups.google.com/forum/#!forum/rabbitmq-users)进行提问。
