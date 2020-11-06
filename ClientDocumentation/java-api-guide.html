@@ -1,0 +1,1414 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Java客户端指南 · RabbitMQ in Chinese</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.0-pre.14">
+        <meta name="author" content="Ping <yuanta11@gmil.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://mr-ping.com" target="_blank" class="custom-link">瓶先生</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    RabbitMQ中文文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    RabbitMQ简介
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../description.html">
+            
+                <a href="../description.html">
+            
+                    
+                    RabbitMQ能为你做些什么？
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    安装
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../installation/Installing_on_Debian_Ubuntu.html">
+            
+                <a href="../installation/Installing_on_Debian_Ubuntu.html">
+            
+                    
+                    在Debian及Ubuntu系统上进行安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../installation/Platforms_supported_by_RabbitMQ.html">
+            
+                <a href="../installation/Platforms_supported_by_RabbitMQ.html">
+            
+                    
+                    RabbitMQ所支持的平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    AMQP协议
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../AMQP/AMQP_0-9-1_Model_Explained.html">
+            
+                <a href="../AMQP/AMQP_0-9-1_Model_Explained.html">
+            
+                    
+                    AMQP 0.9.1 模型解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../AMQP/amqp-0-9-1-quickref.html">
+            
+                <a href="../AMQP/amqp-0-9-1-quickref.html">
+            
+                    
+                    AMQP 0.9.1 快速参考指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    客户端文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="java-api-guide.html">
+            
+                <a href="java-api-guide.html">
+            
+                    
+                    Java客户端指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    应用教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    Python版
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../tutorials_with_python/[1]Hello_World.html">
+            
+                <a href="../tutorials_with_python/[1]Hello_World.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../tutorials_with_python/[2]Work_Queues.html">
+            
+                <a href="../tutorials_with_python/[2]Work_Queues.html">
+            
+                    
+                    工作队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../tutorials_with_python/[3]Publish_Subscribe.html">
+            
+                <a href="../tutorials_with_python/[3]Publish_Subscribe.html">
+            
+                    
+                    发布/订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../tutorials_with_python/[4]Routing.html">
+            
+                <a href="../tutorials_with_python/[4]Routing.html">
+            
+                    
+                    路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="../tutorials_with_python/[5]Topics.html">
+            
+                <a href="../tutorials_with_python/[5]Topics.html">
+            
+                    
+                    主题交换机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.6" data-path="../tutorials_with_python/[6]RPC.html">
+            
+                <a href="../tutorials_with_python/[6]RPC.html">
+            
+                    
+                    远程过程调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    C#版
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../tutorials_with_csharp/HelloWorld.html">
+            
+                <a href="../tutorials_with_csharp/HelloWorld.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../tutorials_with_csharp/WorkQueue.html">
+            
+                <a href="../tutorials_with_csharp/WorkQueue.html">
+            
+                    
+                    工作队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="../tutorials_with_csharp/publish&subscribe.html">
+            
+                <a href="../tutorials_with_csharp/publish&subscribe.html">
+            
+                    
+                    发布/订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.4" data-path="../tutorials_with_csharp/routing.html">
+            
+                <a href="../tutorials_with_csharp/routing.html">
+            
+                    
+                    路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.5" data-path="../tutorials_with_csharp/Topics.html">
+            
+                <a href="../tutorials_with_csharp/Topics.html">
+            
+                    
+                    主题交换机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6" data-path="../tutorials_with_csharp/rpc.html">
+            
+                <a href="../tutorials_with_csharp/rpc.html">
+            
+                    
+                    远程过程调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" >
+            
+                <span>
+            
+                    
+                    golang版
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../tutorials_with_golang/[1]Hello_World.html">
+            
+                <a href="../tutorials_with_golang/[1]Hello_World.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../tutorials_with_golang/[2]Work_Queues.html">
+            
+                <a href="../tutorials_with_golang/[2]Work_Queues.html">
+            
+                    
+                    工作队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.3" data-path="../tutorials_with_golang/[3]Publish_Subscribe.html">
+            
+                <a href="../tutorials_with_golang/[3]Publish_Subscribe.html">
+            
+                    
+                    发布/订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.4" data-path="../tutorials_with_golang/[4]Routing.html">
+            
+                <a href="../tutorials_with_golang/[4]Routing.html">
+            
+                    
+                    路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.5" data-path="../tutorials_with_golang/[5]Topics.html">
+            
+                <a href="../tutorials_with_golang/[5]Topics.html">
+            
+                    
+                    主题交换机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.6" data-path="../tutorials_with_golang/[6]RPC.html">
+            
+                <a href="../tutorials_with_golang/[6]RPC.html">
+            
+                    
+                    远程过程调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Java客户端指南</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<p>&#x539F;&#x6587;&#xFF1A;<a href="https://www.rabbitmq.com/api-guide.html" _target="blank">Java Client API Guide</a><br>&#x7FFB;&#x8BD1;&#xFF1A;<a href="http://rabbitmq.mr-ping.com" _target="blank">mr-ping</a><br>&#x72B6;&#x6001;&#xFF1A;<a href="http://rabbitmq.mr-ping.com" _target="blank">&#x5F85;&#x6821;&#x5BF9;</a><br>&#x8BB8;&#x53EF;&#xFF1A;<img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/CC-BY-SA_icon.svg" alt="CC-BY-SA"></p>
+</blockquote>
+<h1 id="java&#x5BA2;&#x6237;&#x7AEF;&#x63A5;&#x53E3;&#xFF08;api&#xFF09;&#x6307;&#x5357;">Java&#x5BA2;&#x6237;&#x7AEF;&#x63A5;&#x53E3;&#xFF08;API&#xFF09;&#x6307;&#x5357;</h1>
+<h2 id="&#x6982;&#x89C8;"><a href="https://www.rabbitmq.com/api-guide.html#overview" _target="blank">&#x6982;&#x89C8;</a></h2>
+<p>&#x672C;&#x7BC7;&#x8986;&#x76D6;&#x4E86; <a href="https://www.rabbitmq.com/java-client.html" _target="blank">RabbitMQ Java &#x5BA2;&#x6237;&#x7AEF;</a> &#x548C;&#x5B83;&#x7684;&#x516C;&#x5171;&#x63A5;&#x53E3;(API)&#x3002;&#x8FD9;&#x91CC;&#x5047;&#x8BBE;&#x60A8;&#x4F7F;&#x7528;&#x7684;&#x662F;<a href="http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22amqp-client%22" _target="blank">&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x6700;&#x65B0;&#x7684;&#x4E3B;&#x7248;&#x672C;</a>&#xFF0C;&#x5E76;&#x4E14;&#x5DF2;&#x7ECF;&#x5BF9;<a href="https://www.rabbitmq.com/getstarted.html" _target="blank">&#x57FA;&#x672C;&#x64CD;&#x4F5C;</a>&#x6709;&#x6240;&#x719F;&#x6089;&#x3002;</p>
+<p>&#x6307;&#x5357;&#x5305;&#x542B;&#x7684;&#x5173;&#x952E;&#x90E8;&#x5206;&#x6709;&#xFF1A;</p>
+<p>[toc]</p>
+<p>&#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x4F7F;&#x7528; <a href="https://rabbitmq.github.io/rabbitmq-java-client/api/current/" _target="blank">API&#x53C2;&#x8003;</a>&#xFF08;JavaDoc&#xFF09;&#x3002;</p>
+<h2 id="&#x652F;&#x6301;&#x7684;&#x65F6;&#x95F4;&#x7EBF;"><a href="https://www.rabbitmq.com/api-guide.html#support-timeline" _target="blank">&#x652F;&#x6301;&#x7684;&#x65F6;&#x95F4;&#x7EBF;</a></h2>
+<p>&#x8BBF;&#x95EE; <a href="https://www.rabbitmq.com/java-versions.html" _target="blank">RabbitMQ Java &#x5E93;&#x652F;&#x6301;&#x9875;&#x9762;</a> &#x4E86;&#x89E3;&#x6240;&#x652F;&#x6301;&#x7684;&#x65F6;&#x95F4;&#x7EBF;&#x3002;</p>
+<h2 id="jdk-&#x548C;-android-&#x7248;&#x672C;&#x652F;&#x6301;"><a href="https://www.rabbitmq.com/api-guide.html#jdk-versions" _target="blank">JDK &#x548C; Android &#x7248;&#x672C;&#x652F;&#x6301;</a></h2>
+<p>&#x672C;&#x5E93;&#x7684;5.x&#x7CFB;&#x5217;&#x7684;&#x7F16;&#x8BD1;&#x548C;&#x8FD0;&#x884C;&#x9700;&#x8981;<a href="https://www.rabbitmq.com/java-versions.html" _target="blank">JDK 8</a>,&#x3002;&#x5BF9;&#x5B89;&#x5353;&#x6765;&#x8BF4;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x53EA;&#x652F;&#x6301; <a href="https://developer.android.com/guide/platform/j8-jack.html" _target="blank">Android 7.0 &#x6216;&#x4EE5;&#x4E0A;</a> &#x7248;&#x672C;&#x3002;</p>
+<p>4.x&#x7CFB;&#x5217;&#x652F;&#x6301;<a href="https://www.rabbitmq.com/java-versions.html" _target="blank">JDK 6</a> &#x4EE5;&#x53CA;&#x5B89;&#x5353;7.0&#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C;&#x3002;</p>
+<h2 id="&#x8BB8;&#x53EF;"><a href="https://www.rabbitmq.com/api-guide.html#license" _target="blank">&#x8BB8;&#x53EF;</a></h2>
+<p>The library is open source, developed <a href="https://github.com/rabbitmq/rabbitmq-java-client/" _target="blank">on GitHub</a>, and is triple-licensed under</p>
+<p>&#x672C;&#x5E93;&#x5728; <a href="https://github.com/rabbitmq/rabbitmq-java-client/" _target="blank">GitHub</a>&#x4E0A;&#x5F00;&#x6E90;&#xFF0C;&#x9075;&#x5FAA;&#x4EE5;&#x4E0B;&#x4E09;&#x4E2A;&#x8BB8;&#x53EF;</p>
+<ul>
+<li><a href="https://www.apache.org/licenses/LICENSE-2.0.html" _target="blank">Apache Public License 2.0</a></li>
+<li><a href="https://www.mozilla.org/MPL/2.0/" _target="blank">Mozilla Public License 2.0</a></li>
+<li><a href="http://www.gnu.org/licenses/gpl-2.0.html" _target="blank">GPL 2.0</a></li>
+</ul>
+<p>&#x8FD9;&#x610F;&#x5473;&#x7740;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x9075;&#x5FAA;&#x5217;&#x51FA;&#x7684;&#x4E09;&#x4E2A;&#x8BB8;&#x53EF;&#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x5373;&#x53EF;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x4F9D;&#x7167;Apache Public License 2.0&#x8BB8;&#x53EF;&#x5C06;&#x5BA2;&#x6237;&#x7AEF;&#x5E94;&#x7528;&#x4E8E;&#x5546;&#x4E1A;&#x4EA7;&#x54C1;&#x4E2D;&#x3002;GPLv2&#x4E0B;&#x7684;&#x4EE3;&#x7801;&#x5E93;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x4F9D;&#x7167;GPLv2&#x8BB8;&#x53EF;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;</p>
+<h2 id="&#x6982;&#x89C8;"><a href="https://www.rabbitmq.com/api-guide.html#overview" _target="blank">&#x6982;&#x89C8;</a></h2>
+<p>&#x5BA2;&#x6237;&#x7AEF;API&#x63D0;&#x4F9B;&#x4E86; <a href="../AMQP/AMQP_0-9-1_Model_Explained.html">AMQP 0-9-1 protocol model</a> &#x4E2D;&#x7684;&#x5173;&#x952E;&#x5185;&#x5BB9;&#xFF0C;&#x5E76;&#x4E14;&#x989D;&#x5916;&#x63D0;&#x4F9B;&#x4E86;&#x6613;&#x4E8E;&#x4F7F;&#x7528;&#x7684;&#x62BD;&#x8C61;&#x3002;</p>
+<p>RabbitMQ Java &#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;<code>com.rabbitmq.client</code>&#x4F5C;&#x4E3A;&#x5B83;&#x7684;&#x9876;&#x7EA7;&#x5305;&#x3002;&#x5173;&#x952E;&#x7684;&#x7C7B;&#x548C;&#x63A5;&#x53E3;&#x6709;&#xFF1A;</p>
+<ul>
+<li>Channel: &#x4EE3;&#x8868; AMQP 0-9-1&#x901A;&#x9053;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x5927;&#x591A;&#x6570;&#x64CD;&#x4F5C;&#xFF08;&#x534F;&#x8BAE;&#x65B9;&#x6CD5;&#xFF09;&#x3002;</li>
+<li>Connection: &#x4EE3;&#x8868; AMQP 0-9-1 &#x8FDE;&#x63A5;</li>
+<li>ConnectionFactory: &#x6784;&#x5EFA;<code>Connection</code>&#x5B9E;&#x4F8B;</li>
+<li>Consumer: &#x4EE3;&#x8868;&#x6D88;&#x606F;&#x7684;&#x6D88;&#x8D39;&#x8005;</li>
+<li>DefaultConsumer: &#x6D88;&#x8D39;&#x8005;&#x901A;&#x7528;&#x7684;&#x57FA;&#x7C7B;</li>
+<li>BasicProperties: &#x6D88;&#x606F;&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x5143;&#x4FE1;&#x606F;&#xFF09;</li>
+<li>BasicProperties.Builder: <code>BasicProperties</code>&#x7684;&#x6784;&#x5EFA;&#x5668;</li>
+</ul>
+<p>&#x901A;&#x8FC7;<code>Channel</code>&#xFF08;&#x901A;&#x9053;&#xFF09;&#x7684;&#x63A5;&#x53E3;&#x53EF;&#x4EE5;&#x5BF9;&#x534F;&#x8BAE;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;<code>Connection</code>&#xFF08;&#x8FDE;&#x63A5;&#xFF09;&#x7528;&#x4E8E;&#x5F00;&#x542F;&#x901A;&#x9053;&#xFF0C;&#x6CE8;&#x518C;&#x8FDE;&#x63A5;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x5185;&#x7684;&#x5904;&#x7406;&#x4E8B;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x5173;&#x95ED;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x7684;&#x8FDE;&#x63A5;&#x3002;<code>ConnectionFactory</code>&#x7528;&#x4E8E;&#x5B9E;&#x4F8B;&#x5316;<code>Connection</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>ConnectionFactory</code>&#x6765;&#x8FDB;&#x884C;&#x8BF8;&#x5982;vhost&#x3001;username&#x7B49;&#x5C5E;&#x6027;&#x7684;&#x8BBE;&#x7F6E;&#x3002;</p>
+<h2 id="&#x8FDE;&#x63A5;&#xFF08;connections&#xFF09;-&#x548C;-&#x901A;&#x9053;&#xFF08;channels&#xFF09;"><a href="https://www.rabbitmq.com/api-guide.html#connections-and-channels" _target="blank">&#x8FDE;&#x63A5;&#xFF08;Connections&#xFF09; &#x548C; &#x901A;&#x9053;&#xFF08;Channels&#xFF09;</a></h2>
+<p>&#x6838;&#x5FC3;&#x7684;&#x63A5;&#x53E3;&#x7C7B;&#x4E3A;<code>Connection</code>&#x548C;<code>Channel</code>&#xFF0C;&#x5206;&#x522B;&#x4EE3;&#x8868;AMQP 0-9-1&#x7684;&#x8FDE;&#x63A5;&#x548C;&#x901A;&#x9053;&#x3002;&#x901A;&#x5E38;&#x5728;&#x4F7F;&#x7528;&#x4E4B;&#x524D;&#x5C06;&#x4ED6;&#x4EEC;&#x5F15;&#x5165;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> com.rabbitmq.client.Connection;
+<span class="hljs-keyword">import</span> com.rabbitmq.client.Channel;
+</code></pre>
+<h2 id="&#x8FDE;&#x63A5;&#x5230;rabbitmq"><a href="https://www.rabbitmq.com/api-guide.html#connecting" _target="blank">&#x8FDE;&#x63A5;&#x5230;RabbitMQ</a></h2>
+<p>&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x6F14;&#x793A;&#x4F7F;&#x7528;&#x7ED9;&#x5B9A;&#x7684;&#x53C2;&#x6570;&#xFF08;&#x5982;&#x4E3B;&#x673A;&#x540D;&#x3001;&#x7AEF;&#x53E3;&#x53F7;&#xFF09;&#x8FDE;&#x63A5;&#x5230;RabbitMQ&#x8282;&#x70B9;&#xFF1A;</p>
+<pre><code class="lang-java">ConnectionFactory factory = <span class="hljs-keyword">new</span> ConnectionFactory();
+<span class="hljs-comment">// &quot;guest&quot;/&quot;guest&quot; by default, limited to localhost connections</span>
+factory.setUsername(userName);
+factory.setPassword(password);
+factory.setVirtualHost(virtualHost);
+factory.setHost(hostName);
+factory.setPort(portNumber);
+
+Connection conn = factory.newConnection();
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x8FD0;&#x884C;&#x5728;&#x672C;&#x5730;&#x7684;RabbitMQ&#x8282;&#x70B9;&#x800C;&#x8A00;&#xFF0C;&#x8FD9;&#x4E9B;&#x53C2;&#x6570;&#x90FD;&#x6709;&#x5408;&#x9002;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5728;&#x521B;&#x5EFA;&#x8FDE;&#x63A5;&#x524D;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#x503C;&#xFF0C;&#x5219;&#x4F1A;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Username</td>
+<td>&quot;guest&quot;</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>&quot;guest&quot;</td>
+</tr>
+<tr>
+<td>Virtual host</td>
+<td>&quot;/&quot;</td>
+</tr>
+<tr>
+<td>Hostname</td>
+<td>&quot;localhost&quot;</td>
+</tr>
+<tr>
+<td>port</td>
+<td>5672 for regular connections, 5671 for <a href="https://www.rabbitmq.com/ssl.html" _target="blank">connections that use TLS</a></td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <a href="https://www.rabbitmq.com/uri-spec.html" _target="blank">URIs</a> &#x4EE3;&#x66FF;&#xFF1A;</p>
+<pre><code class="lang-java">ConnectionFactory factory = <span class="hljs-keyword">new</span> ConnectionFactory();
+factory.setUri(<span class="hljs-string">&quot;amqp://userName:password@hostName:portNumber/virtualHost&quot;</span>);
+Connection conn = factory.newConnection();
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x5DF2;&#x7ECF;&#x8FD0;&#x884C;&#x5728;&#x672C;&#x5730;&#x7684;RabbitMQ&#x670D;&#x52A1;&#x5668;&#x6765;&#x8BF4;&#xFF0C;&#x6240;&#x6709;&#x8FD9;&#x4E9B;&#x53C2;&#x6570;&#x90FD;&#x6709;&#x5408;&#x9002;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</p>
+<p>&#x6210;&#x529F;&#x548C;&#x4E0D;&#x6210;&#x529F;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#x90FD;&#x53EF;&#x4EE5;&#x5728;<a href="https://www.rabbitmq.com/logging.html" _target="blank">&#x670D;&#x52A1;&#x5668;&#x8282;&#x70B9;&#x65E5;&#x5FD7;</a>&#x4E2D;&#x627E;&#x5230;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;<a href="https://www.rabbitmq.com/access-control.html" _target="blank">guest&#xFF08;&#x6765;&#x5BBE;&#xFF09;&#x7528;&#x6237;&#x53EA;&#x80FD;&#x7528;&#x672C;&#x5730;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;</a>&#x3002;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x9650;&#x5236;&#x5DF2;&#x77E5;&#x51ED;&#x8BC1;&#x5728;&#x751F;&#x4EA7;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x5E94;&#x7528;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;<a href="https://www.rabbitmq.com/api-guide.html#client-provided-names" _target="blank">&#x81EA;&#x5B9A;&#x4E49;&#x8FDE;&#x63A5;&#x540D;&#x79F0;</a>&#x3002;&#x5982;&#x679C;&#x914D;&#x7F6E;&#x4E86;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x540D;&#x5B57;&#x4E5F;&#x4F1A;&#x5728;RabbitMQ&#x8282;&#x70B9;&#x65E5;&#x5FD7;&#x548C; <a href="https://www.rabbitmq.com/management.html" _target="blank">&#x7BA1;&#x7406;&#x754C;&#x9762;</a>&#x91CC;&#x4F53;&#x73B0;&#x51FA;&#x6765;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;<code>Connection</code>&#x63A5;&#x53E3;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5F00;&#x542F;&#x901A;&#x9053;(Channel)&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-java">Channel channel = conn.createChannel();
+</code></pre>
+<p>&#x901A;&#x9053;&#x53EF;&#x7528;&#x4E8E;&#x6D88;&#x606F;&#x7684;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;&#xFF0C;&#x4E4B;&#x540E;&#x7684;&#x90E8;&#x5206;&#x91CC;&#x4F1A;&#x8FDB;&#x884C;&#x4ECB;&#x7ECD;&#x3002;</p>
+<h2 id="&#x5173;&#x95ED;rabbitmq&#x8FDE;&#x63A5;"><a href="https://www.rabbitmq.com/api-guide.html#disconnecting" _target="blank">&#x5173;&#x95ED;RabbitMQ&#x8FDE;&#x63A5;</a></h2>
+<p>&#x901A;&#x8FC7;&#x7B80;&#x5355;&#x7684;&#x5BF9;&#x901A;&#x9053;&#x548C;&#x8FDE;&#x63A5;&#x8FDB;&#x884C;&#x5173;&#x95ED;&#x5373;&#x53EF;&#x5173;&#x95ED;&#x6389;RabbitMQ&#x7684;&#x8FDE;&#x63A5;&#xFF1A;</p>
+<pre><code class="lang-java">channel.close();
+conn.close();
+</code></pre>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x867D;&#x7136;&#x5C06;&#x901A;&#x9053;&#x5173;&#x95ED;&#x6389;&#x662F;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#xFF0C;&#x4F46;&#x5E76;&#x4E0D;&#x662F;&#x5FC5;&#x987B;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x56E0;&#x4E3A;&#x65E0;&#x8BBA;&#x4F55;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x901A;&#x9053;&#x90FD;&#x4F1A;&#x5728;&#x5E95;&#x5C42;&#x7684;&#x8FDE;&#x63A5;&#x5173;&#x95ED;&#x65F6;&#x81EA;&#x52A8;&#x5173;&#x95ED;&#x6389;&#x3002;</p>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x5173;&#x95ED;&#x64CD;&#x4F5C;&#x7684;&#x4E8B;&#x4EF6;&#x53EF;&#x4EE5;&#x5728; <a href="https://www.rabbitmq.com/networking.html#logging" _target="blank">&#x670D;&#x52A1;&#x5668;&#x8282;&#x70B9;&#x65E5;&#x5FD7;</a> &#x4E2D;&#x627E;&#x5230;&#x3002;</p>
+<h2 id="&#x8FDE;&#x63A5;-&#x548C;-&#x901A;&#x9053;-&#x7684;&#x5BFF;&#x547D;"><a href="https://www.rabbitmq.com/api-guide.html#connection-and-channel-lifspan" _target="blank">&#x8FDE;&#x63A5; &#x548C; &#x901A;&#x9053; &#x7684;&#x5BFF;&#x547D;</a></h2>
+<p>&#x5BA2;&#x6237;&#x7AEF;<a href="https://www.rabbitmq.com/connections.html" _target="blank">connections</a>&#x662F;&#x957F;&#x8FDE;&#x63A5;&#x3002;&#x5E95;&#x5C42;&#x534F;&#x8BAE;&#x7684;&#x8BBE;&#x8BA1;&#x548C;&#x4F18;&#x5316;&#x90FD;&#x8003;&#x8651;&#x5230;&#x4E86;&#x957F;&#x8FDE;&#x63A5;&#x7684;&#x9700;&#x6C42;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5BF9;&#x8BF8;&#x5982;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x4E4B;&#x7C7B;&#x7684;&#x6BCF;&#x4E2A;&#x64CD;&#x4F5C;&#x90FD;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x7684;&#x5F62;&#x5F0F;&#x662F;&#x6781;&#x5176;&#x4E0D;&#x63A8;&#x8350;&#x7684;&#xFF0C;&#x90A3;&#x6837;&#x505A;&#x4F1A;&#x4EA7;&#x751F;&#x5927;&#x91CF;&#x7684;&#x7F51;&#x7EDC;&#x5F80;&#x8FD4;&#x548C;&#x5F00;&#x9500;&#x3002;</p>
+<p><a href="https://www.rabbitmq.com/channels.html" _target="blank">Channels</a> &#x867D;&#x7136;&#x4E5F;&#x662F;&#x957F;&#x671F;&#x5B58;&#x6D3B;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x7531;&#x4E8E;&#x6709;&#x5927;&#x91CF;&#x7684;&#x53EF;&#x6062;&#x590D;&#x7684;&#x534F;&#x8BAE;&#x9519;&#x8BEF;&#x4F1A;&#x5BFC;&#x81F4;&#x901A;&#x9053;&#x5173;&#x95ED;&#xFF0C;&#x901A;&#x9053;&#x7684;&#x5B58;&#x6D3B;&#x671F;&#x4F1A;&#x6BD4;&#x8FDE;&#x63A5;&#x65AD;&#x4E00;&#x4E9B;&#x3002;&#x867D;&#x7136;&#x6BCF;&#x4E2A;&#x64CD;&#x4F5C;&#x90FD;&#x6253;&#x5F00;&#x548C;&#x5173;&#x95ED;&#x4E00;&#x4E2A;&#x901A;&#x9053;&#x4E0D;&#x662F;&#x5FC5;&#x987B;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x4E0D;&#x662F;&#x4E0D;&#x53EF;&#x884C;&#x3002;&#x6709;&#x7684;&#x9009;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD8;&#x662F;&#x4F18;&#x5148;&#x8003;&#x8651;&#x901A;&#x9053;&#x7684;&#x590D;&#x7528;&#x4E3A;&#x597D;&#x3002;</p>
+<p>&#x7C7B;&#x4F3C;&#x4E8E;&#x5C1D;&#x8BD5;&#x4ECE;&#x4E00;&#x4E2A;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x961F;&#x5217;&#x91CC;&#x6D88;&#x8D39;&#x6D88;&#x606F;&#x8FD9;&#x79CD; <a href="https://www.rabbitmq.com/channels.html#error-handling" _target="blank">&#x901A;&#x9053;&#x7EA7;&#x522B;&#x7684;&#x5F02;&#x5E38;</a> &#x4F1A;&#x5BFC;&#x81F4;&#x901A;&#x9053;&#x5173;&#x95ED;&#x3002;&#x5DF2;&#x7ECF;&#x5173;&#x95ED;&#x7684;&#x901A;&#x9053;&#x4E0D;&#x53EF;&#x4EE5;&#x518D;&#x88AB;&#x4F7F;&#x7528;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x518D;&#x63A5;&#x6536;&#x5230;&#x5982;<em>&#x6D88;&#x606F;&#x6295;&#x9012;</em>&#x4E4B;&#x7C7B;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E8B;&#x4EF6;&#x3002;RabbitMQ&#x4F1A;&#x8BB0;&#x5F55;&#x4E0B;&#x901A;&#x9053;&#x7EA7;&#x522B;&#x7684;&#x5F02;&#x5E38;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x4E3A;&#x901A;&#x9053;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x5173;&#x95ED;&#x987A;&#x5E8F;&#xFF08;&#x4E0B;&#x8FB9;&#x4F1A;&#x8FDB;&#x884C;&#x4ECB;&#x7ECD;&#xFF09;&#x3002;</p>
+<h2 id="&#x7531;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4F9B;&#x7684;&#x94FE;&#x63A5;&#x540D;&#x79F0;"><a href="https://www.rabbitmq.com/api-guide.html#client-provided-names" _target="blank">&#x7531;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4F9B;&#x7684;&#x94FE;&#x63A5;&#x540D;&#x79F0;</a></h2>
+<p>RabbitMQ &#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x6301;&#x6709;&#x6709;&#x9650;&#x7684;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x4FE1;&#x606F;&#xFF1A;</p>
+<ul>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x7684;TCP&#x8282;&#x70B9;&#xFF08;&#x6765;&#x6E90;IP&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;&#xFF09;</li>
+<li>&#x4F7F;&#x7528;&#x7684;&#x51ED;&#x8BC1;</li>
+</ul>
+<p>&#x51ED;&#x501F;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x5C31;&#x53EF;&#x4EE5;&#x5B9A;&#x4F4D;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#x7684;&#x5E94;&#x7528;&#x6216;&#x8005;&#x5B9E;&#x4F8B;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x5728;&#x53EF;&#x4EE5;&#x5171;&#x4EAB;&#x51ED;&#x8BC1;&#x4E14;&#x5BA2;&#x6237;&#x7AEF;&#x901A;&#x8FC7;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x5668;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#x4F46;&#x65E0;&#x6CD5;&#x542F;&#x7528;&#x4EE3;&#x7406;&#x534F;&#x8BAE;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x3002;</p>
+<p>&#x5305;&#x62EC;RabbitMQ Java&#x5BA2;&#x6237;&#x7AEF;&#x5728;&#x5185;&#x7684;AMQP 0-9-1&#x5BA2;&#x6237;&#x7AEF;&#x94FE;&#x63A5;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x6807;&#x8BC6;&#x7B26;&#xFF0C;&#x4E00;&#x904D;&#x5728;<a href="https://www.rabbitmq.com/logging.html" _target="blank">&#x670D;&#x52A1;&#x5668;&#x65E5;&#x5FD7;</a> &#x548C;<a href="https://www.rabbitmq.com/management.html" _target="blank">&#x7BA1;&#x7406;&#x754C;&#x9762;</a>&#x4E2D;&#x65B9;&#x4FBF;&#x5730;&#x5BF9;&#x5BA2;&#x6237;&#x7AEF;&#x8FDB;&#x884C;&#x533A;&#x5206;&#x3002;&#x8BBE;&#x7F6E;&#x597D;&#x540E;&#xFF0C;&#x65E5;&#x5FD7;&#x5185;&#x5BB9;&#x989D;&#x7BA1;&#x7406;&#x754C;&#x9762;&#x4E2D;&#x4FBF;&#x4F1A;&#x5BF9;&#x6807;&#x8BC6;&#x7B26;&#x6709;&#x6240;&#x4F53;&#x73B0;&#x3002;&#x6807;&#x8BC6;&#x7B26;&#x5373;&#x4E3A;<strong>&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4F9B;&#x7684;&#x8FDE;&#x63A5;&#x540D;&#x79F0;</strong>&#x3002;&#x540D;&#x79F0;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x6807;&#x8BC6;&#x5E94;&#x7528;&#x6216;&#x5E94;&#x7528;&#x4E2D;&#x7279;&#x5B9A;&#x7684;&#x7EC4;&#x4EF6;&#x3002;&#x867D;&#x7136;&#x540D;&#x79F0;&#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#xFF0C;&#x8FD9;&#x5C06;&#x5927;&#x5927;&#x7B80;&#x5316;&#x67D0;&#x4E9B;&#x64CD;&#x4F5C;&#x4EFB;&#x52A1;&#x3002;</p>
+<p>RabbitMQ Java &#x5BA2;&#x6237;&#x7AEF;&#x7684;  <a href="https://rabbitmq.github.io/rabbitmq-java-client/api/current/com/rabbitmq/client/ConnectionFactory.html#newConnection(java.util.concurrent.ExecutorService,com.rabbitmq.client.Address[],java.lang.String" _target="blank"><code>ConnectionFactory#newConnection</code> &#x65B9;&#x6CD5; &#x8986;&#x5199;&#x4E86;</a>) &#x63A5;&#x6536;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4F9B;&#x7684;&#x8FDE;&#x63A5;&#x540D;&#x79F0;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x8FDE;&#x63A5;&#x6837;&#x4F8B;&#xFF0C;&#x7528;&#x4E8E;&#x63D0;&#x4F9B;&#x8FDE;&#x63A5;&#x540D;&#x79F0;&#xFF1A;</p>
+<pre><code class="lang-java">ConnectionFactory factory = <span class="hljs-keyword">new</span> ConnectionFactory();
+factory.setUri(<span class="hljs-string">&quot;amqp://userName:password@hostName:portNumber/virtualHost&quot;</span>);
+<span class="hljs-comment">// provides a custom connection name</span>
+Connection conn = factory.newConnection(<span class="hljs-string">&quot;app:audit component:event-consumer&quot;</span>);
+</code></pre>
+<h2 id="&#x4EA4;&#x6362;&#x673A;&#xFF08;exchanges&#xFF09;&#x548C;--&#x961F;&#x5217;&#xFF08;queues&#xFF09;&#x7684;&#x4F7F;&#x7528;"><a href="https://www.rabbitmq.com/api-guide.html#exchanges-and-queues" _target="blank">&#x4EA4;&#x6362;&#x673A;&#xFF08;Exchanges&#xFF09;&#x548C;  &#x961F;&#x5217;&#xFF08;Queues&#xFF09;&#x7684;&#x4F7F;&#x7528;</a></h2>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;&#x7528;&#x5229;&#x7528;&#x4EA4;&#x6362;&#x673A;&#x548C;<a href="https://www.rabbitmq.com/queues.html" _target="blank">&#x961F;&#x5217;</a>&#x8FD9;&#x4E9B;&#x9AD8;&#x7EA7;&#x7684;<a href="https://www.rabbitmq.com/tutorials/amqp-concepts.html" _target="blank">&#x534F;&#x8BAE;&#x6784;&#x5EFA;&#x5757;&#x5DE5;&#x4F5C;</a>&#x3002;&#x5728;&#x4F7F;&#x7528;&#x4E8B;&#x524D;&#x5FC5;&#x987B;&#x5BF9;&#x4ED6;&#x4EEC;&#x8FDB;&#x884C;&#x58F0;&#x660E;&#x3002;&#x7B80;&#x5355;&#x6765;&#x8BB2;&#xFF0C;&#x5BF9;&#x4EFB;&#x4F55;&#x4E00;&#x79CD;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x58F0;&#x660E;&#x7684;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x786E;&#x4FDD;&#x5B83;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x5E76;&#x5728;&#x9700;&#x8981;&#x7684;&#x65F6;&#x5019;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x521B;&#x5EFA;&#x3002;</p>
+<p>&#x63A5;&#x7740;&#x4E0A;&#x8FB9;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A;&#x4EA4;&#x6362;&#x673A;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;<a href="https://www.rabbitmq.com/queues.html#server-named-queues" _target="blank">&#x670D;&#x52A1;&#x7AEF;&#x547D;&#x540D;&#x7684;&#x961F;&#x5217;</a>&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x5B83;&#x4EEC;&#x7ED1;&#x5B9A;&#x5230;&#x4E00;&#x8D77;&#x3002;</p>
+<pre><code class="lang-java">channel.exchangeDeclare(exchangeName, <span class="hljs-string">&quot;direct&quot;</span>, <span class="hljs-keyword">true</span>);
+String queueName = channel.queueDeclare().getQueue();
+channel.queueBind(queueName, exchangeName, routingKey);
+</code></pre>
+<p>&#x8FD9;&#x5C06;&#x4F1A;&#x4E3B;&#x52A8;&#x58F0;&#x660E;&#x4EE5;&#x4E0B;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9644;&#x52A0;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x81EA;&#x5B9A;&#x4E49;&#x3002;&#x4F46;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6CA1;&#x6709;&#x7ED9;&#x4ED6;&#x4EEC;&#x4FE9;&#x5B9A;&#x4E49;&#x7279;&#x6B8A;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<ul>
+<li>&#x6301;&#x4E45;&#x5316;&#x3001;&#x975E;&#x81EA;&#x52A8;&#x5220;&#x9664;&#x7684;&#x201C;&#x76F4;&#x8FDE;&#x201D;&#x5F62;&#x4EA4;&#x6362;&#x673A;</li>
+<li>&#x5177;&#x6709;&#x7CFB;&#x7EDF;&#x751F;&#x6210;&#x7684;&#x540D;&#x79F0;&#x7684;&#xFF0C;&#x975E;&#x6301;&#x4E45;&#x5316;&#x3001;&#x72EC;&#x5360;&#x3001;&#x81EA;&#x52A8;&#x5220;&#x9664;&#x7684;&#x961F;&#x5217;</li>
+</ul>
+<p>&#x4E0A;&#x8FB9;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x4F7F;&#x7528;&#x7ED9;&#x5B9A;&#x7684;&#x8DEF;&#x7531;&#x952E;&#x5C06;&#x961F;&#x5217;&#x548C;&#x4EA4;&#x6362;&#x673A;&#x7ED1;&#x5B9A;&#x8D77;&#x6765;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x5F53;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x6253;&#x7B97;&#x5DE5;&#x4F5C;&#x4E8E;&#x6B21;&#x961F;&#x5217;&#x65F6;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5178;&#x578B;&#x7684;&#x961F;&#x5217;&#x58F0;&#x660E;&#x65B9;&#x5F0F;&#x3002;&#x961F;&#x5217;&#x4E0D;&#x9700;&#x8981;&#x65E2;&#x5B9A;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x6CA1;&#x6709;&#x5176;&#x4ED6;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;&#x6B64;&#x961F;&#x5217;&#xFF08;&#x72EC;&#x5360;&#xFF09;&#xFF0C;&#x961F;&#x5217;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x6E05;&#x7406;&#x6389;&#xFF08;&#x81EA;&#x52A8;&#x5220;&#x9664;&#xFF09;&#x3002;&#x5982;&#x679C;&#x6709;&#x591A;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x6D88;&#x8D39;&#x6253;&#x7B97;&#x6D88;&#x8D39;&#x4E00;&#x4E2A;&#x65E2;&#x5B9A;&#x540D;&#x79F0;&#x7684;&#x961F;&#x5217;&#xFF0C;&#x4E00;&#x4E0B;&#x4EE3;&#x7801;&#x66F4;&#x4E3A;&#x5408;&#x9002;&#xFF1A;</p>
+<pre><code class="lang-java">channel.exchangeDeclare(exchangeName, <span class="hljs-string">&quot;direct&quot;</span>, <span class="hljs-keyword">true</span>);
+channel.queueDeclare(queueName, <span class="hljs-keyword">true</span>, <span class="hljs-keyword">false</span>, <span class="hljs-keyword">false</span>, <span class="hljs-keyword">null</span>);
+channel.queueBind(queueName, exchangeName, routingKey);
+</code></pre>
+<p>&#x8FD9;&#x5C06;&#x4F1A;&#x4E3B;&#x52A8;&#x8FDB;&#x884C;&#x4EE5;&#x4E0B;&#x58F0;&#x660E;&#xFF1A;</p>
+<ul>
+<li>&#x6301;&#x4E45;&#x5316;&#x3001;&#x975E;&#x81EA;&#x52A8;&#x5220;&#x9664;&#x7684;&#x201C;&#x76F4;&#x8FDE;&#x201D;&#x4EA4;&#x6362;&#x673A;</li>
+<li>&#x62E5;&#x6709;&#x65E2;&#x5B9A;&#x540D;&#x79F0;&#x7684;&#xFF0C;&#x6301;&#x4E45;&#x5316;&#x3001;&#x975E;&#x72EC;&#x5360;&#x3001;&#x975E;&#x81EA;&#x52A8;&#x5220;&#x9664;&#x7684;&#x961F;&#x5217;</li>
+</ul>
+<p>&#x8BB8;&#x591A;<code>Channel</code>&#x63A5;&#x53E3;&#x65B9;&#x6CD5;&#x90FD;&#x662F;&#x88AB;&#x91CD;&#x8F7D;&#x7684;&#x3002;&#x8FD9;&#x91CC;&#x7528;&#x5230;&#x7684;&#x5173;&#x4E8E; <code>exchangeDeclare</code>, <code>queueDeclare</code> &#x548C; <code>queueBind</code>&#x7684;&#x77ED;&#x7ED3;&#x6784;&#x7684;&#x91CD;&#x8F7D;&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x4E86;&#x5408;&#x9002;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x66F4;&#x6613;&#x4E8E;&#x4F7F;&#x7528;&#x3002;&#x5F53;&#x7136;&#x4E5F;&#x6709;&#x66F4;&#x591A;&#x53C2;&#x6570;&#x7684;&#x957F;&#x7ED3;&#x6784;&#x7684;&#x91CD;&#x8F7D;&#x65B9;&#x6CD5;&#xFF0C;&#x4F7F;&#x7528;&#x90A3;&#x4E9B;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E9B;&#x5FC5;&#x8981;&#x7684;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x91CD;&#x5199;&#xFF0C;&#x8FDB;&#x884C;&#x66F4;&#x5168;&#x9762;&#x7684;&#x63A7;&#x5236;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x201C;&#x77ED;&#x7ED3;&#x6784;&#x3001;&#x957F;&#x7ED3;&#x6784;&#x201D;&#x7684;&#x6A21;&#x5F0F;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x63A5;&#x53E3;&#x7684;&#x4F7F;&#x7528;&#x4E2D;&#x6D89;&#x53CA;&#x3002;</p>
+<h3 id="&#x88AB;&#x52A8;&#x58F0;&#x660E;"><a href="https://www.rabbitmq.com/api-guide.html#passive-declaration" _target="blank">&#x88AB;&#x52A8;&#x58F0;&#x660E;</a></h3>
+<p>&#x961F;&#x5217;&#x548C;&#x4EA4;&#x6362;&#x673A;&#x53EF;&#x4EE5;&#x88AB;&#x52A8;&#x5730;&#x8FDB;&#x884C;&#x58F0;&#x660E;&#x3002;&#x88AB;&#x52A8;&#x58F0;&#x660E;&#x4F1A;&#x7B80;&#x5355;&#x5730;&#x68C0;&#x67E5;&#x63D0;&#x4F9B;&#x7684;&#x540D;&#x79F0;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x5B9E;&#x4F53;&#x662F;&#x5426;&#x5B58;&#x5728;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x4E0D;&#x4F1A;&#x505A;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x3002;&#x5BF9;&#x6210;&#x529F;&#x68C0;&#x6D4B;&#x5230;&#x7684;&#x961F;&#x5217;&#x6765;&#x8BF4;&#xFF0C;&#x88AB;&#x52A8;&#x58F0;&#x660E;&#x4F1A;&#x8FD4;&#x56DE;&#x8DDF;&#x975E;&#x88AB;&#x52A8;&#x58F0;&#x660E;&#x540C;&#x6837;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5373;&#x961F;&#x5217;&#x4E2D;&#x5904;&#x4E8E;&#x5C31;&#x7EEA;&#x72B6;&#x6001;&#x7684;&#x6D88;&#x8D39;&#x8005;&#x548C;&#x6D88;&#x606F;&#x6570;&#x91CF;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5BF9;&#x5E94;&#x7684;&#x5B9E;&#x4F53;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x64CD;&#x4F5C;&#x4F1A;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x901A;&#x9053;&#x7EA7;&#x522B;&#x7684;&#x5F02;&#x5E38;&#x3002;&#x7136;&#x540E;&#x901A;&#x9053;&#x5C31;&#x4E0D;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x9700;&#x8981;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x901A;&#x9053;&#x3002;&#x901A;&#x5E38;&#x5728;&#x8FDB;&#x884C;&#x88AB;&#x52A8;&#x58F0;&#x660E;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;&#x4E34;&#x65F6;&#x7684;&#x4E00;&#x6B21;&#x6027;&#x901A;&#x9053;&#x3002;</p>
+<p><code>Channel#queueDeclarePassive</code> &#x548C; <code>Channel#exchangeDeclarePassive</code> &#x65B9;&#x6CD5;&#x88AB;&#x7528;&#x6765;&#x8FDB;&#x884C;&#x88AB;&#x52A8;&#x58F0;&#x660E;&#x3002;&#x4E0B;&#x8FB9;&#x6F14;&#x793A;<code>Channel#queueDeclarePassive</code> &#x7684;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-java">Queue.DeclareOk response = channel.queueDeclarePassive(<span class="hljs-string">&quot;queue-name&quot;</span>);
+<span class="hljs-comment">// returns the number of messages in Ready state in the queue</span>
+response.getMessageCount();
+<span class="hljs-comment">// returns the number of consumers the queue has</span>
+response.getConsumerCount();
+</code></pre>
+<p><code>Channel#exchangeDeclarePassive</code> &#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6CA1;&#x5305;&#x542B;&#x4EC0;&#x4E48;&#x6709;&#x7528;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x53EA;&#x8981;&#x65B9;&#x6CD5;&#x6B63;&#x786E;&#x8FD4;&#x56DE;&#xFF0C;&#x5E76;&#x4E14;&#x6CA1;&#x6709;&#x901A;&#x9053;&#x5F02;&#x5E38;&#x53D1;&#x751F;&#xFF0C;&#x5C31;&#x610F;&#x5473;&#x7740;&#x4EA4;&#x6362;&#x673A;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x4E86;&#x3002;</p>
+<h3 id="&#x53EF;&#x9009;&#x54CD;&#x5E94;&#x7684;&#x64CD;&#x4F5C;"><a href="https://www.rabbitmq.com/api-guide.html#nowait-methods" _target="blank">&#x53EF;&#x9009;&#x54CD;&#x5E94;&#x7684;&#x64CD;&#x4F5C;</a></h3>
+<p>&#x4E00;&#x4E9B;&#x5E38;&#x89C1;&#x7684;&#x64CD;&#x4F5C;&#x8FD8;&#x5E26;&#x6709;&#x201C;&#x975E;&#x7B49;&#x5F85;&#x201D;&#x7248;&#x672C;&#xFF0C;&#x8FD9;&#x79CD;&#x7248;&#x672C;&#x7684;&#x64CD;&#x4F5C;&#x4E0D;&#x4F1A;&#x7B49;&#x5F85;&#x670D;&#x52A1;&#x5668;&#x7684;&#x54CD;&#x5E94;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#x4F1A;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x5E76;&#x4E14;&#x901A;&#x77E5;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x8981;&#x53D1;&#x9001;&#x4EFB;&#x4F55;&#x54CD;&#x5E94;</p>
+<pre><code class="lang-java">channel.queueDeclareNoWait(queueName, <span class="hljs-keyword">true</span>, <span class="hljs-keyword">false</span>, <span class="hljs-keyword">false</span>, <span class="hljs-keyword">null</span>);
+</code></pre>
+<p>&#x201C;&#x975E;&#x7B49;&#x5F85;&#x201D;&#x7248;&#x672C;&#x7684;&#x64CD;&#x4F5C;&#x4F1A;&#x66F4;&#x5177;&#x6548;&#x7387;&#xFF0C;&#x4F46;&#x662F;&#x5B89;&#x5168;&#x4FDD;&#x969C;&#x8F83;&#x4F4E;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x5B83;&#x4EEC;&#x66F4;&#x4F9D;&#x8D56;&#x5FC3;&#x8DF3;&#x673A;&#x5236;&#x53BB;&#x68C0;&#x6D4B;&#x5931;&#x8D25;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x786E;&#x5B9A;&#xFF0C;&#x5C31;&#x4ECE;&#x6807;&#x51C6;&#x7248;&#x672C;&#x7684;&#x64CD;&#x4F5C;&#x7528;&#x8D77;&#x3002;&#x201C;&#x975E;&#x7B49;&#x5F85;&#x201D;&#x7248;&#x672C;&#x53EA;&#x662F;&#x5728;&#x9AD8;&#x7EA7;&#x62D3;&#x6251;&#x7ED3;&#x6784;&#xFF08;&#x961F;&#x5217;&#x3001;&#x7ED1;&#x5B9A;&#xFF09;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x9700;&#x8981;&#x3002;</p>
+<h3 id="&#x5220;&#x9664;&#x5B9E;&#x4F53;&#x548C;&#x6E05;&#x9664;&#x6D88;&#x606F;"><a href="https://www.rabbitmq.com/api-guide.html#deleting-entities" _target="blank">&#x5220;&#x9664;&#x5B9E;&#x4F53;&#x548C;&#x6E05;&#x9664;&#x6D88;&#x606F;</a></h3>
+<p>&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x5730;&#x5C06;&#x961F;&#x5217;&#x548C;&#x4EA4;&#x6362;&#x673A;&#x5220;&#x9664;&#xFF1A;</p>
+<pre><code class="lang-java">channel.queueDelete(<span class="hljs-string">&quot;queue-name&quot;</span>)
+</code></pre>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x5F53;&#x961F;&#x5217;&#x4E3A;&#x7A7A;&#x65F6;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x5220;&#x9664;&#xFF1A;</p>
+<pre><code class="lang-java">channel.queueDelete(<span class="hljs-string">&quot;queue-name&quot;</span>, <span class="hljs-keyword">false</span>, <span class="hljs-keyword">true</span>)
+</code></pre>
+<p>&#x6216;&#x8005;&#x5F53;&#x5B83;&#x4E0D;&#x518D;&#x88AB;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF08;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x6D88;&#x8D39;&#x8005;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x6D88;&#x8D39;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-java">channel.queueDelete(<span class="hljs-string">&quot;queue-name&quot;</span>, <span class="hljs-keyword">true</span>, <span class="hljs-keyword">false</span>)
+</code></pre>
+<p>&#x961F;&#x5217;&#x53EF;&#x4EE5;&#x88AB;&#x6E05;&#x9664;&#xFF08;&#x5220;&#x9664;&#x91CC;&#x8FB9;&#x7684;&#x6240;&#x6709;&#x6D88;&#x606F;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-java">channel.queuePurge(<span class="hljs-string">&quot;queue-name&quot;</span>)
+</code></pre>
+<h2 id="&#x53D1;&#x5E03;&#x6D88;&#x606F;"><a href="https://www.rabbitmq.com/api-guide.html#publishing" _target="blank">&#x53D1;&#x5E03;&#x6D88;&#x606F;</a></h2>
+<p>&#x4F7F;&#x7528; <code>Channel.basicPublish</code> &#x5C06;&#x6D88;&#x606F;&#x53D1;&#x5E03;&#x5230;&#x4EA4;&#x6362;&#x673A;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">byte</span>[] messageBodyBytes = <span class="hljs-string">&quot;Hello, world!&quot;</span>.getBytes();
+channel.basicPublish(exchangeName, routingKey, <span class="hljs-keyword">null</span>, messageBodyBytes);
+</code></pre>
+<p>&#x60F3;&#x8981;&#x5B9E;&#x73B0;&#x66F4;&#x5B8C;&#x5584;&#x7684;&#x63A7;&#x5236;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x91CD;&#x8F7D;&#x7684;&#x53D8;&#x4F53;&#x6765;&#x6307;&#x5B9A;<code>mandatory</code>&#x6807;&#x8BC6;&#xFF0C;&#x6216;&#x8005;&#x53D1;&#x9001;&#x9884;&#x8BBE;&#x597D;&#x6D88;&#x606F;&#x5C5E;&#x6027;&#x7684;&#x6D88;&#x606F;&#xFF08;&#x8BE6;&#x89C1;<a href="https://www.rabbitmq.com/publishers.html" _target="blank">&#x53D1;&#x5E03;&#x6307;&#x5357;</a> &#xFF09;</p>
+<pre><code class="lang-java">channel.basicPublish(exchangeName, routingKey, mandatory,
+                     MessageProperties.PERSISTENT_TEXT_PLAIN,
+                     messageBodyBytes);
+</code></pre>
+<p>&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x6307;&#x5B9A;&#x6295;&#x9012;&#x6A21;&#x5F0F;&#x4E3A;2&#xFF08;&#x6301;&#x4E45;&#x5316;&#xFF09;&#xFF0C;&#x4F18;&#x5148;&#x7EA7;&#x4E3A;1&#x5E76;&#x4E14;&#x6D88;&#x606F;&#x4F53;&#x7C7B;&#x578B;&#xFF08;content-type&#xFF09;&#x4E3A;&quot;text/plain&quot;&#x3002;&#x4F7F;&#x7528;<code>Builder</code>&#x7C7B;&#x53BB;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x6D88;&#x606F;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-java">channel.basicPublish(exchangeName, routingKey,
+             <span class="hljs-keyword">new</span> AMQP.BasicProperties.Builder()
+               .contentType(<span class="hljs-string">&quot;text/plain&quot;</span>)
+               .deliveryMode(<span class="hljs-number">2</span>)
+               .priority(<span class="hljs-number">1</span>)
+               .userId(<span class="hljs-string">&quot;bob&quot;</span>)
+               .build(),
+               messageBodyBytes);
+</code></pre>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x53D1;&#x5E03;&#x5E26;&#x6709;&#x81EA;&#x5B9A;&#x4E49;headers&#x6D88;&#x606F;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java">Map&lt;String, Object&gt; headers = <span class="hljs-keyword">new</span> HashMap&lt;String, Object&gt;();
+headers.put(<span class="hljs-string">&quot;latitude&quot;</span>,  <span class="hljs-number">51.5252949</span>);
+headers.put(<span class="hljs-string">&quot;longitude&quot;</span>, -<span class="hljs-number">0.0905493</span>);
+
+channel.basicPublish(exchangeName, routingKey,
+             <span class="hljs-keyword">new</span> AMQP.BasicProperties.Builder()
+               .headers(headers)
+               .build(),
+               messageBodyBytes);
+</code></pre>
+<p>&#x4EE5;&#x4E0B;&#x4F8B;&#x5B50;&#x4F1A;&#x53D1;&#x5E03;&#x4E00;&#x6761;&#x5177;&#x6709;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x7684;&#x6D88;&#x606F;&#xFF1A;</p>
+<pre><code class="lang-java">channel.basicPublish(exchangeName, routingKey,
+             <span class="hljs-keyword">new</span> AMQP.BasicProperties.Builder()
+               .expiration(<span class="hljs-string">&quot;60000&quot;</span>)
+               .build(),
+               messageBodyBytes);
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5E76;&#x6CA1;&#x6709;&#x5C55;&#x793A;&#x6240;&#x6709;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x3002;</p>
+<p>&#x6CE8;&#x610F;<code>BasicProperties</code>&#x662F;AMQP&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x6301;&#x6709;&#x7C7B;&#x7684;&#x5185;&#x7F6E;&#x7C7B;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x53D1;&#x751F; <a href="https://www.rabbitmq.com/alarms.html" _target="blank">&#x8D44;&#x6E90;&#x9A71;&#x52A8;&#x7684;&#x62A5;&#x8B66;</a>&#xFF0C;&#x90A3;<code>Channel#basicPublish</code>&#x7684;&#x8C03;&#x7528;&#x6700;&#x7EC8;&#x4F1A;&#x88AB;&#x963B;&#x585E;&#x6389;&#x3002;</p>
+<h2 id="&#x901A;&#x9053;&#x548C;&#x5E76;&#x53D1;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF08;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#xFF09;"><a href="https://www.rabbitmq.com/api-guide.html#concurrency" _target="blank">&#x901A;&#x9053;&#x548C;&#x5E76;&#x53D1;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF08;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#xFF09;</a></h2>
+<p>&#x4F9D;&#x7ECF;&#x9A8C;&#x800C;&#x8A00;&#xFF0C;&#x5E94;&#x8BE5;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x5728;&#x7EBF;&#x7A0B;&#x95F4;&#x5171;&#x4EAB;&#x901A;&#x9053;&#x5BF9;&#x8C61;&#x3002;&#x5E94;&#x7528;&#x5E94;&#x8BE5;&#x5C3D;&#x53EF;&#x80FD;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x90FD;&#x4F7F;&#x7528;&#x5355;&#x72EC;&#x7684;&#x901A;&#x9053;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5C06;&#x901A;&#x9053;&#x5171;&#x4EAB;&#x7ED9;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x3002;</p>
+<p>&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x5B89;&#x5168;&#x5730;&#x5E76;&#x53D1;&#x8C03;&#x7528;&#x901A;&#x9053;&#x4E0A;&#x7684;&#x67D0;&#x4E9B;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x6709;&#x4E9B;&#x64CD;&#x4F5C;&#x5219;&#x4E0D;&#x80FD;&#x5E76;&#x53D1;&#x8C03;&#x7528;&#xFF0C;&#x5982;&#x679C;&#x90A3;&#x6837;&#x505A;&#x4F1A;&#x5BFC;&#x81F4;&#x9519;&#x8BEF;&#x7684;&#x5E27;&#x4EA4;&#x9519;&#x5728;&#x7F51;&#x7EDC;&#x4E0A;&#xFF0C;&#x6216;&#x9020;&#x6210;&#x91CD;&#x590D;&#x786E;&#x8BA4;&#x7B49;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x5728;&#x5171;&#x4EAB;&#x7684;&#x901A;&#x9053;&#x4E0A;&#x5E76;&#x53D1;&#x6267;&#x884C;&#x53D1;&#x5E03;&#x4F1A;&#x5BFC;&#x81F4;&#x9519;&#x8BEF;&#x7684;&#x5E27;&#x4EA4;&#x9519;&#x5728;&#x7F51;&#x7EDC;&#x4E0A;&#xFF0C;&#x89E6;&#x53D1;&#x8FDE;&#x63A5;&#x7EA7;&#x522B;&#x7684;&#x534F;&#x8BAE;&#x5F02;&#x5E38;&#x5E76;&#x5BFC;&#x81F4;&#x8FDE;&#x63A5;&#x88AB;&#x4EE3;&#x7406;&#x76F4;&#x63A5;&#x5173;&#x95ED;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;&#x4E2D;&#x8FDB;&#x884C;&#x663E;&#x5F0F;&#x540C;&#x6B65;&#xFF08;&#x5FC5;&#x987B;&#x5728;&#x5173;&#x952E;&#x90E8;&#x5206;&#x8C03;&#x7528;<code>Channel&#xFF03;basicPublish</code>&#xFF09;&#x3002;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x5171;&#x4EAB;&#x901A;&#x9053;&#x4E5F;&#x4F1A;&#x5E72;&#x6270;<a href="https://www.rabbitmq.com/confirms.html" _target="blank">&#x53D1;&#x5E03;&#x8005;&#x786E;&#x8BA4;</a>&#x3002;&#x6700;&#x597D;&#x80FD;&#x591F;&#x5B8C;&#x5168;&#x907F;&#x514D;&#x5728;&#x5171;&#x4EAB;&#x7684;&#x901A;&#x9053;&#x4E0A;&#x4E0A;&#x8FDB;&#x884C;&#x5E76;&#x53D1;&#x53D1;&#x5E03;&#xFF0C;&#x4F8B;&#x5982;&#x901A;&#x8FC7;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x901A;&#x9053;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x5E76;&#x53D1;&#x3002;</p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x901A;&#x9053;&#x6C60;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x907F;&#x514D;&#x5728;&#x5171;&#x4EAB;&#x901A;&#x9053;&#x4E0A;&#x5E76;&#x53D1;&#x53D1;&#x5E03;&#x6D88;&#x606F;&#xFF1A;&#x4E00;&#x65E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x4F7F;&#x7528;&#x5B8C;&#x4E86;&#x67D0;&#x4E2A;&#x901A;&#x9053;&#xFF0C;&#x5C31;&#x5C06;&#x901A;&#x9053;&#x5F52;&#x8FD8;&#x5230;&#x6C60;&#x4E2D;&#xFF0C;&#x4F7F;&#x5F97;&#x901A;&#x9053;&#x53EF;&#x4EE5;&#x88AB;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x518D;&#x6B21;&#x4F7F;&#x7528;&#x3002;&#x901A;&#x9053;&#x6C60;&#x53EF;&#x4EE5;&#x89C6;&#x4E3A;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x540C;&#x6B65;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x73B0;&#x6210;&#x7684;&#x6C60;&#x5E93;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;&#x3002;&#x4F8B;&#x5982;&#x5F00;&#x7BB1;&#x5373;&#x7528;&#x7684; <a href="https://projects.spring.io/spring-amqp/" _target="blank">Spring AMQP</a> &#x3002;</p>
+<p>&#x901A;&#x9053;&#x662F;&#x5403;&#x8D44;&#x6E90;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x5927;&#x591A;&#x6570;&#x5E94;&#x7528;&#x60C5;&#x666F;&#x4E0B;&#x540C;&#x4E00;&#x4E2A;JVM&#x8FDB;&#x7A0B;&#x5F88;&#x5C11;&#x4F1A;&#x5F00;&#x653E;&#x5C0F;&#x51E0;&#x767E;&#x7684;&#x901A;&#x9053;&#x51FA;&#x6765;&#x3002;&#x8BBE;&#x60F3;&#x6211;&#x4EEC;&#x5E94;&#x7528;&#x7684;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x90FD;&#x6301;&#x6709;&#x4E00;&#x4E2A;&#x901A;&#x9053;&#xFF08;&#x7531;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x901A;&#x9053;&#x4E0D;&#x5E94;&#x88AB;&#x7528;&#x4E8E;&#x5E76;&#x53D1;&#x64CD;&#x4F5C;&#xFF09;&#xFF0C;&#x5355;&#x4E2A;JVM&#x91CC;&#x4E0A;&#x5343;&#x4E2A;&#x7EBF;&#x7A0B;&#x5DF2;&#x7ECF;&#x4F1A;&#x662F;&#x4E00;&#x4E2A;&#x76F8;&#x5F53;&#x5927;&#x7684;&#x5F00;&#x9500;&#xFF0C;&#x8FD9;&#x4E9B;&#x5F00;&#x9500;&#x672C;&#x6765;&#x662F;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x7684;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x4E00;&#x5C0F;&#x90E8;&#x5206;&#x5FEB;&#x901F;&#x7684;&#x53D1;&#x5E03;&#x8005;&#x53EF;&#x4EE5;&#x5F88;&#x8F7B;&#x677E;&#x5730;&#x5360;&#x6EE1;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&#x548C;&#x4EE3;&#x7406;&#x8282;&#x70B9;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x901A;&#x5E38;&#x53D1;&#x751F;&#x5728;&#x53D1;&#x5E03;&#x884C;&#x4E3A;&#x7684;&#x5DE5;&#x4F5C;&#x91CF;&#x5C0F;&#x4E8E;&#x8DEF;&#x7531;&#x3001;&#x5B58;&#x50A8;&#x548C;&#x6D88;&#x606F;&#x6295;&#x9012;&#x7684;&#x5DE5;&#x4F5C;&#x91CF;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x9700;&#x8981;&#x907F;&#x514D;&#x7684;&#x7ECF;&#x5178;&#x7684;&#x53CD;&#x6A21;&#x5F0F;&#x5C31;&#x662F;&#x4E3A;&#x6BCF;&#x4E2A;&#x53D1;&#x5E03;&#x7684;&#x6D88;&#x606F;&#x5F00;&#x653E;&#x5355;&#x72EC;&#x7684;&#x901A;&#x9053;&#x3002;&#x901A;&#x9053;&#x5E94;&#x8BE5;&#x662F;&#x957F;&#x65F6;&#x95F4;&#x5B58;&#x8D27;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x5F00;&#x653E;&#x4E00;&#x4E2A;&#x901A;&#x9053;&#x662F;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x5F80;&#x8FD4;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x6240;&#x4EE5;&#x4E0A;&#x8FB9;&#x63D0;&#x5230;&#x7684;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x662F;&#x76F8;&#x5F53;&#x6CA1;&#x6548;&#x7387;&#x7684;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x7528;&#x4E8E;&#x6D88;&#x8D39;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x5728;&#x5171;&#x4EAB;&#x901A;&#x9053;&#x4E0A;&#x63A8;&#x9001;&#x662F;&#x5B89;&#x5168;&#x7684;&#x3002;</p>
+<p>&#x670D;&#x52A1;&#x63A8;&#x9001;&#x6295;&#x9012;&#xFF08;&#x4E0B;&#x8FB9;&#x4ECB;&#x7ECD;&#xFF09;&#x662F;&#x4EE5;&#x5E76;&#x53D1;&#x7684;&#x65B9;&#x5F0F;&#x5206;&#x53D1;&#x7684;&#xFF0C;&#x5E76;&#x80FD;&#x786E;&#x4FDD;&#x6BCF;&#x4E2A;&#x901A;&#x9053;&#x987A;&#x5E8F;&#x7684;&#x56FA;&#x5B9A;&#x3002;&#x5206;&#x53D1;&#x673A;&#x5236;&#x5728;&#x6BCF;&#x4E2A;&#x8FDE;&#x63A5;&#x4E2D;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html" _target="blank">java.util.concurrent.ExecutorService</a>&#x3002;&#x4F7F;&#x7528;<code>ConnectionFactory#setSharedExecutor</code> setter &#x7684;<code>ConnectionFactory</code>&#x751F;&#x6210;&#x7684;&#x6240;&#x6709;&#x8FDE;&#x63A5;&#x90FD;&#x53EF;&#x4EE5;&#x5171;&#x4EAB;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;<code>executor</code>&#x3002;</p>
+<p>&#x5F53;&#x4F7F;&#x7528;<a href="https://www.rabbitmq.com/confirms.html" _target="blank">&#x624B;&#x52A8;&#x786E;&#x8BA4;</a> &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x8003;&#x8651;&#x5230;&#x662F;&#x7EBF;&#x7A0B;&#x5B8C;&#x6210;&#x7684;&#x786E;&#x8BA4;&#x52A8;&#x4F5C;&#x3002;&#x8FD9;&#x6839;&#x7EBF;&#x7A0B;&#x6536;&#x53D6;&#x6295;&#x9012;&#xFF08;&#x4F8B;&#x5982;<code>Consumer#handleDelivery</code>&#x5C06;&#x4EA4;&#x4ED8;&#x5904;&#x7406;&#x59D4;&#x6D3E;&#x7ED9;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#xFF09;&#x4E0D;&#x540C;&#xFF0C;&#x786E;&#x8BA4;&#x64CD;&#x4F5C;&#x5C06;<code>multiple</code>&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x6210;<code>true</code>&#x662F;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x4E24;&#x6B21;&#x786E;&#x8BA4;&#xFF0C;&#x8FD8;&#x4F1A;&#x89E6;&#x53D1;&#x901A;&#x9053;&#x7EA7;&#x522B;&#x5F02;&#x5E38;&#x5E76;&#x4E14;&#x5173;&#x95ED;&#x901A;&#x9053;&#x3002;&#x5728;&#x540C;&#x4E00;&#x65F6;&#x95F4;&#x5355;&#x72EC;&#x786E;&#x8BA4;&#x4E00;&#x6761;&#x72EC;&#x7ACB;&#x7684;&#x6D88;&#x606F;&#x662F;&#x6CA1;&#x95EE;&#x9898;&#x7684;&#x3002;</p>
+<h2 id="&#x901A;&#x8FC7;&#x8BA2;&#x9605;&#x6765;&#x63A5;&#x6536;&#x6D88;&#x606F;-&#x63A8;&#x9001;&#x63A5;&#x53E3;"><a href="https://www.rabbitmq.com/api-guide.html#consuming" _target="blank">&#x901A;&#x8FC7;&#x8BA2;&#x9605;&#x6765;&#x63A5;&#x6536;&#x6D88;&#x606F; (&quot;&#x63A8;&#x9001;&#x63A5;&#x53E3;&quot;)</a></h2>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> com.rabbitmq.client.Consumer;
+<span class="hljs-keyword">import</span> com.rabbitmq.client.DefaultConsumer;
+</code></pre>
+<p>&#x63A5;&#x6536;&#x6D88;&#x606F;&#x6700;&#x9AD8;&#x6548;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x4F7F;&#x7528;<code>Consumer</code>&#x63A5;&#x53E3;&#x8BBE;&#x7F6E;&#x8BA2;&#x9605;&#x3002;&#x6D88;&#x606F;&#x5728;&#x5230;&#x8FBE;&#x65F6;&#x88AB;&#x81EA;&#x52A8;&#x6295;&#x9012;&#x5230;&#x5176;&#x4E2D;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x663E;&#x793A;&#x7684;&#x53BB;&#x8BF7;&#x6C42;&#x3002;</p>
+<p>&#x5F53;&#x8C03;&#x7528;<code>Consumers</code>&#x76F8;&#x5173;&#x7684;&#x63A5;&#x53E3;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x5355;&#x4E2A;&#x8BA2;&#x9605;&#x59CB;&#x7EC8;&#x7531;&#x5176;&#x6D88;&#x8D39;&#x8005;&#x6807;&#x7B7E;&#x5F15;&#x7528;&#x3002;&#x6D88;&#x8D39;&#x8005;&#x6807;&#x7B7E;&#x53EF;&#x4EE5;&#x7531;&#x5BA2;&#x6237;&#x7AEF;&#x6216;&#x8005;&#x670D;&#x52A1;&#x5668;&#x6765;&#x751F;&#x6210;&#xFF0C;&#x7528;&#x4E8E;&#x6D88;&#x8D39;&#x8005;&#x7684;&#x8EAB;&#x4EFD;&#x8BC6;&#x522B;&#x3002;&#x60F3;&#x8BA9;RabbitMQ&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x8303;&#x56F4;&#x5185;&#x7684;&#x552F;&#x4E00;&#x6807;&#x7B7E;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0D;&#x542B;&#x6709;&#x6D88;&#x8D39;&#x8005;&#x6807;&#x7B7E;&#x5C5E;&#x6027;&#x7684;<code>Channel#basicConsume</code> &#x91CD;&#x8F7D;&#xFF0C;&#x6216;&#x8005;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x505A;&#x4E3A;&#x6D88;&#x8D39;&#x8005;&#x6807;&#x7B7E;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;<code>Channel#basicConsume</code>&#x8FD4;&#x56DE;&#x7684;&#x503C;&#x3002;&#x6D88;&#x8D39;&#x8005;&#x6807;&#x7B7E;&#x540C;&#x6837;&#x7528;&#x4E8E;&#x6E05;&#x9664;&#x6D88;&#x8D39;&#x8005;&#x4E4B;&#x7528;&#x3002;</p>
+<p>&#x4E0D;&#x540C;&#x7684;&#x6D88;&#x8D39;&#x8005;&#x5B9E;&#x4F8B;&#x5FC5;&#x987B;&#x6301;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x6D88;&#x8D39;&#x8005;&#x6807;&#x7B7E;&#x3002;&#x975E;&#x5E38;&#x4E0D;&#x5EFA;&#x8BAE;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x4E0A;&#x51FA;&#x73B0;&#x91CD;&#x590D;&#x7684;&#x6D88;&#x8D39;&#x8005;&#x6807;&#x7B7E;&#xFF0C;&#x8FD9;&#x56DE;&#x5BFC;&#x81F4; <a href="https://www.rabbitmq.com/api-guide.html#connection-recovery" _target="blank">&#x81EA;&#x52A8;&#x8FDE;&#x63A5;&#x8986;&#x76D6;</a> &#x95EE;&#x9898;&#xFF0C;&#x5E76;&#x5728;&#x76D1;&#x63A7;&#x6D88;&#x8D39;&#x8005;&#x65F6;&#x6DF7;&#x6DC6;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x5B9E;&#x73B0;<code>Consumer</code>&#x6700;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x5B50;&#x7C7B;&#x5316;<code>DefaultConsumer</code>&#x3002;&#x6B64;&#x5B50;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x5F53;&#x505A;<code>basicConsume</code>&#x8C03;&#x7528;&#x65F6;&#x7684;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x4F20;&#x9012;&#xFF0C;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x8BA2;&#x9605;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">boolean</span> autoAck = <span class="hljs-keyword">false</span>;
+channel.basicConsume(queueName, autoAck, <span class="hljs-string">&quot;myConsumerTag&quot;</span>,
+     <span class="hljs-keyword">new</span> DefaultConsumer(channel) {
+         <span class="hljs-meta">@Override</span>
+         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">handleDelivery</span><span class="hljs-params">(String consumerTag,
+                                    Envelope envelope,
+                                    AMQP.BasicProperties properties,
+                                    <span class="hljs-keyword">byte</span>[] body)</span>
+             <span class="hljs-keyword">throws</span> IOException
+         </span>{
+             String routingKey = envelope.getRoutingKey();
+             String contentType = properties.getContentType();
+             <span class="hljs-keyword">long</span> deliveryTag = envelope.getDeliveryTag();
+             <span class="hljs-comment">// (process the message components here ...)</span>
+             channel.basicAck(deliveryTag, <span class="hljs-keyword">false</span>);
+         }
+     });
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x7531;&#x4E8E;&#x6211;&#x4EEC;&#x8BBE;&#x7F6E;&#x4E86;<code>autoAck = false</code>&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x5BF9;&#x6295;&#x9012;&#x5230;<code>Consumer</code>&#x7684;&#x6D88;&#x606F;&#x8FDB;&#x884C;&#x786E;&#x8BA4;&#x3002;&#x6700;&#x7B80;&#x4FBF;&#x7684;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x5982;&#x4E0A;&#x8FB9;&#x4ECB;&#x7ECD;&#x7684;&#x4E00;&#x6837;&#x5728;<code>handleDelivery</code>&#x4E2D;&#x8FDB;&#x884C;&#x3002;</p>
+<p>&#x66F4;&#x590D;&#x6742;&#x7684;&#x6D88;&#x8D39;&#x8005;&#x9700;&#x8981;&#x53BB;&#x8986;&#x5199;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#x3002;&#x7279;&#x522B;&#x8BF4;&#x660E;&#x7684;&#x662F;&#xFF0C;&#x5F53;&#x901A;&#x9053;&#x548C;&#x8FDE;&#x63A5;&#x5173;&#x95ED;&#x65F6;&#xFF0C;<code>handleShutdownSignal</code>&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#xFF0C;<code>handleConsumeOk</code>&#x4F1A;&#x5728;&#x8C03;&#x7528;&#x5176;&#x4ED6;<code>Consumer</code>&#x56DE;&#x8C03;&#x4E4B;&#x524D;&#x88AB;&#x4F20;&#x9012;&#x7ED9;&#x6D88;&#x8D39;&#x8005;&#x6807;&#x7B7E;&#x3002;</p>
+<p><code>Consumers</code>&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B9E;&#x73B0;<code>handleCancelOk</code>&#x548C;<code>handleCancel</code>&#x65B9;&#x6CD5;&#x6765;&#x5206;&#x522B;&#x88AB;&#x544A;&#x77E5;&#x662F;&#x901A;&#x8FC7;&#x663E;&#x5F0F;&#x8FD8;&#x662F;&#x9690;&#x5F0F;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x53D6;&#x6D88;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>Channel.basicCancel</code>&#x663E;&#x5F0F;&#x5730;&#x53D6;&#x6D88;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x7684;<code>Consumer</code>&#x3002;</p>
+<pre><code class="lang-java">channel.basicCancel(consumerTag);
+</code></pre>
+<p>&#x4F20;&#x9012;&#x6D88;&#x8D39;&#x8005;&#x6807;&#x7B7E;&#x3002;</p>
+<p>&#x5C31;&#x50CF;&#x53D1;&#x5E03;&#x8005;&#x4E00;&#x6837;&#xFF0C;&#x8FD9;&#x91CC;&#x540C;&#x6837;&#x4E5F;&#x9700;&#x8981;&#x8003;&#x8651;&#x5230;&#x6D88;&#x8D39;&#x8005;&#x7684;&#x5E76;&#x53D1;&#x5B89;&#x5168;&#x6027;&#x3002;</p>
+<p>&#x6D88;&#x8D39;&#x8005;&#x7684;&#x56DE;&#x8C03;&#x7684;&#x8C03;&#x5EA6;&#x662F;&#x5728;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#x91CC;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x7EBF;&#x7A0B;&#x6C60;&#x8DDF;&#x901A;&#x9053;&#x5B9E;&#x4F8B;&#x5316;&#x7684;&#x90A3;&#x4E2A;&#x6C60;&#x662F;&#x5206;&#x5F00;&#x7684;&#x3002;&#x8FD9;&#x8868;&#x793A;<code>Consumers</code>&#x53EF;&#x4EE5;&#x5B89;&#x5168;&#x7684;&#x8C03;&#x7528;&#x7C7B;&#x4F3C;&#x4E8E;<code>Channel#queueDeclare</code>&#x548C;<code>Channel#basicCancel</code>&#x8FD9;&#x79CD;&#x94FE;&#x63A5;&#x548C;&#x901A;&#x9053;&#x7684;&#x963B;&#x585E;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;&#x901A;&#x9053;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x8C03;&#x5EA6;&#x7EBF;&#x7A0B;&#x3002;&#x5BF9;&#x4E8E;&#x5927;&#x591A;&#x6570;&#x5E38;&#x89C1;&#x7684;&#x6BCF;&#x4E2A;<code>Channel</code>&#x4E00;&#x4E2A;<code>Consumer</code>&#x7684;&#x573A;&#x666F;&#x4E0B;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x6D88;&#x8D39;&#x8005;&#x4E4B;&#x95F4;&#x4E0D;&#x4F1A;&#x76F8;&#x4E92;&#x5F71;&#x54CD;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x901A;&#x9053;&#x91CC;&#x6709;&#x591A;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#xFF0C;&#x957F;&#x65F6;&#x95F4;&#x8FD0;&#x884C;&#x7684;&#x6D88;&#x8D39;&#x8005;&#x4F1A;&#x963B;&#x6321;&#x901A;&#x9053;&#x4E2D;&#x5176;&#x4ED6;&#x6D88;&#x8D39;&#x8005;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x5EA6;&#x3002;</p>
+<p>&#x8BF7;&#x53C2;&#x8003;&#x5E76;&#x53D1;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF08;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#xFF09;&#x90E8;&#x5206;&#xFF0C;&#x6765;&#x83B7;&#x53D6;&#x6709;&#x5173;&#x4E8E;&#x5E76;&#x53D1;&#x548C;&#x5E76;&#x53D1;&#x5B89;&#x5168;&#x5371;&#x5BB3;&#x7684;&#x5176;&#x4ED6;&#x4E3B;&#x9898;&#x3002;</p>
+<h2 id="&#x68C0;&#x7D22;&#x5355;&#x6761;&#x6D88;&#x606F;-&#x62C9;&#x53D6;&#x63A5;&#x53E3;"><a href="https://www.rabbitmq.com/api-guide.html#getting" _target="blank">&#x68C0;&#x7D22;&#x5355;&#x6761;&#x6D88;&#x606F; (&quot;&#x62C9;&#x53D6;&#x63A5;&#x53E3;&quot;)</a></h2>
+<p>&#x6309;&#x9700;&#x68C0;&#x7D22;&#x5355;&#x6761;&#x6D88;&#x606F;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x7684; (&quot;pull API&quot; &#x53C8;&#x540D; polling)&#x3002;&#x8FD9;&#x79CD;&#x6D88;&#x8D39;&#x65B9;&#x6CD5;&#x7684;&#x6548;&#x7387;&#x662F;&#x6781;&#x4F4E;&#x7684;&#xFF0C;&#x6BD4;&#x5982;&#x5B83;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x8F6E;&#x8BAD;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5373;&#x4F7F;&#x5927;&#x591A;&#x6570;&#x8BF7;&#x6C42;&#x7ED3;&#x679C;&#x5C1A;&#x672A;&#x751F;&#x6210;&#xFF0C;&#x5E94;&#x7528;&#x4E5F;&#x4F1A;&#x91CD;&#x590D;&#x5730;&#x53BB;&#x8BF7;&#x6C42;&#x7ED3;&#x679C;&#x3002;&#x56E0;&#x6B64;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x662F;<strong>&#x5F3A;&#x70C8;&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x7684;</strong>&#x3002;</p>
+<p>&#x4F7F;&#x7528;<code>Channel.basicGet</code>&#x6765;&#x8FDB;&#x884C;&#x6D88;&#x606F;&#x7684;&#x201C;&#x62C9;&#x53D6;&#x201D;&#x3002;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x5305;&#x542B;&#x6709;&#x5934;&#x4FE1;&#x606F;&#xFF08;&#x5C5E;&#x6027;&#xFF09;&#x548C;&#x6D88;&#x606F;&#x4F53;&#x7684;<code>GetResponse</code>&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">boolean</span> autoAck = <span class="hljs-keyword">false</span>;
+GetResponse response = channel.basicGet(queueName, autoAck);
+<span class="hljs-keyword">if</span> (response == <span class="hljs-keyword">null</span>) {
+    <span class="hljs-comment">// No message retrieved.</span>
+} <span class="hljs-keyword">else</span> {
+    AMQP.BasicProperties props = response.getProps();
+    <span class="hljs-keyword">byte</span>[] body = response.getBody();
+    <span class="hljs-keyword">long</span> deliveryTag = response.getEnvelope().getDeliveryTag();
+    <span class="hljs-comment">// ...</span>
+</code></pre>
+<p>&#x7531;&#x4E8E;&#x6B64;&#x4F8B;&#x4F7F;&#x7528;<a href="https://www.rabbitmq.com/confirms.html" _target="blank">&#x624B;&#x52A8;&#x786E;&#x8BA4;</a>(the autoAck = false above)&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x9700;&#x8981;&#x8C03;&#x7528;<code>Channel.basicAckto</code>&#x786E;&#x8BA4;&#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x63A5;&#x6536;&#x5230;&#x4E86;&#x6D88;&#x606F;&#xFF08;&#x8BD1;&#x8005;&#x6CE8;&#xFF1A;&#x4E00;&#x822C;&#x5728;&#x6210;&#x529F;&#x5BF9;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6D88;&#x606F;&#x5904;&#x7406;&#x5B8C;&#x6BD5;&#x540E;&#x8FDB;&#x884C;&#x786E;&#x8BA4;&#xFF09;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-comment">// ...</span>
+channel.basicAck(method.deliveryTag, <span class="hljs-keyword">false</span>); <span class="hljs-comment">// acknowledge receipt of the message</span>
+}
+</code></pre>
+<h2 id="&#x5904;&#x7406;&#x65E0;&#x6CD5;&#x8DEF;&#x7531;&#x7684;&#x6D88;&#x606F;"><a href="https://www.rabbitmq.com/api-guide.html#returning" _target="blank">&#x5904;&#x7406;&#x65E0;&#x6CD5;&#x8DEF;&#x7531;&#x7684;&#x6D88;&#x606F;</a></h2>
+<p>&#x5982;&#x679C;&#x53D1;&#x5E03;&#x7684;&#x6D88;&#x606F;&#x8BBE;&#x7F6E;&#x4E86;<code>mandatory</code>&#x6807;&#x8BC6;&#xFF0C;&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x88AB;&#x6210;&#x529F;&#x8DEF;&#x7531;&#xFF0C;&#x4EE3;&#x7406;&#x4F1A;&#x5C06;&#x5176;&#x8FD4;&#x56DE;&#x7ED9;&#x53D1;&#x9001;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#xFF08;&#x901A;&#x8FC7;<code>AMQP.Basic.Return</code>&#x547D;&#x4EE4;&#xFF09;&#x3002;</p>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B9E;&#x73B0;<code>ReturnListener</code>&#x63A5;&#x53E3;&#x5E76;&#x8C03;&#x7528;<code>Channel.addReturnListener</code>&#x6765;&#x6536;&#x5230;&#x6B64;&#x7C7B;&#x9000;&#x8FD8;&#x901A;&#x77E5;&#x3002;&#x5982;&#x679C;&#x5BA2;&#x6237;&#x7AEF;&#x6CA1;&#x6709;&#x4E3A;&#x7279;&#x5B9A;&#x7684;&#x901A;&#x9053;&#x914D;&#x7F6E;&#x9000;&#x8FD8;&#x76D1;&#x542C;&#xFF0C;&#x90A3;&#x8FD4;&#x56DE;&#x7684;&#x76F8;&#x5E94;&#x6D88;&#x606F;&#x4F1A;&#x88AB;&#x9ED8;&#x9ED8;&#x5730;&#x4E22;&#x5F03;&#x6389;&#x3002;</p>
+<pre><code class="lang-java">channel.addReturnListener(<span class="hljs-keyword">new</span> ReturnListener() {
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">handleReturn</span><span class="hljs-params">(<span class="hljs-keyword">int</span> replyCode,
+                                  String replyText,
+                                  String exchange,
+                                  String routingKey,
+                                  AMQP.BasicProperties properties,
+                                  <span class="hljs-keyword">byte</span>[] body)</span>
+    <span class="hljs-keyword">throws</span> IOException </span>{
+        ...
+    }
+});
+</code></pre>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x5E03;&#x4E86;&#x4E00;&#x6761;&#x5E26;&#x6709;<code>mandatory</code>&#x6807;&#x8BC6;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x6B64;&#x6D88;&#x606F;&#x8BBE;&#x7F6E;&#x4E86;&#x4EA4;&#x6362;&#x673A;&#x7C7B;&#x578B;&#x4E3A;&#x201C;&#x76F4;&#x8FDE;&#x201D;&#xFF0C;&#x4F46;&#x662F;&#x4EA4;&#x6362;&#x673A;&#x5E76;&#x6CA1;&#x6709;&#x7ED1;&#x5B9A;&#x5230;&#x961F;&#x5217;&#x4E0A;&#xFF0C;&#x6B64;&#x65F6;&#x9000;&#x8FD8;&#x76D1;&#x542C;&#x5C31;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;</p>
+<h2 id="&#x5173;&#x95ED;&#x534F;&#x8BAE;"><a href="https://www.rabbitmq.com/api-guide.html#shutdown" _target="blank">&#x5173;&#x95ED;&#x534F;&#x8BAE;</a></h2>
+<h3 id="&#x5BA2;&#x6237;&#x7AEF;&#x5173;&#x95ED;&#x8FDB;&#x7A0B;&#x6982;&#x89C8;"><a href="https://www.rabbitmq.com/api-guide.html#shutdown-overview" _target="blank">&#x5BA2;&#x6237;&#x7AEF;&#x5173;&#x95ED;&#x8FDB;&#x7A0B;&#x6982;&#x89C8;</a></h3>
+<p>AMQP 0-9-1&#x8FDE;&#x63A5;&#x548C;&#x901A;&#x9053;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x901A;&#x7528;&#x65B9;&#x6CD5;&#x6765;&#x7BA1;&#x7406;&#x7F51;&#x7EDC;&#x6545;&#x969C;&#xFF0C;&#x5185;&#x90E8;&#x6545;&#x969C;&#x548C;&#x663E;&#x5F0F;&#x672C;&#x5730;&#x5173;&#x95ED;&#x3002;</p>
+<p>AMQP 0-9-1&#x8FDE;&#x63A5;&#x548C;&#x901A;&#x9053;&#x5177;&#x6709;&#x4EE5;&#x4E0B;&#x751F;&#x547D;&#x5468;&#x671F;&#x72B6;&#x6001;&#xFF1A;</p>
+<ul>
+<li>&#x6253;&#x5F00;&#xFF1A;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E86;</li>
+<li>&#x6B63;&#x5728;&#x5173;&#x95ED;&#xFF1A;&#x5DF2;&#x7ECF;&#x660E;&#x786E;&#x901A;&#x77E5;&#x5BF9;&#x8C61;&#x5728;&#x672C;&#x5730;&#x8FDB;&#x884C;&#x5173;&#x95ED;&#xFF0C;&#x5DF2;&#x7ECF;&#x5411;&#x6240;&#x6709;&#x652F;&#x6301;&#x7684;&#x5E95;&#x5C42;&#x5BF9;&#x8C61;&#x53D1;&#x51FA;&#x4E86;&#x5173;&#x95ED;&#x8BF7;&#x6C42;&#xFF0C;&#x5E76;&#x4E14;&#x6B63;&#x5728;&#x7B49;&#x5F85;&#x5176;&#x5173;&#x95ED;&#x8FC7;&#x7A0B;&#x5B8C;&#x6210;</li>
+<li>&#x5DF2;&#x5173;&#x95ED;&#xFF1A;&#x5BF9;&#x8C61;&#x5DF2;&#x7ECF;&#x63A5;&#x6536;&#x5230;&#x6240;&#x6709;&#x5E95;&#x5C42;&#x5BF9;&#x65B9;&#x53D1;&#x51FA;&#x7684;&#x5173;&#x95ED;&#x5B8C;&#x6210;&#x7684;&#x901A;&#x77E5;&#xFF0C;&#x7136;&#x540E;&#x81EA;&#x5DF1;&#x4E5F;&#x5B8C;&#x6210;&#x4E86;&#x5173;&#x95ED;&#x64CD;&#x4F5C;&#x3002;</li>
+</ul>
+<p>&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x53EA;&#x7BA1;&#x5B8C;&#x6210;&#x5173;&#x95ED;&#x72B6;&#x6001;&#xFF0C;&#x800C;&#x4E0D;&#x5173;&#x5FC3;&#x9020;&#x6210;&#x5173;&#x95ED;&#x7684;&#x539F;&#x56E0;&#x662F;&#x4EC0;&#x4E48;&#x3002;&#x50CF;&#x5E94;&#x7528;&#x8BF7;&#x6C42;&#x3001;&#x5BA2;&#x6237;&#x7AEF;&#x5185;&#x90E8;&#x5E93;&#x9519;&#x8BEF;&#x3001;&#x8FDC;&#x7A0B;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x6216;&#x8005;&#x7F51;&#x7EDC;&#x9519;&#x8BEF;&#x4E00;&#x6982;&#x4E0D;&#x7BA1;&#x3002;</p>
+<p>&#x8FDE;&#x63A5;&#x548C;&#x901A;&#x9053;&#x5BF9;&#x8C61;&#x4F1A;&#x5904;&#x7406;&#x5982;&#x4E0B;&#x6240;&#x793A;&#x7684;&#x8DDF;&#x5173;&#x95ED;&#x6709;&#x5173;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li><code>addShutdownListener(ShutdownListener listener)</code> &#x548C;</li>
+<li><code>removeShutdownListener(ShutdownListener listener)</code>&#x7528;&#x6765;&#x7BA1;&#x7406;&#x76D1;&#x542C;&#x5668;&#xFF0C;&#x5F53;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x4E3A;&#x5173;&#x95ED;&#x72B6;&#x6001;&#x65F6;&#x89E6;&#x53D1;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x7ED9;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x5173;&#x95ED;&#x7684;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5173;&#x95ED;&#x76D1;&#x542C;&#x5668;&#x4F1A;&#x7ACB;&#x5373;&#x51FA;&#x53D1;&#x76D1;&#x542C;&#x884C;&#x4E3A;&#x3002;</li>
+<li><code>getCloseReason()</code>&#x7528;&#x6765;&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x5173;&#x95ED;&#x7684;&#x539F;&#x56E0;</li>
+<li><code>isOpen()</code>&#x5728;&#x6D4B;&#x8BD5;&#x5BF9;&#x8C61;&#x5F00;&#x542F;&#x72B6;&#x6001;&#x65F6;&#x5F88;&#x6709;&#x7528;</li>
+<li><code>close(int closeCode, String closeMessage)</code>&#x7528;&#x6765;&#x663E;&#x5F0F;&#x5730;&#x901A;&#x77E5;&#x5BF9;&#x8C61;&#x6267;&#x884C;&#x5173;&#x95ED;&#x64CD;&#x4F5C;</li>
+</ul>
+<p>&#x76D1;&#x542C;&#x5668;&#x7684;&#x7B80;&#x5355;&#x5E94;&#x7528;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> com.rabbitmq.client.ShutdownSignalException;
+<span class="hljs-keyword">import</span> com.rabbitmq.client.ShutdownListener;
+
+connection.addShutdownListener(<span class="hljs-keyword">new</span> ShutdownListener() {
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shutdownCompleted</span><span class="hljs-params">(ShutdownSignalException cause)</span>
+    </span>{
+        ...
+    }
+});
+</code></pre>
+<h3 id="&#x6709;&#x5173;&#x5173;&#x95ED;&#x60C5;&#x51B5;&#x7684;&#x4FE1;&#x606F;"><a href="https://www.rabbitmq.com/api-guide.html#shutdown-cause" _target="blank">&#x6709;&#x5173;&#x5173;&#x95ED;&#x60C5;&#x51B5;&#x7684;&#x4FE1;&#x606F;</a></h3>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x663E;&#x5F0F;&#x8C03;&#x7528;<code>getCloseReason()</code>&#x65B9;&#x6CD5;&#x6216;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x5E26;&#x6709;<code>cause</code>&#x53C2;&#x6570;&#x7684;<code>ShutdownListener</code>&#x7C7B;&#x7684;<code>service(ShutdownSignalException cause)</code>&#x65B9;&#x6CD5;&#x6765;&#x83B7;&#x53D6;<code>ShutdownSignalException</code>&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x6709;&#x5173;&#x5173;&#x95ED;&#x539F;&#x56E0;&#x7684;&#x6240;&#x6709;&#x53EF;&#x7528;&#x4FE1;&#x606F;&#x3002;</p>
+<p><code>ShutdownSignalException</code>&#x7C7B;&#x63D0;&#x4F9B;&#x4E86;&#x7528;&#x4E8E;&#x5206;&#x6790;&#x5173;&#x95ED;&#x539F;&#x56E0;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x901A;&#x8FC7;&#x8C03;&#x7528;<code>isHardError()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#x662F;&#x4E0D;&#x662F;&#x56E0;&#x4E3A;&#x8FDE;&#x63A5;&#x6216;&#x8005;&#x901A;&#x9053;&#x9519;&#x8BEF;&#x5BFC;&#x81F4;&#xFF0C;<code>getReason()</code>&#x5219;&#x4F1A;&#x4EE5;&#x8FD4;&#x56DE;AMQP&#x65B9;&#x6CD5;&#x7684;&#x65B9;&#x5F0F;&#x63D0;&#x4F9B;&#x5173;&#x95ED;&#x7684;&#x6709;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;<code>AMQP.Channel.Close</code>&#x6216;&#x8005;<code>AMQP.Connection.Close</code>&#xFF08;&#x5982;&#x679C;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x5E93;&#x5F15;&#x8D77;&#x7684;&#x5F02;&#x5E38;&#xFF0C;&#x6BD4;&#x5982;&#x7F51;&#x7EDC;&#x901A;&#x8BAF;&#x5931;&#x8D25;&#x5219;&#x4F1A;&#x8FD4;&#x56DE;null&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>getCause()</code>&#x6765;&#x83B7;&#x53D6;&#x5F02;&#x5E38;&#xFF09;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shutdownCompleted</span><span class="hljs-params">(ShutdownSignalException cause)</span>
+</span>{
+  <span class="hljs-keyword">if</span> (cause.isHardError())
+  {
+    Connection conn = (Connection)cause.getReference();
+    <span class="hljs-keyword">if</span> (!cause.isInitiatedByApplication())
+    {
+      Method reason = cause.getReason();
+      ...
+    }
+    ...
+  } <span class="hljs-keyword">else</span> {
+    Channel ch = (Channel)cause.getReference();
+    ...
+  }
+}
+</code></pre>
+<h3 id="&#x539F;&#x5B50;&#x6027;&#x548C;isopen&#x65B9;&#x6CD5;&#x7684;&#x4F7F;&#x7528;"><a href="https://www.rabbitmq.com/api-guide.html#shutdown-atomicity" _target="blank">&#x539F;&#x5B50;&#x6027;&#x548C;isOpen()&#x65B9;&#x6CD5;&#x7684;&#x4F7F;&#x7528;</a></h3>
+<p>&#x7531;&#x4E8E;&#x901A;&#x9053;&#x548C;&#x8FDE;&#x63A5;&#x7684;isOpen()&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4F9D;&#x8D56;&#x4E8E;&#x5173;&#x95ED;&#x539F;&#x56E0;&#x662F;&#x5426;&#x5B58;&#x5728;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x5BF9;&#x7ADE;&#x4E89;&#x6761;&#x4EF6;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x8FDB;&#x884C;&#x4E86;&#x8BF4;&#x660E;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">brokenMethod</span><span class="hljs-params">(Channel channel)</span>
+</span>{
+    <span class="hljs-keyword">if</span> (channel.isOpen())
+    {
+        <span class="hljs-comment">// The following code depends on the channel being in open state.</span>
+        <span class="hljs-comment">// However there is a possibility of the change in the channel state</span>
+        <span class="hljs-comment">// between isOpen() and basicQos(1) call</span>
+        ...
+        channel.basicQos(<span class="hljs-number">1</span>);
+    }
+}
+</code></pre>
+<p>&#x76F8;&#x53CD;&#xFF0C;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x5FFD;&#x7565;&#x7C7B;&#x4F3C;&#x7684;&#x68C0;&#x67E5;&#xFF0C;&#x7B80;&#x5355;&#x5730;&#x5C1D;&#x8BD5;&#x81EA;&#x5DF1;&#x6240;&#x9700;&#x8981;&#x6267;&#x884C;&#x7684;&#x52A8;&#x4F5C;&#x5373;&#x53EF;&#x3002;&#x5982;&#x679C;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x901A;&#x9053;&#x6216;&#x8005;&#x8FDE;&#x63A5;&#x5173;&#x95ED;&#x4E86;&#xFF0C;&#x4F1A;&#x629B;&#x51FA;<code>ShutdownSignalException</code>&#x6765;&#x8868;&#x793A;&#x5BF9;&#x8C61;&#x662F;&#x65E0;&#x6548;&#x7684;&#x3002;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x6355;&#x83B7;&#x7531;&#x4E8E;&#x4EE3;&#x7406;&#x610F;&#x5916;&#x5173;&#x95ED;&#x8FDE;&#x63A5;&#x9020;&#x6210;&#x7684;<code>SocketException</code>&#x548C;&#x4EE3;&#x7406;&#x53D1;&#x8D77;&#x6E05;&#x7406;&#x5173;&#x95ED;&#x6240;&#x9020;&#x6210;&#x7684;<code>ShutdownSignalException</code>&#x6240;&#x5F15;&#x53D1;&#x7684;<code>IOException</code>&#x5F02;&#x5E38;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">validMethod</span><span class="hljs-params">(Channel channel)</span>
+</span>{
+    <span class="hljs-keyword">try</span> {
+        ...
+        channel.basicQos(<span class="hljs-number">1</span>);
+    } <span class="hljs-keyword">catch</span> (ShutdownSignalException sse) {
+        <span class="hljs-comment">// possibly check if channel was closed</span>
+        <span class="hljs-comment">// by the time we started action and reasons for</span>
+        <span class="hljs-comment">// closing it</span>
+        ...
+    } <span class="hljs-keyword">catch</span> (IOException ioe) {
+        <span class="hljs-comment">// check why connection was closed</span>
+        ...
+    }
+}
+</code></pre>
+<h2 id="&#x9AD8;&#x7EA7;&#x8FDE;&#x63A5;&#x9009;&#x9879;"><a href="https://www.rabbitmq.com/api-guide.html#advanced-connection" _target="blank">&#x9AD8;&#x7EA7;&#x8FDE;&#x63A5;&#x9009;&#x9879;</a></h2>
+<h3 id="&#x6D88;&#x8D39;&#x8005;&#x64CD;&#x4F5C;&#x7EBF;&#x7A0B;&#x6C60;"><a href="https://www.rabbitmq.com/api-guide.html#consumer-thread-pool" _target="blank">&#x6D88;&#x8D39;&#x8005;&#x64CD;&#x4F5C;&#x7EBF;&#x7A0B;&#x6C60;</a></h3>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6D88;&#x8D39;&#x8005;&#x7EBF;&#x7A0B;&#xFF08;&#x53C2;&#x89C1;&#x4E0B;&#x8FB9;&#x7684; <a href="https://www.rabbitmq.com/api-guide.html#consuming" _target="blank">&#x63A5;&#x6536;</a> &#xFF09;&#x4F1A;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x65B0;&#x7684;<code>ExecutorService</code>&#x7EBF;&#x7A0B;&#x6C60;&#x5206;&#x914D;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x66F4;&#x5927;&#x7684;&#x63A7;&#x5236;&#x6743;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>newConnection()</code>&#x53BB;&#x5E94;&#x7528;<code>ExecutorService</code>&#x4EE5;&#x8FDB;&#x884C;&#x66FF;&#x4EE3;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x4E00;&#x4E2A;&#x6BD4;&#x5E38;&#x89C4;&#x5206;&#x914D;&#x989D;&#x66F4;&#x5927;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java">ExecutorService es = Executors.newFixedThreadPool(<span class="hljs-number">20</span>);
+Connection conn = factory.newConnection(es);
+</code></pre>
+<p><code>Executors</code>&#x548C;<code>ExecutorService</code>&#x7C7B;&#x90FD;&#x5728;<code>java.util.concurrent package</code>&#x91CC;&#x3002;</p>
+<p>&#x5F53;&#x8FDE;&#x63A5;&#x5173;&#x95ED;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x63D0;&#x4F9B;&#x7684;<code>ExecutorService</code>&#x4E5F;&#x4F1A;&#x6267;&#x884C;<code>shutdown()</code>&#xFF0C;&#x4F46;&#x662F;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x7684;<code>ExecutorService</code>&#xFF08;&#x5982;&#x4E0A;&#x6240;&#x793A;&#xFF09;&#x5219;<em>&#x4E0D;&#x4F1A;</em>&#x6267;&#x884C;<code>shutdown()</code>&#x3002;&#x63D0;&#x4F9B;&#x81EA;&#x5B9A;&#x4E49;<code>ExecutorService</code>&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x5FC5;&#x987B;&#x786E;&#x4FDD;&#x5176;&#x6700;&#x7EC8;&#x4F1A;&#x88AB;&#x5173;&#x95ED;&#xFF08;&#x5373;&#x8C03;&#x7528;<code>shutdown()</code> &#x65B9;&#x6CD5;&#xFF09;&#xFF0C;&#x5426;&#x5219;&#x7EBF;&#x7A0B;&#x6C60;&#x4F1A;&#x5F71;&#x54CD;JVM&#x7684;&#x4E2D;&#x6B62;&#x3002;</p>
+<p>&#x76F8;&#x540C;&#x7684;executor&#x670D;&#x52A1;&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x591A;&#x4E2A;&#x8FDE;&#x63A5;&#x5171;&#x4EAB;&#xFF0C;&#x6216;&#x8005;&#x63A5;&#x8FDE;&#x4E0D;&#x65AD;&#x7684;&#x91CD;&#x590D;&#x4F7F;&#x7528;&#x3001;&#x91CD;&#x590D;&#x8FDE;&#x63A5;&#xFF0C;&#x4F46;&#x662F;&#x65E0;&#x8BBA;&#x5982;&#x4F55;&#x5F53;&#x5B83;&#x5173;&#x95ED;&#x540E;&#x662F;&#x4E0D;&#x53EF;&#x4EE5;&#x518D;&#x7528;&#x7684;&#x3002;</p>
+<p>&#x5E94;&#x8BE5;&#x5728;&#x6709;&#x8BC1;&#x636E;&#x8868;&#x660E;&#x5904;&#x7406;&#x6D88;&#x8D39;&#x56DE;&#x8C03;&#x5B58;&#x5728;&#x4E25;&#x91CD;&#x74F6;&#x9888;&#x65F6;&#x624D;&#x53BB;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6216;&#x8005;&#x53EA;&#x6709;&#x5C11;&#x91CF;&#x6D88;&#x8D39;&#x8005;&#x56DE;&#x8C03;&#x9700;&#x8981;&#x6267;&#x884C;&#xFF0C;&#x90A3;&#x9ED8;&#x8BA4;&#x5206;&#x914D;&#x7684;&#x7EBF;&#x7A0B;&#x5C31;&#x8DB3;&#x591F;&#x4E86;&#x3002;&#x5373;&#x4F7F;&#x5076;&#x5C14;&#x4F1A;&#x6709;&#x6D88;&#x8D39;&#x8005;&#x6D3B;&#x52A8;&#x9661;&#x589E;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x6700;&#x521D;&#x7684;&#x8D1F;&#x8F7D;&#x662F;&#x5F88;&#x5C0F;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x7EBF;&#x7A0B;&#x8D44;&#x6E90;&#x7684;&#x5206;&#x914D;&#x548C;&#x4E0D;&#x80FD;&#x65E0;&#x9650;&#x6269;&#x5927;&#x3002;</p>
+<h3 id="&#x4E3B;&#x673A;&#x5217;&#x8868;&#x7684;&#x4F7F;&#x7528;"><a href="https://www.rabbitmq.com/api-guide.html#address-array" _target="blank">&#x4E3B;&#x673A;&#x5217;&#x8868;&#x7684;&#x4F7F;&#x7528;</a></h3>
+<p>&#x628A;&#x4E00;&#x4E2A;<code>Address</code>&#x6570;&#x7EC4;&#x4F20;&#x7ED9;<code>newConnection()</code>&#x662F;&#x6CA1;&#x95EE;&#x9898;&#x7684;&#x3002;<code>Address</code>&#x662F;&#x4E00;&#x4E2A;<code>com.rabbitmq.client package</code>&#x4E2D;&#x5305;&#x542B; <em>&#x4E3B;&#x673A;</em> &#x548C; <em>&#x7AEF;&#x53E3;</em>&#x7EC4;&#x4EF6;&#x7684;&#x7B80;&#x5355;&#x7684;&#x4FBF;&#x6377;&#x7C7B;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-java">Address[] addrArr = <span class="hljs-keyword">new</span> Address[]{ <span class="hljs-keyword">new</span> Address(hostname1, portnumber1)
+                                 , <span class="hljs-keyword">new</span> Address(hostname2, portnumber2)};
+Connection conn = factory.newConnection(addrArr);
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x4F1A;&#x5148;&#x53BB;&#x5C1D;&#x8BD5;&#x8FDE;&#x63A5;<code>hostname1:portnumber1</code>&#xFF0C;&#x5931;&#x8D25;&#x7684;&#x8BDD;&#x4F1A;&#x518D;&#x5C1D;&#x8BD5;<code>hostname2:portnumber2</code>&#x3002;&#x8FD4;&#x56DE;&#x7684;&#x8FDE;&#x63A5;&#x5BF9;&#x8C61;&#x662F;&#x7B2C;&#x4E00;&#x6B21;&#x6210;&#x529F;&#x7684;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;(&#x6CA1;&#x629B;&#x51FA;<code>IOException</code>&#x7684;&#x8BDD;)&#x3002;&#x8FD9;&#x8DDF;&#x5206;&#x522B;&#x8BBE;&#x7F6E;&#x4E3B;&#x673A;&#x548C;&#x7AEF;&#x53E3;&#x7136;&#x540E;&#x4F9D;&#x6B21;&#x8C03;&#x7528;<code>factory.newConnection()</code>&#x76F4;&#x5230;&#x6210;&#x529F;&#x7684;&#x64CD;&#x4F5C;&#x4E00;&#x6BDB;&#x4E00;&#x6837;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x540C;&#x65F6;&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;<code>ExecutorService</code>&#xFF08;&#x5728;<code>factory.newConnection(es, addrArr)</code>&#x4E2D;&#x4F7F;&#x7528;&#xFF09;&#xFF0C;&#x90A3;&#x7EBF;&#x7A0B;&#x6C60;&#x4E5F;&#x662F;&#x5BF9;&#x5E94;&#x7684;&#x7B2C;&#x4E00;&#x6B21;&#x6210;&#x529F;&#x8FDE;&#x63A5;&#x7684;&#x90A3;&#x4E2A;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x60F3;&#x8981;&#x5B9E;&#x73B0;&#x8FDE;&#x63A5;&#x7684;&#x66F4;&#x591A;&#x63A7;&#x5236;&#xFF0C;&#x53C2;&#x89C1; <a href="https://www.rabbitmq.com/api-guide.html#service-discovery-with-address-resolver" _target="blank">&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x652F;&#x6301;</a>.</p>
+<h3 id="&#x4F7F;&#x7528;addressresolver&#x63A5;&#x53E3;&#x5B9E;&#x73B0;&#x670D;&#x52A1;&#x53D1;&#x73B0;"><a href="https://www.rabbitmq.com/api-guide.html#service-discovery-with-address-resolver" _target="blank">&#x4F7F;&#x7528;AddressResolver&#x63A5;&#x53E3;&#x5B9E;&#x73B0;&#x670D;&#x52A1;&#x53D1;&#x73B0;</a></h3>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>AddressResolver</code>&#x63A5;&#x53E3;&#x5B9E;&#x73B0;&#x6765;&#x6539;&#x53D8;&#x8FDE;&#x63A5;&#x65F6;&#x7684;&#x7AEF;&#x70B9;&#x89E3;&#x6790;&#x7B97;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-java">Connection conn = factory.newConnection(addressResolver);
+</code></pre>
+<p>The AddressResolver interface is like the following:</p>
+<p><code>AddressResolver</code>&#x63A5;&#x53E3;&#x7C7B;&#x4F3C;&#x4E8E;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">AddressResolver</span> </span>{
+
+  <span class="hljs-function">List&lt;Address&gt; <span class="hljs-title">getAddresses</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException</span>;
+
+}
+</code></pre>
+<p>&#x5C31;&#x8DDF; <a href="https://www.rabbitmq.com/api-guide.html#address-array" _target="blank">&#x4E3B;&#x673A;&#x5217;&#x8868;</a>&#x4E00;&#x6837;&#xFF0C;&#x5148;&#x5C1D;&#x8BD5;&#x8FD4;&#x56DE;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;<code>Address</code>&#xFF0C;&#x5982;&#x679C;&#x5931;&#x8D25;&#x4E86;&#x518D;&#x8BD5;&#x7B2C;&#x4E8C;&#x4E2A;&#xFF0C;&#x76F4;&#x5230;&#x6210;&#x529F;&#x4E3A;&#x6B62;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x540C;&#x65F6;&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;<code>ExecutorService</code>&#xFF08;&#x5728;<code>factory.newConnection(es, addrArr)</code>&#x4E2D;&#x4F7F;&#x7528;&#xFF09;&#xFF0C;&#x90A3;&#x7EBF;&#x7A0B;&#x6C60;&#x4E5F;&#x662F;&#x5BF9;&#x5E94;&#x7684;&#x7B2C;&#x4E00;&#x6B21;&#x6210;&#x529F;&#x8FDE;&#x63A5;&#x7684;&#x90A3;&#x4E2A;&#x3002;</p>
+<p><code>AddressResolver</code>&#x662F;&#x5B9E;&#x73B0;&#x81EA;&#x5B9A;&#x4E49;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x903B;&#x8F91;&#x7684;&#x6700;&#x4F73;&#x65B9;&#x5F0F;&#xFF0C;&#x5728;&#x52A8;&#x6001;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x7684;&#x72B6;&#x51B5;&#x4E0B;&#x5C24;&#x5176;&#x6709;&#x7528;&#x3002;&#x7ED3;&#x5408; <a href="https://www.rabbitmq.com/api-guide.html#recovery" _target="blank">&#x81EA;&#x52A8;&#x53D1;&#x73B0;]</a>&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x8FDE;&#x63A5;&#x5230;&#x9996;&#x6B21;&#x542F;&#x52A8;&#x65F6;&#x5C1A;&#x672A;&#x51FA;&#x73B0;&#x6545;&#x969C;&#x7684;&#x8282;&#x70B9;&#x3002;&#x59FB;&#x4EB2;&#x548C;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x662F;&#x81EA;&#x5B9A;&#x4E49;<code>AddressResolver</code>&#x80FD;&#x505A;&#x7684;&#x53E6;&#x5916;&#x4E24;&#x4E2A;&#x60C5;&#x666F;&#x3002;</p>
+<p>Java&#x5BA2;&#x6237;&#x7AEF;&#x9644;&#x5E26;&#x4E86;&#x4EE5;&#x4E0B;&#x5B9E;&#x73B0;&#xFF08;&#x8BE6;&#x89C1;javadoc&#xFF09;&#xFF1A;</p>
+<ul>
+<li><code>DnsRecordIpAddressResolver</code>&#xFF1A;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x4E3B;&#x673A;&#x540D;&#xFF0C;&#x8FD4;&#x56DE;&#x5176;IP&#x5730;&#x5740;&#xFF08;&#x9488;&#x5BF9;DNS&#x670D;&#x52A1;&#x5668;&#x5E73;&#x53F0;&#x7684;&#x89E3;&#x6790;&#xFF09;&#x3002;&#x8FD9;&#x5BF9;&#x7B80;&#x5355;&#x7684;&#x57FA;&#x4E8E;DNS&#x7684;&#x5982;&#x5728;&#x5747;&#x8861;&#x5F88;&#x5E2E;&#x52A9;&#x5F88;&#x5927;&#x3002;</li>
+<li><code>DnsSrvRecordAddressResolver</code>&#xFF1A;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x670D;&#x52A1;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x8FD4;&#x56DE;&#x5176;&#x6240;&#x5728;&#x7684;&#x4E3B;&#x673A;&#x540D;/&#x7AEF;&#x53E3;&#x5BF9;&#x3002;&#x641C;&#x7D22;&#x670D;&#x52A1;&#x57FA;&#x4E8E;DNS SRV&#x8BF7;&#x6C42;&#x5B9E;&#x73B0;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x7C7B;&#x4F3C;&#x4E8E;<a href="https://www.consul.io/" _target="blank">HashiCorp Consul</a>&#x7684;&#x670D;&#x52A1;&#x6CE8;&#x518C;&#x529F;&#x80FD;&#x7684;&#x8BDD;&#xFF0C;&#x8FD9;&#x4E5F;&#x76F8;&#x5F53;&#x5B9E;&#x7528;&#x3002;</li>
+</ul>
+<h3 id="&#x5FC3;&#x8DF3;&#x8D85;&#x65F6;"><a href="https://www.rabbitmq.com/api-guide.html#heartbeats-timeout" _target="blank">&#x5FC3;&#x8DF3;&#x8D85;&#x65F6;</a></h3>
+<p>&#x60F3;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x5173;&#x4E8E;&#x5FC3;&#x8DF3;&#x7684;&#x4FE1;&#x606F;&#x548C;&#x5982;&#x4F55;&#x5728;java&#x5BA2;&#x6237;&#x7AEF;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="https://www.rabbitmq.com/heartbeats.html" _target="blank">Heartbeats guide</a> </p>
+<h3 id="&#x81EA;&#x5B9A;&#x4E49;&#x7EBF;&#x7A0B;&#x5DE5;&#x5382;"><a href="https://www.rabbitmq.com/api-guide.html#thread-factories" _target="blank">&#x81EA;&#x5B9A;&#x4E49;&#x7EBF;&#x7A0B;&#x5DE5;&#x5382;</a></h3>
+<p>&#x7C7B;&#x4F3C; Google App Engine (GAE) &#x7684;&#x73AF;&#x5883;&#x80FD;&#x591F; <a href="https://developers.google.com/appengine/docs/java/#Java_The_sandbox" _target="blank">&#x9650;&#x5236;&#x76F4;&#x63A5;&#x5C06;&#x7EBF;&#x7A0B;&#x5B9E;&#x4F8B;&#x5316;</a>.&#x60F3;&#x8981;&#x5728;&#x8FD9;&#x79CD;&#x73AF;&#x5883;&#x91CC;&#x4F7F;&#x7528;RabbitMQ Java&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x9002;&#x5F53;&#x7684;&#x65B9;&#x6CD5;&#x914D;&#x7F6E;&#x81EA;&#x5B9A;&#x4E49;&#x7684;<code>ThreadFactory</code>&#x6765;&#x5B9E;&#x4F8B;&#x5316;&#x7EBF;&#x7A0B;&#xFF0C;&#x4F8B;&#x5982;GAE &#x7684; <code>ThreadManager</code>.</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x9488;&#x5BF9;Google App Engine&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> com.google.appengine.api.ThreadManager;
+
+ConnectionFactory cf = <span class="hljs-keyword">new</span> ConnectionFactory();
+cf.setThreadFactory(ThreadManager.backgroundThreadFactory());
+</code></pre>
+<h3 id="&#x652F;&#x6301;java&#x7684;&#x975E;&#x963B;&#x585E;io"><a href="https://www.rabbitmq.com/api-guide.html#java-nio" _target="blank">&#x652F;&#x6301;Java&#x7684;&#x975E;&#x963B;&#x585E;IO</a></h3>
+<p>Java&#x5BA2;&#x6237;&#x7AEF;4.0&#x7248;&#x672C;&#x5E26;&#x6765;&#x4E86;&#x5BF9;Java&#x975E;&#x963B;&#x585E;IO&#xFF08;&#x4E5F;&#x53EB;Java NIO&#xFF09;&#x7684;&#x652F;&#x6301;&#x3002;NIO&#x7684;&#x76EE;&#x7684;&#x4E0D;&#x662F;&#x4E3A;&#x4E86;&#x6BD4;&#x963B;&#x585E;IO&#x66F4;&#x5FEB;&#xFF0C;&#x800C;&#x662F;&#x4E3A;&#x4E86;&#x66F4;&#x65B9;&#x4FBF;&#x7684;&#x5B9E;&#x73B0;&#x7B80;&#x5355;&#x7684;&#x8D44;&#x6E90;&#x63A7;&#x5236;&#xFF08;&#x8FD9;&#x91CC;&#x6307;&#x7684;&#x662F;&#x7EBF;&#x7A0B;&#xFF09;&#x3002;</p>
+<p>&#x5728;&#x9ED8;&#x8BA4;&#x7684;&#x963B;&#x585E;IO&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x6BCF;&#x4E2A;&#x8FDE;&#x63A5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x53BB;&#x4ECE;&#x7F51;&#x7EDC;&#x5957;&#x63A5;&#x5B57;(network socket)&#x8BFB;&#x53D6;&#x5185;&#x5BB9;&#x3002;&#x5728;NIO&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x8BFB;&#x53D6;&#x548C;&#x5199;&#x5165;&#x7F51;&#x7EDC;&#x5957;&#x63A5;&#x5B57;&#x7684;&#x7EBF;&#x7A0B;&#x7684;&#x6570;&#x91CF;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684;Java&#x8FDB;&#x7A0B;&#x4F7F;&#x7528;&#x4E86;&#x5F88;&#x591A;&#x8FDE;&#x63A5;&#xFF08;&#x6570;&#x767E;&#x4E2A;&#x4E4B;&#x591A;&#xFF09;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;NIO&#x6A21;&#x5F0F;&#x3002;&#x4F60;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x6BD4;&#x9ED8;&#x8BA4;&#x963B;&#x585E;&#x6A21;&#x5F0F;&#x4E0B;&#x66F4;&#x5C11;&#x7684;&#x7EBF;&#x7A0B;&#x3002;&#x8BBE;&#x7F6E;&#x5408;&#x9002;&#x7684;&#x7EBF;&#x7A0B;&#x6570;&#x91CF;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x4E0D;&#x4F1A;&#x635F;&#x5931;&#x4EFB;&#x4F55;&#x6027;&#x80FD;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x8FDE;&#x63A5;&#x4E0D;&#x662F;&#x7279;&#x522B;&#x7E41;&#x5FD9;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x3002;</p>
+<p>NIO&#x9700;&#x8981;&#x663E;&#x793A;&#x7684;&#x5F00;&#x542F;&#x5141;&#x8BB8;&#xFF1A;</p>
+<pre><code class="lang-java">ConnectionFactory connectionFactory = <span class="hljs-keyword">new</span> ConnectionFactory();
+connectionFactory.useNio();
+</code></pre>
+<p>The NIO mode can be configured through the NioParams class:</p>
+<p>NIO&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>NioParams</code>&#x7C7B;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre><code class="lang-java">  connectionFactory.setNioParams(<span class="hljs-keyword">new</span> NioParams().setNbIoThreads(<span class="hljs-number">4</span>));
+</code></pre>
+<p>&#x867D;&#x7136;NIO&#x6A21;&#x5F0F;&#x9ED8;&#x8BA4;&#x503C;&#x662F;&#x5408;&#x7406;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x4E5F;&#x6709;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x6839;&#x636E;&#x81EA;&#x8EAB;&#x7684;&#x5DE5;&#x4F5C;&#x8D1F;&#x8F7D;&#x6765;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x3002;&#x5176;&#x4E2D;&#x4E00;&#x4E9B;&#x8BBE;&#x7F6E;&#x5305;&#x62EC;&#xFF1A;&#x4F7F;&#x7528;&#x7684;&#x603B;&#x7684;IO&#x7EBF;&#x7A0B;&#x6570;&#x91CF;&#xFF0C;&#x7F13;&#x5B58;&#x5927;&#x5C0F;&#xFF0C;IO&#x5FAA;&#x73AF;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x670D;&#x52A1;&#x6267;&#x884C;&#x5668;&#xFF08;service executor&#xFF09;&#xFF0C;&#x5185;&#x5B58;&#x4E2D;&#x5199;&#x961F;&#x5217;&#x7684;&#x53C2;&#x6570;&#xFF08;&#x5C06;&#x8BF7;&#x6C42;&#x53D1;&#x9001;&#x5230;&#x7F51;&#x7EDC;&#x4E4B;&#x524D;&#x5199;&#x5165;&#x961F;&#x5217;&#xFF09;&#x3002;&#x9605;&#x8BFB;Javadoc&#x6765;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#x548C;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</p>
+<h2 id="&#x81EA;&#x52A8;&#x6062;&#x590D;&#x7F51;&#x7EDC;&#x6545;&#x969C;"><a href="https://www.rabbitmq.com/api-guide.html#recovery" _target="blank">&#x81EA;&#x52A8;&#x6062;&#x590D;&#x7F51;&#x7EDC;&#x6545;&#x969C;</a></h2>
+<h3 id="&#x6062;&#x590D;&#x8FDE;&#x63A5;"><a href="https://www.rabbitmq.com/api-guide.html#connection-recovery" _target="blank">&#x6062;&#x590D;&#x8FDE;&#x63A5;</a></h3>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x548C;RabbitMQ&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x4F1A;&#x53D1;&#x751F;&#x5931;&#x8D25;&#x3002;RabbitMQ&#x7684;Java&#x5BA2;&#x6237;&#x7AEF;&#x652F;&#x6301;&#x81EA;&#x52A8;&#x6062;&#x590D;&#x8FDE;&#x63A5;&#x548C;&#x62D3;&#x6251;&#xFF08;&#x961F;&#x5217;&#xFF0C;&#x4EA4;&#x6362;&#x673A;&#xFF0C;&#x7ED1;&#x5B9A;&#x548C;&#x6D88;&#x8D39;&#x8005;&#xFF09;&#x3002;</p>
+<p>&#x591A;&#x5E94;&#x7528;&#x7684;&#x81EA;&#x52A8;&#x6062;&#x590D;&#x8FC7;&#x7A0B;&#x4F9D;&#x7167;&#x4E00;&#x4E0B;&#x6B65;&#x9AA4;&#x8FDB;&#x884C;&#xFF1A;</p>
+<ul>
+<li>&#x91CD;&#x8FDE;</li>
+<li>&#x6062;&#x590D;&#x8FDE;&#x63A5;&#x76D1;&#x542C;</li>
+<li>&#x91CD;&#x5F00;&#x901A;&#x9053;</li>
+<li>&#x6062;&#x590D;&#x901A;&#x9053;&#x76D1;&#x542C;</li>
+<li>&#x6062;&#x590D;&#x901A;&#x9053;&#x7684;<code>basic.qos</code>&#x8BBE;&#x7F6E;&#xFF0C;&#x53D1;&#x5E03;&#x786E;&#x8BA4;&#x548C;&#x4E8B;&#x52A1;&#x8BBE;&#x7F6E;</li>
+</ul>
+<p>&#x62D3;&#x6251;&#x7684;&#x6062;&#x590D;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x52A8;&#x4F5C;&#xFF0C;&#x4F1A;&#x5E94;&#x7528;&#x5230;&#x6BCF;&#x4E2A;&#x901A;&#x9053;</p>
+<ul>
+<li>&#x91CD;&#x65B0;&#x58F0;&#x660E;&#x4EA4;&#x6362;&#x673A;&#xFF08;&#x9884;&#x5B9A;&#x4E49;&#x7684;&#x9664;&#x5916;&#xFF09;</li>
+<li>&#x91CD;&#x65B0;&#x58F0;&#x660E;&#x961F;&#x5217;</li>
+<li>&#x6062;&#x590D;&#x6240;&#x6709;&#x7ED1;&#x5B9A;</li>
+<li>&#x6062;&#x590D;&#x6240;&#x6709;&#x6D88;&#x8D39;&#x8005;</li>
+</ul>
+<p>&#x5728;Java&#x5BA2;&#x6237;&#x7AEF;4.0.0&#x7248;&#x672C;&#x4E2D;&#xFF0C;&#x81EA;&#x52A8;&#x6062;&#x590D;&#x9ED8;&#x8BA4;&#x662F;&#x5F00;&#x542F;&#x7684;&#xFF08;&#x62D3;&#x6251;&#x7684;&#x6062;&#x590D;&#x4E5F;&#x4E00;&#x6837;&#xFF09;&#x3002;</p>
+<p>&#x62D3;&#x6251;&#x6062;&#x590D;&#x4F9D;&#x8D56;&#x4E8E;&#x5B9E;&#x4F53;&#x7684;&#x6BCF;&#x4E2A;&#x8FDE;&#x63A5;&#x7F13;&#x5B58;&#xFF08;&#x961F;&#x5217;&#xFF0C;&#x4EA4;&#x6362;&#x673A;&#xFF0C;&#x7ED1;&#x5B9A;&#xFF0C;&#x6D88;&#x8D39;&#x8005;&#xFF09;&#x3002;&#x5F53;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6B64;&#x961F;&#x5217;&#x4E5F;&#x4F1A;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x7F13;&#x5B58;&#x4E2D;&#x3002;&#x5F53;&#x5B83;&#x88AB;&#x5220;&#x9664;&#x6216;&#x8005;&#x5217;&#x5165;&#x5220;&#x9664;&#x8BA1;&#x5212;&#x65F6;&#xFF08;&#x4F8B;&#x5982;&#x662F;&#x4E00;&#x4E2A; <a href="https://www.rabbitmq.com/queues.html" _target="blank">&#x81EA;&#x52A8;&#x5220;&#x9664;</a>&#x961F;&#x5217;&#xFF09;&#xFF0C;&#x7F13;&#x5B58;&#x4F1A;&#x88AB;&#x79FB;&#x9664;&#x3002;&#x6B64;&#x6A21;&#x578B;&#x6709;&#x4EE5;&#x4E0B;&#x9650;&#x5236;&#x3002;</p>
+<p>&#x4F7F;&#x7528;<code>factory.setAutomaticRecoveryEnabled(boolean)</code>&#x65B9;&#x6CD5;&#x5F00;&#x542F;&#x6216;&#x505C;&#x7528;&#x81EA;&#x52A8;&#x8FDE;&#x63A5;&#x6062;&#x590D;&#x3002;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x5C55;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x663E;&#x5F0F;&#x5730;&#x5F00;&#x542F;&#x81EA;&#x52A8;&#x6062;&#x590D;&#xFF08;&#x4F8B;&#x5982;&#x9488;&#x5BF9;Java&#x5BA2;&#x6237;&#x7AEF;4.0.0&#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-java">ConnectionFactory factory = <span class="hljs-keyword">new</span> ConnectionFactory();
+factory.setUsername(userName);
+factory.setPassword(password);
+factory.setVirtualHost(virtualHost);
+factory.setHost(hostName);
+factory.setPort(portNumber);
+factory.setAutomaticRecoveryEnabled(<span class="hljs-keyword">true</span>);
+<span class="hljs-comment">// connection that will recover automatically</span>
+Connection conn = factory.newConnection();
+</code></pre>
+<p>&#x5982;&#x679C;&#x56E0;&#x4E3A;&#x5F02;&#x5E38;&#x5BFC;&#x81F4;&#x6062;&#x590D;&#x5931;&#x8D25;&#xFF08;&#x6BD4;&#x5982;RabbitMQ&#x8282;&#x70B9;&#x5C1A;&#x4E0D;&#x53EF;&#x7528;&#xFF09;&#xFF0C;&#x4F1A;&#x5728;&#x56FA;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF08;&#x9ED8;&#x8BA4;5&#x79D2;&#xFF09;&#x8FDB;&#x884C;&#x91CD;&#x8BD5;&#x3002;&#x95F4;&#x9694;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre><code class="lang-java">ConnectionFactory factory = <span class="hljs-keyword">new</span> ConnectionFactory();
+<span class="hljs-comment">// attempt recovery every 10 seconds</span>
+factory.setNetworkRecoveryInterval(<span class="hljs-number">10000</span>);
+</code></pre>
+<p>When a list of addresses is provided, the list is shuffled and all addresses are tried, one after the next:</p>
+<p>&#x5F53;&#x63D0;&#x4F9B;&#x4E86;&#x5730;&#x5740;&#x5217;&#x8868;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5217;&#x8868;&#x4F1A;&#x88AB;&#x968F;&#x673A;&#x91CD;&#x6392;&#x5E76;&#x9010;&#x4E00;&#x5C1D;&#x8BD5;&#xFF1A;</p>
+<pre><code class="lang-java">ConnectionFactory factory = <span class="hljs-keyword">new</span> ConnectionFactory();
+
+Address[] addresses = {<span class="hljs-keyword">new</span> Address(<span class="hljs-string">&quot;192.168.1.4&quot;</span>), <span class="hljs-keyword">new</span> Address(<span class="hljs-string">&quot;192.168.1.5&quot;</span>)};
+factory.newConnection(addresses);
+</code></pre>
+<h3 id="&#x8FDE;&#x63A5;&#x7684;&#x81EA;&#x52A8;&#x6062;&#x590D;&#x4F55;&#x65F6;&#x4F1A;&#x88AB;&#x89E6;&#x53D1;"><a href="https://www.rabbitmq.com/api-guide.html#recovery-triggers" _target="blank">&#x8FDE;&#x63A5;&#x7684;&#x81EA;&#x52A8;&#x6062;&#x590D;&#x4F55;&#x65F6;&#x4F1A;&#x88AB;&#x89E6;&#x53D1;?</a></h3>
+<p>&#x5982;&#x679C;&#x5F00;&#x542F;&#x4E86;&#x8FDE;&#x63A5;&#x81EA;&#x52A8;&#x6062;&#x590D;&#xFF0C;&#x4F1A;&#x4F9D;&#x7167;&#x4E00;&#x4E0B;&#x65F6;&#x95F4;&#x6765;&#x8FDB;&#x884C;&#x89E6;&#x53D1;&#xFF1A;</p>
+<ul>
+<li>&#x8FDE;&#x63A5;&#x7684;I/O&#x5FAA;&#x73AF;&#x4E2D;&#x629B;&#x51FA;&#x4E86;I/O&#x5F02;&#x5E38;</li>
+<li>&#x5957;&#x63A5;&#x5B57;(socket)&#x8BFB;&#x64CD;&#x4F5C;&#x8D85;&#x65F6;</li>
+<li>&#x68C0;&#x6D4B;&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E22;&#x5931; <a href="https://www.rabbitmq.com/heartbeats.html" _target="blank">&#x5FC3;&#x8DF3;</a></li>
+<li>&#x8FDE;&#x63A5;&#x7684;I/O&#x5FAA;&#x73AF;&#x4E2D;&#x629B;&#x51FA;&#x4E86;&#x5176;&#x4ED6;&#x4E0D;&#x53EF;&#x9884;&#x671F;&#x7684;&#x5F02;&#x5E38;</li>
+</ul>
+<p>&#x4EE5;&#x5148;&#x53D1;&#x751F;&#x7684;&#x4E3A;&#x51C6;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5BA2;&#x6237;&#x7AEF;&#x5230;RabbitMQ&#x8282;&#x70B9;&#x7684;&#x8FDE;&#x63A5;&#x521D;&#x59CB;&#x5316;&#x5931;&#x8D25;&#xFF0C;&#x8FDE;&#x63A5;&#x81EA;&#x52A8;&#x6062;&#x590D;&#x4E0D;&#x4F1A;&#x751F;&#x6548;&#x3002;&#x5E94;&#x7528;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x8D1F;&#x8D23;&#x91CD;&#x8BD5;&#x8FDE;&#x63A5;&#xFF0C;&#x8BB0;&#x5F55;&#x4E0B;&#x5931;&#x8D25;&#x7684;&#x5C1D;&#x8BD5;&#xFF0C;&#x5B9E;&#x73B0;&#x91CD;&#x8BD5;&#x7684;&#x6B21;&#x6570;&#x9650;&#x5236;&#x7B49;&#x3002;&#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x57FA;&#x672C;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java">ConnectionFactory factory = <span class="hljs-keyword">new</span> ConnectionFactory();
+<span class="hljs-comment">// configure various connection settings</span>
+
+<span class="hljs-keyword">try</span> {
+  Connection conn = factory.newConnection();
+} <span class="hljs-keyword">catch</span> (java.net.ConnectException e) {
+  Thread.sleep(<span class="hljs-number">5000</span>);
+  <span class="hljs-comment">// apply retry logic</span>
+}
+</code></pre>
+<p>&#x5F53;&#x8FDE;&#x63A5;&#x88AB;&#x5E94;&#x7528;&#x4F7F;&#x7528;<code>Connection.Close</code>&#x65B9;&#x6CD5;&#x5173;&#x95ED;&#x7684;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FDE;&#x63A5;&#x6062;&#x590D;&#x4E0D;&#x4F1A;&#x542F;&#x52A8;&#x3002;</p>
+<p>&#x901A;&#x9053;&#x7EA7;&#x5F02;&#x5E38;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x4EFB;&#x4F55;&#x6062;&#x590D;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E9B;&#x5F02;&#x5E38;&#x901A;&#x5E38;&#x6307;&#x51FA;&#x7684;&#x662F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x8BED;&#x4E49;&#x95EE;&#x9898;&#xFF08;&#x4F8B;&#x5982;&#x4ECE;&#x4E00;&#x4E2A;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x961F;&#x5217;&#x8FDB;&#x884C;&#x6D88;&#x8D39;&#xFF09;&#x3002;</p>
+<h3 id="&#x6062;&#x590D;&#x76D1;&#x542C;"><a href="https://www.rabbitmq.com/api-guide.html#recovery-listeners" _target="blank">&#x6062;&#x590D;&#x76D1;&#x542C;</a></h3>
+<p>&#x53EF;&#x4EE5;&#x5728;&#x53EF;&#x6062;&#x590D;&#x7684;&#x8FDE;&#x63A5;&#x4E0A;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6062;&#x590D;&#x76D1;&#x542C;&#x3002;&#x5F53;&#x8FDE;&#x63A5;&#x6062;&#x590D;&#x5F00;&#x542F;&#x65F6;&#xFF0C;<code>ConnectionFactory#newConnection</code>&#x548C;<code>Connection#createChannel</code>&#x8FD4;&#x56DE;&#x7684;&#x8FDE;&#x63A5;&#x5B9E;&#x73B0;&#x4E86; <code>com.rabbitmq.client.Recoverable</code>&#xFF0C;&#x5E76;&#x4E14;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x4E2A;&#x76F8;&#x5F53;&#x5177;&#x6709;&#x63CF;&#x8FF0;&#x6027;&#x540D;&#x5B57;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<ul>
+<li><code>addRecoveryListener</code></li>
+<li><code>removeRecoveryListener</code></li>
+</ul>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x5F53;&#x524D;&#x9700;&#x8981;&#x5C06;&#x8FDE;&#x63A5;&#x548C;&#x901A;&#x9053;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x4E3A;<code>Recoverable</code>&#x624D;&#x80FD;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="&#x5BF9;&#x53D1;&#x5E03;&#x7684;&#x5F71;&#x54CD;"><a href="https://www.rabbitmq.com/api-guide.html#publishers" _target="blank">&#x5BF9;&#x53D1;&#x5E03;&#x7684;&#x5F71;&#x54CD;</a></h3>
+<p>&#x5F53;&#x8FDE;&#x63A5;&#x5931;&#x6548;&#x65F6;&#xFF0C;&#x901A;&#x8FC7;<code>Channel.basicPublish</code>&#x53D1;&#x5E03;&#x7684;&#x6D88;&#x606F;&#x4F1A;&#x4E22;&#x5931;&#x6389;&#x3002;&#x5BA2;&#x6237;&#x7AEF;&#x4E0D;&#x4F1A;&#x5C06;&#x5176;&#x653E;&#x5165;&#x961F;&#x5217;&#x4EE5;&#x7528;&#x8FDE;&#x63A5;&#x6062;&#x590D;&#x540E;&#x8FDB;&#x884C;&#x6295;&#x9012;&#x3002;&#x60F3;&#x8981;&#x786E;&#x8BA4;&#x53D1;&#x5E03;&#x7684;&#x6D88;&#x606F;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x5230;&#x8FBE;RabbitMQ&#xFF0C;&#x5E94;&#x7528;&#x9700;&#x8981;&#x4F7F;&#x7528; <a href="https://www.rabbitmq.com/confirms.html" _target="blank">&#x53D1;&#x5E03;&#x786E;&#x8BA4;</a> &#x5E76;&#x4E14;&#x89E3;&#x51B3;&#x8FDE;&#x63A5;&#x5931;&#x8D25;&#x3002;</p>
+<h3 id="&#x62D3;&#x6251;&#x6062;&#x590D;"><a href="https://www.rabbitmq.com/api-guide.html#topology-recovery" _target="blank">&#x62D3;&#x6251;&#x6062;&#x590D;</a></h3>
+<p>&#x62D3;&#x6251;&#x7684;&#x6062;&#x590D;&#x6D89;&#x53CA;&#x5230;&#x4EA4;&#x6362;&#x673A;&#x3001;&#x961F;&#x5217;&#x3001;&#x7ED1;&#x5B9A;&#x548C;&#x6D88;&#x8D39;&#x8005;&#x7684;&#x6062;&#x590D;&#x3002;&#x81EA;&#x52A8;&#x6062;&#x590D;&#x542F;&#x7528;&#x65F6;&#x62D3;&#x6251;&#x6062;&#x590D;&#x4E5F;&#x4F1A;&#x968F;&#x4E4B;&#x542F;&#x7528;&#x3002;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5F53;&#x4EE3;&#x7248;&#x672C;&#x90FD;&#x9ED8;&#x8BA4;&#x542F;&#x7528;&#x4E86;&#x62D3;&#x6251;&#x6062;&#x590D;&#x3002;</p>
+<p>&#x6709;&#x9700;&#x8981;&#x7684;&#x8BDD;&#xFF0C;&#x62D3;&#x6251;&#x6062;&#x590D;&#x53EF;&#x4EE5;&#x663E;&#x5F0F;&#x7684;&#x5173;&#x95ED;&#xFF1A;</p>
+<pre><code class="lang-java">ConnectionFactory factory = <span class="hljs-keyword">new</span> ConnectionFactory();
+
+Connection conn = factory.newConnection();
+<span class="hljs-comment">// enable automatic recovery (e.g. Java client prior 4.0.0)</span>
+factory.setAutomaticRecoveryEnabled(<span class="hljs-keyword">true</span>);
+<span class="hljs-comment">// disable topology recovery</span>
+factory.setTopologyRecoveryEnabled(<span class="hljs-keyword">false</span>);
+</code></pre>
+<h3 id="&#x6545;&#x969C;&#x68C0;&#x6D4B;&#x548C;&#x6062;&#x590D;&#x7684;&#x9650;&#x5236;"><a href="https://www.rabbitmq.com/api-guide.html#automatic-recovery-limitations" _target="blank">&#x6545;&#x969C;&#x68C0;&#x6D4B;&#x548C;&#x6062;&#x590D;&#x7684;&#x9650;&#x5236;</a></h3>
+<p>&#x8FDE;&#x63A5;&#x81EA;&#x52A8;&#x6062;&#x590D;&#x6709;&#x4E00;&#x4E9B;&#x5C40;&#x9650;&#x6027;&#x548C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x6709;&#x610F;&#x8BBE;&#x8BA1;&#x7684;&#x7B56;&#x7565;&#x3002;</p>
+<p>&#x62D3;&#x6251;&#x6062;&#x590D;&#x4F9D;&#x8D56;&#x4E8E;&#x5B9E;&#x4F53;&#x7684;&#x6BCF;&#x4E2A;&#x8FDE;&#x63A5;&#x7F13;&#x5B58;&#xFF08;&#x961F;&#x5217;&#xFF0C;&#x4EA4;&#x6362;&#x673A;&#xFF0C;&#x7ED1;&#x5B9A;&#xFF0C;&#x6D88;&#x8D39;&#x8005;&#xFF09;&#x3002;&#x5F53;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6B64;&#x961F;&#x5217;&#x4E5F;&#x4F1A;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x7F13;&#x5B58;&#x4E2D;&#x3002;&#x5F53;&#x5B83;&#x88AB;&#x5220;&#x9664;&#x6216;&#x8005;&#x5217;&#x5165;&#x5220;&#x9664;&#x8BA1;&#x5212;&#x65F6;&#xFF08;&#x4F8B;&#x5982;&#x662F;&#x4E00;&#x4E2A; <a href="https://www.rabbitmq.com/queues.html" _target="blank">&#x81EA;&#x52A8;&#x5220;&#x9664;</a>&#x961F;&#x5217;&#xFF09;&#xFF0C;&#x7F13;&#x5B58;&#x4F1A;&#x88AB;&#x79FB;&#x9664;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x901A;&#x9053;&#x4E0A;&#x58F0;&#x660E;&#x548C;&#x5220;&#x9664;&#x5B9E;&#x4F53;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x4EA7;&#x751F;&#x610F;&#x5916;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x8FD9;&#x4E5F;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x4F7F;&#x7528;&#x81EA;&#x52A8;&#x8FDE;&#x63A5;&#x6062;&#x590D;&#x7684;&#x6D88;&#x8D39;&#x8005;&#x6807;&#x7B7E;&#xFF08;&#x7279;&#x5B9A;&#x901A;&#x9053;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#xFF09;&#x5728;&#x6240;&#x6709;&#x901A;&#x9053;&#x4E0A;&#x5FC5;&#x987B;&#x662F;&#x552F;&#x4E00;&#x7684;&#x3002;</p>
+<p>&#x5F53;&#x8FDE;&#x63A5;&#x65AD;&#x5F00;&#x6216;&#x4E22;&#x5931;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x82B1;&#x8D39;&#x4E00;&#x4E9B;&#x65F6;&#x95F4;&#x8FDB;&#x884C;&#x68C0;&#x6D4B;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5E93;&#x548C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x610F;&#x8BC6;&#x5230;&#x6709;&#x8FDE;&#x63A5;&#x5931;&#x8D25;&#x4E4B;&#x524D;&#x6709;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x671F;&#x3002;&#x5728;&#x8FD9;&#x7AEF;&#x65F6;&#x95F4;&#x5185;&#x53D1;&#x5E03;&#x7684;&#x6240;&#x6709;&#x6D88;&#x606F;&#x90FD;&#x5C06;&#x7167;&#x5E38;&#x8FDB;&#x884C;&#x5E8F;&#x5217;&#x5316;&#x5E76;&#x5199;&#x5165;TCP&#x5957;&#x63A5;&#x5B57;&#x3002;&#x53EA;&#x6709;&#x901A;&#x8FC7;<a href="https://www.rabbitmq.com/confirms.html" _target="blank">&#x53D1;&#x5E03;&#x8005;&#x786E;&#x8BA4;</a>&#x624D;&#x80FD;&#x4FDD;&#x8BC1;&#x5C06;&#x5B83;&#x4EEC;&#x6210;&#x529F;&#x4EA4;&#x4ED8;&#x7ED9;&#x4E86;&#x4EE3;&#x7406;&#xFF1A;&#x6309;&#x7167;&#x8BBE;&#x8BA1;&#xFF0C;AMQP 0-9-1&#x7684;&#x53D1;&#x5E03;&#x8FC7;&#x7A0B;&#x5B8C;&#x5168;&#x662F;&#x5F02;&#x6B65;&#x7684;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5728;&#x542F;&#x7528;&#x4E86;&#x81EA;&#x52A8;&#x6062;&#x590D;&#x7684;&#x8FDE;&#x63A5;&#x4E2D;&#x68C0;&#x6D4B;&#x5230;&#x5957;&#x63A5;&#x5B57;&#x6216;I / O&#x64CD;&#x4F5C;&#x9519;&#x8BEF;&#xFF0C;&#x5219;&#x6062;&#x590D;&#x5C06;&#x5728;&#x9ED8;&#x8BA4;&#x7684;5&#x79D2;&#x5EF6;&#x8FDF;&#x540E;&#x5F00;&#x59CB;&#xFF08;&#x8FD9;&#x4E2A;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#x662F;&#x53EF;&#x914D;&#x7F6E;&#x7684;&#xFF09;&#x3002; &#x8BE5;&#x8BBE;&#x8BA1;&#x5047;&#x5B9A;&#x5373;&#x4F7F;&#x8BB8;&#x591A;&#x7F51;&#x7EDC;&#x6545;&#x969C;&#x662F;&#x6682;&#x65F6;&#x7684;&#x5E76;&#x4E14;&#x901A;&#x5E38;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x5F88;&#x77ED;&#xFF0C;&#x4F46;&#x4E5F;&#x4E0D;&#x4F1A;&#x7ACB;&#x5373;&#x5C31;&#x6062;&#x590D;&#x3002; &#x5EF6;&#x8FDF;&#x8FD8;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x5728;&#x76F8;&#x540C;&#x8FDE;&#x63A5;&#x4E0A;&#x53D1;&#x751F;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x8D44;&#x6E90;&#x6E05;&#x9664;&#xFF08;&#x4F8B;&#x5982;<a href="https://www.rabbitmq.com/queues.html" _target="blank">&#x72EC;&#x5360;&#x6216;&#x81EA;&#x52A8;&#x5220;&#x9664;&#x961F;&#x5217;</a>&#x5220;&#x9664;&#xFF09;&#x548C;&#x6253;&#x5F00;&#x65B0;&#x8FDE;&#x63A5;&#x4E4B;&#x95F4;&#x7684;&#x8D44;&#x6E90;&#x7ADE;&#x4E89;&#x3002;</p>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FDE;&#x63A5;&#x6062;&#x590D;&#x5C1D;&#x8BD5;&#x5C06;&#x4EE5;&#x76F8;&#x540C;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x8FDB;&#x884C;&#xFF0C;&#x76F4;&#x5230;&#x6210;&#x529F;&#x6253;&#x5F00;&#x65B0;&#x8FDE;&#x63A5;&#x4E3A;&#x6B62;&#x3002; &#x901A;&#x8FC7;&#x5C06;&#x5B9E;&#x73B0;<code>RecoveryDelayHandler</code>&#x7684;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x7ED9;<code>ConnectionFactory&#xFF03;setRecoveryDelayHandler</code>&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x6062;&#x590D;&#x5EF6;&#x8FDF;&#x7684;&#x52A8;&#x6001;&#x5316;&#x3002; &#x5B9E;&#x73B0;&#x52A8;&#x6001;&#x8BA1;&#x7B97;&#x7684;&#x5EF6;&#x8FDF;&#x95F4;&#x9694;&#x5E94;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x8FC7;&#x4F4E;&#x7684;&#x503C;&#xFF08;&#x6839;&#x636E;&#x7ECF;&#x9A8C;&#xFF0C;&#x5C0F;&#x4E8E;2&#x79D2;&#x5C31;&#x7B97;&#x8FC7;&#x4F4E;&#x4E86;&#xFF09;&#x3002;</p>
+<p>&#x5F53;&#x8FDE;&#x63A5;&#x5904;&#x4E8E;&#x6062;&#x590D;&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x5728;&#x5176;&#x901A;&#x9053;&#x4E0A;&#x5C1D;&#x8BD5;&#x8FDB;&#x884C;&#x7684;&#x4EFB;&#x4F55;&#x53D1;&#x5E03;&#x90FD;&#x5C06;&#x88AB;&#x62D2;&#x7EDD;&#xFF0C;&#x4F46;&#x4E5F;&#x6709;&#x4F8B;&#x5916;&#x3002; &#x5BA2;&#x6237;&#x7AEF;&#x5F53;&#x524D;&#x4E0D;&#x5BF9;&#x6B64;&#x7C7B;&#x4F20;&#x51FA;&#x6D88;&#x606F;&#x6267;&#x884C;&#x4EFB;&#x4F55;&#x5185;&#x90E8;&#x7F13;&#x51B2;&#x3002; &#x8DDF;&#x8E2A;&#x6B64;&#x7C7B;&#x6D88;&#x606F;&#x5E76;&#x5728;&#x6062;&#x590D;&#x6210;&#x529F;&#x540E;&#x91CD;&#x65B0;&#x53D1;&#x5E03;&#x5B83;&#x4EEC;&#x662F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x7684;&#x8D23;&#x4EFB;&#x3002; <a href="https://www.rabbitmq.com/confirms.html" _target="blank">&#x53D1;&#x5E03;&#x8005;&#x786E;&#x8BA4;</a>&#x662F;&#x534F;&#x8BAE;&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x53D1;&#x5E03;&#x8005;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x5176;&#x907F;&#x514D;&#x6D88;&#x606F;&#x4E22;&#x5931;&#x3002;</p>
+<p>&#x5F53;&#x53D1;&#x751F;&#x901A;&#x9053;&#x7EA7;&#x522B;&#x5F02;&#x5E38;&#x800C;&#x5BFC;&#x81F4;&#x901A;&#x9053;&#x5E72;&#x58C1;&#x65F6;&#xFF0C;&#x8FDE;&#x63A5;&#x6062;&#x590D;&#x4E0D;&#x4F1A;&#x751F;&#x6548;&#x3002; &#x6B64;&#x7C7B;&#x5F02;&#x5E38;&#x901A;&#x5E38;&#x8868;&#x793A;&#x7684;&#x662F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7EA7;&#x522B;&#x7684;&#x95EE;&#x9898;&#x3002; &#x5E93;&#x65E0;&#x6CD5;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x91C7;&#x53D6;&#x9002;&#x5408;&#x7684;&#x5E94;&#x5BF9;&#x63AA;&#x65BD;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x901A;&#x9053;&#x7684;&#x5173;&#x95ED;&#x662F;&#x901A;&#x8FC7;&#x663E;&#x5F0F;&#x5173;&#x95ED;&#x7684;&#x6216;&#x8005;&#x662F;&#x7531;&#x4E8E;&#x4E0A;&#x8FF0;&#x901A;&#x9053;&#x7EA7;&#x522B;&#x5F02;&#x5E38;&#x5F15;&#x53D1;&#x7684;&#x3002; &#x5373;&#x4F7F;&#x542F;&#x52A8;&#x4E86;&#x8FDE;&#x63A5;&#x6062;&#x590D;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x6062;&#x590D;&#x5DF2;&#x5173;&#x95ED;&#x7684;&#x901A;&#x9053;&#x3002;</p>
+<h3 id="&#x624B;&#x52A8;&#x786E;&#x8BA4;&#x548C;&#x81EA;&#x52A8;&#x6062;&#x590D;"><a href="https://www.rabbitmq.com/api-guide.html#recovery-and-acknowledgements" _target="blank">&#x624B;&#x52A8;&#x786E;&#x8BA4;&#x548C;&#x81EA;&#x52A8;&#x6062;&#x590D;</a></h3>
+<p>&#x5F53;&#x4F7F;&#x7528;&#x624B;&#x52A8;&#x786E;&#x8BA4;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x751F;&#x8FDE;&#x63A5;&#x5728;&#x6D88;&#x606F;&#x6295;&#x9012;&#x6210;&#x529F;&#x4F46;&#x5E76;&#x672A;&#x8FDB;&#x884C;&#x786E;&#x8BA4;&#x7684;&#x7A7A;&#x6321;&#x4E2D;&#x5931;&#x6548;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x5728;&#x8FDE;&#x63A5;&#x6062;&#x590D;&#x540E;&#xFF0C;RabbitMQ&#x4F1A;&#x5728;&#x901A;&#x9053;&#x91CC;&#x91CD;&#x7F6E;&#x6295;&#x9012;&#x6807;&#x7B7E;&#x3002;</p>
+<p>&#x8FD9;&#x610F;&#x5473;&#x7740;&#x65E7;&#x7684;&#x6295;&#x9012;&#x6807;&#x7B7E;&#x7684;<em>basic.ack</em>, <em>basic.nack</em>, &#x548C; <em>basic.reject</em>  &#x4F1A;&#x5BFC;&#x81F4;&#x901A;&#x9053;&#x5F02;&#x5E38;&#x53D1;&#x751F;&#x3002;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;RabbitMQ&#x7684;Java&#x5BA2;&#x6237;&#x7AEF;&#x4F1A;&#x4FDD;&#x6301;&#x5BF9;&#x6295;&#x9012;&#x6807;&#x7B7E;&#x7684;&#x8FFD;&#x8E2A;&#x548C;&#x66F4;&#x65B0;&#xFF0C;&#x4EE5;&#x4F7F;&#x5B83;&#x4EEC;&#x5728;&#x6062;&#x590D;&#x8FC7;&#x7A0B;&#x4E2D;&#x5355;&#x8C03;&#x589E;&#x957F;&#x3002;</p>
+<p>&#x4E4B;&#x540E;&#xFF0C;<code>Channel.basicAck</code>, <code>Channel.basicNack</code>, &#x548C; <code>Channel.basicReject</code>&#x4F1A;&#x5C06;&#x8C03;&#x6574;&#x540E;&#x7684;&#x4F20;&#x9012;&#x6807;&#x7B7E;&#x8F6C;&#x6362;&#x4E3A;RabbitMQ&#x4F7F;&#x7528;&#x7684;&#x4F20;&#x9012;&#x6807;&#x7B7E;&#x3002;</p>
+<p>&#x5E26;&#x6709;&#x8FC7;&#x65F6;&#x7684;&#x6295;&#x9012;&#x6807;&#x7B7E;&#x7684;&#x786E;&#x8BA4;&#x5C06;&#x4E0D;&#x4F1A;&#x53D1;&#x9001;&#x3002;&#x4F7F;&#x7528;&#x624B;&#x52A8;&#x786E;&#x8BA4;&#x548C;&#x81EA;&#x52A8;&#x6062;&#x590D;&#x7684;&#x5E94;&#x7528;&#x5FC5;&#x987B;&#x80FD;&#x591F;&#x5BF9;&#x91CD;&#x65B0;&#x6295;&#x9012;&#x7684;&#x6D88;&#x606F;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</p>
+<h3 id="&#x901A;&#x9053;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x548C;&#x62D3;&#x6251;&#x6062;&#x590D;"><a href="https://www.rabbitmq.com/api-guide.html#recovery-channel-lifecycle" _target="blank">&#x901A;&#x9053;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x548C;&#x62D3;&#x6251;&#x6062;&#x590D;</a></h3>
+<p>&#x8FDE;&#x63A5;&#x81EA;&#x52A8;&#x6062;&#x590D;&#x5BF9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x6765;&#x8BF4;&#x5E94;&#x5C3D;&#x53EF;&#x80FD;&#x900F;&#x660E;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x5373;&#x4F7F;&#x597D;&#x51E0;&#x4E2A;&#x8FDE;&#x63A5;&#x5931;&#x6548;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x540E;&#x53F0;&#x6062;&#x590D;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<code>Channel</code>&#x5B9E;&#x4F8B;&#x4EFB;&#x7136;&#x4F1A;&#x4FDD;&#x6301;&#x76F8;&#x540C;&#x7684;&#x539F;&#x56E0;&#x3002; &#x4ECE;&#x6280;&#x672F;&#x4E0A;&#x8BB2;&#xFF0C;&#x542F;&#x7528;&#x81EA;&#x52A8;&#x6062;&#x590D;&#x65F6;&#xFF0C;&#x901A;&#x9053;&#x5B9E;&#x4F8B;&#x5145;&#x5F53;&#x4EE3;&#x7406;&#x6216;&#x88C5;&#x9970;&#x5668;&#xFF1A;&#x5B83;&#x4EEC;&#x5C06;AMQP&#x4E1A;&#x52A1;&#x59D4;&#x6D3E;&#x7ED9;&#x5B9E;&#x9645;&#x7684;AMQP&#x901A;&#x9053;&#x5B9E;&#x73B0;&#xFF0C;&#x5E76;&#x56F4;&#x7ED5;&#x5B83;&#x5B9E;&#x65BD;&#x4E00;&#x4E9B;&#x6062;&#x590D;&#x673A;&#x5236;&#x3002; &#x8FD9;&#x5C31;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x60A8;&#x4E0D;&#x5E94;&#x8BE5;&#x5728;&#x901A;&#x9053;&#x5B8C;&#x6210;&#x4E86;&#x4E00;&#x4E9B;&#x8D44;&#x6E90;&#x521B;&#x5EFA;&#xFF08;&#x961F;&#x5217;&#xFF0C;&#x4EA4;&#x6362;&#xFF0C;&#x7ED1;&#x5B9A;&#xFF09;&#x4E4B;&#x540E;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x5173;&#x95ED;&#xFF0C;&#x8FD9;&#x4F1A;&#x5BFC;&#x81F4;&#x7A0D;&#x540E;&#x7684;&#x6251;&#x6062;&#x590D;&#x5931;&#x8D25;&#x3002; &#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6574;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E2D;&#x90FD;&#x5E94;&#x8BE5;&#x4FDD;&#x6301;&#x901A;&#x9053;&#x7684;&#x6253;&#x5F00;&#x72B6;&#x6001;&#x3002;</p>
+<h2 id="&#x672A;&#x5904;&#x7406;&#x7684;&#x5F02;&#x5E38;"><a href="https://www.rabbitmq.com/api-guide.html#unhandled-exceptions" _target="blank">&#x672A;&#x5904;&#x7406;&#x7684;&#x5F02;&#x5E38;</a></h2>
+<p>&#x8DDF;&#x8FDE;&#x63A5;&#x3001;&#x901A;&#x9053;&#x3001;&#x6062;&#x590D;&#x548C;&#x6D88;&#x8D39;&#x8005;&#x751F;&#x547D;&#x5468;&#x671F;&#x6709;&#x5173;&#x7684;&#x672A;&#x5904;&#x7406;&#x7684;&#x5F02;&#x5E38;&#x4F1A;&#x59D4;&#x6258;&#x7ED9;&#x201C;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x201D;&#x3002;&#x201C;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x201D;&#x662F;&#x5BF9;<code>ExceptionHandler</code>&#x63A5;&#x53E3;&#x7684;&#x4E00;&#x4E2A;&#x5B9E;&#x73B0;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F1A;&#x4F7F;&#x7528;<code>DefaultExceptionHandler</code>&#x5B9E;&#x4F8B;&#x3002;&#x5B83;&#x4F1A;&#x628A;&#x5F02;&#x5E38;&#x7684;&#x7EC6;&#x8282;&#x6253;&#x5370;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x4E2D;&#x3002;</p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x7528;<code>ConnectionFactory#setExceptionHandler</code>&#x6765;&#x8986;&#x76D6;&#x9ED8;&#x8BA4;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x3002;&#x8FD9;&#x4F1A;&#x5E94;&#x7528;&#x5230;&#x6240;&#x6709;&#x901A;&#x8FC7;&#x5DE5;&#x5382;&#x521B;&#x5EFA;&#x7684;&#x8FDE;&#x63A5;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-java">ConnectionFactory factory = <span class="hljs-keyword">new</span> ConnectionFactory();
+cf.setExceptionHandler(customHandler);
+</code></pre>
+<p>&#x5F02;&#x5E38;&#x5904;&#x7406;&#x5E94;&#x8BE5;&#x5C06;&#x5F02;&#x5E38;&#x8BB0;&#x5F55;&#x5230;&#x65E5;&#x5FD7;&#x5F53;&#x4E2D;&#x3002;</p>
+<h2 id="&#x6307;&#x6807;&#x548C;&#x76D1;&#x63A7;"><a href="https://www.rabbitmq.com/api-guide.html#metrics" _target="blank">&#x6307;&#x6807;&#x548C;&#x76D1;&#x63A7;</a></h2>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x4F1A;&#x6536;&#x96C6;&#x6D3B;&#x52A8;&#x7684;&#x8FDE;&#x63A5;&#x7684;&#x8FD0;&#x884C;&#x65F6;&#x6307;&#x6807;&#xFF08;&#x4F8B;&#x5982;&#x53D1;&#x5E03;&#x6D88;&#x606F;&#x7684;&#x6570;&#x91CF;&#xFF09;&#x3002;&#x6307;&#x6807;&#x6536;&#x96C6;&#x662F;&#x9700;&#x8981;&#x5728;<code>ConnectionFactory</code>&#x7EA7;&#x522B;&#x4F7F;&#x7528;<code>setMetricsCollector(metricsCollector)</code>&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x7684;&#x53EF;&#x9009;&#x529F;&#x80FD;&#x3002;&#x6B64;&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x7684;<code>MetricsCollector</code>&#x5B9E;&#x4F8B;&#x4F1A;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x591A;&#x5904;&#x7528;&#x5230;&#x3002;</p>
+<p>4.3&#x7248;&#x672C;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x5F00;&#x59CB;&#x652F;&#x6301; <a href="http://micrometer.io/" _target="blank">Micrometer</a> &#x548C; <a href="http://metrics.dropwizard.io/" _target="blank">Dropwizard Metrics</a> &#xFF0C;&#x5F00;&#x7BB1;&#x5373;&#x7528;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x6536;&#x96C6;&#x7684;&#x6307;&#x6807;&#xFF1A;</p>
+<ul>
+<li>&#x5F00;&#x542F;&#x7684;&#x8FDE;&#x63A5;&#x6570;&#x91CF;</li>
+<li>&#x5F00;&#x542F;&#x7684;&#x901A;&#x9053;&#x6570;&#x91CF;</li>
+<li>&#x53D1;&#x5E03;&#x7684;&#x6D88;&#x606F;&#x6570;&#x91CF;</li>
+<li>&#x6D88;&#x8D39;&#x7684;&#x6D88;&#x606F;&#x6570;&#x91CF;</li>
+<li>&#x786E;&#x8BA4;&#x7684;&#x6D88;&#x606F;&#x6570;&#x91CF;</li>
+<li>&#x62D2;&#x7EDD;&#x7684;&#x6D88;&#x606F;&#x6570;&#x91CF;</li>
+</ul>
+<p>Micrometer &#x548C; Dropwizard Metrics &#x90FD;&#x63D0;&#x4F9B;&#x4E86;&#x4E0E;&#x6D88;&#x606F;&#x6307;&#x6807;&#x76F8;&#x5173;&#x7684;&#x8BA1;&#x6570;&#x5668;&#xFF0C;&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x5E73;&#x5747;&#x901F;&#x7387;&#xFF0C;&#x6700;&#x540E;5&#x5206;&#x949F;&#x901F;&#x7387;&#x7B49;&#x3002;&#x4ED6;&#x4EEC;&#x4E5F;&#x652F;&#x6301;&#x7528;&#x4E8E;&#x76D1;&#x63A7;&#x548C;&#x62A5;&#x544A;&#x7684;&#x901A;&#x7528;&#x5DE5;&#x5177;&#xFF08;&#x5982; JMX, Graphite, Ganglia, Datadog&#x7B49;&#xFF09;&#x3002;&#x66F4;&#x591A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x4E0B;&#x8FB9;&#x4F1A;&#x4E13;&#x95E8;&#x8FDB;&#x884C;&#x8BF4;&#x660E;&#x3002;</p>
+<p>&#x542F;&#x7528;&#x6307;&#x6807;&#x6536;&#x96C6;&#x65F6;&#xFF0C;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5E94;&#x7262;&#x8BB0;&#x4E00;&#x4E9B;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x3002;</p>
+<ul>
+<li>&#x8981;&#x4F7F;&#x7528;Micrometer &#x6216;&#x8005; Dropwizard Metrics &#x7684;&#x8BDD;&#xFF0C;&#x522B;&#x5FD8;&#x4E86;&#x6DFB;&#x52A0;&#x76F8;&#x5173;&#x4F9D;&#x8D56;&#xFF08; (&#x5728;Maven, Gradle, &#x6216;&#x8005; JAR &#x6587;&#x4EF6;&#x91CC;)&#xFF09;&#x5230;JVM classpath&#x4E2D;&#x3002;</li>
+<li>&#x6307;&#x6807;&#x7684;&#x6536;&#x96C6;&#x662F;&#x53EF;&#x4EE5;&#x6269;&#x5C55;&#x7684;&#x3002;&#x63A8;&#x8350;&#x4E3A;&#x7279;&#x5B9A;&#x76EE;&#x7684;&#x5B9E;&#x73B0;&#x81EA;&#x5B9A;&#x4E49;&#x7684;<code>MetricsCollector</code>&#x3002;</li>
+<li>&#x867D;&#x7136;<code>MetricsCollector</code>&#x662F;&#x5728;<code>ConnectionFactory</code>&#x5C42;&#x5B9A;&#x4E49;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x5B9E;&#x4F8B;&#x4E2D;&#x5171;&#x4EAB;&#x3002;</li>
+<li>&#x6307;&#x6807;&#x7684;&#x6536;&#x96C6;&#x4E0D;&#x652F;&#x6301;&#x4E8B;&#x52A1;&#x3002;&#x4E3E;&#x4F8B;&#x6765;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x786E;&#x8BA4;&#xFF08;acknowledgment&#xFF09;&#x901A;&#x8FC7;&#x4E8B;&#x52A1;&#x53D1;&#x9001;&#xFF0C;&#x7136;&#x540E;&#x4E8B;&#x52A1;&#x56DE;&#x6EDA;&#x4E86;&#xFF0C;&#x90A3;&#x8FD9;&#x4E2A;&#x786E;&#x8BA4;&#x5C31;&#x5DF2;&#x7ECF;&#x88AB;&#x5BA2;&#x6237;&#x7AEF;&#x6307;&#x6807;&#xFF08;&#x5F88;&#x663E;&#x7136;&#x4E0D;&#x662F;&#x901A;&#x8FC7;&#x4EE3;&#x7406;&#xFF09;&#x7D2F;&#x8BA1;&#x4E86;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x786E;&#x8BA4;&#xFF08;acknowledgment&#xFF09;&#x786E;&#x5B9E;&#x5DF2;&#x7ECF;&#x53D1;&#x9001;&#x5230;&#x4EE3;&#x7406;&#x4E86;&#xFF0C;&#x7136;&#x540E;&#x53C8;&#x88AB;&#x4E8B;&#x52A1;&#x56DE;&#x6EDA;&#x7ED9;&#x6E05;&#x9664;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x5BA2;&#x6237;&#x7AEF;&#x6307;&#x6807;&#x5BF9;&#x4E8E;&#x786E;&#x8BA4;&#x7684;&#x5904;&#x7406;&#x662F;&#x6CA1;&#x95EE;&#x9898;&#x7684;&#x3002;&#x603B;&#x4E4B;&#xFF0C;&#x4E0D;&#x8981;&#x628A;&#x5BA2;&#x6237;&#x7AEF;&#x6307;&#x6807;&#x7528;&#x4F5C;&#x5173;&#x952E;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#xFF0C;&#x56E0;&#x4E3A;&#x4E0D;&#x4FDD;&#x8BC1;&#x5B83;&#x4EEC;&#x5B8C;&#x5168;&#x51C6;&#x786E;&#x65E0;&#x8BEF;&#x3002;&#x5B83;&#x4EEC;&#x5B58;&#x5728;&#x7684;&#x76EE;&#x7684;&#x5728;&#x4E8E;&#x7B80;&#x5355;&#x7684;&#x89E3;&#x91CA;&#x7CFB;&#x7EDF;&#x7684;&#x8FD0;&#x884C;&#x60C5;&#x51B5;&#x5E76;&#x4E14;&#x8BA9;&#x64CD;&#x4F5C;&#x66F4;&#x5177;&#x6548;&#x7387;&#x3002;</li>
+</ul>
+<h3 id="micrometer&#x7684;&#x652F;&#x6301;"><a href="https://www.rabbitmq.com/api-guide.html#metrics-micrometer" _target="blank">Micrometer&#x7684;&#x652F;&#x6301;</a></h3>
+<p>&#x9996;&#x5148;&#x6307;&#x6807;&#x6536;&#x96C6;&#x5DF2;&#x7ECF;&#x88AB;&#x5F00;&#x542F;&#x4E86;&#xFF1A;</p>
+<p><a href="http://micrometer.io/" _target="blank">Micrometer</a> &#x6309;&#x7167;&#x4EE5;&#x4E0B;&#x65B9;&#x5F0F;:</p>
+<pre><code class="lang-java">ConnectionFactory connectionFactory = <span class="hljs-keyword">new</span> ConnectionFactory();
+MicrometerMetricsCollector metrics = <span class="hljs-keyword">new</span> MicrometerMetricsCollector();
+connectionFactory.setMetricsCollector(metrics);
+...
+metrics.getPublishedMessages(); <span class="hljs-comment">// get Micrometer&apos;s Counter object</span>
+</code></pre>
+<p>Micrometer&#x652F;&#x6301; <a href="http://micrometer.io/docs" _target="blank">&#x591A;&#x79CD;&#x62A5;&#x544A;&#x540E;&#x53F0;</a>&#xFF1A;Netflix Atlas, Prometheus, Datadog, Influx, JMX, &#x7B49;&#x3002;</p>
+<p>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x5C06;<code>MeterRegistry</code>&#x7684;&#x5B9E;&#x4F8B;&#x4F20;&#x7ED9;<code>MicrometerMetricsCollector</code>&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x4F7F;&#x7528;JMX&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java">JmxMeterRegistry registry = <span class="hljs-keyword">new</span> JmxMeterRegistry();
+MicrometerMetricsCollector metrics = <span class="hljs-keyword">new</span> MicrometerMetricsCollector(registry);
+ConnectionFactory connectionFactory = <span class="hljs-keyword">new</span> ConnectionFactory();
+connectionFactory.setMetricsCollector(metrics);
+</code></pre>
+<h3 id="dropwizard-metrics&#x7684;&#x652F;&#x6301;"><a href="https://www.rabbitmq.com/api-guide.html#metrics-dropwizard-metrics" _target="blank">Dropwizard Metrics&#x7684;&#x652F;&#x6301;</a></h3>
+<p>&#x5982;&#x4E0B;&#x5F00;&#x542F;&#x6307;&#x6807;&#x6536;&#x96C6;&#x7684; <a href="http://metrics.dropwizard.io/" _target="blank">Dropwizard</a> &#x652F;&#x6301;&#xFF1A;</p>
+<pre><code class="lang-java">ConnectionFactory connectionFactory = <span class="hljs-keyword">new</span> ConnectionFactory();
+StandardMetricsCollector metrics = <span class="hljs-keyword">new</span> StandardMetricsCollector();
+connectionFactory.setMetricsCollector(metrics);
+...
+metrics.getPublishedMessages(); <span class="hljs-comment">// get Metrics&apos; Meter object</span>
+</code></pre>
+<p>Dropwizard Metrics&#x652F;&#x6301;<a href="http://metrics.dropwizard.io/3.2.3/getting-started.html" _target="blank">&#x591A;&#x79CD;&#x62A5;&#x544A;&#x540E;&#x53F0;</a>: console, JMX, HTTP, Graphite, Ganglia, &#x7B49;.</p>
+<p>&#x901A;&#x5E38;&#x4F60;&#x53EF;&#x4EE5;&#x5C06;<code>MetricsRegistry</code>&#x5B9E;&#x4F8B;&#x4F20;&#x7ED9;<code>StandardMetricsCollector</code>&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x5173;&#x4E8E;JMX&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java">MetricRegistry registry = <span class="hljs-keyword">new</span> MetricRegistry();
+StandardMetricsCollector metrics = <span class="hljs-keyword">new</span> StandardMetricsCollector(registry);
+
+ConnectionFactory connectionFactory = <span class="hljs-keyword">new</span> ConnectionFactory();
+connectionFactory.setMetricsCollector(metrics);
+
+JmxReporter reporter = JmxReporter
+  .forRegistry(registry)
+  .inDomain(<span class="hljs-string">&quot;com.rabbitmq.client.jmx&quot;</span>)
+  .build();
+reporter.start();
+</code></pre>
+<h2 id="google-app-engine&#x4E0A;&#x7684;rabbitmq-java&#x5BA2;&#x6237;&#x7AEF;"><a href="https://www.rabbitmq.com/api-guide.html#gae-pitfalls" _target="blank">Google App Engine&#x4E0A;&#x7684;RabbitMQ Java&#x5BA2;&#x6237;&#x7AEF;</a></h2>
+<p>Using RabbitMQ Java client on Google App Engine (GAE) requires using a custom thread factory that instantiates thread using GAE&apos;s ThreadManager (see above). In addition, it is necessary to set a low heartbeat interval (4-5 seconds) to avoid running into the low InputStream read timeouts on GAE:</p>
+<p>&#x8981;&#x5728;Google App Engine (GAE)&#x4E0A;&#x4F7F;&#x7528;RabbitMQ Java&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BDD;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;GAE&apos;s ThreadManager (see above)&#x8FD9;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x7EBF;&#x7A0B;&#x5DE5;&#x5177;&#x53BB;&#x5B9E;&#x4F8B;&#x5316;&#x7EBF;&#x7A0B;&#x3002;&#x53E6;&#x5916;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x4F4E;&#x7684;&#x5FC3;&#x8DF3;&#x95F4;&#x9694;&#xFF08;4-5&#x79D2;&#xFF09;&#x6765;&#x907F;&#x514D;GAE&#x4E0A;&#x7684;InputStream&#x8BFB;&#x53D6;&#x8D85;&#x65F6;&#x8FC7;&#x4F4E;&#x3002;</p>
+<pre><code class="lang-java">ConnectionFactory factory = <span class="hljs-keyword">new</span> ConnectionFactory();
+cf.setRequestedHeartbeat(<span class="hljs-number">5</span>);
+</code></pre>
+<h2 id="&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x548C;&#x9650;&#x5236;"><a href="https://www.rabbitmq.com/api-guide.html#cache-pitfalls" _target="blank">&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x548C;&#x9650;&#x5236;</a></h2>
+<p>&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x62D3;&#x6251;&#x7684;&#x81EA;&#x52A8;&#x6062;&#x590D;&#xFF0C;RabbitMQ Java&#x5BA2;&#x6237;&#x7AEF;&#x7EF4;&#x62A4;&#x4E86;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x58F0;&#x660E;&#x961F;&#x5217;&#x3001;&#x4EA4;&#x6362;&#x673A;&#x548C;&#x7ED1;&#x5B9A;&#x7684;&#x7F13;&#x5B58;&#x3002;&#x7F13;&#x5B58;&#x662F;&#x6309;&#x8FDE;&#x63A5;&#x6765;&#x5BF9;&#x5E94;&#x7684;&#x3002;&#x6B27;&#x8C22;RabbitMQ&#x7684;&#x529F;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x5BA2;&#x6237;&#x7AEF;&#x65E0;&#x6CD5;&#x89C2;&#x5BDF;&#x5230;&#x62D3;&#x6251;&#x529F;&#x80FD;&#x7684;&#x53D8;&#x66F4;&#xFF0C;&#x4F8B;&#x5982;&#x5F53;&#x961F;&#x5217;&#x56E0;TTL&#x88AB;&#x5220;&#x9664;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;RabbitMQ Java&#x5BA2;&#x6237;&#x7AEF;&#x4F1A;&#x5C1D;&#x8BD5;&#x8BA9;&#x7F13;&#x5B58;&#x5B9E;&#x4F53;&#x65E0;&#x6548;&#xFF1A;</p>
+<ul>
+<li>When a queue is deleted.</li>
+<li>&#x5F53;&#x961F;&#x5217;&#x88AB;&#x5220;&#x9664;&#x7684;&#x65F6;&#x5019;&#x3002;</li>
+<li>When an exchange is deleted.</li>
+<li>&#x5F53;&#x4EA4;&#x6362;&#x673A;&#x88AB;&#x5220;&#x9664;&#x7684;&#x65F6;&#x5019;&#x3002;</li>
+<li>When a binding is deleted.</li>
+<li>&#x5F53;&#x7ED1;&#x5B9A;&#x88AB;&#x5220;&#x9664;&#x7684;&#x65F6;&#x5019;&#x3002;</li>
+<li>When a consumer is cancelled on an auto-deleted queue.</li>
+<li>&#x5F53;&#x6D88;&#x8D39;&#x8005;&#x56E0;&#x961F;&#x5217;&#x7684;&#x81EA;&#x52A8;&#x5220;&#x9664;&#x52A8;&#x4F5C;&#x800C;&#x88AB;&#x6E05;&#x7406;&#x6389;&#x7684;&#x65F6;&#x5019;&#x3002;</li>
+<li>When a queue or exchange is unbound from an auto-deleted exchange.</li>
+<li>&#x5F53;&#x4EA4;&#x6362;&#x673A;&#x6216;&#x961F;&#x5217;&#x4ECE;&#x81EA;&#x52A8;&#x5220;&#x7684;&#x7684;&#x4EA4;&#x6362;&#x673A;&#x4E0A;&#x89E3;&#x7ED1;&#x7684;&#x65F6;&#x5019;&#x3002;</li>
+</ul>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x65E0;&#x6CD5;&#x8DDF;&#x8E2A;&#x5355;&#x4E2A;&#x8FDE;&#x63A5;&#x4EE5;&#x5916;&#x7684;&#x62D3;&#x6251;&#x53D8;&#x5316;&#x3002; &#x4F9D;&#x8D56;&#x4E8E;&#x81EA;&#x52A8;&#x5220;&#x9664;&#x961F;&#x5217;&#x6216;&#x4EA4;&#x6362;&#x673A;&#x4EE5;&#x53CA;&#x961F;&#x5217;TTL&#xFF08;&#x8BF7;&#x6CE8;&#x610F;&#xFF1A;&#x4E0D;&#x662F;&#x6D88;&#x606F;TTL&#xFF01;&#xFF09;&#x548C;&#x4F7F;&#x7528;<a href="https://www.rabbitmq.com/api-guide.html#connection-recovery" _target="blank">&#x8FDE;&#x63A5;&#x81EA;&#x52A8;&#x6062;&#x590D;</a>&#x7684;&#x5E94;&#x7528;&#x5E94;&#x8BE5;&#x663E;&#x5F0F;&#x5220;&#x9664;&#x5DF2;&#x77E5;&#x7684;&#x672A;&#x88AB;&#x4F7F;&#x7528;&#x6216;&#x5DF2;&#x88AB;&#x5220;&#x9664;&#x7684;&#x5B9E;&#x4F53;&#xFF0C;&#x4EE5;&#x6E05;&#x9664;&#x5BA2;&#x6237;&#x7AEF;&#x62D3;&#x6251;&#x7F13;&#x5B58;&#x3002; <code>Channel&#xFF03;queueDelete</code>&#xFF0C;<code>Channel&#xFF03;exchangeDelete</code>&#xFF0C;<code>Channel&#xFF03;queueUnbind</code>&#x548C;<code>Channel&#xFF03;exchangeUnbind</code>&#x5728;RabbitMQ 3.3.x&#x4E2D;&#x662F;&#x5E42;&#x7B49;&#x7684;&#xFF08;&#x5220;&#x9664;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x4F1A;&#x5BFC;&#x81F4;&#x5F02;&#x5E38;&#xFF09;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x6709;&#x52A9;&#x4E8E;&#x5B9E;&#x73B0;&#x8FD9;&#x4E00;&#x64CD;&#x4F5C;&#x3002;</p>
+<h2 id="&#x8FDC;&#x7A0B;&#x8FC7;&#x7A0B;&#x8C03;&#x7528;-rpc-&#x8BF7;&#x6C42;&#x56DE;&#x590D;&#x6A21;&#x5F0F;-&#x793A;&#x4F8B;"><a href="https://www.rabbitmq.com/api-guide.html#rpc" _target="blank">&#x8FDC;&#x7A0B;&#x8FC7;&#x7A0B;&#x8C03;&#x7528;-RPC (&#x8BF7;&#x6C42;/&#x56DE;&#x590D;)&#x6A21;&#x5F0F;: &#x793A;&#x4F8B;</a></h2>
+<p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x7F16;&#x5199;&#x7A0B;&#x5E8F;&#xFF0C;Java&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4F9B;&#x4E86;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x4E34;&#x65F6;&#x56DE;&#x590D;&#x961F;&#x5217;&#x6765;&#x5B9E;&#x73B0;&#x7684;<code>RpcClient</code>&#x7C7B;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x901A;&#x8FC7;AMQP 0-9-1 &#x5B9E;&#x73B0;&#x4E86;&#x7B80;&#x5355;&#x7684; <a href="https://www.rabbitmq.com/tutorials/tutorial-six-java.html" _target="blank">RPC-&#x98CE;&#x683C;&#x901A;&#x8BAF;</a>&#x3002;</p>
+<p>&#x6B64;&#x7C7B;&#x6CA1;&#x6709;&#x5728;RPC&#x5C5E;&#x6027;&#x548C;&#x8FD4;&#x56DE;&#x503C;&#x65B9;&#x9762;&#x65B0;&#x589E;&#x4EFB;&#x4F55;&#x7279;&#x6B8A;&#x683C;&#x5F0F;&#x3002;&#x5B83;&#x53EA;&#x662F;&#x7B80;&#x5355;&#x7684;&#x5B9E;&#x73B0;&#x4E86;&#x9644;&#x5E26;&#x8DEF;&#x7531;&#x952E;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x5230;&#x7ED9;&#x5B9A;&#x7684;&#x4EA4;&#x6362;&#x673A;&#xFF0C;&#x5E76;&#x4E14;&#x7B49;&#x5F85;&#x5728;&#x56DE;&#x590D;&#x961F;&#x5217;&#x91CC;&#x7B49;&#x5F85;&#x56DE;&#x5E94;&#x7684;&#x673A;&#x5236;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> com.rabbitmq.client.RpcClient;
+
+RpcClient rpc = <span class="hljs-keyword">new</span> RpcClient(channel, exchangeName, routingKey);
+</code></pre>
+<p>&#xFF08;&#x6B64;&#x7C7B;&#x4F7F;&#x7528;AMQP 0-9-1&#x7684;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;&#x5982;&#x4E0B;&#xFF1A;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x6D88;&#x606F;&#x65F6;&#xFF0C;&#x5176;<code>basic.correlation_id</code>&#x5B57;&#x6BB5;&#x8BBE;&#x7F6E;&#x4E3A;&#x8BE5;<code>RpcClient</code>&#x5B9E;&#x4F8B;&#x7684;&#x552F;&#x4E00;&#x503C;&#xFF0C;&#x800C;<code>basic.reply_to</code>&#x8BBE;&#x7F6E;&#x4E3A;&#x56DE;&#x590D;&#x961F;&#x5217;&#x7684;&#x540D;&#x79F0;&#x3002;&#xFF09;</p>
+<p>&#x4E00;&#x65E6;&#x521B;&#x5EFA;&#x4E86;&#x6B64;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E0B;&#x4EFB;&#x4E00;&#x65B9;&#x6CD5;&#x6765;&#x53D1;&#x9001;RPC&#x8BF7;&#x6C42;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">byte</span>[] primitiveCall(<span class="hljs-keyword">byte</span>[] message);
+<span class="hljs-function">String <span class="hljs-title">stringCall</span><span class="hljs-params">(String message)</span>
+Map <span class="hljs-title">mapCall</span><span class="hljs-params">(Map message)</span>
+Map <span class="hljs-title">mapCall</span><span class="hljs-params">(Object[] keyValuePairs)</span>
+</span></code></pre>
+<p><code>primitiveCall</code>&#x65B9;&#x6CD5;&#x5C06;&#x539F;&#x59CB;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x8BF7;&#x6C42;&#x548C;&#x54CD;&#x5E94;&#x4E3B;&#x4F53;&#x8FDB;&#x884C;&#x4F20;&#x8F93;&#x3002; &#x65B9;&#x6CD5;<code>stringCall</code>&#x662F;<code>primitiveCall</code>&#x7684;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x5316;&#x5C01;&#x88C5;&#xFF0C;&#x5C06;&#x6D88;&#x606F;&#x6B63;&#x6587;&#x4F5C;&#x4E3A;&#x9ED8;&#x8BA4;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;String&#x5B9E;&#x4F8B;&#x6765;&#x5904;&#x7406;&#x3002;</p>
+<p><code>mapCall</code>&#x8FD9;&#x79CD;&#x53D8;&#x4F53;&#x7A0D;&#x5FAE;&#x6709;&#x70B9;&#x590D;&#x6742;&#xFF1A;&#x4ED6;&#x4EEC;&#x5C06;&#x5305;&#x542B;&#x666E;&#x901A;Java&#x503C;&#x7684;<code>java.util.Map</code>&#x7F16;&#x7801;&#x4E3A;AMQP 0-9-1&#x4E8C;&#x8FDB;&#x5236;&#x8868;&#x6765;&#x8868;&#x793A;&#xFF0C;&#x5E76;&#x4EE5;&#x76F8;&#x540C;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5BF9;&#x6536;&#x5230;&#x7684;&#x54CD;&#x5E94;&#x8FDB;&#x884C;&#x89E3;&#x7801;&#x3002; &#xFF08;&#x6CE8;&#x610F;&#xFF0C;&#x6B64;&#x5904;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x54EA;&#x79CD;&#x503C;&#x7C7B;&#x578B;&#x6709;&#x4E00;&#x4E9B;&#x9650;&#x5236;&#xFF0C;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x8BF7;&#x53C2;&#x89C1;javadoc&#x3002;&#xFF09;</p>
+<p>&#x6240;&#x6709;&#x7F16;&#x7EC4;/&#x89E3;&#x7EC4;&#x7684;&#x4FBF;&#x6377;&#x65B9;&#x6CD5;&#x90FD;&#x4F7F;&#x7528;<code>primitiveCall</code>&#x4F5C;&#x4E3A;&#x4F20;&#x8F93;&#x673A;&#x5236;&#xFF0C;&#x4EC5;&#x5728;&#x5B83;&#x4E4B;&#x4E0A;&#x63D0;&#x4F9B;&#x5305;&#x88C5;&#x5C42;&#x3002;</p>
+<h2 id="tls-&#x7684;&#x652F;&#x6301;"><a href="https://www.rabbitmq.com/api-guide.html#tls" _target="blank">TLS &#x7684;&#x652F;&#x6301;</a></h2>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <a href="https://www.rabbitmq.com/ssl.html" _target="blank">&#x4F7F;&#x7528; TLS</a> &#x52A0;&#x5BC6;&#x5BA2;&#x6237;&#x7AEF;&#x5230;&#x4EE3;&#x7406;&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x8BAF;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x5BA2;&#x6237;&#x7AEF;\&#x670D;&#x52A1;&#x5668;&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;&#xFF08;&#x4E5F;&#x53EB;&#x5BF9;&#x7B49;&#x8BA4;&#x8BC1;&#xFF09;&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;Java&#x5BA2;&#x6237;&#x7AEF;&#x5B9E;&#x73B0;&#x7684;&#x6700;&#x539F;&#x59CB;&#x7684;&#x7B80;&#x5355;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java">ConnectionFactory factory = <span class="hljs-keyword">new</span> ConnectionFactory();
+factory.setHost(<span class="hljs-string">&quot;localhost&quot;</span>);
+factory.setPort(<span class="hljs-number">5671</span>);
+
+<span class="hljs-comment">// Only suitable for development.</span>
+<span class="hljs-comment">// This code will not perform peer certificate chain verification and prone</span>
+<span class="hljs-comment">// to man-in-the-middle attacks.</span>
+<span class="hljs-comment">// See the main TLS guide to learn about peer verification and how to enable it.</span>
+factory.useSslProtocol();
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x4EE5;&#x4E0A;&#x6837;&#x4F8B;&#x5BA2;&#x6237;&#x7AEF;&#x9ED8;&#x8BA4;&#x4E0D;&#x5F3A;&#x5236;&#x4EFB;&#x4F55;&#x670D;&#x52A1;&#x5668;&#x9A8C;&#x8BC1;&#xFF08;<a href="https://www.rabbitmq.com/ssl.html#peer-verification" _target="blank">&#x5BF9;&#x7B49;&#x8BC1;&#x4E66;&#x94FE;&#x8BA4;&#x8BC1;</a>&#xFF09;&#xFF0C;&#x4F7F;&#x7528;&#x4E86;&#x201D;&#x4FE1;&#x4EFB;&#x6240;&#x6709;&#x8BC1;&#x4E66;&#x201C;&#x7684;<code>TrustManager</code>&#x3002;&#x8FD9;&#x5728;&#x672C;&#x5730;&#x5F00;&#x53D1;&#x7684;&#x65F6;&#x5019;&#x5F88;&#x662F;&#x65B9;&#x4FBF;&#xFF0C;&#x4F46;&#x662F;<strong>&#x5BB9;&#x6613;&#x6536;&#x5230;&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;</strong>&#xFF0C;&#x6240;&#x4EE5; <a href="https://www.rabbitmq.com/production-checklist.html" _target="blank">&#x4E0D;&#x63A8;&#x8350;&#x5728;&#x7528;&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;</a></p>
+<p>&#x60F3;&#x8981;&#x5BF9;RabbitMQ&#x7684;TSL&#x652F;&#x6301;&#x8FDB;&#x884C;&#x8FDB;&#x4E00;&#x6B65;&#x5B66;&#x4E60;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x89C1;<a href="https://www.rabbitmq.com/ssl.html" _target="blank">TLS &#x6307;&#x5357;</a>&#x3002;&#x5982;&#x679C;&#x53EA;&#x6253;&#x7B97;&#x914D;&#x7F6E;Java&#x5BA2;&#x6237;&#x7AEF;&#xFF08;&#x7279;&#x522B;&#x662F;&#x5BF9;&#x7B49;&#x8BA4;&#x8BC1;&#x548C;&#x4FE1;&#x4EFB;&#x7BA1;&#x7406;&#x8005;&#x90E8;&#x5206;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x53EA;&#x9605;&#x8BFB;&#x4E00;&#x4E0B;TLS&#x6307;&#x5357;&#x7684; <a href="https://www.rabbitmq.com/ssl.html#java-client" _target="blank">&#x76F8;&#x5173;&#x90E8;&#x5206;</a> &#x5373;&#x53EF;&#x3002;</p>
+<h2 id="oauth-2-&#x7684;&#x652F;&#x6301;"><a href="https://www.rabbitmq.com/api-guide.html#oauth2-support" _target="blank">OAuth 2 &#x7684;&#x652F;&#x6301;</a></h2>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <a href="https://github.com/cloudfoundry/uaa" _target="blank">UAA</a>&#x8FD9;&#x6837;&#x7684;OAuth 2 &#x670D;&#x52A1;&#x5668;&#x6765;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;&#x3002;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x9700;&#x8981;&#x542F;&#x7528; <a href="https://github.com/rabbitmq/rabbitmq-auth-backend-oauth2" _target="blank">OAuth 2 &#x63D2;&#x4EF6;</a>&#xFF0C;&#x5E76;&#x914D;&#x7F6E;&#x8DDF;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;&#x540C;&#x4E00;&#x4E2A;OAuth 2 &#x670D;&#x52A1;&#x5668; &#x3002;</p>
+<h3 id="&#x83B7;&#x53D6;-oauth-2-&#x4EE4;&#x724C;"><a href="https://www.rabbitmq.com/api-guide.html#oauth2-getting-token" _target="blank">&#x83B7;&#x53D6; OAuth 2 &#x4EE4;&#x724C;</a></h3>
+<p>Java&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4F9B;&#x4E86;<code>OAuth2ClientCredentialsGrantCredentialsProvider</code>&#x7C7B;&#xFF0C;&#x7528;&#x6765;&#x4ECE;<a href="https://tools.ietf.org/html/rfc6749#section-4.4" _target="blank">OAuth 2 &#x5BA2;&#x6237;&#x7AEF;&#x51ED;&#x8BC1;&#x6D41;</a>&#x83B7;&#x53D6;JWT&#x4EE4;&#x724C;&#x3002;&#x5BA2;&#x6237;&#x7AEF;&#x4F1A;&#x5728;&#x6253;&#x5F00;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x5C06;&#x4EE4;&#x724C;&#x653E;&#x5728;password&#x5B57;&#x6BB5;&#x4E2D;&#x8FDB;&#x884C;&#x53D1;&#x9001;&#x3002;&#x7136;&#x540E;&#x4EE3;&#x7406;&#x4F1A;&#x5728;&#x6388;&#x6743;&#x4E4B;&#x524D;&#x9A8C;&#x8BC1;JWT&#x4EE4;&#x724C;&#x7684;&#x7B7E;&#x540D;&#x3001;&#x6709;&#x6548;&#x6027;&#x548C;&#x6743;&#x9650;&#xFF0C;&#x5E76;&#x6388;&#x4E88;&#x5BF9;&#x8BF7;&#x6C42;&#x7684;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x3002;</p>
+<p>&#x4F18;&#x5148;&#x4F7F;&#x7528;<code>OAuth2ClientCredentialsGrantCredentialsProviderBuilder</code>&#x6765;&#x521B;&#x5EFA;<code>OAuth2ClientCredentialsGrantCredentialsProvider</code>&#x5B9E;&#x4F8B;&#xFF0C;&#x7136;&#x540E;&#x7528;&#x5B83;&#x6765;&#x914D;&#x7F6E;<code>ConnectionFactory</code>&#x3002;&#x4EE5;&#x4E0B;&#x7247;&#x6BB5;&#x5C55;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x4E3A;<a href="https://github.com/rabbitmq/rabbitmq-auth-backend-oauth2#examples" _target="blank">&#x914D;&#x7F6E; OAuth 2 &#x63D2;&#x4EF6;&#x7684;&#x793A;&#x4F8B;</a>&#x8BBE;&#x7F6E;&#x548C;&#x521B;&#x5EFA;OAuth 2 credentials provider&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> com.rabbitmq.client.impl.OAuth2ClientCredentialsGrantCredentialsProvider.
+        OAuth2ClientCredentialsGrantCredentialsProviderBuilder;
+...
+CredentialsProvider credentialsProvider =
+  <span class="hljs-keyword">new</span> OAuth2ClientCredentialsGrantCredentialsProviderBuilder()
+    .tokenEndpointUri(<span class="hljs-string">&quot;http://localhost:8080/uaa/oauth/token/&quot;</span>)
+    .clientId(<span class="hljs-string">&quot;rabbit_client&quot;</span>).clientSecret(<span class="hljs-string">&quot;rabbit_secret&quot;</span>)
+    .grantType(<span class="hljs-string">&quot;password&quot;</span>)
+    .parameter(<span class="hljs-string">&quot;username&quot;</span>, <span class="hljs-string">&quot;rabbit_super&quot;</span>)
+    .parameter(<span class="hljs-string">&quot;password&quot;</span>, <span class="hljs-string">&quot;rabbit_super&quot;</span>)
+    .build();
+
+connectionFactory.setCredentialsProvider(credentialsProvider);
+</code></pre>
+<p>&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x786E;&#x8BA4;&#x4EE4;&#x724C;&#x65AD;&#x7535;URI&#x4F7F;&#x7528;&#x7684;&#x662F;HTTPS&#xFF0C;&#x5E76;&#x4E14;&#x6839;&#x636E;&#x9700;&#x8981;&#x4E3A;HTTPS&#x8BF7;&#x6C42;&#x914D;&#x7F6E;&#x4E86;<code>SSLContext</code>&#xFF08;&#x7528;&#x6765;&#x9A8C;&#x8BC1;&#x548C;&#x4FE1;&#x4EFB;OAuth 2 &#x670D;&#x52A1;&#x5668;&#x7684;&#x8EAB;&#x4EFD;&#xFF09;&#x3002;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x4F7F;&#x7528;<code>OAuth2ClientCredentialsGrantCredentialsProviderBuilder</code>&#x7684;<code>tls().sslContext()</code>&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x4E86;&#x4E0A;&#x8FB9;&#x6240;&#x63D0;&#x53CA;&#x4E8B;&#x9879;&#xFF1A;</p>
+<pre><code class="lang-java">SSLContext sslContext = ... <span class="hljs-comment">// create and initialise SSLContext</span>
+
+CredentialsProvider credentialsProvider =
+  <span class="hljs-keyword">new</span> OAuth2ClientCredentialsGrantCredentialsProviderBuilder()
+    .tokenEndpointUri(<span class="hljs-string">&quot;http://localhost:8080/uaa/oauth/token/&quot;</span>)
+    .clientId(<span class="hljs-string">&quot;rabbit_client&quot;</span>).clientSecret(<span class="hljs-string">&quot;rabbit_secret&quot;</span>)
+    .grantType(<span class="hljs-string">&quot;password&quot;</span>)
+    .parameter(<span class="hljs-string">&quot;username&quot;</span>, <span class="hljs-string">&quot;rabbit_super&quot;</span>)
+    .parameter(<span class="hljs-string">&quot;password&quot;</span>, <span class="hljs-string">&quot;rabbit_super&quot;</span>)
+    .tls()                    <span class="hljs-comment">// configure TLS</span>
+      .sslContext(sslContext) <span class="hljs-comment">// set SSLContext</span>
+      .builder()              <span class="hljs-comment">// back to main configuration</span>
+    .build();
+</code></pre>
+<p>&#x66F4;&#x591A;&#x9009;&#x9879;&#x8BF7;&#x53C2;&#x7167;<a href="https://rabbitmq.github.io/rabbitmq-java-client/api/current/com/rabbitmq/client/impl/OAuth2ClientCredentialsGrantCredentialsProvider.html" _target="blank">Javadoc</a>&#x3002;</p>
+<h3 id="&#x5237;&#x65B0;&#x4EE4;&#x724C;"><a href="https://www.rabbitmq.com/api-guide.html#oauth2-refreshing-token" _target="blank">&#x5237;&#x65B0;&#x4EE4;&#x724C;</a></h3>
+<p>&#x4EE4;&#x724C;&#x662F;&#x4F1A;&#x6216;&#x8FC7;&#x671F;&#x7684;&#xFF0C;&#x4EE3;&#x7406;&#x4F1A;&#x62D2;&#x7EDD;&#x5E26;&#x6709;&#x8FC7;&#x671F;&#x4EE4;&#x724C;&#x7684;&#x8FDE;&#x63A5;&#x6240;&#x8BF7;&#x6C42;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>CredentialsProvider#refresh()</code>&#x5728;&#x4EE4;&#x724C;&#x8FC7;&#x671F;&#x524D;&#x4F7F;&#x7528;&#x65B0;&#x4EE4;&#x724C;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#xFF0C;&#x4EE5;&#x9632;&#x6B62;&#x6B64;&#x60C5;&#x51B5;&#x7684;&#x53D1;&#x751F;&#x3002;&#x5E94;&#x7528;&#x81EA;&#x5DF1;&#x6765;&#x5B9E;&#x73B0;&#x662F;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;&#x7684;&#xFF0C;&#x6240;&#x4EE5;Java&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4F9B;&#x4E86;<code>DefaultCredentialsRefreshService</code>&#x6765;&#x7ED9;&#x4E88;&#x4E00;&#x5B9A;&#x5E2E;&#x52A9;&#x3002;&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#x7528;&#x6765;&#x8FFD;&#x8E2A;&#x4F7F;&#x7528;&#x7684;&#x4EE4;&#x724C;&#xFF0C;&#x5728;&#x8FC7;&#x671F;&#x524D;&#x8FDB;&#x884C;&#x5237;&#x65B0;&#xFF0C;&#x5E76;&#x5C06;&#x65B0;&#x4EE4;&#x724C;&#x53D1;&#x9001;&#x7ED9;&#x6240;&#x8D1F;&#x8D23;&#x7684;&#x8FDE;&#x63A5;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x5C55;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x521B;&#x5EFA;<code>DefaultCredentialsRefreshService</code>&#x5B9E;&#x4F8B;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x5176;&#x914D;&#x7F6E;&#x5230;<code>ConnectionFactory</code>&#x4E0A;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> com.rabbitmq.client.impl.DefaultCredentialsRefreshService.
+        DefaultCredentialsRefreshServiceBuilder;
+...
+CredentialsRefreshService refreshService =
+  <span class="hljs-keyword">new</span> DefaultCredentialsRefreshServiceBuilder().build();
+cf.setCredentialsRefreshService(refreshService);
+</code></pre>
+<p><code>DefaultCredentialsRefreshService</code>&#x4F1A;&#x5728;&#x4EE4;&#x724C;&#x6709;&#x6548;&#x671F;&#x8D85;&#x8FC7;80%&#x540E;&#x8FDB;&#x884C;&#x5237;&#x65B0;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x4EE4;&#x724C;&#x5728;60&#x5206;&#x949F;&#x540E;&#x8FC7;&#x671F;&#xFF0C;<code>DefaultCredentialsRefreshService</code>&#x4F1A;&#x5728;48&#x5206;&#x949F;&#x7684;&#x65F6;&#x5019;&#x8FDB;&#x884C;&#x5237;&#x65B0;&#x3002;&#x8FD9;&#x662F;&#x9ED8;&#x8BA4;&#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x66F4;&#x591A;&#x7684;&#x7EC6;&#x8282;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <a href="https://rabbitmq.github.io/rabbitmq-java-client/api/current/com/rabbitmq/client/impl/DefaultCredentialsRefreshService.html" _target="blank">Javadoc</a> &#x4E86;&#x89E3;&#x3002;</p>
+<h2 id="&#x83B7;&#x53D6;&#x5E2E;&#x52A9;&#x548C;&#x63D0;&#x4F9B;&#x5EFA;&#x8BAE;">&#x83B7;&#x53D6;&#x5E2E;&#x52A9;&#x548C;&#x63D0;&#x4F9B;&#x5EFA;&#x8BAE;</h2>
+<p>&#x5982;&#x679C;&#x4F60;&#x5BF9;&#x672C;&#x6307;&#x5357;&#x7684;&#x5185;&#x5BB9;&#x6216;RabbitMQ&#x7684;&#x5176;&#x4ED6;&#x4E3B;&#x9898;&#x6709;&#x4EFB;&#x4F55;&#x7591;&#x95EE;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x591A; <a href="https://groups.google.com/forum/#!forum/rabbitmq-users" _target="blank">RabbitMQ &#x90AE;&#x4EF6;&#x5217;&#x8868;</a>&#x8FDB;&#x884C;&#x63D0;&#x95EE;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Java客户端指南","level":"1.5.1","depth":2,"next":{"title":"应用教程","level":"1.6","depth":1,"ref":"","articles":[{"title":"Python版","level":"1.6.1","depth":2,"ref":"","articles":[{"title":"Hello World","level":"1.6.1.1","depth":3,"path":"tutorials_with_python/[1]Hello_World.md","ref":"tutorials_with_python/[1]Hello_World.md","articles":[]},{"title":"工作队列","level":"1.6.1.2","depth":3,"path":"tutorials_with_python/[2]Work_Queues.md","ref":"tutorials_with_python/[2]Work_Queues.md","articles":[]},{"title":"发布/订阅","level":"1.6.1.3","depth":3,"path":"tutorials_with_python/[3]Publish_Subscribe.md","ref":"tutorials_with_python/[3]Publish_Subscribe.md","articles":[]},{"title":"路由","level":"1.6.1.4","depth":3,"path":"tutorials_with_python/[4]Routing.md","ref":"tutorials_with_python/[4]Routing.md","articles":[]},{"title":"主题交换机","level":"1.6.1.5","depth":3,"path":"tutorials_with_python/[5]Topics.md","ref":"tutorials_with_python/[5]Topics.md","articles":[]},{"title":"远程过程调用","level":"1.6.1.6","depth":3,"path":"tutorials_with_python/[6]RPC.md","ref":"tutorials_with_python/[6]RPC.md","articles":[]}]},{"title":"C#版","level":"1.6.2","depth":2,"ref":"","articles":[{"title":"Hello World","level":"1.6.2.1","depth":3,"path":"tutorials_with_csharp/HelloWorld.md","ref":"tutorials_with_csharp/HelloWorld.md","articles":[]},{"title":"工作队列","level":"1.6.2.2","depth":3,"path":"tutorials_with_csharp/WorkQueue.md","ref":"tutorials_with_csharp/WorkQueue.md","articles":[]},{"title":"发布/订阅","level":"1.6.2.3","depth":3,"path":"tutorials_with_csharp/publish&subscribe.md","ref":"tutorials_with_csharp/publish&subscribe.md","articles":[]},{"title":"路由","level":"1.6.2.4","depth":3,"path":"tutorials_with_csharp/routing.md","ref":"tutorials_with_csharp/routing.md","articles":[]},{"title":"主题交换机","level":"1.6.2.5","depth":3,"path":"tutorials_with_csharp/Topics.md","ref":"tutorials_with_csharp/Topics.md","articles":[]},{"title":"远程过程调用","level":"1.6.2.6","depth":3,"path":"tutorials_with_csharp/rpc.md","ref":"tutorials_with_csharp/rpc.md","articles":[]}]},{"title":"golang版","level":"1.6.3","depth":2,"ref":"","articles":[{"title":"Hello World","level":"1.6.3.1","depth":3,"path":"tutorials_with_golang/[1]Hello_World.md","ref":"tutorials_with_golang/[1]Hello_World.md","articles":[]},{"title":"工作队列","level":"1.6.3.2","depth":3,"path":"tutorials_with_golang/[2]Work_Queues.md","ref":"tutorials_with_golang/[2]Work_Queues.md","articles":[]},{"title":"发布/订阅","level":"1.6.3.3","depth":3,"path":"tutorials_with_golang/[3]Publish_Subscribe.md","ref":"tutorials_with_golang/[3]Publish_Subscribe.md","articles":[]},{"title":"路由","level":"1.6.3.4","depth":3,"path":"tutorials_with_golang/[4]Routing.md","ref":"tutorials_with_golang/[4]Routing.md","articles":[]},{"title":"主题交换机","level":"1.6.3.5","depth":3,"path":"tutorials_with_golang/[5]Topics.md","ref":"tutorials_with_golang/[5]Topics.md","articles":[]},{"title":"远程过程调用","level":"1.6.3.6","depth":3,"path":"tutorials_with_golang/[6]RPC.md","ref":"tutorials_with_golang/[6]RPC.md","articles":[]}]}]},"previous":{"title":"客户端文档","level":"1.5","depth":1,"ref":"","articles":[{"title":"Java客户端指南","level":"1.5.1","depth":2,"path":"ClientDocumentation/java-api-guide.md","ref":"ClientDocumentation/java-api-guide.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["ga","expandable-chapters-interactive","-lunr","-search","search-plus","page-toc"],"root":"./published","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"token":"UA-120619814-1","configuration":"auto"},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"before-first","showByDefault":true},"expandable-chapters-interactive":{},"search-plus":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Ping <yuanta11@gmil.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"RabbitMQ in Chinese","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"瓶先生":"http://mr-ping.com"}},"gitbook":"=3.0.0-pre.14","description":"RabbitMQ in Chinese"},"file":{"path":"ClientDocumentation/java-api-guide.md","mtime":"2020-11-06T06:35:42.058Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.14","time":"2020-11-06T06:37:07.867Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
