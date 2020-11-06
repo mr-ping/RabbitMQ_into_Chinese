@@ -13,6 +13,9 @@
     * [AMQP 0.9.1 模型解析](AMQP/AMQP_0-9-1_Model_Explained.md)
     * [AMQP 0.9.1 快速参考指南](AMQP/amqp-0-9-1-quickref.md)
 
+* 客户端文档
+    * [Java客户端指南](ClientDocumentation/java-api-guide.md)
+
 * 应用教程
     - Python版
         - [Hello World](tutorials_with_python/[1]Hello_World.md)

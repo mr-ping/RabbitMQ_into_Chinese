@@ -19,10 +19,17 @@
     "plugins": [
         "ga",
         "expandable-chapters-interactive",
-        "-lunr", "-search", "search-plus"],
+        "-lunr", "-search", "search-plus",
+	"page-toc"
+    ],
     "pluginsConfig": {
         "ga": {
             "token": "UA-120619814-1"
+        },
+        "page-toc": {
+            "selector": ".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4",
+            "position": "before-first",
+            "showByDefault": true
         }
     },
     "title": "RabbitMQ in Chinese",
