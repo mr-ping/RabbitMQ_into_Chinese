@@ -1,6 +1,6 @@
 >原文：[Java Client API Guide](https://www.rabbitmq.com/api-guide.html)  
 >翻译：[mr-ping](http://rabbitmq.mr-ping.com)  
->状态：[待校对](http://rabbitmq.mr-ping.com)  
+>状态：[待校对](https://github.com/mr-ping/RabbitMQ_into_Chinese/blob/master/published/ClientDocumentation/java-api-guide.md)  
 >许可：![CC-BY-SA](https://upload.wikimedia.org/wikipedia/commons/d/d0/CC-BY-SA_icon.svg)
 
 
@@ -8,13 +8,13 @@
 
 ## [概览](https://www.rabbitmq.com/api-guide.html#overview)
 
-本篇覆盖了 [RabbitMQ Java 客户端](https://www.rabbitmq.com/java-client.html) 和它的公共接口(API)。这里假设您使用的是[客户端的最新的主版本](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22amqp-client%22)，并且已经对[基本操作](https://www.rabbitmq.com/getstarted.html)有所熟悉。
+本篇覆盖了 [RabbitMQ Java 客户端](https://www.rabbitmq.com/java-client.html) 和它的公共接口(API)。这里假设您使用的是[客户端最新的主版本](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22amqp-client%22)，并且对[基本操作](https://www.rabbitmq.com/getstarted.html)已经有所了解。
 
-指南包含的关键部分有：
+指南包含以下的关键部分：
 
 [toc]
 
-可以单独使用 [API参考](https://rabbitmq.github.io/rabbitmq-java-client/api/current/)（JavaDoc）。
+也可以单独使用 [API参考](https://rabbitmq.github.io/rabbitmq-java-client/api/current/)（JavaDoc）。
 
 ## [支持的时间线](https://www.rabbitmq.com/api-guide.html#support-timeline)
 
@@ -22,25 +22,24 @@
 
 ## [JDK 和 Android 版本支持](https://www.rabbitmq.com/api-guide.html#jdk-versions)
 
-本库的5.x系列的编译和运行需要[JDK 8](https://www.rabbitmq.com/java-versions.html),。对安卓来说，意味着只支持 [Android 7.0 或以上](https://developer.android.com/guide/platform/j8-jack.html) 版本。
+本库的5.x系列的编译和运行需要[JDK 8](https://www.rabbitmq.com/java-versions.html),。对安卓来说，代表着只支持 [Android 7.0 或以上](https://developer.android.com/guide/platform/j8-jack.html) 版本。
 
 4.x系列支持[JDK 6](https://www.rabbitmq.com/java-versions.html) 以及安卓7.0之前的版本。
 
 ## [许可](https://www.rabbitmq.com/api-guide.html#license)
 
-The library is open source, developed [on GitHub](https://github.com/rabbitmq/rabbitmq-java-client/), and is triple-licensed under
 
-本库在 [GitHub](https://github.com/rabbitmq/rabbitmq-java-client/)上开源，遵循以下三个许可
+本库在 [GitHub](https://github.com/rabbitmq/rabbitmq-java-client/)上开源，并遵循以下三个许可
 
 - [Apache Public License 2.0](https://www.apache.org/licenses/LICENSE-2.0.html)
 - [Mozilla Public License 2.0](https://www.mozilla.org/MPL/2.0/)
 - [GPL 2.0](http://www.gnu.org/licenses/gpl-2.0.html)
 
-这意味着用户可以根据需要遵循列出的三个许可中的任意一个即可。例如，用户可以选择依照Apache Public License 2.0许可将客户端应用于商业产品中。GPLv2下的代码库可以选择依照GPLv2许可，以此类推。
+这意味着用户可以根据需要遵循所列出的三个许可中的任意一个即可。例如，用户可以选择依照Apache Public License 2.0许可将客户端应用于商业产品中。GPLv2下的代码库可以选择依照GPLv2许可，以此类推。
 
 ## [概览](https://www.rabbitmq.com/api-guide.html#overview)
 
-客户端API提供了 [AMQP 0-9-1 protocol model](/AMQP/AMQP_0-9-1_Model_Explained.html) 中的关键内容，并且额外提供了易于使用的抽象。
+客户端API提供了 [AMQP 0-9-1 协议模型](/AMQP/AMQP_0-9-1_Model_Explained.html) 中的关键内容，并且额外提供了易于使用的抽象。
 
 RabbitMQ Java 客户端使用`com.rabbitmq.client`作为它的顶级包。关键的类和接口有：
 
