@@ -42,5 +42,5 @@
 - 发布到此处的文档请统一使用 [Markdown](http://zh.wikipedia.org/wiki/Markdown) 格式。
 - Markdown语法介绍可以 [点击此处](http://wowubuntu.com/markdown/) 查看。
 - Markdown编辑器推荐：
-    - 在线编辑器：[Markable](http://markable.in/)
+    - 在线编辑器：[Coddy Markdown Editor](https://coddy.tech/tools/markdown-editor)
     - 本地编辑器：[typora](https://typora.io)
